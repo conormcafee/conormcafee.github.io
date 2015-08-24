@@ -1,6 +1,33 @@
-/**
- * Syntax highlighting styles
- */
+// Syntax highlighting styles
+pre,
+code {
+    font-size: 15px;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #eef;
+}
+
+code {
+    padding: 1px 5px;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: scroll;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+$spacing-unit:     30px;
+
+%vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+
 .highlight {
     background: #fff;
     @extend %vertical-rhythm;
