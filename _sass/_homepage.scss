@@ -1,0 +1,157 @@
+.hero {
+	display: none;
+
+	@media only screen and (min-width: 601px) {
+		height: 300px;
+		display: block;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat; 
+		position: relative;
+	}
+	
+	@media only screen and (min-width:992px) {
+		position: fixed;
+		width: 40%;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		height: 100%;
+	}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 991px) {
+	.hero {
+		background-image: url('../assets/images/conor-mcafee-900.jpg');
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.hero {
+		background-image: url('../assets/images/conor-mcafee.jpg');
+	}
+}
+
+
+
+
+
+// Homepage Content
+
+.homepage {
+	position: relative;
+	overflow: hidden;
+	
+	@media only screen and (min-width: 992px) {
+		left: 40%;
+		width: 60%;
+	}
+}
+
+// Homepage Navigation
+
+.homepage-nav {
+	text-align: center;
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	color: brand-colour(white);
+	background-color: brand-colour(black);
+	margin-bottom: em(60);
+
+	@media only screen and (min-width: 992px) {
+		display: block;
+		background-color: transparent;
+		color: brand-colour(black);
+	}
+}
+
+.homepage-nav--link {
+	@include base;
+	@include font-size(1.4);
+	display: table-cell;
+	padding: em(25) em(5);
+
+	@media only screen and (min-width: 992px) {
+		display: inline-block;
+		@include font-size(1.8);
+	}
+}
+
+.homepage-nav--link:not(:last-child) {
+	border-right: 2px solid brand-colour(blue);
+
+	@media only screen and (min-width: 992px) {
+		border-right: none;
+	}
+}
+
+.homepage-nav--link:hover {
+	color: brand-colour(blue);
+}
+
+// Homepage Content
+
+.homepage-content {
+	display: block;
+	color: brand-colour(black);
+	padding: em(60);
+
+	@media only screen and (min-width: 992px) {
+		padding: em(140);
+	}
+}
+
+.homepage-logo {
+	@include heading;
+	@include font-size(5.0);
+	margin-bottom: em(2);
+	text-shadow: 5px 5px 1px brand-colour(blue, lighter);
+	line-height: em(26);
+	color: brand-colour(orange);
+	text-align: center;
+}
+
+.homepage-job-title {
+	@include sub-heading;
+	text-align: center;
+	border-bottom: 1px solid brand-colour(grey, dark);
+	padding-bottom: em(20);
+	@include font-size(2.0);
+	line-height: em(24);
+	margin-bottom: em(20);
+
+	span {
+		color: brand-colour(orange);
+	}
+}
+
+.homepage-text  {
+	@include base;
+	@include font-size(2.0);
+	line-height: em(24);
+	margin-bottom: em(20);
+}
+
+.homepage-work {
+	margin: em(20) 0;
+}
+
+.homepage-work li {
+	@include base;
+	@include font-size(2.0);
+	display: inline-block;
+	line-height: em(24);
+	padding-right: em(5);
+
+	&:after {
+		content: "/";
+		display: inline-block;
+		color: brand-colour(blue, light);
+		margin-left: em(5);
+	}
+
+	&:last-child:after {
+		display: none;
+	}
+}
