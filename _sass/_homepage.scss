@@ -106,13 +106,14 @@
 	@include heading;
 	@include font-size(3.0);
 	margin-bottom: em(2);
-	text-shadow: 5px 5px 1px brand-colour(blue, lighter);
+	text-shadow: 2px 2px 1px brand-colour(blue, lighter);
 	line-height: em(26);
 	color: brand-colour(orange);
 	text-align: center;
 
 	@media only screen and (min-width: 700px) {
 		@include font-size(5.0);
+		text-shadow: 5px 5px 1px brand-colour(blue, lighter);
 	}
 }
 
