@@ -89,14 +89,6 @@
 	}
 }
 
-.homepage-sub-title {
-	@include sub-heading;
-	@include font-size(1.6);
-	line-height: em(24);
-	margin-bottom: em(10);
-	color: brand-colour(orange);
-}
-
 .homepage-text  {
 	@include base;
 	@include font-size(1.2);

@@ -42,11 +42,7 @@ title: Conor McAfee | Designer &amp; Front-End Developer
 
         <p class="homepage-job-title">Designer <span>&amp;</span> Front-End Developer</p>
 
-        <p class="homepage-text">Hi, I'm a designer &amp; front-end developer from Ballymena, Northern Ireland with 3 years industry experience.</p>
-
-        <p class="homepage-text">You can learn more <a href="#" class="homepage-link">about</a> me, read my <a href="#" class="homepage-link">journal</a>, check out my latest <a href="#" class="homepage-link">case studies</a> or look through my experiments in the <a href="#" class="homepage-link">lab</a>.</p>
-
-        <h2 class="homepage-sub-title">Work</h2>
+        <p class="homepage-text">Hi, I'm a designer &amp; front-end developer from Ballymena, Northern Ireland with 3 years industry experience.  You can learn more <a href="#" class="homepage-link">about</a> me, read my <a href="#" class="homepage-link">journal</a>, check out my latest <a href="{{ site.baseurl }}/case-studies" class="homepage-link">case studies</a> or look through my experiments in the <a href="#" class="homepage-link">lab</a>.</p>
 
         <p class="homepage-text">I have worked solely, or within a team on projects for:</p>
 
@@ -64,6 +60,18 @@ title: Conor McAfee | Designer &amp; Front-End Developer
           <li>Remus Uomo</li>
           <li>AM Nexday</li>
         </ul>
+
+        <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
       </div>
 
