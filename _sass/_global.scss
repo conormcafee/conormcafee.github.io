@@ -1,5 +1,12 @@
 html {
-	font-size: 62.5%;
+	-webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+	//font-size: 62.5%;
+	font-size: 14px;
+
+	@media only screen and (min-width: 678px) {
+		font-size: 16px;
+	}
 }
 
 body {
@@ -42,4 +49,43 @@ a {
 ::selection {
     color: brand-colour(orange);
     background: transparent;
+}
+
+
+
+
+// Navigation
+
+.navigation {
+	text-align: center;
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	border-top: 5px solid brand-colour(orange);
+	margin-bottom: em(10);
+
+	@media only screen and (min-width: 992px) {
+		display: block;
+	}
+}
+
+.navigation--link {
+	@include base;
+	@include font-size(1.0);
+	display: table-cell;
+	padding: em(25) em(5);
+	color: brand-colour(black);
+
+	&:hover {
+		color: brand-colour(orange);
+	}
+
+	@media only screen and (min-width: 992px) {
+		display: inline-block;
+		margin-right: em(20);
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
 }

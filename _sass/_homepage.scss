@@ -41,6 +41,7 @@
 .homepage {
 	position: relative;
 	overflow: hidden;
+	border-top: 5px solid brand-colour(orange);
 	
 	@media only screen and (min-width: 992px) {
 		left: 40%;
@@ -48,63 +49,21 @@
 	}
 }
 
-// Homepage Navigation
-
-.homepage-nav {
-	text-align: center;
-	display: table;
-	table-layout: fixed;
-	width: 100%;
-	color: brand-colour(white);
-	background-color: brand-colour(black);
-	margin-bottom: em(60);
-
-	@media only screen and (min-width: 992px) {
-		display: block;
-		background-color: transparent;
-		color: brand-colour(black);
-	}
-}
-
-.homepage-nav--link {
-	@include base;
-	@include font-size(1.4);
-	display: table-cell;
-	padding: em(25) em(5);
-
-	@media only screen and (min-width: 992px) {
-		display: inline-block;
-		@include font-size(1.8);
-	}
-}
-
-.homepage-nav--link:not(:last-child) {
-	border-right: 2px solid brand-colour(blue);
-
-	@media only screen and (min-width: 992px) {
-		border-right: none;
-	}
-}
-
-.homepage-nav--link:hover {
-	color: brand-colour(blue);
-}
-
 // Homepage Content
 
 .homepage-content {
 	display: block;
 	color: brand-colour(black);
-	padding: em(60);
+	padding: em(30);
 
 	@media only screen and (min-width: 992px) {
-		padding: em(140);
+		padding: em(60);
 	}
 }
 
 .homepage-logo {
 	@include heading;
-	@include font-size(3.0);
+	@include font-size(2.2);
 	margin-bottom: em(2);
 	text-shadow: 2px 2px 1px brand-colour(blue, lighter);
 	line-height: em(26);
@@ -112,7 +71,6 @@
 	text-align: center;
 
 	@media only screen and (min-width: 700px) {
-		@include font-size(5.0);
 		text-shadow: 5px 5px 1px brand-colour(blue, lighter);
 	}
 }
@@ -122,7 +80,7 @@
 	text-align: center;
 	border-bottom: 1px solid brand-colour(grey, dark);
 	padding-bottom: em(20);
-	@include font-size(2.0);
+	@include font-size(1.0);
 	line-height: em(24);
 	margin-bottom: em(20);
 
@@ -131,11 +89,29 @@
 	}
 }
 
+.homepage-sub-title {
+	@include sub-heading;
+	@include font-size(1.6);
+	line-height: em(24);
+	margin-bottom: em(10);
+	color: brand-colour(orange);
+}
+
 .homepage-text  {
 	@include base;
-	@include font-size(2.0);
+	@include font-size(1.2);
 	line-height: em(24);
 	margin-bottom: em(20);
+}
+
+.homepage-link {
+	color: brand-colour(orange);
+	border-bottom: 1px dashed brand-colour(orange);
+
+	&:hover {
+		color: brand-colour(blue);
+		border-bottom: 1px dashed brand-colour(blue);
+	}
 }
 
 .homepage-work {
@@ -144,7 +120,7 @@
 
 .homepage-work li {
 	@include base;
-	@include font-size(2.0);
+	@include font-size(1.2);
 	display: inline-block;
 	line-height: em(24);
 	padding-right: em(5);
