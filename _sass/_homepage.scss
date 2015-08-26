@@ -1,16 +1,14 @@
 .hero {
-	display: none;
-
-	@media only screen and (min-width: 601px) {
-		height: 300px;
-		display: block;
+	height: 140px;
+	display: block;
+	position: relative;
+	background-position: center center;
+	background-repeat: no-repeat;
+	
+	@media only screen and (min-width:992px) {
 		background-size: cover;
 		background-position: center center;
 		background-repeat: no-repeat; 
-		position: relative;
-	}
-	
-	@media only screen and (min-width:992px) {
 		position: fixed;
 		width: 40%;
 		top: 0;
@@ -20,9 +18,17 @@
 	}
 }
 
-@media only screen and (min-width: 601px) and (max-width: 991px) {
+@media only screen and (max-width: 991px) {
+	.hero:before {
+		content: "";
+		display: block;
+		height: 5px;
+		width: 100%;
+		background-color: brand-colour(orange);
+	}
+
 	.hero {
-		background-image: url('../assets/images/conor-mcafee-900.jpg');
+		background-image: url('../assets/images/conor-mcafee-mobile.jpg');
 	}
 }
 
@@ -48,63 +54,31 @@
 	}
 }
 
-// Homepage Navigation
-
-.homepage-nav {
-	text-align: center;
-	display: table;
-	table-layout: fixed;
-	width: 100%;
-	color: brand-colour(white);
-	background-color: brand-colour(black);
-	margin-bottom: em(60);
-
-	@media only screen and (min-width: 992px) {
-		display: block;
-		background-color: transparent;
-		color: brand-colour(black);
-	}
-}
-
-.homepage-nav--link {
-	@include base;
-	@include font-size(1.4);
-	display: table-cell;
-	padding: em(25) em(5);
-
-	@media only screen and (min-width: 992px) {
-		display: inline-block;
-		@include font-size(1.8);
-	}
-}
-
-.homepage-nav--link:not(:last-child) {
-	border-right: 2px solid brand-colour(blue);
-
-	@media only screen and (min-width: 992px) {
-		border-right: none;
-	}
-}
-
-.homepage-nav--link:hover {
-	color: brand-colour(blue);
-}
-
 // Homepage Content
 
-.homepage-content {
+.homepage__content {
 	display: block;
 	color: brand-colour(black);
-	padding: em(60);
+	padding: 0 em(30);
+
+	@media only screen and (min-width: 500px) {
+		max-width: 75%;
+		margin: 0 auto;
+	}
+
+	@media only screen and (min-width: 768px) {
+		max-width: 60%;
+	}
 
 	@media only screen and (min-width: 992px) {
-		padding: em(140);
+		padding: em(60);
+		max-width: 100%;
 	}
 }
 
-.homepage-logo {
+.homepage__logo {
 	@include heading;
-	@include font-size(3.0);
+	@include font-size(2.2);
 	margin-bottom: em(2);
 	text-shadow: 2px 2px 1px brand-colour(blue, lighter);
 	line-height: em(26);
@@ -112,17 +86,20 @@
 	text-align: center;
 
 	@media only screen and (min-width: 700px) {
+<<<<<<< HEAD
+=======
 		@include font-size(5.0);
+>>>>>>> master
 		text-shadow: 5px 5px 1px brand-colour(blue, lighter);
 	}
 }
 
-.homepage-job-title {
+.homepage__job-title {
 	@include sub-heading;
 	text-align: center;
 	border-bottom: 1px solid brand-colour(grey, dark);
 	padding-bottom: em(20);
-	@include font-size(2.0);
+	@include font-size(1.0);
 	line-height: em(24);
 	margin-bottom: em(20);
 
@@ -131,20 +108,37 @@
 	}
 }
 
-.homepage-text  {
+.homepage__text  {
 	@include base;
-	@include font-size(2.0);
+	@include font-size(1.2);
 	line-height: em(24);
 	margin-bottom: em(20);
 }
 
-.homepage-work {
+.homepage-highlight {
+	display: inline-block;
+	background-color: brand-colour(orange);
+	padding: em(5) em(15);
+	color: brand-colour(white);
+}
+
+.homepage__link {
+	color: brand-colour(orange);
+	border-bottom: 1px dashed brand-colour(orange);
+
+	&:hover {
+		color: brand-colour(blue);
+		border-bottom: 1px dashed brand-colour(blue);
+	}
+}
+
+.homepage__list {
 	margin: em(20) 0;
 }
 
-.homepage-work li {
+.homepage__list-item {
 	@include base;
-	@include font-size(2.0);
+	@include font-size(1.2);
 	display: inline-block;
 	line-height: em(24);
 	padding-right: em(5);
