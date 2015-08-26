@@ -27,51 +27,36 @@ title: Conor McAfee | Designer &amp; Front-End Developer
 
     <div class="homepage">
 
-      <!--<nav class="navigation">
+      <div class="homepage__content">
 
-        <a href="#" class="navigation--link">About</a>
-        <a href="#" class="navigation--link">Journal</a>
-        <a href="#" class="navigation--link">Case Studies</a>
-        <a href="#" class="navigation--link">Labs</a>
+        <h1 class="homepage__logo">Conor McAfee</h1>
 
-      </nav>-->
+        <p class="homepage__job-title">Designer <span>&amp;</span> Front-End Developer</p>
 
-      <div class="homepage-content">
+        <p class="homepage__text">Hi, I'm a designer &amp; front-end developer from Ballymena, Northern Ireland with 3 years industry experience.  You can learn more <a href="#about" class="homepage__link">about</a> me, read my <a href="{{ site.baseurl }}/journal" class="homepage__link">journal</a>, check out my latest <a href="{{ site.baseurl }}/case-studies" class="homepage__link">case studies</a> or look through my experiments in the <a href="{{ site.baseurl }}/labs" class="homepage__link">lab</a>.</p>
 
-        <h1 class="homepage-logo">Conor McAfee</h1>
+        <p class="homepage__text">I have worked solely, or within a team on projects for:</p>
 
-        <p class="homepage-job-title">Designer <span>&amp;</span> Front-End Developer</p>
-
-        <p class="homepage-text">Hi, I'm a designer &amp; front-end developer from Ballymena, Northern Ireland with 3 years industry experience.  You can learn more <a href="#" class="homepage-link">about</a> me, read my <a href="#" class="homepage-link">journal</a>, check out my latest <a href="{{ site.baseurl }}/case-studies" class="homepage-link">case studies</a> or look through my experiments in the <a href="#" class="homepage-link">lab</a>.</p>
-
-        <p class="homepage-text">I have worked solely, or within a team on projects for:</p>
-
-        <ul class="homepage-work">
-          <li>ActivWireless</li>
-          <li>Northern Ireland Open Challenge Tour</li>
-          <li>Blue Horizon Developments</li>
-          <li>University of Ulster</li>
-          <li>Nobel Cafe</li>
-          <li>GPR Motorcycles &amp; Exhausts</li>
-          <li>Kyoto Pearl</li>
-          <li>Pet Warehouse</li>
-          <li>Wallaces of Ballymena</li>
-          <li>Counties</li>
-          <li>Remus Uomo</li>
-          <li>AM Nexday</li>
+        <ul class="homepage__list">
+          <li class="homepage__list-item">ActivWireless</li>
+          <li class="homepage__list-item">Northern Ireland Open Challenge Tour</li>
+          <li class="homepage__list-item">Blue Horizon Developments</li>
+          <li class="homepage__list-item">University of Ulster</li>
+          <li class="homepage__list-item">Nobel Cafe</li>
+          <li class="homepage__list-item">GPR Motorcycles &amp; Exhausts</li>
+          <li class="homepage__list-item">Kyoto Pearl</li>
+          <li class="homepage__list-item">Pet Warehouse</li>
+          <li class="homepage__list-item">Wallaces of Ballymena</li>
+          <li class="homepage__list-item">Counties</li>
+          <li class="homepage__list-item">Remus Uomo</li>
+          <li class="homepage__list-item">AM Nexday</li>
         </ul>
 
-        <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+        <!--<ul class="post-list">
+          {% for post in site.posts %}
+          <li><span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span><h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2></li>
+          {% endfor %}
+        </ul>-->
 
       </div>
 
