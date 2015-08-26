@@ -61,8 +61,18 @@
 	color: brand-colour(black);
 	padding: 0 em(30);
 
+	@media only screen and (min-width: 500px) {
+		max-width: 75%;
+		margin: 0 auto;
+	}
+
+	@media only screen and (min-width: 768px) {
+		max-width: 60%;
+	}
+
 	@media only screen and (min-width: 992px) {
 		padding: em(60);
+		max-width: 100%;
 	}
 }
 
@@ -99,6 +109,13 @@
 	@include font-size(1.2);
 	line-height: em(24);
 	margin-bottom: em(20);
+}
+
+.homepage-highlight {
+	display: inline-block;
+	background-color: brand-colour(orange);
+	padding: em(5) em(15);
+	color: brand-colour(white);
 }
 
 .homepage__link {
