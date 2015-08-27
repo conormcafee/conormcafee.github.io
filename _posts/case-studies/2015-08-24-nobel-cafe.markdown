@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "Nobel-Cafe"
-date: {}
 categories: "case-studies"
-published: true
 ---
 
 #Nobel Cafe
