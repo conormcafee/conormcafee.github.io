@@ -8,11 +8,11 @@
 
   <body>
 
-    <!--{% include header.html %}-->
+    {{ content }}
 
-     {{ content }}
-
-     <script src="assets/js/main.js"></script>
+    {% include nav.html %}
+    
+    <script src="{{ site.baseurl }}/assets/js/main.js"></script>
 
   </body>
 
