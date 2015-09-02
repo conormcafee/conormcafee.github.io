@@ -1,7 +1,27 @@
 <header>
 
-  <h1 class="homepage__logo">Conor McAfee</h1>
+	<div class="wrapper">
 
-  <p class="menu-button">Click to view Menu</p>
+		<div class="header-left">
+
+			<h1 class="header__logo">Conor McAfee</h1>
+
+		</div>
+
+		<div class="header-right">
+
+		  <ul class="header-menu">
+			<li class="header-menu__item" data-header="about"><a href="{{ site.baseurl }}/">About</a></li>
+			<li class="header-menu__item" data-header="case-studies"><a href="{{ site.baseurl }}/case-studies">Case Studies</a></li>
+			<li class="header-menu__item" data-header="journal"><a href="{{ site.baseurl }}/journal">Journal</a></li>
+			<li class="header-menu__item" data-header="labs"><a href="{{ site.baseurl }}/labs">Labs</a></li>
+			<li class="header-menu__item" data-header="contact"><a href="{{ site.baseurl }}/">Contact</a></li>
+			<!-- Extended Menu -->
+			<li class="header-menu__item--extended"><img src="../assets/images/menu48.svg" alt="Extended Menu Icon" class="header-menu__icon">Full Menu</li>
+		</ul>
+
+		</div>
+
+	</div>
 
 </header>
