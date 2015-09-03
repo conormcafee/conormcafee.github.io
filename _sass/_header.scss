@@ -6,10 +6,7 @@ header {
 	background-color: brand-colour(white);
 	border-bottom: 1px solid brand-colour(grey);
 	overflow: hidden;
-}
-
-.post-archive {
-	margin-top: em(60);
+	z-index: 1;
 }
 
 .header-left,

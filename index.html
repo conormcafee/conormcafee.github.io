@@ -20,18 +20,9 @@ title: Conor McAfee | Designer &amp; Front-End Developer
         <p class="homepage__text">I have worked solely, or within a team on projects for:</p>
 
         <ul class="homepage__list">
-          <li class="homepage__list-item">ActivWireless</li>
-          <li class="homepage__list-item">Northern Ireland Open Challenge Tour</li>
-          <li class="homepage__list-item">Blue Horizon Developments</li>
-          <li class="homepage__list-item">University of Ulster</li>
-          <li class="homepage__list-item">Nobel Cafe</li>
-          <li class="homepage__list-item">GPR Motorcycles &amp; Exhausts</li>
-          <li class="homepage__list-item">Kyoto Pearl</li>
-          <li class="homepage__list-item">Pet Warehouse</li>
-          <li class="homepage__list-item">Wallaces of Ballymena</li>
-          <li class="homepage__list-item">Counties</li>
-          <li class="homepage__list-item">Remus Uomo</li>
-          <li class="homepage__list-item">AM Nexday</li>
+        {% for client in site.data.clients %}
+          <li class="homepage__list-item">{{ client.name }}</li>
+        {% endfor %}
         </ul>
 
       </div>
