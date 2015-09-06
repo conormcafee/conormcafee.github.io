@@ -2,6 +2,7 @@
 layout: post
 title: "Nobel-Cafe"
 categories: "case-studies"
+type: "case-study"
 published: true
 ---
 

@@ -3,6 +3,7 @@ layout: post
 title:  "Why hello Batman"
 date:   2015-08-24 20:18:41
 categories: journal
+type: "journal"
 ---
 You either die a hero or you live long enough to see yourself become the villain.  Accomplice? I'm gonna tell them the whole thing was your idea. There you are! There is nothing to fear but fear itseIf!
 

@@ -12,8 +12,7 @@
 
 .archive-list__title,
 .archive-list__date,
-.archive-list__excert,
-.archive-list__button {
+.archive-list__excert {
 	display: block;
 	text-align: center;
 }
@@ -22,46 +21,31 @@
 	display: block;
 	float: left;
 	width: 100%;
-
-	@media only screen and (min-width: 675px) {
-		width: 50%;
-	}
+	position: relative;
+	background-color: brand-colour(white);
+	border: 1px solid brand-colour(grey, dark);
+	border-radius: 7px;
 }
 
-@media only screen and (max-width: 767px) {
-	.archive-list__item:after {
-		content: "";
-		display: block;
-		height: 1px;
-		width: 75%;
-		margin: em(30) auto 0 auto;
-		background-color: brand-colour(blue, lighter);
-	}
-}
-
-.archive-list__image {
-	display: block;
-	margin: 0 auto;
-	width: 75px;
-	height: 75px;
-	border-radius: 75px;
-	background-position: center center;
-	background-size: cover;
-	margin-bottom: em(20);
-}
-
-.archive-list__title {
-	@include sub-heading;
-	@include font-size(1.1);
-	line-height: em(24);
-}
-
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 667px) and (max-width: 991px) {
 	.archive-list__item {
-		position: relative;
+		width: 45%;
+		margin-right: 5%;
+
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+
+		&:nth-child(2n+1) {
+			clear: left;
+		}
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.archive-list__item {
 		width: 21.25%;
 		margin-right: 5%;
-		border: 1px solid brand-colour(grey);
 
 		&:nth-child(4n) {
 			margin-right: 0;
@@ -69,52 +53,98 @@
 
 		&:nth-child(4n+1) {
 			clear: left;
-		}	
+		}
 	}
+}
 
-	.archive-list__item:after {
+.archive-list__item:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	left: em(10);
+	bottom: em(10);
+}
+
+.archive-list__image {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	height: 150px;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+
+	&:after {
 		content: "";
 		display: block;
 		position: absolute;
-		width: 10px;
-		height: 10px;
-		border-radius: 10px;
-		left: em(10);
-		top: em(10);
+		bottom: 0;
+		height: 30px;
+		width: 100%;	
 	}
+}
 
-	.archive-list__item[data-post="journal"]:after {
-		background-color: brand-colour(orange);
-	}
+.archive-list__title {
+	@include base;
+	@include font-size(1.0);
+	line-height: em(24);
+}
 
-	.archive-list__item[data-post="case-study"]:after {
-		background-color: brand-colour(blue);
-	}
+.archive-list__title,
+.archive-list__date {
+	padding: 0 em(10) em(10) em(10);
+}
 
-	.archive-list__item[data-post="labs"]:after {
-		background-color: yellow;
-	}
+.archive-list__date {
+	@include font-size(0.8);
+	color: brand-colour(grey, darker);
+}
 
-	.archive-list__image {
-		width: 100%;
-		height: 200px;
-		border-radius: 0;
-	}
+.archive-list__button {
+	display: block;
+	@include sub-heading;
+	@include font-size(0.8);
+	padding: em(10);
+	margin-top: em(10);
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	text-align: right;
+}
 
-	.archive-list__title,
-	.archive-list__date {
-		padding: em(10) 0;
-	}
+$post-colour-map: (
+    journal: brand-colour(orange),
+    case-study: brand-colour(blue),
+    labs: brand-colour(green)
+);
 
-	.archive-list__date {
-		@include font-size(0.8);
-	}
+@each $selector, $value in $post-colour-map {
+  .archive-list__item[data-post="#{$selector}"]:after {
+  	background-color: $value;
+  }
 
-	.archive-list__button {
-		@include sub-heading;
-		@include font-size(1.0);
-		background-color: brand-colour(grey);
-		padding: em(10);
-		margin-top: em(10);
-	}
+  .archive-list__item[data-post="#{$selector}"] .archive-list__title:hover {
+  	color: $value;
+  }
+
+  .archive-list__item[data-post="#{$selector}"] .archive-list__button {
+  	color: $value;
+  }
+}
+
+$post-svg-map: (
+    journal: journal,
+    case-study: case-study,
+    labs: labs
+);
+
+@each $selector, $value in $post-svg-map {
+  .archive-list__item[data-post="#{$selector}"] .archive-list__image:after {
+  	background-image: url('../assets/images/waves-#{$value}.svg');
+  }
 }
