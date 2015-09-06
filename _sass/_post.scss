@@ -3,87 +3,118 @@
 }
 
 .archive-middle {
-	display: block;
-	margin: 0 auto;
-
-	@media only screen and (min-width: 600px) {
-		width: 75%;
-	}
-
-	@media only screen and (min-width: 1000px) {
-		//width: 50%;
-	}
+	display: block;	
 }
 
+.archive-list__item:not(:last-child) {
+	margin-bottom: em(30);
+}
 
-@media only screen and (max-width: 999px) {
-	.archive-list__item:not(:last-child) {
-		margin-bottom: em(30);
-	}
+.archive-list__title,
+.archive-list__date,
+.archive-list__excert,
+.archive-list__button {
+	display: block;
+	text-align: center;
 }
 
 .archive-list__item {
-
-	@media only screen and (min-width: 1000px) {
-		border-left: 3px solid brand-colour(grey, dark);
-		padding: em(20) 0 em(100) em(80);
-		position: relative;
-	}
-}
-
-.archive-list__link,
-.archive-list__date,
-.archive-list__excert {
-	@include font-size(1.2);
-	line-height: em(24);
 	display: block;
-}
+	float: left;
+	width: 100%;
 
-.archive-list__link,
-.archive-list__date {
-	text-align: center;
-	margin-bottom: em(10);
-
-	@media only screen and (min-width: 1000px) {
-		text-align: left;
+	@media only screen and (min-width: 675px) {
+		width: 50%;
 	}
 }
 
-.archive-list__link,
-.archive-list__date {
-	@include sub-heading;
+@media only screen and (max-width: 767px) {
+	.archive-list__item:after {
+		content: "";
+		display: block;
+		height: 1px;
+		width: 75%;
+		margin: em(30) auto 0 auto;
+		background-color: brand-colour(blue, lighter);
+	}
 }
 
-.archive-list__date {
-	color: brand-colour(blue);
+.archive-list__image {
+	display: block;
+	margin: 0 auto;
+	width: 75px;
+	height: 75px;
+	border-radius: 75px;
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: em(20);
+}
 
-	@media only screen and (min-width: 1000px) {
-		@include font-size(0.5);
+.archive-list__title {
+	@include sub-heading;
+	@include font-size(1.1);
+	line-height: em(24);
+}
+
+@media only screen and (min-width: 768px) {
+	.archive-list__item {
+		position: relative;
+		width: 21.25%;
+		margin-right: 5%;
+		border: 1px solid brand-colour(grey);
+
+		&:nth-child(4n) {
+			margin-right: 0;
+		}
+
+		&:nth-child(4n+1) {
+			clear: left;
+		}	
+	}
+
+	.archive-list__item:after {
+		content: "";
+		display: block;
 		position: absolute;
-		left: -37px;
-		width: 75px;
-		height: 75px;
-		border-radius: 75px;
-		line-height: 75px;
-		background-color: brand-colour(grey, dark);
-		color: brand-colour(black);
-		text-align: center;
+		width: 10px;
+		height: 10px;
+		border-radius: 10px;
+		left: em(10);
+		top: em(10);
+	}
 
-		&:before {
-			content: "";
-			display: block;
-			position: absolute;
-			width: 69px;
-			height: 69px;
-			border-radius: 69px;
-			top: 3px;
-			left: 3px;
-			background-color: white;
-		}
+	.archive-list__item[data-post="journal"]:after {
+		background-color: brand-colour(orange);
+	}
 
-		b {
-			z-index: 1;
-			position: relative;
-		}
+	.archive-list__item[data-post="case-study"]:after {
+		background-color: brand-colour(blue);
+	}
+
+	.archive-list__item[data-post="labs"]:after {
+		background-color: yellow;
+	}
+
+	.archive-list__image {
+		width: 100%;
+		height: 200px;
+		border-radius: 0;
+	}
+
+	.archive-list__title,
+	.archive-list__date {
+		padding: em(10) 0;
+	}
+
+	.archive-list__date {
+		@include font-size(0.8);
+	}
+
+	.archive-list__button {
+		@include sub-heading;
+		@include font-size(1.0);
+		background-color: brand-colour(grey);
+		padding: em(10);
+		margin-top: em(10);
 	}
 }

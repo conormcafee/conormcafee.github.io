@@ -3,7 +3,7 @@ layout: post-archive
 title: Conor McAfee | Designer &amp; Front-End Developer
 ---
 
-{% for post in site.categories.journal %}
+<!--{% for post in site.posts %}
 <ul class="archive-list">
 	<li class="archive-list__item">
 		<a href="{{ post.url | prepend: site.baseurl }}" class="archive-list__link">{{ post.title }}</a>
@@ -11,4 +11,62 @@ title: Conor McAfee | Designer &amp; Front-End Developer
 		<span class="archive-list__excert">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</span>
 	</li>
 </h2>
-{% endfor %}
+{% endfor %}-->
+
+<ul class="archive-list">
+	<li class="archive-list__item" data-post="journal">
+		<span class="archive-list__image" style="background-image: url('https://placehold.it/400x400');"></span>
+		<a href="#" class="archive-list__title">Journal Post Title</a>
+		<span class="archive-list__date">5th Sep 2015</span>
+		<a href="#" title="Title" class="archive-list__button">Read Post</a>
+	</li>
+
+	<li class="archive-list__item" data-post="case-study">
+		<span class="archive-list__image" style="background-image: url('https://placehold.it/400x400');"></span>
+		<a href="#" class="archive-list__title">Case Study Title</a>
+		<span class="archive-list__date">5th Sep 2015</span>
+		<a href="#" title="Title" class="archive-list__button">Read Post</a>
+	</li>
+
+	<li class="archive-list__item" data-post="journal">
+		<span class="archive-list__image" style="background-image: url('https://placehold.it/400x400');"></span>
+		<a href="#" class="archive-list__title">This is a really long Journal Post Title</a>
+		<span class="archive-list__date">5th Sep 2015</span>
+		<a href="#" title="Title" class="archive-list__button">Read Post</a>
+	</li>
+
+	<li class="archive-list__item" data-post="labs">
+		<span class="archive-list__image" style="background-image: url('https://placehold.it/400x400');"></span>
+		<a href="#" class="archive-list__title">Lab Post Title</a>
+		<span class="archive-list__date">5th Sep 2015</span>
+		<a href="#" title="Title" class="archive-list__button">Read Post</a>
+	</li>
+
+	<li class="archive-list__item" data-post="journal">
+		<span class="archive-list__image" style="background-image: url('https://placehold.it/400x400');"></span>
+		<a href="#" class="archive-list__title">Journal Post Title</a>
+		<span class="archive-list__date">5th Sep 2015</span>
+		<a href="#" title="Title" class="archive-list__button">Read Post</a>
+	</li>
+
+	<li class="archive-list__item" data-post="case-study">
+		<span class="archive-list__image" style="background-image: url('https://placehold.it/400x400');"></span>
+		<a href="#" class="archive-list__title">Case Study Title</a>
+		<span class="archive-list__date">5th Sep 2015</span>
+		<a href="#" title="Title" class="archive-list__button">Read Post</a>
+	</li>
+
+	<li class="archive-list__item" data-post="journal">
+		<span class="archive-list__image" style="background-image: url('https://placehold.it/400x400');"></span>
+		<a href="#" class="archive-list__title">This is a really long Journal Post Title</a>
+		<span class="archive-list__date">5th Sep 2015</span>
+		<a href="#" title="Title" class="archive-list__button">Read Post</a>
+	</li>
+
+	<li class="archive-list__item" data-post="labs">
+		<span class="archive-list__image" style="background-image: url('https://placehold.it/400x400');"></span>
+		<a href="#" class="archive-list__title">Lab Post Title</a>
+		<span class="archive-list__date">5th Sep 2015</span>
+		<a href="#" title="Title" class="archive-list__button">Read Post</a>
+	</li>
+</ul>
