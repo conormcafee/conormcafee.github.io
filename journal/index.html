@@ -4,14 +4,14 @@ title: Conor McAfee | Designer &amp; Front-End Developer
 ---
 
 <ul class="filter-list">
-	<li class="filter-list__item filter-list__item-inactive">Case Studies</li>
+	<li class="filter-list__item" id="case-study-btn">Case Studies</li>
 	<li class="filter-list__item">Journal</li>
 	<li class="filter-list__item">Labs</li>
 </ul>
 
 <ul class="archive-list">
 {% for post in site.posts %}
-	<li class="archive-list__item" data-post="{{ post.type }}">
+	<li class="archive-list__item {{ post.type }} is-visible" data-post="{{ post.type }}">
 
 		<span class="archive-list__image" style="background-image: url('{{ site.baseurl }}/assets/images/conor-mcafee.jpg');"></span>
 
