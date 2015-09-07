@@ -3,9 +3,13 @@
 $grey: #f6f6f6;
 $orange: #EF4640;
 $blue: #6494AA;
-$green: #7FC6A4;
+$green: #35605A;
 $white: #ffffff;
 $black: #3E4147;
+
+// Validation
+$on: #7FC6A4;
+$off: #780116;
  
 // Brand Colour Palette
 $brand-colours: (
@@ -39,6 +43,22 @@ $brand-colours: (
         light:  lighten($green, 10%),
         dark:   darken($green, 10%),
         darker: darken($green, 20%)
+    ),
+
+    on: (
+        base:   $on,
+        lighter: lighten($on, 35%),
+        light:  lighten($on, 10%),
+        dark:   darken($on, 10%),
+        darker: darken($on, 20%)
+    ),
+
+    off: (
+        base:   $off,
+        lighter: lighten($off, 35%),
+        light:  lighten($off, 10%),
+        dark:   darken($off, 10%),
+        darker: darken($off, 20%)
     ),
     
     white: (
