@@ -116,3 +116,42 @@
   background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
   background: linear-gradient($direction, $color-stops);
 }
+
+
+
+
+// Animations
+
+@keyframes fade-in {
+  0%   { opacity:0; }
+  100%  { opacity:1; }
+}
+@-o-keyframes fade-in {
+  0%   { opacity:0; }
+  100%  { opacity:1; }
+}
+@-moz-keyframes fade-in {
+  0%   { opacity:0; }
+  100%  { opacity:1; }
+}
+@-webkit-keyframes fade-in {
+  0%   { opacity:0; }
+  100%  { opacity:1; }
+}
+
+@keyframes fade-out {
+  0%   { opacity:1; }
+  100%  { opacity:0.3; }
+}
+@-o-keyframes fade-out {
+  0%   { opacity:1; }
+  100%  { opacity:0.3; }
+}
+@-moz-keyframes fade-out {
+  0%   { opacity:1; }
+  100%  { opacity:0.3; }
+}
+@-webkit-keyframes fade-out {
+  0%   { opacity:1; }
+  100%  { opacity:0.3; }
+}

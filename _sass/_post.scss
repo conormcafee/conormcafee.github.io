@@ -27,6 +27,28 @@
 	border-radius: 7px;
 }
 
+.archive-list__item.is-visible {
+	-webkit-animation: fade-in 1s;
+   	-moz-animation: fade-in 1s; 
+   	-o-animation: fade-in 1s;
+    animation: fade-in 1s;
+    //display: block;
+    //visibility: visible;
+}
+
+.archive-list__item.is-hidden {
+	-webkit-animation: fade-out 1s;
+   	-moz-animation: fade-out 1s; 
+   	-o-animation: fade-out 1s;
+    animation: fade-out 1s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    //display: none;
+    //visibility: hidden;
+}
+
 @media only screen and (min-width: 667px) and (max-width: 991px) {
 	.archive-list__item {
 		width: 45%;
