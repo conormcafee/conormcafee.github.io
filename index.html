@@ -3,25 +3,7 @@ layout: default
 title: Conor McAfee | Designer &amp; Front-End Developer
 ---
 
-<!--<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>-->
+<main>
 
 <div class="hero" data-image="conor-mcafee-portrait"></div>
 
@@ -33,35 +15,27 @@ title: Conor McAfee | Designer &amp; Front-End Developer
 
         <p class="homepage__job-title">Designer <span>&amp;</span> Front-End Developer</p>
 
-        <p class="homepage__text">Hi, I'm a designer &amp; front-end developer from Ballymena, Northern Ireland with 3 years industry experience.  Currently, I am working for dotRetailer in Belfast's Titanic Quarter.</p>
+        <!--<ul class="header-menu header-menu--homepage">
+          <li class="header-menu__item" data-header="case-studies"><a href="{{ site.baseurl }}/journal">Work, Blog &amp; Experiments</a></li>
+          <li class="header-menu__item" data-header="contact"><a href="{{ site.baseurl }}/">Contact</a></li>
+        </ul>-->
 
         <p class="homepage__text homepage-highlight">Full site launching September 2015</p>
 
-        <!--<p class="homepage__text">You can learn more <a href="#about" class="homepage__link">about</a> me, read my <a href="{{ site.baseurl }}/journal" class="homepage__link">journal</a>, check out my latest <a href="{{ site.baseurl }}/case-studies" class="homepage__link">case studies</a> or look through my experiments in the <a href="{{ site.baseurl }}/labs" class="homepage__link">lab</a>.</p>-->
+        <p class="homepage__text">Hi, I'm a designer &amp; front-end developer from Ballymena, Northern Ireland with 3 years industry experience.  Currently, I am working for dotRetailer in Belfast's Titanic Quarter.</p>
 
         <p class="homepage__text">I have worked solely, or within a team on projects for:</p>
 
         <ul class="homepage__list">
-          <li class="homepage__list-item">ActivWireless</li>
-          <li class="homepage__list-item">Northern Ireland Open Challenge Tour</li>
-          <li class="homepage__list-item">Blue Horizon Developments</li>
-          <li class="homepage__list-item">University of Ulster</li>
-          <li class="homepage__list-item">Nobel Cafe</li>
-          <li class="homepage__list-item">GPR Motorcycles &amp; Exhausts</li>
-          <li class="homepage__list-item">Kyoto Pearl</li>
-          <li class="homepage__list-item">Pet Warehouse</li>
-          <li class="homepage__list-item">Wallaces of Ballymena</li>
-          <li class="homepage__list-item">Counties</li>
-          <li class="homepage__list-item">Remus Uomo</li>
-          <li class="homepage__list-item">AM Nexday</li>
+        {% for client in site.data.clients %}
+          <li class="homepage__list-item">{{ client.name }}</li>
+        {% endfor %}
         </ul>
-
-        <!--<ul class="post-list">
-          {% for post in site.posts %}
-          <li><span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span><h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2></li>
-          {% endfor %}
-        </ul>-->
 
       </div>
 
     </div>
+
+  </main>
+
+  <script src="{{ site.baseurl }}/assets/js/main.js"></script>

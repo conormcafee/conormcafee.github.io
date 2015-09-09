@@ -13,6 +13,7 @@
 		width: 40%;
 		top: 0;
 		left: 0;
+		right: 0;
 		bottom: 0;
 		height: 100%;
 	}
@@ -28,17 +29,16 @@
 	}
 
 	.hero {
-		background-image: url('../assets/images/conor-mcafee-mobile.jpg');
+		background-image: url('../assets/images/conor-mcafee-mobile.png');
 	}
 }
 
 @media only screen and (min-width: 992px) {
 	.hero {
 		background-image: url('../assets/images/conor-mcafee.jpg');
+		border-right: 3px solid brand-colour(orange);
 	}
 }
-
-
 
 
 
@@ -98,6 +98,11 @@
 	span {
 		color: brand-colour(orange);
 	}
+}
+
+.header-menu--homepage {
+	text-align: center;
+	margin-bottom: em(20);
 }
 
 .homepage__text  {

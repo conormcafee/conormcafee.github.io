@@ -1,39 +1,25 @@
 ---
-layout: default
+layout: post-archive
 title: Conor McAfee | Designer &amp; Front-End Developer
 ---
 
-<!--<div class="home">
+<ul class="filter-list">
+	<li class="filter-list__item" id="case-study-btn">Case Studies</li>
+	<li class="filter-list__item" id="journal-btn">Journal</li>
+	<li class="filter-list__item" id="labs-btn">Labs</li>
+</ul>
 
-  <h1 class="page-heading">Posts</h1>
+<ul class="archive-list">
+{% for post in site.posts %}
+	<li class="archive-list__item {{ post.type }} is-visible" data-post="{{ post.type }}">
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+		<span class="archive-list__image" style="background-image: url('{{ site.baseurl }}/assets/images/conor-mcafee.jpg');"></span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>-->
-
-<div class="hero" data-image="conor-mcafee-portrait"></div>
-
-    <div class="homepage">
-
-      <div class="homepage-content">
-
-        {% for post in site.categories.journal %}
-        <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-        <p></p>
-        {% endfor %}
-
-      </div>
-
-    </div>
+		<a href="{{ post.url | prepend: site.baseurl }}" class="archive-list__title">{{ post.title }}</a>
+		
+		<span class="archive-list__date">{{ post.date | date: "%b %-d, %Y" }}</span>
+		
+		<a href="{{ post.url | prepend: site.baseurl }}" title="Title" class="archive-list__button">Read Post</a>
+	</li>
+{% endfor %}
+</ul>
