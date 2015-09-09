@@ -11,7 +11,10 @@ html {
 body {
 	position: relative;
 	@include base;
-	background-color: brand-colour(grey);
+	//background-color: brand-colour(grey);
+	background-color: brand-colour(white);
+	background-image: url('../assets/images/watercolour-bg.jpg');
+	background-repeat: repeat-x;
 }
 
 .wrapper {

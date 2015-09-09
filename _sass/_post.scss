@@ -11,10 +11,13 @@
 }
 
 .archive-list__title,
-.archive-list__date,
-.archive-list__excert {
+.archive-list__date {
 	display: block;
-	text-align: center;
+	text-align: left;
+
+	@media only screen and (min-width: 667px) {
+		text-align: center;
+	}
 }
 
 .archive-list__item {
@@ -23,8 +26,11 @@
 	width: 100%;
 	position: relative;
 	background-color: brand-colour(white);
-	border: 1px solid brand-colour(grey, dark);
-	border-radius: 7px;
+	
+	@media only screen and (min-width: 667px) {
+		border: 1px solid brand-colour(grey, dark);
+		border-radius: 7px;
+	}
 }
 
 .archive-list__item.is-visible {
@@ -32,8 +38,6 @@
    	-moz-animation: fade-in 1s; 
    	-o-animation: fade-in 1s;
     animation: fade-in 1s;
-    //display: block;
-    //visibility: visible;
 }
 
 .archive-list__item.is-hidden {
@@ -45,8 +49,6 @@
     -moz-animation-fill-mode: forwards;
     -o-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    //display: none;
-    //visibility: hidden;
 }
 
 @media only screen and (min-width: 667px) and (max-width: 991px) {
@@ -92,23 +94,30 @@
 
 .archive-list__image {
 	display: block;
+	float: left;
 	position: relative;
-	margin: 0 auto;
-	width: 100%;
-	height: 150px;
+	width: 100px;
+	height: 100px;
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	border-top-left-radius: 7px;
-	border-top-right-radius: 7px;
 
-	&:after {
-		content: "";
-		display: block;
-		position: absolute;
-		bottom: 0;
-		height: 30px;
-		width: 100%;	
+	@media only screen and (min-width: 667px) {
+		width: 100%;
+		height: 150px;
+		float: none;
+		margin: 0 auto;
+		border-top-left-radius: 7px;
+		border-top-right-radius: 7px;
+
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 0;
+			height: 30px;
+			width: 100%;	
+		}
 	}
 }
 
@@ -120,7 +129,15 @@
 
 .archive-list__title,
 .archive-list__date {
+	display: block;
+	float: left;
+	width: 60%;
 	padding: 0 em(10) em(10) em(10);
+
+	@media only screen and (min-width: 667px) {
+		float: none;
+		width: auto;
+	}
 }
 
 .archive-list__date {
@@ -130,13 +147,17 @@
 
 .archive-list__button {
 	display: block;
+	float: left;
+	width: 100%;
 	@include sub-heading;
 	@include font-size(0.8);
 	padding: em(10);
 	margin-top: em(10);
-	border-bottom-left-radius: 7px;
-	border-bottom-right-radius: 7px;
-	text-align: right;
+	text-align: center;
+
+	@media only screen and (min-width: 667px) {
+		text-align: right;
+	}
 }
 
 $post-colour-map: (

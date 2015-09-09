@@ -5,6 +5,8 @@
 
 .filter-list__item {
 	@include sub-heading;
+	width: 100%;
+	margin-bottom: em(20);
 	display: inline-block;
 	background-color: brand-colour(white);
 	border: 1px solid brand-colour(grey, dark);
@@ -12,6 +14,11 @@
 	cursor: pointer;
 	border-radius: 7px;
 	position: relative;
+
+	@media only screen and (min-width: 650px) {
+		width: auto;
+		margin-bottom: 0;
+	}
 
 	&:after {
 		content: "";
