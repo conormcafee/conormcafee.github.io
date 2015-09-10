@@ -1,3 +1,5 @@
+// Archive 
+
 .archive {
 	margin-top: em(100);
 }
@@ -6,8 +8,22 @@
 	display: block;	
 }
 
-.archive-list__item:not(:last-child) {
-	margin-bottom: em(30);
+.archive-heading {
+	@include sub-heading;
+	@include font-size(2.0);
+	text-align: center;
+	color: brand-colour(black);
+	margin-bottom: em(15);
+	line-height: 2.6rem;
+}
+
+.archive-list {
+	border-top: 1px solid brand-colour(grey, dark);
+	padding-top: em(40);
+
+	&__item:not(:last-child) {
+		margin-bottom: em(40);
+	}
 }
 
 .archive-list__title,
@@ -17,19 +33,6 @@
 
 	@media only screen and (min-width: 667px) {
 		text-align: center;
-	}
-}
-
-.archive-list__item {
-	display: block;
-	float: left;
-	width: 100%;
-	position: relative;
-	background-color: brand-colour(white);
-	
-	@media only screen and (min-width: 667px) {
-		border: 1px solid brand-colour(grey, dark);
-		border-radius: 7px;
 	}
 }
 
@@ -51,16 +54,57 @@
     animation-fill-mode: forwards;
 }
 
+@media only screen and (max-width: 666px) {
+	.archive-list__item:before {
+		content: "";
+		display: block;
+		height: 15px;
+		width: 15px;
+		border-radius: 15px;
+		position: absolute;
+		top: em(20);
+		right: em(20);
+	}
+}
+
+.archive-list__item {
+	display: block;
+	float: left;
+	width: 100%;
+	position: relative;
+	background-color: brand-colour(white);
+	border: 1px solid brand-colour(grey, dark);
+	padding: em(20);
+	border-radius: 7px;
+	
+	@media only screen and (min-width: 667px) {
+		padding: 0;
+	}
+}
+
+@media only screen and (min-width: 667px) {
+	.archive-list__item:after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		border-radius: 10px;
+		left: em(10);
+		bottom: em(10);
+	}
+}
+
 @media only screen and (min-width: 667px) and (max-width: 991px) {
 	.archive-list__item {
-		width: 45%;
+		width: 30%;
 		margin-right: 5%;
 
-		&:nth-child(2n) {
+		&:nth-child(3n) {
 			margin-right: 0;
 		}
 
-		&:nth-child(2n+1) {
+		&:nth-child(3n+1) {
 			clear: left;
 		}
 	}
@@ -80,33 +124,17 @@
 		}
 	}
 }
-
-.archive-list__item:after {
-	content: "";
-	display: block;
-	position: absolute;
-	width: 10px;
-	height: 10px;
-	border-radius: 10px;
-	left: em(10);
-	bottom: em(10);
-}
-
-.archive-list__image {
-	display: block;
-	float: left;
-	position: relative;
-	width: 100px;
-	height: 100px;
-	background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
-
-	@media only screen and (min-width: 667px) {
+@media only screen and (min-width: 667px) {
+	.archive-list__image {
+		display: block;
+		position: relative;
 		width: 100%;
 		height: 150px;
 		float: none;
 		margin: 0 auto;
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
 		border-top-left-radius: 7px;
 		border-top-right-radius: 7px;
 
@@ -122,16 +150,18 @@
 }
 
 .archive-list__title {
-	@include base;
+	@include sub-heading;
 	@include font-size(1.0);
+	color: brand-colour(black);
 	line-height: em(24);
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 .archive-list__title,
 .archive-list__date {
 	display: block;
-	float: left;
-	width: 60%;
 	padding: 0 em(10) em(10) em(10);
 
 	@media only screen and (min-width: 667px) {
@@ -167,6 +197,12 @@ $post-colour-map: (
 );
 
 @each $selector, $value in $post-colour-map {
+
+	@media only screen and (max-width: 666px) {
+		.archive-list__item[data-post="#{$selector}"]:before {
+			background-color: $value;
+		}
+	}
   .archive-list__item[data-post="#{$selector}"]:after {
   	background-color: $value;
   }
@@ -191,3 +227,8 @@ $post-svg-map: (
   	background-image: url('../assets/images/waves-#{$value}.svg');
   }
 }
+
+
+
+
+// Post Page
