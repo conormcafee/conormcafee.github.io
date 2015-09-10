@@ -36,7 +36,6 @@
 @media only screen and (min-width: 992px) {
 	.hero {
 		background-image: url('../assets/images/conor-mcafee.jpg');
-		border-right: 3px solid brand-colour(orange);
 	}
 }
 
@@ -51,6 +50,7 @@
 	@media only screen and (min-width: 992px) {
 		left: 40%;
 		width: 60%;
+		padding-top: em(40);
 	}
 }
 
@@ -58,21 +58,23 @@
 
 .homepage__content {
 	display: block;
+	background-color: brand-colour(white);
+	border: 1px solid brand-colour(grey, dark);
 	color: brand-colour(black);
-	padding: 0 em(30);
+	padding: em(30);
+	margin: em(15);
 
-	@media only screen and (min-width: 500px) {
-		max-width: 75%;
-		margin: 0 auto;
-	}
-
-	@media only screen and (min-width: 768px) {
-		max-width: 60%;
+	@media only screen and (min-width: 600px) {
+		max-width: 600px;
+		margin: em(15) auto;
 	}
 
 	@media only screen and (min-width: 992px) {
-		padding: em(60);
-		max-width: 100%;
+		max-width: 500px;
+	}
+
+	@media only screen and (min-width: 1200px) {
+		max-width: 600px;
 	}
 }
 
@@ -89,11 +91,9 @@
 .homepage__job-title {
 	@include sub-heading;
 	text-align: center;
-	border-bottom: 1px solid brand-colour(grey, dark);
 	padding-bottom: em(20);
 	@include font-size(1.0);
 	line-height: em(24);
-	margin-bottom: em(20);
 
 	span {
 		color: brand-colour(orange);
