@@ -1,0 +1,181 @@
+.two-col__wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: brand-colour(white);
+	overflow: hidden;
+	padding: 20px;
+}
+
+.two-col__left {
+	@media only screen and (max-width: 991px) {
+		height: 140px;
+		display: block;
+		position: relative;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-image: url('../assets/images/conor-mcafee-mobile.png');
+	}
+
+	@media only screen and (min-width: 992px) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 35%;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-image: url('../assets/images/conor-mcafee.jpg');
+	}
+}
+
+.two-col__right {
+	display: block;
+	position: absolute;
+	float: left;
+	padding: em(40) em(60);
+	background-color: brand-colour(white);
+
+	@media only screen and (min-width: 992px) {
+		left: 35%;
+		width: 65%;
+	}
+}
+
+.two-col__border {
+	position: fixed;
+	display: block;
+	background-color: brand-colour(orange);
+	z-index: 1;
+
+	&.top {
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 20px;
+	}
+
+	&.left {
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 20px;
+	}
+
+	&.bottom {
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 20px;
+	}
+
+	&.right {
+		top: 0;
+		bottom: 0;
+		right: 0;
+		width: 20px;
+	}
+}
+
+
+
+// Homepage Content
+
+.homepage {
+	position: relative;
+	overflow: hidden;
+	
+	@media only screen and (min-width: 992px) {
+		left: 40%;
+		width: 60%;
+		padding-top: em(40);
+	}
+}
+
+// Homepage Content
+
+.homepage__content {
+	display: block;
+	background-color: brand-colour(white);
+	border: 1px solid brand-colour(grey, dark);
+	color: brand-colour(black);
+	padding: em(30);
+	margin: em(15);
+
+	@media only screen and (min-width: 600px) {
+		max-width: 600px;
+		margin: em(15) auto;
+	}
+
+	@media only screen and (min-width: 992px) {
+		max-width: 500px;
+	}
+
+	@media only screen and (min-width: 1200px) {
+		max-width: 600px;
+	}
+}
+
+.homepage__logo {
+	@include heading;
+	@include font-size(2.2);
+	margin-bottom: em(2);
+	text-shadow: 2px 2px 1px brand-colour(blue, lighter);
+	line-height: em(26);
+	color: brand-colour(orange);
+	text-align: center;
+}
+
+.two-col__right-title {
+	@include sub-heading;
+	text-align: center;
+	padding-bottom: em(20);
+	@include font-size(1.0);
+	line-height: em(24);
+
+	span {
+		color: brand-colour(orange);
+	}
+}
+
+.two-col__right-header {
+	text-align: center;
+	margin-bottom: em(20);
+}
+
+.two-col__right-text  {
+	@include base;
+	@include font-size(1.2);
+	line-height: em(24);
+	margin-bottom: em(20);
+}
+
+.two-col__right--highlight {
+	display: inline-block;
+	background-color: brand-colour(orange);
+	padding: em(5) em(15);
+	color: brand-colour(white);
+}
+
+.two-col__right-list {
+	margin: em(20) 0;
+}
+
+.two-col__right-list-item {
+	@include base;
+	@include font-size(1.2);
+	display: inline-block;
+	line-height: em(24);
+	padding-right: em(5);
+
+	&:after {
+		content: "/";
+		display: inline-block;
+		color: brand-colour(blue, light);
+		margin-left: em(5);
+	}
+
+	&:last-child:after {
+		display: none;
+	}
+}

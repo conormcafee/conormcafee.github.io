@@ -11,7 +11,7 @@ html {
 body {
 	position: relative;
 	@include base;
-	background-color: brand-colour(grey);
+	background-color: brand-colour(orange);
 	background-repeat: repeat-x;
 }
 
@@ -52,12 +52,12 @@ a {
 }
 
 ::-moz-selection { 
-    color: brand-colour(orange);
+    color: brand-colour(orange, darker);
     background: transparent;
 }
 
 ::selection {
-    color: brand-colour(orange);
+    color: brand-colour(orange, darker);
     background: transparent;
 }
 

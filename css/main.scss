@@ -5,13 +5,14 @@
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-		"mixins",
-		"variables",
+	"mixins",
+	"variables",
         "base",
         "global",
         "nav",
         "header",
-        "homepage",
+        //"homepage",
+        "homepage2",
         "filters",
         "post",
         "syntax-highlighting"
