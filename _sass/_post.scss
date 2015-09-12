@@ -12,9 +12,10 @@
 	@include sub-heading;
 	@include font-size(2.0);
 	text-align: center;
-	color: brand-colour(black);
+	color: brand-colour(white);
 	margin-bottom: em(15);
 	line-height: 2.6rem;
+	text-shadow: 0px 3px 1px brand-colour(orange, darker);
 }
 
 .archive-list {
@@ -73,7 +74,7 @@
 	width: 100%;
 	position: relative;
 	background-color: brand-colour(white);
-	border: 1px solid brand-colour(grey, dark);
+	border: 1px solid brand-colour(orange, darker);
 	padding: em(20);
 	border-radius: 7px;
 	
@@ -135,8 +136,8 @@
 		background-position: center center;
 		background-size: cover;
 		background-repeat: no-repeat;
-		border-top-left-radius: 7px;
-		border-top-right-radius: 7px;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
 
 		&:after {
 			content: "";

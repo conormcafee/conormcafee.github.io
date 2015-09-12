@@ -5,37 +5,47 @@ title: Conor McAfee | Designer &amp; Front-End Developer
 
 <main>
 
-<div class="hero" data-image="conor-mcafee-portrait"></div>
+<div class="two-col__wrapper">
 
-    <div class="homepage">
+  <div class="two-col__left">
 
-        <div class="homepage__content">
+    <div class="two-col__left-image"></div>
 
-        <h1 class="homepage__logo">Conor McAfee</h1>
+  </div>
 
-        <p class="homepage__job-title">Designer <span>&amp;</span> Front-End Developer</p>
+  <div class="two-col__right">
 
-        <ul class="header-menu header-menu--homepage">
-          <li class="header-menu__item" data-header="case-studies"><a href="{{ site.baseurl }}/journal">Work, Blog &amp; Experiments</a></li>
-          <li class="header-menu__item" data-header="contact"><a href="{{ site.baseurl }}/">Contact</a></li>
-        </ul>
+    <div class="two-col__right-content">
 
-        <p class="homepage__text homepage-highlight">Full site launching September 2015</p>
+      <h1 class="homepage__logo">Conor McAfee</h1>
 
-        <p class="homepage__text">Hi, I'm a designer &amp; front-end developer from Ballymena, Northern Ireland with 3 years industry experience.  Currently, I am working for dotRetailer in Belfast's Titanic Quarter.</p>
+      <p class="two-col__right-title">Designer <span>&amp;</span> Front-End Developer</p>
 
-        <p class="homepage__text">I have worked solely, or within a team on projects for:</p>
+      <p class="two-col__right-text">Hi, I'm a designer &amp; front-end developer from Ballymena, Northern Ireland with 3 years industry experience.  Currently, I am working for dotRetailer in Belfast's Titanic Quarter.</p>
 
-        <ul class="homepage__list">
-        {% for client in site.data.clients %}
-          <li class="homepage__list-item">{{ client.name }}</li>
-        {% endfor %}
-        </ul>
+      <p class="two-col__right-text">Be sure to check out my <a href="#" title="#" class="two-col__right-link">Case Studies, Blog &amp; Experiments</a>.  If you wish to learn more about me, keep reading below.  If you wish to contact me, you can do so via <a href="#" title="Tweet me" class="two-col__right-link">@conormcafee</a> on Twitter or via email <a href="#" title="Email me" class="two-col__right-link">hello@conormcafee.co.uk</a>.</p>
 
-      </div>
+      <p class="two-col__right-text">Focusing mainly on RWD (Responsive Website Design), I have developed a strong knowledge on building websites for not only desktops, but mobiles &amp; tablets too.  A key aspect which is often forgot about regarding RWD is the performance of the websites.  This is an area which I love working on and trying to make the websites as fast and performant as possible.</p>
+
+      <p class="two-col__right-text">I have worked solely, or within a team on projects for:</p>
+
+      <ul class="two-col__right-list">
+      {% for client in site.data.clients %}
+        <li class="two-col__right-list-item">{{ client.name }}</li>
+      {% endfor %}
+      </ul>
 
     </div>
 
-  </main>
+  </div>
 
-  <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+</div>
+
+</main>
+
+<div class="two-col__border top"></div>
+<div class="two-col__border left"></div>
+<div class="two-col__border bottom"></div>
+<div class="two-col__border right"></div>
+
+<script src="{{ site.baseurl }}/assets/js/main.js"></script>
