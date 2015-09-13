@@ -17,7 +17,8 @@ permalink: /:categories/:title.html
 
 # Custom
 
-type: "string"
+#type: "string"
+#image: "string"
 
 sass:
     style: compressed

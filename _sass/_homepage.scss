@@ -1,81 +1,52 @@
-.hero {
-	height: 140px;
-	display: block;
-	position: relative;
-	background-position: center center;
-	background-repeat: no-repeat;
-	
-	@media only screen and (min-width:992px) {
-		background-size: cover;
-		background-position: center center;
-		background-repeat: no-repeat; 
-		position: fixed;
-		width: 40%;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		height: 100%;
-	}
+.two-col__wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: brand-colour(white);
+	overflow: hidden;
+	padding: em(10);
 }
 
-@media only screen and (max-width: 991px) {
-	.hero:before {
-		content: "";
+.two-col__left {
+	@media only screen and (max-width: 991px) {
+		height: 140px;
 		display: block;
-		height: 5px;
-		width: 100%;
-		background-color: brand-colour(orange);
-	}
-
-	.hero {
+		position: relative;
+		background-position: center center;
+		background-repeat: no-repeat;
 		background-image: url('../assets/images/conor-mcafee-mobile.png');
 	}
-}
 
-@media only screen and (min-width: 992px) {
-	.hero {
+	@media only screen and (min-width: 992px) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 35%;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
 		background-image: url('../assets/images/conor-mcafee.jpg');
 	}
 }
 
+.two-col__right {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: 0 em(60);
+	background-color: brand-colour(white);
 
-
-// Homepage Content
-
-.homepage {
-	position: relative;
-	overflow: hidden;
-	
 	@media only screen and (min-width: 992px) {
-		left: 40%;
-		width: 60%;
-		padding-top: em(40);
+		padding: em(40) em(60);
+		left: 35%;
+		width: 65%;
 	}
 }
 
-// Homepage Content
-
-.homepage__content {
-	display: block;
-	background-color: brand-colour(white);
-	border: 1px solid brand-colour(grey, dark);
+.two-col__right-content {
+	max-width: 600px;
+	margin: 0 auto;
 	color: brand-colour(black);
-	padding: em(30);
-	margin: em(15);
-
-	@media only screen and (min-width: 600px) {
-		max-width: 600px;
-		margin: em(15) auto;
-	}
-
-	@media only screen and (min-width: 992px) {
-		max-width: 500px;
-	}
-
-	@media only screen and (min-width: 1200px) {
-		max-width: 600px;
-	}
 }
 
 .homepage__logo {
@@ -88,52 +59,56 @@
 	text-align: center;
 }
 
-.homepage__job-title {
+.two-col__right-title {
 	@include sub-heading;
 	text-align: center;
-	padding-bottom: em(20);
 	@include font-size(1.0);
 	line-height: em(24);
 
 	span {
 		color: brand-colour(orange);
 	}
+
+	&:after {
+		content: "";
+		display: block;
+		margin: em(30) 0;
+		height: 1px;
+		background-color: brand-colour(grey, dark);
+		width: 100%;
+	}
 }
 
-.header-menu--homepage {
-	text-align: center;
-	margin-bottom: em(20);
-}
-
-.homepage__text  {
+.two-col__right-text  {
 	@include base;
 	@include font-size(1.2);
 	line-height: em(24);
 	margin-bottom: em(20);
 }
 
-.homepage-highlight {
+.two-col__right-link {
+	display: inline-block;
+	border-bottom: 1px dashed brand-colour(orange);
+	color: brand-colour(orange);
+
+	&:hover {
+		color: brand-colour(orange, darker);
+		border-bottom: 1px dashed brand-colour(orange, darker);
+	}
+}
+
+.two-col__right--highlight {
 	display: inline-block;
 	background-color: brand-colour(orange);
 	padding: em(5) em(15);
 	color: brand-colour(white);
 }
 
-.homepage__link {
-	color: brand-colour(orange);
-	border-bottom: 1px dashed brand-colour(orange);
-
-	&:hover {
-		color: brand-colour(blue);
-		border-bottom: 1px dashed brand-colour(blue);
-	}
-}
-
-.homepage__list {
+.two-col__right-list {
 	margin: em(20) 0;
 }
 
-.homepage__list-item {
+.two-col__right-list-item {
 	@include base;
 	@include font-size(1.2);
 	display: inline-block;
@@ -143,11 +118,55 @@
 	&:after {
 		content: "/";
 		display: inline-block;
-		color: brand-colour(blue, light);
+		color: brand-colour(orange, darker);
 		margin-left: em(5);
 	}
 
 	&:last-child:after {
 		display: none;
+	}
+}
+
+
+
+
+// Border 
+
+.two-col__border {
+	position: fixed;
+	display: block;
+	background-color: brand-colour(orange);
+	z-index: 1;
+
+	&.top {
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 10px;
+		border-bottom: 2px solid brand-colour(orange, darker);
+	}
+
+	&.left {
+		top: 8px;
+		left: 0;
+		bottom: 0;
+		width: 10px;
+		border-right: 2px solid brand-colour(orange, darker);
+	}
+
+	&.bottom {
+		bottom: 0;
+		left: 8px;
+		right: 0;
+		height: 10px;
+		border-top: 2px solid brand-colour(orange, darker);
+	}
+
+	&.right {
+		top: 8px;
+		bottom: 8px;
+		right: 0;
+		width: 10px;
+		border-left: 2px solid brand-colour(orange, darker);
 	}
 }

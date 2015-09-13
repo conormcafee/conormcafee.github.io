@@ -3,6 +3,7 @@ layout: post
 title: "Nobel-Cafe"
 categories: "case-studies"
 type: "case-study"
+thumbnail-desktop: "nobel.jpg"
 published: true
 ---
 
