@@ -1,15 +1,41 @@
 ---
-layout: post-archive
+layout: default
 ---
-<div class="post">
 
-  <div class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </div>
+{% include header.html %}
 
-  <article class="post-content">
-    {{ content }}
-  </article>
+<main class="m-top post">
 
-</div>
+	<div class="wrapper">
+
+	<div class="post-header">
+
+		<h1 class="post-heading">{{ page.title }}</h1>
+
+		<p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+
+	</div>
+
+	<div class="post-content">
+				
+		{{ content }}
+
+	</div>
+
+	<div class="post-additional">
+
+		<img src="{{ site.baseurl }}/assets/images/conor-mcafee-mobile.png" class="post-additional__image" />
+
+		<p class="post-additional__author">Posted by {{ page.author }}</p>
+
+		<p class="post-additional__guest">Fancy writting a guest post on design and/or front-end development? Drop me an <a href="#" title="Guest Post" class="post-additional__guest-link">email</a> to chat more.</p>
+
+	</div>
+
+	</div>
+
+</main>
+
+<script src="{{ site.baseurl }}/assets/js/main.js"></script>
+
+<script src="{{ site.baseurl }}/assets/js/apollo.min.js"></script>
