@@ -3,8 +3,8 @@
 	clear: both;
 	margin: em(30) 0;
 	background-color: brand-colour(blue);
-	border-top: 1px solid brand-colour(orange, darker);
-	border-bottom: 1px solid brand-colour(orange, darker);
+	border-top: 2px solid brand-colour(orange, darker);
+	border-bottom: 2px solid brand-colour(orange, darker);
 	text-align: center;
 }
 
@@ -29,5 +29,4 @@
 	background-color: brand-colour(white);
 	color: brand-colour(orange);
 	border-radius: 7px;
-	//box-shadow: 2px 2px 0 brand-colour(orange, darker);
 }

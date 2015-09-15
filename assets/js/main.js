@@ -21,20 +21,17 @@ a(h))}}setTimeout(function(){w();y(h)},3E3);t(k,function(a){f=a;x()});r(k,h.fami
 	if( w.document.documentElement.className.indexOf( "fonts-loaded" ) > -1 ){
 		return;
 	}
-	var fontA = new w.FontFaceObserver( "pacificoregular", {
-		weight: 500
-	});
 
-	var fontB = new w.FontFaceObserver( "quicksandregular", {
+	var fontA = new w.FontFaceObserver( "quicksandregular", {
 		weight: 400
 	});
 
-	var fontC = new w.FontFaceObserver( "source_serif_proregular", {
+	var fontB = new w.FontFaceObserver( "source_serif_proregular", {
 		weight: 400
 	});
 
 	w.Promise
-		.all([fontA.check(), fontB.check(), fontC.check()])
+		.all([fontA.check(), fontB.check()])
 		.then(function(){
 			w.document.documentElement.className += " fonts-loaded";
 		});

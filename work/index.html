@@ -1,5 +1,5 @@
 ---
-layout: post-archive
+layout: archive
 title: Conor McAfee | Designer &amp; Front-End Developer
 ---
 
@@ -29,3 +29,25 @@ title: Conor McAfee | Designer &amp; Front-End Developer
 	</li>
 {% endfor %}
 </ul>
+
+<script src="{{ site.baseurl }}/assets/js/apollo.min.js"></script>
+
+<script>
+	document.getElementById('case-study-btn').addEventListener('click', function (e) {
+		var x = document.querySelectorAll('[data-post="case-study"]');
+			for (var i = 0; i < x.length; i++)
+			apollo.toggleClass(x[i], 'is-hidden is-visible');
+	}, false);
+
+	document.getElementById('journal-btn').addEventListener('click', function (e) {
+		var x = document.querySelectorAll('[data-post="journal"]');
+			for (var i = 0; i < x.length; i++)
+			apollo.toggleClass(x[i], 'is-hidden is-visible');
+	}, false);
+
+	document.getElementById('labs-btn').addEventListener('click', function (e) {
+		var x = document.querySelectorAll('[data-post="labs"]');
+			for (var i = 0; i < x.length; i++)
+			apollo.toggleClass(x[i], 'is-hidden is-visible');
+	}, false);
+</script>

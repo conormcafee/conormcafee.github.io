@@ -1,0 +1,85 @@
+.post-content {
+	display: block;
+	border: 1px solid brand-colour(orange, dark);
+	background-color: brand-colour(white);
+	position: relative;
+	border-radius: 7px;
+	margin-bottom: em(30);
+	padding: em(30);
+
+	@media only screen and (min-width: 667px) {
+		width: 70%;
+		margin: 0 auto;
+	}
+}
+
+.post-content p {
+	@include base;
+	@include font-size(1.2);
+	line-height: em(24);
+	margin-bottom: em(20);
+	color: brand-colour(black);
+}
+
+.post-heading {
+	@include sub-heading;
+	@include font-size(2.0);
+	text-align: center;
+	color: brand-colour(white);
+	line-height: 2.6rem;
+	text-shadow: 0px 3px 1px brand-colour(orange, darker);
+}
+
+.post-meta {
+	@include sub-heading;
+	@include font-size(1.0);
+	text-align: center;
+	color: brand-colour(orange, darker);
+	margin-bottom: em(30);
+	line-height: 1.6rem;
+}
+
+.post-additional {
+	display: block;
+	float: left;
+	border: 1px solid brand-colour(orange, dark);
+	background-color: brand-colour(white);
+	padding: em(30);
+	border-radius: 7px;
+	text-align: center;
+
+	@media only screen and (min-width: 667px) {
+		width: 27.5%;
+	}
+}
+
+.post-additional__image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 75px;
+}
+
+.post-additional__author {
+	@include sub-heading;
+	@include font-size(0.8);
+	color: brand-colour(orange, dark);
+	margin: em(20) 0;
+}
+
+.post-additional__guest {
+	@include font-size(0.8);
+	line-height: 17px;
+	line-height: 1.3rem;
+	color: brand-colour(black);
+
+	&-link {
+		color: brand-colour(orange);
+		border-bottom: 1px dashed brand-colour(orange);
+
+		&:hover {
+			color: brand-colour(orange, darker);
+			border-bottom: 1px dashed brand-colour(orange, darker);
+		}
+	}
+}

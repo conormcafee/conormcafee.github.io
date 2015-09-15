@@ -5,35 +5,35 @@ title: Conor McAfee | Designer &amp; Front-End Developer
 
 <main>
 
-<div class="two-col__wrapper">
+<div class="about">
 
-  <div class="two-col__left">
+  <div class="about__left">
 
-    <div class="two-col__left-image"></div>
+    <div class="about__hero"></div>
 
   </div>
 
-  <div class="two-col__right">
+  <div class="about__right">
 
-    <div class="two-col__right-content">
+    <div class="about__right--content">
 
-      <h1 class="homepage__logo">Conor McAfee</h1>
+      <img src="assets/images/conor-mcafee-logo.svg" alt="Conor McAfee | Designer & Front-End Developer" height="60" width="200" class="logo about__logo">
 
-      <p class="two-col__right-title">Designer <span>&amp;</span> Front-End Developer</p>
+      <p class="about__title">Designer <span>&amp;</span> Front-End Developer</p>
 
-      <p class="two-col__right-text">Hi, I'm a designer &amp; front-end developer from Ballymena, Northern Ireland with 3 years industry experience.  Currently, I am working for dotRetailer in Belfast's Titanic Quarter.</p>
+      <p class="about__text">Hi, I'm a designer &amp; front-end developer from Ballymena, Northern Ireland with 3 years industry experience.  Currently, I am working for dotRetailer in Belfast's Titanic Quarter.</p>
 
-      <p class="two-col__right-text">Be sure to check out my <a href="#" title="#" class="two-col__right-link">Case Studies, Blog &amp; Experiments</a>.  If you wish to learn more about me, keep reading below.  If you wish to contact me, you can do so via <a href="#" title="Tweet me" class="two-col__right-link">@conormcafee</a> on Twitter or via email <a href="#" title="Email me" class="two-col__right-link">hello@conormcafee.co.uk</a>.</p>
+      <p class="about__text">Be sure to check out my <a href="/work/" title="Check out my work: Case Studies | Journal | Labs" class="about__link">work</a>, I have documented case studies &amp; labs to look through as well as blog posts on design &amp; front-end development.  If you wish to learn more about me, keep reading below.  If you wish to contact me, you can do so via <a href="#" title="Tweet me" class="about__link">@conormcafee</a> on Twitter or via email <a href="#" title="Email me" class="about__link">hello@conormcafee.co.uk</a>.</p>
 
-      <p class="two-col__right-text">Focusing mainly on RWD (Responsive Website Design), I have developed a strong knowledge on building websites for not only desktops, but mobiles &amp; tablets too.</p>
+      <p class="about__text">Focusing mainly on RWD (Responsive Website Design), I have developed a strong knowledge on building websites for not only desktops, but mobiles &amp; tablets too.</p>
 
-      <p class="two-col__right-text">A key aspect which is often forgot about regarding RWD is the performance of the websites.  This is an area which I love working on and trying to make the websites as fast and performant as possible.</p>
+      <p class="about__text">A key aspect which is often forgot about regarding RWD is the performance of the websites.  This is an area which I love working on and trying to make the websites as fast and performant as possible.</p>
 
-      <p class="two-col__right-text">I have worked solely, or within a team on projects for:</p>
+      <p class="about__text">I have worked solely, or within a team on projects for:</p>
 
-      <ul class="two-col__right-list">
+      <ul class="about__list">
       {% for client in site.data.clients %}
-        <li class="two-col__right-list-item">{{ client.name }}</li>
+        <li class="about__list-item">{{ client.name }}</li>
       {% endfor %}
       </ul>
 
@@ -45,9 +45,9 @@ title: Conor McAfee | Designer &amp; Front-End Developer
 
 </main>
 
-<div class="two-col__border top"></div>
-<div class="two-col__border left"></div>
-<div class="two-col__border bottom"></div>
-<div class="two-col__border right"></div>
+<div class="page-border page-border--top"></div>
+<div class="page-border page-border--left"></div>
+<div class="page-border page-border--bottom"></div>
+<div class="page-border page-border--right"></div>
 
 <script src="{{ site.baseurl }}/assets/js/main.js"></script>

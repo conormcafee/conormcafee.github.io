@@ -1,4 +1,4 @@
-.two-col__wrapper {
+.about {
 	margin-left: auto;
 	margin-right: auto;
 	background-color: brand-colour(white);
@@ -6,7 +6,7 @@
 	padding: em(10);
 }
 
-.two-col__left {
+.about__left {
 	@media only screen and (max-width: 991px) {
 		height: 140px;
 		display: block;
@@ -29,7 +29,7 @@
 	}
 }
 
-.two-col__right {
+.about__right {
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -43,23 +43,18 @@
 	}
 }
 
-.two-col__right-content {
+.about__right--content {
 	max-width: 600px;
 	margin: 0 auto;
 	color: brand-colour(black);
 }
 
-.homepage__logo {
-	@include heading;
-	@include font-size(2.2);
-	margin-bottom: em(2);
-	text-shadow: 2px 2px 1px brand-colour(blue, lighter);
-	line-height: em(26);
-	color: brand-colour(orange);
-	text-align: center;
+.about__logo {
+	display: block;
+	margin: 0 auto;
 }
 
-.two-col__right-title {
+.about__title {
 	@include sub-heading;
 	text-align: center;
 	@include font-size(1.0);
@@ -79,14 +74,14 @@
 	}
 }
 
-.two-col__right-text  {
+.about__text  {
 	@include base;
 	@include font-size(1.2);
 	line-height: em(24);
 	margin-bottom: em(20);
 }
 
-.two-col__right-link {
+.about__link {
 	display: inline-block;
 	border-bottom: 1px dashed brand-colour(orange);
 	color: brand-colour(orange);
@@ -97,18 +92,18 @@
 	}
 }
 
-.two-col__right--highlight {
+.about__highlight {
 	display: inline-block;
 	background-color: brand-colour(orange);
 	padding: em(5) em(15);
 	color: brand-colour(white);
 }
 
-.two-col__right-list {
+.about__list {
 	margin: em(20) 0;
 }
 
-.two-col__right-list-item {
+.about__list-item {
 	@include base;
 	@include font-size(1.2);
 	display: inline-block;
@@ -132,41 +127,41 @@
 
 // Border 
 
-.two-col__border {
+.page-border {
 	position: fixed;
 	display: block;
 	background-color: brand-colour(orange);
 	z-index: 1;
 
-	&.top {
+	&--top {
 		top: 0;
 		left: 0;
 		right: 0;
 		height: 10px;
-		border-bottom: 2px solid brand-colour(orange, darker);
+		border-bottom: 1px solid brand-colour(orange, darker);
 	}
 
-	&.left {
-		top: 8px;
+	&--left {
+		top: 9px;
 		left: 0;
 		bottom: 0;
 		width: 10px;
-		border-right: 2px solid brand-colour(orange, darker);
+		border-right: 1px solid brand-colour(orange, darker);
 	}
 
-	&.bottom {
+	&--bottom {
 		bottom: 0;
-		left: 8px;
+		left: 9px;
 		right: 0;
 		height: 10px;
-		border-top: 2px solid brand-colour(orange, darker);
+		border-top: 1px solid brand-colour(orange, darker);
 	}
 
-	&.right {
-		top: 8px;
-		bottom: 8px;
+	&--right {
+		top: 9px;
+		bottom: 9px;
 		right: 0;
 		width: 10px;
-		border-left: 2px solid brand-colour(orange, darker);
+		border-left: 1px solid brand-colour(orange, darker);
 	}
 }
