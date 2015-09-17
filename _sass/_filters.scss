@@ -29,8 +29,10 @@
 	}
 }
 
-.filter-list__item:not(:last-child) {
-	margin-right: em(10);
+@media only screen and (min-width: 667px) {
+	.filter-list__item:not(:last-child) {
+		margin-right: em(10);
+	}
 }
 
 .filter-list__item.js-active:before,
