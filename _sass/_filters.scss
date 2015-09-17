@@ -22,67 +22,63 @@
 	position: relative;
 	box-shadow: 0px 2px 1px brand-colour(orange, darker);
 
-	&:before {
-		content: "";
-		display: block;
-		margin: 0 auto em(10) auto;
-	    position: relative;
-    	top: 3px;
-	    height: 18px;
-	    width: 18px;
-	    background-size: contain;
-	}
-}
-
-@media only screen and (min-width: 667px) {
-	.filter-list__item {
+	@media only screen and (min-width: 667px) {
 		width: auto;
 		margin-bottom: 0;
 		padding: em(20) em(50);
-
-		&:before {
-			display: none;
-		}
-
-		&:after {
-			content: "";
-			display: inline-block;
-		    position: relative;
-	    	top: 3px;
-		    height: 18px;
-		    width: 18px;
-		    background-size: contain;
-		    margin-left: em(10);
-		}
-	}
-}
-
-.filter-list__item:before,
-.filter-list__item:after {
-	background-image: url('../assets/images/check.svg');
-}
-
-.filter-list__item:hover {
-	border: 1px solid brand-colour(off);
-
-	&:after {
-		background-image: url('../assets/images/cancel.svg');
-	}
-}
-
-.filter-list__item-inactive:before,
-.filter-list__item-inactive:after {
-	background-image: url('../assets/images/cancel.svg');
-}
-
-.filter-list__item-inactive:hover {
-	border: 1px solid brand-colour(on);
-	
-	&:after {
-		background-image: url('../assets/images/check.svg');
 	}
 }
 
 .filter-list__item:not(:last-child) {
-	//margin-right: em(10);
+	margin-right: em(10);
 }
+
+.filter-list__item.js-active:before,
+.filter-list__item.js-inactive:before {
+	content: "";
+	display: block;
+	margin: 0 auto em(10) auto;
+	position: relative;
+    top: 3px;
+	height: 18px;
+	width: 18px;
+	background-size: contain;
+
+	@media only screen and (min-width: 667px) {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 667px) {
+	.filter-list__item.js-active:after,
+	.filter-list__item.js-inactive:after {
+		content: "";
+		display: inline-block;
+		position: relative;
+		top: 3px;
+		height: 18px;
+		width: 18px;
+		background-size: contain;
+		margin-left: em(10);
+	}
+}
+
+.filter-list__item.js-active:before,
+.filter-list__item.js-active:after {
+	background-image: url('../assets/images/check.svg');
+}
+
+/*.filter-list__item.js-active:hover:before,
+.filter-list__item.js-active:hover:after {
+	background-image: url('../assets/images/cancel.svg');
+}*/
+
+.filter-list__item.js-inactive:before,
+.filter-list__item.js-inactive:after {
+	background-image: url('../assets/images/cancel.svg');
+}
+
+/*.filter-list__item.js-inactive:hover:before,
+.filter-list__item.js-inactive:hover:after {
+	background-image: url('../assets/images/check.svg');
+}*/

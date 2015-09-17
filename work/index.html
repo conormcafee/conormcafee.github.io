@@ -5,19 +5,15 @@ title: Conor McAfee | Designer &amp; Front-End Developer
 
 <h1 class="archive-heading">Case Studies, Journals &amp; Experiments</h1>
 
-<!--<p class="filter-list__text">Filter by:</p>-->
-
 <ul class="filter-list">
-	<li class="filter-list__item" id="case-study-btn">Case Studies</li>
-	<li class="filter-list__item" id="journal-btn">Journal</li>
-	<li class="filter-list__item" id="labs-btn">Labs</li>
+	<li class="filter-list__item filter-list--case-study js-active" id="case-study-btn">Case Studies</li>
+	<li class="filter-list__item filter-list--journal js-active" id="journal-btn">Journal</li>
+	<li class="filter-list__item filter-list--labs js-active" id="labs-btn">Labs</li>
 </ul>
 
 <ul class="archive-list">
 {% for post in site.posts %}
 	<li class="archive-list__item {{ post.type }} is-visible" data-post="{{ post.type }}">
-
-		<!--<span class="archive-list__image" style="background-image: url('{{ site.baseurl }}/assets/images/conor-mcafee.jpg');"></span>-->
 
 		<span class="archive-list__image" style="background-image: url('{{ site.baseurl }}/assets/images/{{ post.thumbnail-desktop }}');"></span>
 
@@ -31,23 +27,4 @@ title: Conor McAfee | Designer &amp; Front-End Developer
 </ul>
 
 <script src="{{ site.baseurl }}/assets/js/apollo.min.js"></script>
-
-<script>
-	document.getElementById('case-study-btn').addEventListener('click', function (e) {
-		var x = document.querySelectorAll('[data-post="case-study"]');
-			for (var i = 0; i < x.length; i++)
-			apollo.toggleClass(x[i], 'is-hidden is-visible');
-	}, false);
-
-	document.getElementById('journal-btn').addEventListener('click', function (e) {
-		var x = document.querySelectorAll('[data-post="journal"]');
-			for (var i = 0; i < x.length; i++)
-			apollo.toggleClass(x[i], 'is-hidden is-visible');
-	}, false);
-
-	document.getElementById('labs-btn').addEventListener('click', function (e) {
-		var x = document.querySelectorAll('[data-post="labs"]');
-			for (var i = 0; i < x.length; i++)
-			apollo.toggleClass(x[i], 'is-hidden is-visible');
-	}, false);
-</script>
+<script src="{{ site.baseurl }}/assets/js/filter.js"></script>
