@@ -1,13 +1,21 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2015-08-24 20:18:41
+title: Journal
 categories: journal
-type: "journal"
+type: journal
+thumbnail-desktop: journal/sass-map-thumbnail.jpg
+author: Conor McAfee
 ---
+
+{::nomarkdown}
+<img src="/assets/images/case-studies/nobel-cafe/nobel-header.jpg" title="Nobel Cafe Case Study" alt="Photo of Nobel Cafe, Content below is my work for Nobel" />
+{:/}
+
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+![Nobel Cafe Case Study](/assets/images/nobel-post.jpg)
 
 Jekyll also offers powerful support for code snippets:
 

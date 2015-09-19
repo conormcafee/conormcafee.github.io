@@ -26,11 +26,7 @@
 .archive-list__title,
 .archive-list__date {
 	display: block;
-	text-align: left;
-
-	@media only screen and (min-width: 667px) {
-		text-align: center;
-	}
+	text-align: center;
 }
 
 .archive-list__item.is-visible {
@@ -51,19 +47,6 @@
     animation-fill-mode: forwards;
 }
 
-@media only screen and (max-width: 666px) {
-	.archive-list__item:before {
-		content: "";
-		display: block;
-		height: 15px;
-		width: 15px;
-		border-radius: 15px;
-		position: absolute;
-		top: em(20);
-		right: em(20);
-	}
-}
-
 .archive-list__item {
 	display: block;
 	float: left;
@@ -71,24 +54,21 @@
 	position: relative;
 	background-color: brand-colour(white);
 	border: 1px solid brand-colour(orange, dark);
-	padding: em(20);
 	border-radius: 7px;
-	
-	@media only screen and (min-width: 667px) {
-		padding: 0;
-	}
 }
 
-@media only screen and (min-width: 667px) {
-	.archive-list__item:after {
-		content: "";
-		display: block;
-		position: absolute;
-		width: 10px;
-		height: 10px;
-		border-radius: 10px;
-		left: em(10);
-		bottom: em(10);
+@media only screen and (min-width: 500px) and (max-width: 666px) {
+	.archive-list__item {
+		width: 47.5%;
+		margin-right: 5%;
+
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+
+		&:nth-child(2n+1) {
+			clear: left;
+		}
 	}
 }
 
@@ -121,35 +101,37 @@
 		}
 	}
 }
-@media only screen and (min-width: 667px) {
-	.archive-list__image {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 150px;
-		float: none;
-		margin: 0 auto;
-		background-position: center center;
-		background-size: cover;
-		background-repeat: no-repeat;
-		border-top-left-radius: 4px;
-		border-top-right-radius: 4px;
 
-		&:after {
-			content: "";
-			display: block;
-			position: absolute;
-			bottom: 0;
-			height: 30px;
-			width: 100%;	
-		}
+.archive-list__header-image {
+	display: block;
+	position: relative;
+	width: 100%;
+	background-color: brand-colour(white);
+
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0;
+		height: 31px;
+		width: 100%;	
 	}
+}
+
+.archive-list__image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	height: auto;
+	//padding-top: em(50);
+	padding-bottom: em(20);
 }
 
 .archive-list__title {
 	@include sub-heading;
 	@include font-size(1.0);
-	color: brand-colour(black);
+	color: brand-colour(white);
 	line-height: em(24);
 	overflow: hidden;
 	white-space: nowrap;
@@ -169,58 +151,26 @@
 
 .archive-list__date {
 	@include font-size(0.8);
-	color: brand-colour(grey, darker);
+	margin-bottom: em(20);
 }
 
-.archive-list__button {
-	display: block;
-	float: left;
-	width: 100%;
-	@include sub-heading;
-	@include font-size(0.8);
-	padding: em(10);
-	margin-top: em(10);
-	text-align: center;
+// Colour Maps
 
-	@media only screen and (min-width: 667px) {
-		text-align: right;
+@each $selector, $value in $post-colours {
+	.archive-list__item[data-post="#{$selector}"] .archive-list__header-image:after {
+  		background-image: url('../assets/images/archive/waves-#{post-colour($selector, svg)}.svg');
+  	}
+
+	.archive-list__item[data-post="#{$selector}"] {
+		background-color: post-colour($selector, light);
 	}
-}
 
-$post-colour-map: (
-    journal: brand-colour(orange),
-    case-study: brand-colour(blue),
-    labs: brand-colour(green)
-);
-
-@each $selector, $value in $post-colour-map {
-
-	@media only screen and (max-width: 666px) {
-		.archive-list__item[data-post="#{$selector}"]:before {
-			background-color: $value;
-		}
+	.archive-list__item[data-post="#{$selector}"] .archive-list__title:hover,
+	.archive-list__item[data-post="#{$selector}"] .archive-list__date {
+		color: post-colour($selector, hover);
 	}
-  .archive-list__item[data-post="#{$selector}"]:after {
-  	background-color: $value;
-  }
 
-  .archive-list__item[data-post="#{$selector}"] .archive-list__title:hover {
-  	color: $value;
-  }
-
-  .archive-list__item[data-post="#{$selector}"] .archive-list__button {
-  	color: $value;
-  }
-}
-
-$post-svg-map: (
-    journal: journal,
-    case-study: case-study,
-    labs: labs
-);
-
-@each $selector, $value in $post-svg-map {
-  .archive-list__item[data-post="#{$selector}"] .archive-list__image:after {
-  	background-image: url('../assets/images/waves-#{$value}.svg');
-  }
+	.archive-list__item[data-post="#{$selector}"] .archive-list__button {
+		background-color: post-colour($selector);
+	}
 }

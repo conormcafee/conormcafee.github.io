@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  "conormcafee.co.uk"
+title:  "2015 Redesign"
 date:   2015-08-24 20:18:41
 categories: case-studies
 type: "case-study"
+thumbnail-desktop: case-studies/conormcafee/conor-mcafee-logo.jpg
 ---
 
 {::nomarkdown}

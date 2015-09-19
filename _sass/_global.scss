@@ -11,8 +11,7 @@ html {
 body {
 	position: relative;
 	@include base;
-	background-color: brand-colour(orange);
-	background-repeat: repeat-x;
+	@include linear-gradient(brand-colour(orange), brand-colour(orange, dark));
 }
 
 .wrapper {
@@ -85,4 +84,12 @@ a {
 			margin-right: 0;
 		}
 	}
+}
+
+// Footer
+
+footer {
+	clear: both;
+	text-align: center;
+	margin: em(30) 0;
 }

@@ -3,7 +3,8 @@
 $grey: #f6f6f6;
 $orange: #EF4640;
 $blue: #6494AA;
-$green: #35605A;
+$green: #70C1B3;
+$purple: #67597A;
 $white: #ffffff;
 $black: #525252;
 
@@ -45,6 +46,14 @@ $brand-colours: (
         darker: darken($green, 20%)
     ),
 
+    purple: (
+        base:   $purple,
+        lighter: lighten($purple, 35%),
+        light:  lighten($purple, 10%),
+        dark:   darken($purple, 10%),
+        darker: darken($purple, 20%)
+    ),
+
     on: (
         base:   $on,
         lighter: lighten($on, 35%),
@@ -79,4 +88,40 @@ $brand-colours: (
 }
 @function get-brand-colour($brand-colour, $tone: 'base') {
     @return map-get(map-get($brand-colours, $brand-colour), $tone);
+}
+
+
+
+
+// Journal, Case Studies & Labs Map 
+
+$post-colours: (
+    case-study: (
+        base:   $blue,
+        light: lighten($blue, 10%),
+        hover: darken($blue, 20%),
+        svg:  case-study
+    ),
+
+    journal: (
+        base: $purple,
+        light: lighten($purple, 10%),
+        hover: darken($purple, 20%),
+        svg: journal
+    ),
+
+    labs: (
+        base: $green,
+        light: lighten($green, 10%),
+        hover: darken($green, 20%),
+        svg: labs
+    )
+);
+
+@function post-colour($post-colour, $tone: 'base') {
+    @return map-get(map-get($post-colours, $post-colour), $tone);
+}
+
+@function get-post-colour($post-colour, $tone: 'base') {
+    @return map-get(map-get($post-colours, $post-colour), $tone);
 }
