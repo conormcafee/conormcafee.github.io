@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Journal
-categories: journal
-type: journal
-thumbnail-desktop: journal/sass-map-thumbnail.jpg
+title: Nobel Cafe
+date:   2015-09-07 20:00
+categories: case-studies
+type: case-study
+thumbnail-desktop: case-studies/nobel-cafe/nobel-logo.jpg
 author: Conor McAfee
 ---
 

@@ -1,21 +1,19 @@
 ---
 layout: post
-title: Nobel Cafe
+title:  "2015 Redesign"
+date:   2015-09-14 20:00:00
 categories: case-studies
-type: case-study
-thumbnail-desktop: case-studies/nobel-cafe/nobel-logo.jpg
-author: Conor McAfee
+type: "case-study"
+thumbnail-desktop: case-studies/conormcafee/conor-mcafee-logo.jpg
 ---
 
 {::nomarkdown}
-<img src="/assets/images/case-studies/nobel-cafe/nobel-header.jpg" title="Nobel Cafe Case Study" alt="Photo of Nobel Cafe, Content below is my work for Nobel" />
+<img src="/assets/images/case-studies/conormcafee/conormcafee-header.jpg" title="Conor McAfee" alt="Photo of Conor McAfee Photoshoot, Content below is my work on this website" />
 {:/}
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-![Nobel Cafe Case Study](/assets/images/nobel-post.jpg)
 
 Jekyll also offers powerful support for code snippets:
 
