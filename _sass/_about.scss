@@ -92,13 +92,6 @@
 	}
 }
 
-.about__highlight {
-	display: inline-block;
-	background-color: brand-colour(orange);
-	padding: em(5) em(15);
-	color: brand-colour(white);
-}
-
 .about__list {
 	margin: em(20) 0;
 }
@@ -120,6 +113,13 @@
 	&:last-child:after {
 		display: none;
 	}
+}
+
+.about__hr {
+	border: 0;
+	height: 1px;
+	background-color: brand-colour(grey, dark);
+	margin-bottom: em(20);
 }
 
 

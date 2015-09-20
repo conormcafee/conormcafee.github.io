@@ -19,13 +19,21 @@ title: Conor McAfee | Designer &amp; Front-End Developer
 
       <p class="about__text">Hi, I'm a designer &amp; front-end developer from Ballymena, Northern Ireland with 3 years industry experience.  Currently, I am working for dotRetailer in Belfast's Titanic Quarter.</p>
 
-      <p class="about__text">Be sure to check out my <a href="/work/" title="Check out my work: Case Studies &amp; Journals" class="about__link">work</a>, I have documented case studies to look through as well as journals on design &amp; front-end development.  If you wish to learn more about me, keep reading below.  If you wish to contact me, you can do so via <a href="http://www.twitter.com/conormcafee" title="Tweet me" class="about__link">@conormcafee</a> on Twitter or via email <a href="mailto:hello@conormcafee.co.uk" title="Email me" class="about__link">hello@conormcafee.co.uk</a>.</p>
+      <p class="about__text">Be sure to check out my <a href="/work/" title="Check out my work: Case Studies &amp; Journals" class="about__link">work</a>, I have documented case studies to look through as well as journals on design &amp; front-end development.  If you wish to contact me, you can do so via <a href="http://www.twitter.com/conormcafee" title="Tweet me" class="about__link" target="_blank">@conormcafee</a> on Twitter or via email <a href="mailto:hello@conormcafee.co.uk" title="Email me" class="about__link">hello@conormcafee.co.uk</a>.</p>
 
-      <p class="about__text">Focusing on RWD (Responsive Web Design), I have developed a strong knowledge on building websites for not only desktops, but mobiles &amp; tablets too.</p>
+      <p class="about__text">I have experience in working with:</p>
 
-      <p class="about__text">A key aspect which is often forgot about regarding RWD is the performance of the websites.  This is an area which I love working on and trying to make the websites as fast and performant as possible.</p>
+      <ul class="about__list">
+        {% for skill in site.data.skills %}
+        <li class="about__list-item">{{ skill.name }}</li>
+        {% endfor %}
+      </ul>
 
-      <p class="about__text">I have worked solely, or within a team on projects for:</p>
+      <p class="about__text">My primary focus is on front-end development.  To me, this is the most important part of the web development process as this is what your users will interact with the most.  I build well executed websites, that not only looks great on all devices - but also perform great.  Living in Northern Ireland, we're not blessed with 4G connections in every town or even good broadband connections - because of this I aim to optimise my websites as best I can, so that they load as quick as possible when the user is not on a great Internet connection.</p> 
+
+      <hr class="about__hr">
+
+      <p class="about__text">You may have seen some of the work that I have worked on solely, or contributed to in a team around the web:</p>
 
       <ul class="about__list">
       {% for client in site.data.clients %}

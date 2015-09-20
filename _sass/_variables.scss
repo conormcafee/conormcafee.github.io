@@ -104,16 +104,16 @@ $post-colours: (
     ),
 
     journal: (
-        base: $purple,
-        light: lighten($purple, 10%),
-        hover: darken($purple, 20%),
+        base: $green,
+        light: lighten($green, 10%),
+        hover: darken($green, 20%),
         svg: journal
     ),
 
     labs: (
-        base: $green,
-        light: lighten($green, 10%),
-        hover: darken($green, 20%),
+        base: $purple,
+        light: lighten($purple, 10%),
+        hover: darken($purple, 20%),
         svg: labs
     )
 );

@@ -8,14 +8,13 @@ title: Conor McAfee | Designer &amp; Front-End Developer
 <ul class="archive-list">
 {% for post in site.categories.journal %}
 	<li class="archive-list__item {{ post.type }} is-visible" data-post="{{ post.type }}">
-
-		<span class="archive-list__image" style="background-image: url('{{ site.baseurl }}/assets/images/conor-mcafee.jpg');"></span>
+		<figure class="archive-list__header-image">
+			<img src="{{ site.baseurl }}/assets/images/{{ post.thumbnail-desktop }}" class="archive-list__image" title="{{ post.title }}" />
+		</figure>
 
 		<a href="{{ post.url | prepend: site.baseurl }}" class="archive-list__title">{{ post.title }}</a>
 		
 		<span class="archive-list__date">{{ post.date | date: "%b %-d, %Y" }}</span>
-		
-		<a href="{{ post.url | prepend: site.baseurl }}" title="Title" class="archive-list__button">Read Post</a>
 	</li>
 {% endfor %}
 </ul>

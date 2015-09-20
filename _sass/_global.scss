@@ -91,5 +91,29 @@ a {
 footer {
 	clear: both;
 	text-align: center;
-	margin: em(30) 0;
+	margin: em(40) 0 em(10) 0;
+}
+
+.footer__text {
+	@include sub-heading;
+	@include font-size(0.8);
+	line-height: em(25);
+	color: brand-colour(orange);
+	margin-bottom: em(5);
+}
+
+.footer__link {
+	border-bottom: 1px dashed brand-colour(orange);
+}
+
+.m-top .footer__text {
+	color: brand-colour(white);
+}
+
+.m-top .footer__link {
+	border-bottom: 1px dashed brand-colour(white);
+}
+
+.follow-on-twitter {
+	margin-top: em(20);
 }
