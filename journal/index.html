@@ -3,18 +3,18 @@ layout: archive
 title: Conor McAfee | Designer &amp; Front-End Developer
 ---
 
-<h1 class="archive-heading">Journal</h1>
+<h1 class="archive__heading">Journal</h1>
 
-<ul class="archive-list">
+<ul class="archive__list">
 {% for post in site.categories.journal %}
-	<li class="archive-list__item {{ post.type }} is-visible" data-post="{{ post.type }}">
-		<figure class="archive-list__header-image">
-			<img src="{{ site.baseurl }}/assets/images/{{ post.thumbnail-desktop }}" class="archive-list__image" title="{{ post.title }}" />
+	<li class="archive__list-item {{ post.type }} is-visible" data-post="{{ post.type }}">
+		<figure class="archive__image-wrap">
+			<img src="{{ site.baseurl }}/assets/images/{{ post.thumbnail-desktop }}" class="archive__image" title="{{ post.title }}" />
 		</figure>
 
-		<a href="{{ post.url | prepend: site.baseurl }}" class="archive-list__title">{{ post.title }}</a>
+		<a href="{{ post.url | prepend: site.baseurl }}" class="archive__title">{{ post.title }}</a>
 		
-		<span class="archive-list__date">{{ post.date | date: "%b %-d, %Y" }}</span>
+		<span class="archive__date">{{ post.date | date: "%b %-d, %Y" }}</span>
 	</li>
 {% endfor %}
 </ul>

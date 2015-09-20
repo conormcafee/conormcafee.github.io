@@ -1,16 +1,9 @@
-.filter-list__text {
-	@include base;
-	color: brand-colour(grey, darker);
-	text-align: center;
-	margin-bottom: em(10);
-}
-
-.filter-list {
+.filter__list {
 	text-align: center;
 	margin-bottom: em(40);
 }
 
-.filter-list__item {
+.filter__list-item {
 	@include sub-heading;
 	width: 32%;
 	display: inline-block;
@@ -30,13 +23,13 @@
 }
 
 @media only screen and (min-width: 667px) {
-	.filter-list__item:not(:last-child) {
+	.filter__list-item:not(:last-child) {
 		margin-right: em(10);
 	}
 }
 
-.filter-list__item.js-active:before,
-.filter-list__item.js-inactive:before {
+.filter__list-item.js-active:before,
+.filter__list-item.js-inactive:before {
 	content: "";
 	display: block;
 	margin: 0 auto em(10) auto;
@@ -52,8 +45,8 @@
 }
 
 @media only screen and (min-width: 667px) {
-	.filter-list__item.js-active:after,
-	.filter-list__item.js-inactive:after {
+	.filter__list-item.js-active:after,
+	.filter__list-item.js-inactive:after {
 		content: "";
 		display: inline-block;
 		position: relative;
@@ -65,22 +58,12 @@
 	}
 }
 
-.filter-list__item.js-active:before,
-.filter-list__item.js-active:after {
+.filter__list-item.js-active:before,
+.filter__list-item.js-active:after {
 	background-image: url('../assets/images/check.svg');
 }
 
-/*.filter-list__item.js-active:hover:before,
-.filter-list__item.js-active:hover:after {
-	background-image: url('../assets/images/cancel.svg');
-}*/
-
-.filter-list__item.js-inactive:before,
-.filter-list__item.js-inactive:after {
+.filter__list-item.js-inactive:before,
+.filter__list-item.js-inactive:after {
 	background-image: url('../assets/images/cancel.svg');
 }
-
-/*.filter-list__item.js-inactive:hover:before,
-.filter-list__item.js-inactive:hover:after {
-	background-image: url('../assets/images/check.svg');
-}*/

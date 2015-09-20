@@ -1,11 +1,11 @@
 // Archive 
 
-.archive-middle {
+.archive__content {
 	display: block;
 	overflow: hidden;
 }
 
-.archive-heading {
+.archive__heading {
 	@include sub-heading;
 	@include font-size(2.0);
 	text-align: center;
@@ -15,30 +15,26 @@
 	text-shadow: 0px 3px 1px brand-colour(orange, darker);
 }
 
-.archive-list {
+.archive__list {
 	border-top: 1px solid brand-colour(grey, dark);
 	padding-top: em(40);
 	overflow: hidden;
-
-	&__item:not(:last-child) {
-		margin-bottom: em(40);
-	}
 }
 
-.archive-list__title,
-.archive-list__date {
+.archive__title,
+.archive__date {
 	display: block;
 	text-align: center;
 }
 
-.archive-list__item.is-visible {
+.archive__list-item.is-visible {
 	-webkit-animation: fade-in 1s;
    	-moz-animation: fade-in 1s; 
    	-o-animation: fade-in 1s;
     animation: fade-in 1s;
 }
 
-.archive-list__item.is-hidden {
+.archive__list-item.is-hidden {
 	-webkit-animation: fade-out 1s;
    	-moz-animation: fade-out 1s; 
    	-o-animation: fade-out 1s;
@@ -49,7 +45,7 @@
     animation-fill-mode: forwards;
 }
 
-.archive-list__item {
+.archive__list-item {
 	display: block;
 	float: left;
 	width: 100%;
@@ -57,10 +53,14 @@
 	background-color: brand-colour(white);
 	border: 1px solid brand-colour(orange, dark);
 	border-radius: 7px;
+
+	&:not(:last-child) {
+		margin-bottom: em(40);
+	}
 }
 
 @media only screen and (min-width: 500px) and (max-width: 666px) {
-	.archive-list__item {
+	.archive__list-item {
 		width: 47.5%;
 		margin-right: 5%;
 
@@ -75,7 +75,7 @@
 }
 
 @media only screen and (min-width: 667px) and (max-width: 991px) {
-	.archive-list__item {
+	.archive__list-item {
 		width: 30%;
 		margin-right: 5%;
 
@@ -90,7 +90,7 @@
 }
 
 @media only screen and (min-width: 992px) {
-	.archive-list__item {
+	.archive__list-item {
 		width: 21.25%;
 		margin-right: 5%;
 
@@ -104,7 +104,7 @@
 	}
 }
 
-.archive-list__header-image {
+.archive__image-wrap {
 	display: block;
 	position: relative;
 	width: 100%;
@@ -120,17 +120,16 @@
 	}
 }
 
-.archive-list__image {
+.archive__image {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 100%;
 	height: auto;
-	//padding-top: em(50);
 	padding-bottom: em(20);
 }
 
-.archive-list__title {
+.archive__title {
 	@include sub-heading;
 	@include font-size(1.0);
 	color: brand-colour(white);
@@ -140,8 +139,8 @@
 	text-overflow: ellipsis;
 }
 
-.archive-list__title,
-.archive-list__date {
+.archive__title,
+.archive__date {
 	display: block;
 	padding: 0 em(10) em(10) em(10);
 
@@ -151,7 +150,7 @@
 	}
 }
 
-.archive-list__date {
+.archive__date {
 	@include font-size(0.8);
 	margin-bottom: em(20);
 }
@@ -159,20 +158,16 @@
 // Colour Maps
 
 @each $selector, $value in $post-colours {
-	.archive-list__item[data-post="#{$selector}"] .archive-list__header-image:after {
+	.archive__list-item[data-post="#{$selector}"] .archive__image-wrap:after {
   		background-image: url('../assets/images/archive/waves-#{post-colour($selector, svg)}.svg');
   	}
 
-	.archive-list__item[data-post="#{$selector}"] {
+	.archive__list-item[data-post="#{$selector}"] {
 		background-color: post-colour($selector, light);
 	}
 
-	.archive-list__item[data-post="#{$selector}"] .archive-list__title:hover,
-	.archive-list__item[data-post="#{$selector}"] .archive-list__date {
+	.archive__list-item[data-post="#{$selector}"] .archive__title:hover,
+	.archive__list-item[data-post="#{$selector}"] .archive__date {
 		color: post-colour($selector, hover);
-	}
-
-	.archive-list__item[data-post="#{$selector}"] .archive-list__button {
-		background-color: post-colour($selector);
 	}
 }
