@@ -125,3 +125,31 @@ $post-colours: (
 @function get-post-colour($post-colour, $tone: 'base') {
     @return map-get(map-get($post-colours, $post-colour), $tone);
 }
+
+
+
+
+// Syntax Colours
+$navy: #2D3047;
+
+// Brand Colour Palette
+$syntax-colours: (
+    navy: (
+        base:   $navy,
+        lighter: lighten($navy, 20%),
+        light:  lighten($navy, 10%),
+        dark:   darken($navy, 10%),
+        darker: darken($navy, 20%)
+    ),
+    
+    white: (
+        base: $white
+    )
+);
+ 
+@function syntax-colour($syntax-colour, $tone: 'base') {
+    @return map-get(map-get($syntax-colours, $syntax-colour), $tone);
+}
+@function get-syntax-colour($syntax-colour, $tone: 'base') {
+    @return map-get(map-get($syntax-colours, $syntax-colour), $tone);
+}

@@ -21,11 +21,27 @@ layout: default
 		{{ content }}
 
 	</div>
-
+	
 	{% include footer.html %}
 
 	</div>
 
 </main>
 
-<script src="{{ site.baseurl }}/assets/js/main.js"></script>
+<script src="{{ site.baseurl }}/assets/js/main.min.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ page.title }}",
+  "creator": "{{ page.author }}",
+  "url": "{{ site.url }}{{ page.url }}",
+  "image": [
+    "{{ site.url }}/assets/images/{{ page.thumbnail-desktop }}"
+  ],
+  "datePublished": "{{ page.date }}",
+  "description": "{{ page.description }}",
+  "articleBody": "{{ content | strip_html }}"
+}
+</script>
+
