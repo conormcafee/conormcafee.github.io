@@ -30,6 +30,16 @@
 	}
 }
 
+.post__content h2 {
+	@include base;
+	@include font-size(1.6);
+	line-height: em(24);
+	margin-bottom: em(20);
+	color: brand-colour(blue);
+	padding: 0 em(25);
+	text-align: center;
+}
+
 .post__content p {
 	@include base;
 	@include font-size(1.2);
@@ -37,6 +47,32 @@
 	margin-bottom: em(20);
 	color: brand-colour(black);
 	padding: 0 em(30);
+}
+
+.post__content ul {
+	margin-bottom: em(15);
+	list-style: disc;
+	list-style-position: inside;
+}
+
+.post__content li {
+	@include base;
+	@include font-size(1.2);
+	line-height: em(24);
+	margin-bottom: em(5);
+	color: brand-colour(black);
+	padding: 0 em(30);
+	text-indent: em(20);
+}
+
+.post__content a {
+	color: brand-colour(blue);
+	border-bottom: 1px dashed brand-colour(blue);
+
+	&:hover {
+		color: brand-colour(orange);
+		border-bottom: 1px dashed brand-colour(orange);
+	}
 }
 
 .post__content img {
