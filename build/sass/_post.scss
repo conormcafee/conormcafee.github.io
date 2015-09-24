@@ -1,0 +1,83 @@
+.post__heading {
+	@include sub-heading;
+	@include font-size(2.0);
+	text-align: center;
+	color: brand-colour(white);
+	line-height: 2.6rem;
+	text-shadow: 0px 3px 1px brand-colour(orange, darker);
+}
+
+.post__date {
+	@include sub-heading;
+	@include font-size(1.0);
+	text-align: center;
+	color: brand-colour(orange, darker);
+	margin-bottom: em(30);
+	line-height: 1.6rem;
+}
+
+.post__content {
+	display: block;
+	border: 1px solid brand-colour(orange, dark);
+	background-color: brand-colour(white);
+	position: relative;
+	border-radius: 7px;
+	margin-bottom: em(30);
+
+	@media only screen and (min-width: 667px) {
+		width: 70%;
+		margin: 0 auto;
+	}
+}
+
+.post__content h2 {
+	@include base;
+	@include font-size(1.6);
+	line-height: em(24);
+	margin-bottom: em(20);
+	color: brand-colour(blue);
+	padding: 0 em(25);
+	text-align: center;
+}
+
+.post__content p {
+	@include base;
+	@include font-size(1.2);
+	line-height: em(24);
+	margin-bottom: em(20);
+	color: brand-colour(black);
+	padding: 0 em(30);
+}
+
+.post__content ul {
+	margin-bottom: em(15);
+	list-style: disc;
+	list-style-position: inside;
+}
+
+.post__content li {
+	@include base;
+	@include font-size(1.2);
+	line-height: em(24);
+	margin-bottom: em(5);
+	color: brand-colour(black);
+	padding: 0 em(30);
+	text-indent: em(20);
+}
+
+.post__content a {
+	color: brand-colour(blue);
+	border-bottom: 1px dashed brand-colour(blue);
+
+	&:hover {
+		color: brand-colour(orange);
+		border-bottom: 1px dashed brand-colour(orange);
+	}
+}
+
+.post__content img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin-bottom: em(20);
+}

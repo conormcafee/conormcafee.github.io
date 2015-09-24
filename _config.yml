@@ -10,15 +10,7 @@ github_username:  conormcafee
 
 # Build settings
 markdown: kramdown
-
-# Permalinks
-
 permalink: /:categories/:title.html
-
-# Custom
-
-#type: "string"
-#image: "string"
-
 sass:
     style: compressed
+exclude: [node_modules]
