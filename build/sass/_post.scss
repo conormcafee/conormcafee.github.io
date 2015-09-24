@@ -75,9 +75,17 @@
 	}
 }
 
-.post__content img {
+.post__header-image {
 	display: block;
 	max-width: 100%;
 	height: auto;
 	margin-bottom: em(20);
+	border: none;
+}
+
+.post__content img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin-bottom: em(30);
 }

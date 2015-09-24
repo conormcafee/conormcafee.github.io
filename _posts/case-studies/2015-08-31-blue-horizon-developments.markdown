@@ -10,7 +10,7 @@ author: Conor McAfee
 ---
 
 {::nomarkdown}
-<img src="/assets/images/case-studies/blue-horizon-developments/bhd-header.jpg" title="Blue Horizon Developments Case Study" alt="Photo of Blue Horizon Developments Site" />
+<img src="/assets/images/case-studies/blue-horizon-developments/bhd-header.jpg" title="Blue Horizon Developments Case Study" alt="Photo of Blue Horizon Developments Site" class="post__header-image" />
 {:/}
 
 ## The Brief
@@ -44,11 +44,15 @@ After taking the decision to not allow text on the carousel, I felt it was impor
 
 In the image below, you can see the UI of the 4 module section which Caroline is able to edit as and when she needs to.
 
-![Blue Horizon Developments - Homepage UI]({{ site.url }}/assets/images/case-studies/blue-horizon-developments/bhd-homepage-ui.jpg)
+{::nomarkdown}
+<img src="/assets/images/case-studies/blue-horizon-developments/bhd-homepage-ui.jpg" title="Blue Horizon Developments - Homepage UI" alt="Photo of Blue Horizon Developments - Homepage UI" class="post__image"/>
+{:/}
 
 The next stage was to look at designing the UI for the developments page.  It had been requested that the design would be familiar to the users, so after some research looking at competitors and other property websites I came up with following.
 
-![Blue Horizon Developments - Development UI]({{ site.url }}/assets/images/case-studies/blue-horizon-developments/bhd-development-ui.jpg)
+{::nomarkdown}
+<img src="/assets/images/case-studies/blue-horizon-developments/bhd-developments-ui.png" title="Blue Horizon Developments - Development UI" alt="Photo of Blue Horizon Developments - Development UI" class="post__image"/>
+{:/}
 
 This worked well as I felt it would be very familiar to users in the property market, and it would’t need to much thought from them in terms of where to go next.  Another strong point about this design, was that I felt this would be a very easy design to build ‘Mobile First’.
 

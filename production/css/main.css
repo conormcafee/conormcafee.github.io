@@ -314,6 +314,7 @@ header {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    background-color: #ffffff;
     background-image: url("../../assets/images/conor-mcafee.jpg");
   }
 }
@@ -714,11 +715,19 @@ header {
   border-bottom: 1px dashed #EF4640;
 }
 
-.post__content img {
+.post__header-image {
   display: block;
   max-width: 100%;
   height: auto;
   margin-bottom: 1.25em;
+  border: none;
+}
+
+.post__content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1.875em;
 }
 
 .filter__list {
