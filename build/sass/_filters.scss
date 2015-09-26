@@ -60,10 +60,10 @@
 
 .filter__list-item.js-active:before,
 .filter__list-item.js-active:after {
-	background-image: url('../assets/images/check.svg');
+	background-image: url('../../assets/images/check.svg');
 }
 
 .filter__list-item.js-inactive:before,
 .filter__list-item.js-inactive:after {
-	background-image: url('../assets/images/cancel.svg');
+	background-image: url('../../assets/images/cancel.svg');
 }

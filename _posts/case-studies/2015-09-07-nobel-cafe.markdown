@@ -1,35 +1,39 @@
 ---
 layout: post
-title: Nobel Cafe
+title:  Nobel Cafe
+description: Nobel Cafe is an award winning contemporary cafe/restaurant in Ballymena, Co. Antrim.  Nobel approached me to redesign their existing website to bring it more in line with the interior changes to their premises. 
 date:   2015-09-07 20:00
 categories: case-studies
 type: case-study
-thumbnail-desktop: case-studies/nobel-cafe/nobel-logo.jpg
+thumbnail: case-studies/nobel-cafe/nobel-logo.jpg
+header: case-studies/nobel-cafe/nobel-header.jpg
 author: Conor McAfee
 ---
 
-{::nomarkdown}
-<img src="/assets/images/case-studies/nobel-cafe/nobel-header.jpg" title="Nobel Cafe Case Study" alt="Photo of Nobel Cafe, Content below is my work for Nobel" />
-{:/}
+Nobel Cafe are an awarding winning Ballymena based cafe/restaurant that I have worked with on numerous occasions over the past number of years.  The majority of work that I took on for Nobel was print based (menu design, posters etc).
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+In December 2014 I was approached about taking on the task of redesigning and developing their website.  At the time, it was a very dated design and they also had no way of updating the content on the site.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+## The Brief
 
-![Nobel Cafe Case Study](/assets/images/nobel-post.jpg)
+The Nobel Cafe premises underwent a face lift in October 2014, so they felt this would be a good time to get the ball rolling on a new website.  In terms of a brief as such, everything was left entirely to me use my professional judgement, so long as the following were accounted for:
 
-Jekyll also offers powerful support for code snippets:
+- Modern design to reflect the new premises
+- Online Menus
+- Ability for customers to submit reviews
+- Display reviews
+- CMS integration
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+Receiving a brief like this was only possible because I know people at Nobel Cafe with working with them previously - normally I would expect a more detailed breakdown with what is required in a project.
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+## The Solution
 
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
+My main goals when starting this website was to come up with a modern design and to make it a really fast site.  When trying to think of scenario’s as to why users would be on a cafe’s website, I kept coming back to the same one.  To check the menu.    
+
+Straight away it was in my head that the menu I create for Nobel Cafe, has to be rendered with HTML & CSS - unlike many cafe’s &amp; restaurant’s which choose to upload a PDF - which the user then has to download before they can read it. Nightmare.
+
+Out of the box, creating the menu in HTML & CSS would also help with pagespeed as PDFs can tend to be quite large in size if they’re not optimised properly.
+
+![Nobel Cafe - Food Menu Solution](/assets/images/case-studies/nobel-cafe/nobel-cafe-menu.jpg)
+
+Above, you can see the solution I came up with for the menus.  With their being more than one menu, I opted for a Javascript show and hide so that it is only taking up a small section of the website - if all the menus where on show it would add too much scrolling for the user.  It may also become overwhelming for  them too and they may not get the information they were looking as menus tend to quite text heavy.

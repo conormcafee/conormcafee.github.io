@@ -4,12 +4,10 @@ title:  "2015 Redesign"
 date:   2015-09-14 20:00:00
 categories: case-studies
 type: "case-study"
-thumbnail-desktop: case-studies/conormcafee/conor-mcafee-logo.jpg
+thumbnail: case-studies/conormcafee/conor-mcafee-logo.jpg
+header: /case-studies/conormcafee/conormcafee-header.jpg
+author: Conor McAfee
 ---
-
-{::nomarkdown}
-<img src="/assets/images/case-studies/conormcafee/conormcafee-header.jpg" title="Conor McAfee" alt="Photo of Conor McAfee Photoshoot, Content below is my work on this website" />
-{:/}
 
 You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.
 

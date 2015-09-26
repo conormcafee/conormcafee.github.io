@@ -4,13 +4,10 @@ title: New Site, New Direction
 date:   2015-09-21 20:00:00
 categories: journal
 type: journal
-thumbnail-desktop: journal/jekyll.jpg
+thumbnail: journal/jekyll.jpg
+header: /case-studies/nobel-cafe/nobel-header.jpg
 author: Conor McAfee
 ---
-
-{::nomarkdown}
-<img src="/assets/images/case-studies/nobel-cafe/nobel-header.jpg" title="Nobel Cafe Case Study" alt="Photo of Nobel Cafe, Content below is my work for Nobel" />
-{:/}
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

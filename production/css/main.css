@@ -339,6 +339,11 @@ header {
   margin: 0 auto;
   color: #525252;
 }
+@media only screen and (min-width: 1300px) {
+  .about__right--content {
+    max-width: 700px;
+  }
+}
 
 .about__logo {
   display: block;
@@ -397,7 +402,7 @@ header {
 .about__list-item:after {
   content: "/";
   display: inline-block;
-  color: #b91510;
+  color: #85abbc;
   margin-left: 0.3125em;
 }
 .about__list-item:last-child:after {
@@ -653,19 +658,33 @@ header {
   line-height: 1.6rem;
 }
 
-.post__content {
-  display: block;
-  border: 1px solid #e91b13;
-  background-color: #ffffff;
-  position: relative;
-  border-radius: 7px;
-  margin-bottom: 1.875em;
-}
 @media only screen and (min-width: 667px) {
-  .post__content {
+  .post__wrap {
     width: 70%;
     margin: 0 auto;
   }
+}
+
+.post--image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #e91b13;
+  border-bottom: none;
+}
+
+.post__content {
+  display: block;
+  border: 1px solid #e91b13;
+  border-top: none;
+  background-color: #ffffff;
+  position: relative;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: 0.9375em 1.875em;
+  margin-bottom: 1.875em;
 }
 
 .post__content h2 {
@@ -675,7 +694,6 @@ header {
   line-height: 1.5em;
   margin-bottom: 1.25em;
   color: #6494AA;
-  padding: 0 1.5625em;
   text-align: center;
 }
 
@@ -686,7 +704,6 @@ header {
   line-height: 1.5em;
   margin-bottom: 1.25em;
   color: #525252;
-  padding: 0 1.875em;
 }
 
 .post__content ul {
@@ -702,7 +719,6 @@ header {
   line-height: 1.5em;
   margin-bottom: 0.3125em;
   color: #525252;
-  padding: 0 1.875em;
   text-indent: 1.25em;
 }
 
@@ -715,19 +731,12 @@ header {
   border-bottom: 1px dashed #EF4640;
 }
 
-.post__header-image {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 1.25em;
-  border: none;
-}
-
 .post__content img {
   display: block;
   max-width: 100%;
   height: auto;
   margin-bottom: 1.875em;
+  border: 1px solid #85abbc;
 }
 
 .filter__list {
@@ -793,12 +802,12 @@ header {
 }
 .filter__list-item.js-active:before,
 .filter__list-item.js-active:after {
-  background-image: url("../assets/images/check.svg");
+  background-image: url("../../assets/images/check.svg");
 }
 
 .filter__list-item.js-inactive:before,
 .filter__list-item.js-inactive:after {
-  background-image: url("../assets/images/cancel.svg");
+  background-image: url("../../assets/images/cancel.svg");
 }
 
 .contact {
