@@ -9,24 +9,36 @@ header: /case-studies/nobel-cafe/nobel-header.jpg
 author: Conor McAfee
 ---
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+It’s been a long time in coming, but at long last I can finally say I have a new presence online.  I hope you like it. 
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+It’s been a busy 2 years since I graduated university and have come a long way in my career since then.  I’m now at the stage where I want to give more back to the web design community - and feel that I am better equipped to do that now.
 
-![Nobel Cafe Case Study](/assets/images/nobel-post.jpg)
+The thinking behind this website is that I am going to:
 
-Jekyll also offers powerful support for code snippets:
+- Blog more on Front-End Development
+- Experiment more (Labs section coming soon)
+- Provide in-depth Case Studies
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+## Blogging
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+Like the majority of people in the seem line of work as me, you learn mainly from reading blog posts and tutorials people have put online.  I would like to be a part of that now, and would like to help in getting more people using front-end tools such as:
 
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
+- [Gulp.js]
+- [Sass]
+- [BEM]
+- [Github]
+
+I’m not proclaiming to be an expert at any of these, not by a long shot - but I do want to document more about how i’ve learned to get to grips with these tools and incorporate them into my workflow.  Hopefully it can help someone else.
+
+## Labs (Coming Soon)
+
+To help drive my career forward, I need to keep on top of the latest trends and technologies that become available.  To do that, I need to work on side projects and experiments.  To help me document this learning, I have decided to include a labs sections in this website.  To have my experiments documented online it will show what I can do, and it will also hopefully help other people who are looking to learn more as well - so really this is just an extension to the blog section.
+
+## Case Studies
+
+Along with blogging and experiments, it is important for any designer &amp; front-end developer to document work that they have done for other people.  There are only certain projects which I can talk about on a public forum due to them being done for an employer.
+
+[Gulp.js]: http://gulpjs.com
+[Sass]: http://sass-lang.com
+[BEM]: http://en.bem.info
+[Github]: http://github.com
