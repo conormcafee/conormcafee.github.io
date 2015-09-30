@@ -47,8 +47,9 @@
 
 .archive__list-item {
 	display: block;
-	float: left;
-	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
 	position: relative;
 	background-color: brand-colour(white);
 	border: 1px solid brand-colour(orange, dark);
@@ -64,6 +65,7 @@
 	.archive__list-item {
 		width: 47.5%;
 		margin-right: 5%;
+		float: left;
 
 		&:nth-child(2n) {
 			margin-right: 0;
@@ -79,6 +81,7 @@
 	.archive__list-item {
 		width: 30%;
 		margin-right: 5%;
+		float: left;
 
 		&:nth-child(3n) {
 			margin-right: 0;
@@ -94,6 +97,7 @@
 	.archive__list-item {
 		width: 21.25%;
 		margin-right: 5%;
+		float: left;
 
 		&:nth-child(4n) {
 			margin-right: 0;
@@ -136,12 +140,16 @@
 
 .archive__title {
 	@include sub-heading;
-	@include font-size(1.0);
+	@include font-size(1.2);
 	color: brand-colour(white);
 	line-height: em(24);
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+
+	@media only screen and (min-width: 768px) {
+		@include font-size(1.0);
+	}
 }
 
 .archive__title,

@@ -181,7 +181,7 @@ a:focus {
 footer {
   clear: both;
   text-align: center;
-  margin: 2.5em 0 0.625em 0;
+  margin: 2.5em 0;
 }
 
 .footer__text {
@@ -323,7 +323,7 @@ header {
   position: absolute;
   left: 0;
   right: 0;
-  padding: 0 3.75em;
+  padding: 0 1.875em;
   background-color: #ffffff;
 }
 @media only screen and (min-width: 992px) {
@@ -493,8 +493,9 @@ header {
 
 .archive__list-item {
   display: block;
-  float: left;
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
   position: relative;
   background-color: #ffffff;
   border: 1px solid #e91b13;
@@ -509,6 +510,7 @@ header {
   .archive__list-item {
     width: 47.5%;
     margin-right: 5%;
+    float: left;
   }
   .archive__list-item:nth-child(2n) {
     margin-right: 0;
@@ -521,6 +523,7 @@ header {
   .archive__list-item {
     width: 30%;
     margin-right: 5%;
+    float: left;
   }
   .archive__list-item:nth-child(3n) {
     margin-right: 0;
@@ -533,6 +536,7 @@ header {
   .archive__list-item {
     width: 21.25%;
     margin-right: 5%;
+    float: left;
   }
   .archive__list-item:nth-child(4n) {
     margin-right: 0;
@@ -571,13 +575,19 @@ header {
 
 .archive__title {
   font-family: 'quicksandregular', 'Arial', serif;
-  font-size: 10px;
-  font-size: 1rem;
+  font-size: 12px;
+  font-size: 1.2rem;
   color: #ffffff;
   line-height: 1.5em;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+@media only screen and (min-width: 768px) {
+  .archive__title {
+    font-size: 10px;
+    font-size: 1rem;
+  }
 }
 
 .archive__title,
@@ -683,8 +693,13 @@ header {
   position: relative;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
-  padding: 0.9375em 1.875em;
+  padding: 0.9375em;
   margin-bottom: 1.875em;
+}
+@media only screen and (min-width: 768px) {
+  .post__content {
+    padding: 0.9375em 1.875em;
+  }
 }
 
 .post__content h2 {

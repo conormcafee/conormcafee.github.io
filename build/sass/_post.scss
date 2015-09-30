@@ -41,8 +41,12 @@
 	position: relative;
 	border-bottom-left-radius: 7px;
 	border-bottom-right-radius: 7px;
-	padding: em(15) em(30);
+	padding: em(15);
 	margin-bottom: em(30);
+
+	@media only screen and (min-width: 768px) {
+		padding: em(15) em(30);
+	}
 }
 
 .post__content h2 {
