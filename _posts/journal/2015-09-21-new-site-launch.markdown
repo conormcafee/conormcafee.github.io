@@ -4,8 +4,8 @@ title: New Site, New Direction
 date:   2015-09-21 20:00:00
 categories: journal
 type: journal
-thumbnail: journal/jekyll.jpg
-header: /case-studies/nobel-cafe/nobel-header.jpg
+thumbnail: journal/journal.jpg
+header: /journal/business-card.jpg
 author: Conor McAfee
 ---
 
@@ -21,7 +21,7 @@ The thinking behind this website is that I am going to:
 
 ## Blogging
 
-Like the majority of people in the seem line of work as me, you learn mainly from reading blog posts and tutorials people have put online.  I would like to be a part of that now, and would like to help in getting more people using front-end tools such as:
+Like the majority of people in the same line of work as me, you learn mainly from reading blog posts and tutorials people have put online.  I would like to be a part of that now.  I will be blogging about my experiences with:
 
 - [Gulp.js]
 - [Sass]
@@ -36,7 +36,10 @@ To help drive my career forward, I need to keep on top of the latest trends and 
 
 ## Case Studies
 
-Along with blogging and experiments, it is important for any designer &amp; front-end developer to document work that they have done for other people.  There are only certain projects which I can talk about on a public forum due to them being done for an employer.
+Along with blogging and experiments, it is important for any designer &amp; front-end developer to document work that they have done for other people.  There are only certain projects which I can talk about on a public forum, alot of the work I have completed has been done whilst employed by a company - and therefore is the companies work rather than mine.
+
+I look forward to sharing more with you all soon.
+
 
 [Gulp.js]: http://gulpjs.com
 [Sass]: http://sass-lang.com
