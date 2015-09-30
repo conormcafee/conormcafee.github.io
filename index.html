@@ -1,41 +1,64 @@
 ---
 layout: default
 title: Conor McAfee | Designer &amp; Front-End Developer
+description: I'm a Designer & Front-End Developer from Ballymena Northen Ireland.
 ---
 
 <main>
 
-<div class="hero" data-image="conor-mcafee-portrait"></div>
+<div class="about">
 
-    <div class="homepage">
+  <div class="about__left"></div>
 
-        <h1 class="homepage__logo">Conor McAfee</h1>
+  <div class="about__right">
 
-        <p class="homepage__job-title">Designer <span>&amp;</span> Front-End Developer</p>
+    <div class="about__right--content">
 
-        <div class="homepage__content">
+      <img src="assets/images/conor-mcafee-logo.svg" alt="Conor McAfee | Designer &amp; Front-End Developer" height="60" width="200" class="logo about__logo">
 
-        <!--<ul class="header-menu header-menu--homepage">
-          <li class="header-menu__item" data-header="case-studies"><a href="{{ site.baseurl }}/journal">Work, Blog &amp; Experiments</a></li>
-          <li class="header-menu__item" data-header="contact"><a href="{{ site.baseurl }}/">Contact</a></li>
-        </ul>-->
+      <p class="about__title">Designer <span>&amp;</span> Front-End Developer</p>
 
-        <p class="homepage__text homepage-highlight">Full site launching September 2015</p>
+      <p class="about__text">I'm a designer &amp; front-end developer from Ballymena, Northern Ireland with 3 years industry experience.  Currently, I am working for dotRetailer in Belfast's Titanic Quarter.</p>
 
-        <p class="homepage__text">Hi, I'm a designer &amp; front-end developer from Ballymena, Northern Ireland with 3 years industry experience.  Currently, I am working for dotRetailer in Belfast's Titanic Quarter.</p>
+      <p class="about__text">Be sure to check out my <a href="/work/" title="Check out my work: Case Studies &amp; Journals" class="about__link">work</a>, I have documented case studies to look through as well as journals on design &amp; front-end development.  If you wish to contact me, you can get me <a href="http://www.twitter.com/conormcafee" title="Tweet me" class="about__link" target="_blank">@conormcafee</a> on Twitter or via email <a href="mailto:hello@conormcafee.co.uk" title="Email me" class="about__link">hello@conormcafee.co.uk</a>.</p>
 
-        <p class="homepage__text">I have worked solely, or within a team on projects for:</p>
+      <hr class="about__hr">
 
-        <ul class="homepage__list">
-        {% for client in site.data.clients %}
-          <li class="homepage__list-item">{{ client.name }}</li>
+      <p class="about__text">I have experience in working with:</p>
+
+      <ul class="about__list">
+        {% for skill in site.data.skills %}
+        <li class="about__list-item">{{ skill.name }}</li>
         {% endfor %}
-        </ul>
+      </ul>
 
-      </div>
+      <p class="about__text">My primary focus is on front-end development.  To me, this is the most important part of the web development process as this is what your users will interact with the most.</p>
+
+      <p class="about__text">I strive to build well executed websites, that not only look great on all devices - but also perform great.  Living in Northern Ireland, we're not blessed with 4G connections in every town or even good broadband connections - because of this I aim to optimise my websites as best I can, so that they load as quick as possible when the user is not on a great Internet connection.</p> 
+
+      <hr class="about__hr">
+
+      <p class="about__text">You may have seen some work that I have contributed to as part of a team, or solely around the web:</p>
+
+      <ul class="about__list">
+      {% for client in site.data.clients %}
+        <li class="about__list-item">{{ client.name }}</li>
+      {% endfor %}
+      </ul>
+
+      {% include footer.html %}
 
     </div>
 
-  </main>
+  </div>
 
-  <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+</div>
+
+</main>
+
+<div class="page-border page-border--top"></div>
+<div class="page-border page-border--left"></div>
+<div class="page-border page-border--bottom"></div>
+<div class="page-border page-border--right"></div>
+
+<script src="{{ site.baseurl }}/assets/js/main.min.js"></script>
