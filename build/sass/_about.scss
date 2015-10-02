@@ -81,9 +81,9 @@
 
 .about__text  {
 	@include base;
-	@include font-size(1.2);
-	line-height: em(24);
-	margin-bottom: em(20);
+	@include font-size(1.1);
+	line-height: em(28);
+	margin-bottom: em(30);
 }
 
 .about__link {

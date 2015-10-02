@@ -61,21 +61,23 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
 
   <div class="wrapper">
 
-  <h1 class="leading-title">About</h1>
+    <div class="bio bio--centre">
 
-  <div class="about-col about-col--half">
+      <p class="bio__text">I'm a designer &amp; front-end developer from Ballymena, Northern Ireland.</p>
 
-    <p class="about__text">I'm a designer &amp; front-end developer from Ballymena, Northern Ireland with 3 years industry experience.  Currently, I am working for dotRetailer in Belfast's Titanic Quarter.</p>
+      <p class="bio__text">I have 3 years of industry experience, currently applying my trade at dotRetailer in Belfast's Titanic Quarter.</p>
 
-    <p class="about__text">My primary focus is on front-end development.  To me, this is the most important part of the web development process as this is what your users will interact with the most.</p>
+      <p class="bio__text">Responsive Web Design and Performance Optimisation are my thing.</p>
 
-    <p class="about__text">I main aim is to build well executed websites, that not only look great on all devices - but also perform great.  Living in Northern Ireland, we're not blessed with 4G connections in every town or even good broadband connections - so because of this I aim to optimise my websites as best I can, so that they load as quick as possible when the user is not on a great Internet connection.</p>
+    </div>
 
-  </div>
+    <div class="bio bio--half">
 
-  <div class="about-col about-col--half">
+    <p class="bio__text"></p>
 
-    <div class="sprite" data-sprite="amnexday"></div>
+    </div>
+
+    <!--<div class="sprite" data-sprite="amnexday"></div>
     <div class="sprite" data-sprite="activwireless"></div>
     <div class="sprite" data-sprite="ni-open"></div>
     <div class="sprite" data-sprite="blue-horizon-developments"></div>
@@ -86,32 +88,7 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
     <div class="sprite" data-sprite="pet-warehouse"></div>
     <div class="sprite" data-sprite="wallaces"></div>
     <div class="sprite" data-sprite="remus"></div>
-    <div class="sprite" data-sprite="counties"></div>
-
-    <div class="clearfix"></div>
-
-    <p class="about__text">Above you can see some of the companies that I have completed work for.  Some of these projects were worked on in a freelance capacity, as a member of a team whilst employed by a company, or soley whilst employed by a company.</p>
-
-    <hr class="about__hr" />
-
-    <ul class="about__list">
-      <li class="about__list-item about--first-item">Skillset</li>
-    {% for skill in site.data.skills %}
-      <li class="about__list-item">{{ skill.name }}</li>
-    {% endfor %}
-    </ul>
-
-  </div>
-
-  <div class="about-col about-col--full">
-    
-    <div class="about__box">
-
-      <p class="about__text">If you would like to get in touch with me, you can do so via email at <a href="mailto:hello@conormcafee.co.uk" title="Email Conor">hello@conormcafee.co.uk</a> - or if you prefer you can get me <a href="http://www.twitter.com/conormcafee" title="Tweet or follow Conor">@conormcafee</a> on Twitter.</p>
-
-    </div>
-
-  </div>
+    <div class="sprite" data-sprite="counties"></div>-->
 
   </div>
 
@@ -119,13 +96,97 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
 
 <section class="journal" id="journal">
 
-<p>&nbsp;</p>
+<div class="wrapper">
+
+  <div class="journal--">
+
+  {% for post in site.categories.journal %}
+  <div class="journal-card">
+    <div class="journal-card__top">
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </div>
+    <div class="journal-card__bottom">
+      <p>{{ post.date | date: "%b %-d, %Y" }}</p>
+      <a href="{{ post.url | prepend: site.baseurl }}" class="journal-card__read">Read Journal</a>
+    </div>
+  </div>
+
+  <div class="journal-card">
+    <div class="journal-card__top">
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </div>
+    <div class="journal-card__bottom">
+      <p>{{ post.date | date: "%b %-d, %Y" }}</p>
+      <a href="{{ post.url | prepend: site.baseurl }}" class="journal-card__read">Read Journal</a>
+    </div>
+  </div>
+
+  <div class="journal-card">
+    <div class="journal-card__top">
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </div>
+    <div class="journal-card__bottom">
+      <p>{{ post.date | date: "%b %-d, %Y" }}</p>
+      <a href="{{ post.url | prepend: site.baseurl }}" class="journal-card__read">Read Journal</a>
+    </div>
+  </div>
+
+  <div class="journal-card">
+    <div class="journal-card__top">
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </div>
+    <div class="journal-card__bottom">
+      <p>{{ post.date | date: "%b %-d, %Y" }}</p>
+      <a href="{{ post.url | prepend: site.baseurl }}" class="journal-card__read">Read Journal</a>
+    </div>
+  </div>
+
+  <div class="journal-card">
+    <div class="journal-card__top">
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </div>
+    <div class="journal-card__bottom">
+      <p>{{ post.date | date: "%b %-d, %Y" }}</p>
+      <a href="{{ post.url | prepend: site.baseurl }}" class="journal-card__read">Read Journal</a>
+    </div>
+  </div>
+
+  <div class="journal-card">
+    <div class="journal-card__top">
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </div>
+    <div class="journal-card__bottom">
+      <p>{{ post.date | date: "%b %-d, %Y" }}</p>
+      <a href="{{ post.url | prepend: site.baseurl }}" class="journal-card__read">Read Journal</a>
+    </div>
+  </div>
+
+  <div class="journal-card">
+    <div class="journal-card__top">
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </div>
+    <div class="journal-card__bottom">
+      <p>{{ post.date | date: "%b %-d, %Y" }}</p>
+      <a href="{{ post.url | prepend: site.baseurl }}" class="journal-card__read">Read Journal</a>
+    </div>
+  </div>
+  {% endfor %}
+
+  </div>
+
+  <!--<div class="journal--">
+
+    <p>Test</p>
+
+  </div>-->
+
+</div>
 
 </section>
 
 <section class="case-studies" id="case-studies">
 
-<p>&nbsp;</p>
+  
 
 </section>
 

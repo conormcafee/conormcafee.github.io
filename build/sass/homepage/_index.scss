@@ -6,6 +6,7 @@
     color: brand-colour(orange); 
     margin-bottom: em(20);
     text-align: center;
+    position: relative;
 }
 
 .intro,
@@ -24,13 +25,13 @@
 }
 
 .about {
-    background-color: brand-colour(white);
+    @include linear-gradient(brand-colour(white), brand-colour(white));
     padding: em(40) em(20) !important;
 }
 
 .journal {
     @include linear-gradient(brand-colour(green, light), brand-colour(green, dark));
-    padding: em(40) em(20);
+    padding: em(100) em(20) em(40) em(20);
 }
 
 .case-studies {
@@ -169,52 +170,40 @@
 
 
 
-// About
+// Bio
 
-.about-col {
+.bio {
     display: block;
-    float: left;
-    color: brand-colour(black);
 
-    @media only screen and (min-width: 768px) {
-        &--half {
-        width: 46.375%;
-
-            &:first-of-type {
-                margin-right: 7.25%;
-            }
-        }
-    }
-
-}
-
-.about--first-item {
-    color: brand-colour(orange);
-}
-
-.about__list-item.about--first-item:after {
-    content: ":";
-}
-
-.about__box {
-    border: 1px solid brand-colour(orange, dark);
-    background-color: brand-colour(orange);
-    padding: em(20);
-    border-radius: 7px;
-    display: block;
-    margin-top: em(20);
-
-    @media only screen and (min-width: 768px) {
+    &--centre {
+        margin-left: auto;
+        margin-right: auto;
         width: 50%;
-        margin: em(20) auto 0 auto;
+    }
+
+    &--half {
+        width: 47.25%;
+        float: left;
     }
 }
 
-.about__box .about__text {
-    color: brand-colour(white);
-    margin-bottom: 0;
+.bio__text {
+    @include base;
+    @include font-size(1.8);
+    line-height: em(24);
+    color: brand-colour(black);
     text-align: center;
+    margin-bottom: em(20);
+
+    &:first-of-type {
+        margin-top: em(20);
+    }
 }
+
+
+
+
+// Sprite
 
 .sprite {
     width: 100px;
@@ -249,4 +238,64 @@ $clients: (
     .sprite[data-sprite="#{$selector}"] {
         background-position: $value;
     }
+}
+
+
+
+
+// Journal 
+
+.journal--main {
+    display: block;
+    width: 70%;
+    float: left;
+}
+
+.journal--side {
+    display: block;
+    width: 30%;
+    float: left;
+}
+
+.journal-card {
+    @include sub-heading;
+    width: 28.333333333%;
+    margin-right: 5%;
+    display: block;
+    float: left;
+    background-color: brand-colour(white);
+    box-shadow: 10px 10px 15px brand-colour(green, darker);
+    border-radius: 7px;
+    border: 1px solid brand-colour(green, dark);
+    margin-bottom: em(60);
+    text-align: center;
+    position: relative;
+
+    &:nth-child(3n) {
+        //margin-right: 0;
+    }
+
+    &:nth-child(3n+1) {
+        //clear: left;
+    }
+}
+
+.journal-card__top {
+    padding: em(20);
+}
+
+.journal-card__bottom {
+    background-color: brand-colour(white);
+    position: relative;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.journal-card__read {
+    background-color: brand-colour(green, light);
+    display: inline-block;
+    padding: em(10) em(20);
+    margin: em(20) 0;
+    border-radius: 20px;
+    color: brand-colour(white);
 }
