@@ -106,12 +106,10 @@ html {
 body {
   position: relative;
   font-family: 'source_serif_proregular', 'Arial', serif;
-  background: #EF4640;
-  background: linear-gradient(180deg, #EF4640, #e91b13);
 }
 
 .wrapper {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 0.9375em;
 }
@@ -209,6 +207,10 @@ footer {
   margin-top: 1.25em;
 }
 
+.clearfix {
+  clear: both;
+}
+
 nav {
   z-index: 1;
   position: fixed;
@@ -284,6 +286,283 @@ header {
 
 .header__menu-item:not(:first-child) {
   padding-left: 0.9375em;
+}
+
+.leading-title {
+  font-family: 'quicksandregular', 'Arial', serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+  color: #EF4640;
+  margin-bottom: 1.25em;
+  text-align: center;
+}
+
+.intro,
+.about,
+.journal,
+.case-studies,
+.labs {
+  display: block;
+  position: relative;
+  overflow: auto;
+}
+
+.intro {
+  background: #EF4640;
+  background: linear-gradient(180deg, #EF4640, #e91b13);
+  padding: 5em 1.25em;
+}
+
+.about {
+  background-color: #ffffff;
+  padding: 2.5em 1.25em !important;
+}
+
+.journal {
+  background: #94d0c6;
+  background: linear-gradient(180deg, #94d0c6, #4db1a0);
+  padding: 2.5em 1.25em;
+}
+
+.case-studies {
+  background: #85abbc;
+  background: linear-gradient(180deg, #85abbc, #4e798d);
+  padding: 2.5em 1.25em;
+}
+
+.card {
+  width: 30%;
+  background-color: #ffffff;
+  display: block;
+  float: left;
+  border-radius: 4px;
+  box-shadow: 10px 10px 20px #b91510;
+  position: relative;
+}
+.card-small {
+  margin-top: 5em;
+}
+.card:not(:last-child) {
+  margin-right: 5%;
+}
+
+.card__main-image {
+  display: block;
+  height: 300px;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.card__main-image:after {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 100%;
+  background-image: url("/assets/images/waves.svg");
+  background-repeat: repeat-x;
+  position: absolute;
+  bottom: -5px;
+}
+
+.card__logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card__text {
+  text-align: center;
+  font-family: 'quicksandregular', 'Arial', serif;
+  color: #525252;
+  margin-bottom: 1.25em;
+}
+
+.card__nav-list {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+}
+.card__nav-list-item {
+  font-family: 'quicksandregular', 'Arial', serif;
+  display: table-cell;
+  padding: 0.9375em 0;
+}
+.card__nav-list-item:not(:last-child) {
+  border-right: 1px solid #e6e6e6;
+}
+.card__nav-list-item:hover {
+  background-color: #e6e6e6;
+}
+
+.card__top {
+  display: block;
+  height: 80%;
+}
+
+.card__title {
+  font-family: 'quicksandregular', 'Arial', serif;
+  color: #ffffff;
+  padding: 1.25em;
+  text-align: center;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.card__list-item {
+  font-family: 'quicksandregular', 'Arial', serif;
+  color: #525252;
+  padding: 1.25em;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.card__bottom {
+  display: block;
+  text-align: center;
+}
+
+.card__link {
+  display: inline-block;
+  text-align: center;
+  font-family: 'quicksandregular', 'Arial', serif;
+  font-size: 10px;
+  font-size: 1rem;
+  color: #ffffff;
+  padding: 0.625em 0.9375em;
+  border-radius: 20px;
+  margin: 1.25em 0;
+}
+
+[data-intro="case-study"] .card__title {
+  background-color: #85abbc;
+  border-bottom: 1px solid #6494AA;
+}
+
+[data-intro="case-study"] .card__link {
+  background-color: #85abbc;
+}
+[data-intro="case-study"] .card__link:hover {
+  background-color: #3c5d6d;
+}
+
+[data-intro="journal"] .card__title {
+  background-color: #94d0c6;
+  border-bottom: 1px solid #70C1B3;
+}
+
+[data-intro="journal"] .card__link {
+  background-color: #94d0c6;
+}
+[data-intro="journal"] .card__link:hover {
+  background-color: #3d8e80;
+}
+
+.about-col {
+  display: block;
+  float: left;
+  color: #525252;
+}
+@media only screen and (min-width: 768px) {
+  .about-col--half {
+    width: 46.375%;
+  }
+  .about-col--half:first-of-type {
+    margin-right: 7.25%;
+  }
+}
+
+.about--first-item {
+  color: #EF4640;
+}
+
+.about__list-item.about--first-item:after {
+  content: ":";
+}
+
+.about__box {
+  border: 1px solid #e91b13;
+  background-color: #EF4640;
+  padding: 1.25em;
+  border-radius: 7px;
+  display: block;
+  margin-top: 1.25em;
+}
+@media only screen and (min-width: 768px) {
+  .about__box {
+    width: 50%;
+    margin: 1.25em auto 0 auto;
+  }
+}
+
+.about__box .about__text {
+  color: #ffffff;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.sprite {
+  width: 100px;
+  height: 50px;
+  margin-bottom: 1.25em;
+  background-image: url("/assets/images/sprites/project-logos.png");
+  background-repeat: no-repeat;
+  background-size: 1300px;
+  display: block;
+  float: left;
+  margin-right: 1.25em;
+  border: 1px solid #e6e6e6;
+  border-radius: 7px;
+}
+
+.sprite[data-sprite="amnexday"] {
+  background-position: 0 0;
+}
+
+.sprite[data-sprite="activwireless"] {
+  background-position: -100px 0;
+}
+
+.sprite[data-sprite="ni-open"] {
+  background-position: -200px 0;
+}
+
+.sprite[data-sprite="blue-horizon-developments"] {
+  background-position: -300px 0;
+}
+
+.sprite[data-sprite="ulster-uni"] {
+  background-position: -400px 0;
+}
+
+.sprite[data-sprite="nobel-cafe"] {
+  background-position: -500px 0;
+}
+
+.sprite[data-sprite="gpr"] {
+  background-position: -600px 0;
+}
+
+.sprite[data-sprite="kyoto-pearl"] {
+  background-position: -700px 0;
+}
+
+.sprite[data-sprite="pet-warehouse"] {
+  background-position: -800px 0;
+}
+
+.sprite[data-sprite="wallaces"] {
+  background-position: -900px 0;
+}
+
+.sprite[data-sprite="remus"] {
+  background-position: -1000px 0;
+}
+
+.sprite[data-sprite="counties"] {
+  background-position: -1205px 0;
 }
 
 .about {
@@ -633,19 +912,6 @@ header {
 .archive__list-item[data-post="journal"] .archive__title:hover,
 .archive__list-item[data-post="journal"] .archive__date {
   color: #3d8e80;
-}
-
-.archive__list-item[data-post="labs"] .archive__image-wrap:after {
-  background-image: url("../../assets/images/archive/waves-labs.svg");
-}
-
-.archive__list-item[data-post="labs"] {
-  background-color: #807096;
-}
-
-.archive__list-item[data-post="labs"] .archive__title:hover,
-.archive__list-item[data-post="labs"] .archive__date {
-  color: #352e3f;
 }
 
 .post__heading {

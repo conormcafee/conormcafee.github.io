@@ -11,11 +11,11 @@ html {
 body {
 	position: relative;
 	@include base;
-	@include linear-gradient(brand-colour(orange), brand-colour(orange, dark));
+	//@include linear-gradient(brand-colour(orange), brand-colour(orange, dark));
 }
 
 .wrapper {
-	max-width: 1100px;
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 em(15);
 
@@ -116,4 +116,8 @@ footer {
 
 .follow-on-twitter {
 	margin-top: em(20);
+}
+
+.clearfix {
+	clear: both;
 }

@@ -1,71 +1,252 @@
-.hero {
-    display: block;
-    float: left;
-    width: 100%;
-    height: 70vh;
-    background-image: url('../../assets/images/profile/conor-mcafee-1200.jpg');
-    background-size: cover;
-    background-position: center center;
-    position: relative;
+// Global
 
-    &:after {
-            content: "";
-            display: block;
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            height: 30px;
-            background-image: url('../../assets/images/waves-journal.svg');
-        }
-}
-
-.column--wrapper {
-    clear: both;
-    background-color: brand-colour(orange);
-    overflow: hidden;
-}
-
-.column {
-    display: block;
-    float: left;
-    height: 30vh;
+.leading-title {
+    @include sub-heading;
+    @include font-size(1.8);
+    color: brand-colour(orange); 
+    margin-bottom: em(20);
     text-align: center;
+}
+
+.intro,
+.about,
+.journal,
+.case-studies,
+.labs {
+    display: block;
     position: relative;
-
-    &__one {
-        width: 40%;
-        background-color: brand-colour(white);
-    }
-
-    &__two,
-    &__three,
-    &__four {
-        width: 20%;
-        background-color: brand-colour(orange);
-    }
+    overflow: auto;
 }
 
-.column__link {
-    @include sub-heading;
-    @include font-size(2.0);
-    color: brand-colour(white);
-    text-shadow: 0px 3px 1px brand-colour(orange, darker);
-}
-
-.column__link,
-.column__logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.column__logo-text {
-    @include sub-heading;
-    color: brand-colour(blue);
+.intro {
+    @include linear-gradient(brand-colour(orange), brand-colour(orange, dark));
+    padding: em(80) em(20);
 }
 
 .about {
-    clear: both;
+    background-color: brand-colour(white);
+    padding: em(40) em(20) !important;
+}
+
+.journal {
+    @include linear-gradient(brand-colour(green, light), brand-colour(green, dark));
+    padding: em(40) em(20);
+}
+
+.case-studies {
+    @include linear-gradient(brand-colour(blue, light), brand-colour(blue, dark));
+    padding: em(40) em(20);
+}
+
+// Card Design
+
+.card {
+    width: 30%;
+    background-color: brand-colour(white);
+    display: block;
+    float: left;
+    border-radius: 4px;
+    box-shadow: 10px 10px 20px brand-colour(orange, darker);
+    position: relative;
+
+    &-small {
+        margin-top: em(80);
+    }
+
+    &:not(:last-child) {
+        margin-right: 5%;
+    }
+}
+
+.card__main-image {
+    display: block;
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    
+    &:after {
+        content: "";
+        display: block;
+        height: 30px;
+        width: 100%;
+        background-image: url('/assets/images/waves.svg');
+        background-repeat: repeat-x;
+        position: absolute;
+        bottom: -5px;
+    }
+}
+
+.card__logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card__text {
+    text-align: center;
+    @include sub-heading;
+    color: brand-colour(black);
+    margin-bottom: em(20);
+}
+
+.card__nav-list {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #e6e6e6;
+
+    &-item {
+        @include sub-heading;
+        display: table-cell;
+        padding: em(15) 0;
+
+        &:not(:last-child) {
+            border-right: 1px solid #e6e6e6;
+        }
+
+        &:hover {
+            background-color: #e6e6e6;
+        }
+    }
+}
+
+.card__top {
+    display: block;
+    height: 80%;
+}
+
+.card__title {
+    @include sub-heading;
+    color: brand-colour(white);
+    padding: em(20);
+    text-align: center;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.card__list-item {
+    @include sub-heading;
+    color: brand-colour(black);
+    padding: em(20);
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.card__bottom {
+    display: block;
+    text-align: center;
+}
+
+.card__link {
+    display: inline-block;
+    text-align: center;
+    @include sub-heading;
+    @include font-size(1.0);
+    color: brand-colour(white);
+    padding: em(10) em(15);
+    border-radius: 20px;
+    margin: em(20) 0;
+}
+
+@each $selector, $value in $post-colours {
+    [data-intro="#{$selector}"] .card__title {
+        background-color: post-colour($selector, light);
+        border-bottom: 1px solid post-colour($selector);
+    }
+
+    [data-intro="#{$selector}"] .card__link {
+        background-color: post-colour($selector, light);
+
+        &:hover {
+            background-color: post-colour($selector, hover);
+        }
+    }
+}
+
+
+
+
+// About
+
+.about-col {
+    display: block;
+    float: left;
+    color: brand-colour(black);
+
+    @media only screen and (min-width: 768px) {
+        &--half {
+        width: 46.375%;
+
+            &:first-of-type {
+                margin-right: 7.25%;
+            }
+        }
+    }
+
+}
+
+.about--first-item {
+    color: brand-colour(orange);
+}
+
+.about__list-item.about--first-item:after {
+    content: ":";
+}
+
+.about__box {
+    border: 1px solid brand-colour(orange, dark);
+    background-color: brand-colour(orange);
+    padding: em(20);
+    border-radius: 7px;
+    display: block;
+    margin-top: em(20);
+
+    @media only screen and (min-width: 768px) {
+        width: 50%;
+        margin: em(20) auto 0 auto;
+    }
+}
+
+.about__box .about__text {
+    color: brand-colour(white);
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.sprite {
+    width: 100px;
+    height: 50px;
+    margin-bottom: em(20);
+    background-image: url("/assets/images/sprites/project-logos.png");
+    background-repeat: no-repeat;
+    background-size: 1300px;
+    display:block;
+    float: left;
+    margin-right: em(20);
+    border: 1px solid #e6e6e6;
+    border-radius: 7px;
+}
+
+$clients: (
+    amnexday: 0 0,
+    activwireless: -100px 0,
+    ni-open: -200px 0,
+    blue-horizon-developments: -300px 0,
+    ulster-uni: -400px 0,
+    nobel-cafe: -500px 0,
+    gpr: -600px 0,
+    kyoto-pearl: -700px 0,
+    pet-warehouse: -800px 0,
+    wallaces: -900px 0,
+    remus: -1000px 0,
+    counties: -1205px 0
+);
+
+@each $selector, $value in $clients {
+    .sprite[data-sprite="#{$selector}"] {
+        background-position: $value;
+    }
 }
