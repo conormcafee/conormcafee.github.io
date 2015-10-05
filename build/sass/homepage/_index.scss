@@ -259,7 +259,7 @@ $clients: (
 
 .journal-card {
     @include sub-heading;
-    width: 28.333333333%;
+    width: 47.5%;
     margin-right: 5%;
     display: block;
     float: left;
@@ -271,31 +271,31 @@ $clients: (
     text-align: center;
     position: relative;
 
-    &:nth-child(3n) {
-        //margin-right: 0;
+    &:nth-child(2n) {
+        margin-right: 0;
     }
 
-    &:nth-child(3n+1) {
-        //clear: left;
+    &:nth-child(2n+1) {
+        clear: left;
     }
 }
 
-.journal-card__top {
+.journal-card__title {
+    display: block;
+    border-bottom: 1px solid #e6e6e6;
     padding: em(20);
 }
 
-.journal-card__bottom {
-    background-color: brand-colour(white);
-    position: relative;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
+.journal-card__excerpt,
+.journal-card__date {
+    padding: em(20);
 }
 
 .journal-card__read {
     background-color: brand-colour(green, light);
     display: inline-block;
     padding: em(10) em(20);
-    margin: em(20) 0;
+    margin-bottom: em(20);
     border-radius: 20px;
     color: brand-colour(white);
 }

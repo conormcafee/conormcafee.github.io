@@ -98,87 +98,31 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
 
 <div class="wrapper">
 
-  <div class="journal--">
+  <div class="journal--main">
 
   {% for post in site.categories.journal %}
   <div class="journal-card">
-    <div class="journal-card__top">
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </div>
-    <div class="journal-card__bottom">
-      <p>{{ post.date | date: "%b %-d, %Y" }}</p>
-      <a href="{{ post.url | prepend: site.baseurl }}" class="journal-card__read">Read Journal</a>
-    </div>
+    <a href="{{ post.url | prepend: site.baseurl }}" class="journal-card__title">{{ post.title }}</a>
+    <p class="journal-card__excerpt">{{ post.excerpt | strip_html | truncate:250 }}</p>
+    <p class="journal-card__date">{{ post.date | date: "%b %-d, %Y" }}</p>
+    <a href="{{ post.url | prepend: site.baseurl }}" class="journal-card__read">Read Journal</a>
   </div>
 
   <div class="journal-card">
-    <div class="journal-card__top">
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </div>
-    <div class="journal-card__bottom">
-      <p>{{ post.date | date: "%b %-d, %Y" }}</p>
-      <a href="{{ post.url | prepend: site.baseurl }}" class="journal-card__read">Read Journal</a>
-    </div>
-  </div>
-
-  <div class="journal-card">
-    <div class="journal-card__top">
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </div>
-    <div class="journal-card__bottom">
-      <p>{{ post.date | date: "%b %-d, %Y" }}</p>
-      <a href="{{ post.url | prepend: site.baseurl }}" class="journal-card__read">Read Journal</a>
-    </div>
-  </div>
-
-  <div class="journal-card">
-    <div class="journal-card__top">
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </div>
-    <div class="journal-card__bottom">
-      <p>{{ post.date | date: "%b %-d, %Y" }}</p>
-      <a href="{{ post.url | prepend: site.baseurl }}" class="journal-card__read">Read Journal</a>
-    </div>
-  </div>
-
-  <div class="journal-card">
-    <div class="journal-card__top">
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </div>
-    <div class="journal-card__bottom">
-      <p>{{ post.date | date: "%b %-d, %Y" }}</p>
-      <a href="{{ post.url | prepend: site.baseurl }}" class="journal-card__read">Read Journal</a>
-    </div>
-  </div>
-
-  <div class="journal-card">
-    <div class="journal-card__top">
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </div>
-    <div class="journal-card__bottom">
-      <p>{{ post.date | date: "%b %-d, %Y" }}</p>
-      <a href="{{ post.url | prepend: site.baseurl }}" class="journal-card__read">Read Journal</a>
-    </div>
-  </div>
-
-  <div class="journal-card">
-    <div class="journal-card__top">
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </div>
-    <div class="journal-card__bottom">
-      <p>{{ post.date | date: "%b %-d, %Y" }}</p>
-      <a href="{{ post.url | prepend: site.baseurl }}" class="journal-card__read">Read Journal</a>
-    </div>
+    <a href="{{ post.url | prepend: site.baseurl }}" class="journal-card__title">{{ post.title }}</a>
+    <p class="journal-card__excerpt">{{ post.excerpt | strip_html | truncate:250 }}</p>
+    <p class="journal-card__date">{{ post.date | date: "%b %-d, %Y" }}</p>
+    <a href="{{ post.url | prepend: site.baseurl }}" class="journal-card__read">Read Journal</a>
   </div>
   {% endfor %}
 
   </div>
 
-  <!--<div class="journal--">
+  <div class="journal--side">
 
     <p>Test</p>
 
-  </div>-->
+  </div>
 
 </div>
 

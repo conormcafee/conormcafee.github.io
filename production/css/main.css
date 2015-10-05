@@ -564,7 +564,7 @@ header {
 
 .journal-card {
   font-family: 'quicksandregular', 'Arial', serif;
-  width: 28.333333333%;
+  width: 47.5%;
   margin-right: 5%;
   display: block;
   float: left;
@@ -576,23 +576,29 @@ header {
   text-align: center;
   position: relative;
 }
+.journal-card:nth-child(2n) {
+  margin-right: 0;
+}
+.journal-card:nth-child(2n+1) {
+  clear: left;
+}
 
-.journal-card__top {
+.journal-card__title {
+  display: block;
+  border-bottom: 1px solid #e6e6e6;
   padding: 1.25em;
 }
 
-.journal-card__bottom {
-  background-color: #ffffff;
-  position: relative;
-  border-bottom-left-radius: 7px;
-  border-bottom-right-radius: 7px;
+.journal-card__excerpt,
+.journal-card__date {
+  padding: 1.25em;
 }
 
 .journal-card__read {
   background-color: #94d0c6;
   display: inline-block;
   padding: 0.625em 1.25em;
-  margin: 1.25em 0;
+  margin-bottom: 1.25em;
   border-radius: 20px;
   color: #ffffff;
 }
