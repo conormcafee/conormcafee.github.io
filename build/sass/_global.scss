@@ -1,23 +1,18 @@
 html {
 	-webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
-	font-size: 14px;
-
-	@media only screen and (min-width: 768px) {
-		font-size: 16px;
-	}
+	@include type-setting(0);
 }
 
 body {
-	position: relative;
 	@include base;
-	//@include linear-gradient(brand-colour(orange), brand-colour(orange, dark));
+	position: relative;
 }
 
 .wrapper {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 em(15);
+	padding: 0 $base-line-height;
 
 	@media only screen and (min-width: 1150px) {
 		padding: 0;

@@ -1,72 +1,83 @@
 // Global
 
-.leading-title {
-    @include sub-heading;
-    @include font-size(1.8);
-    color: brand-colour(orange); 
-    margin-bottom: em(20);
-    text-align: center;
-    position: relative;
-}
-
 .intro,
-.about,
-.journal,
-.case-studies,
-.labs {
+.about {
     display: block;
     position: relative;
     overflow: auto;
 }
 
-.intro {
+//@include linear-gradient(brand-colour(green), brand-colour(green, darker));
+//@include linear-gradient(brand-colour(blue, light), brand-colour(blue, dark));
+
+
+// Welcome
+
+.welcome {
+    @include sub-heading;
     @include linear-gradient(brand-colour(orange), brand-colour(orange, dark));
-    padding: em(80) em(20);
+    width: 100%;
+    padding: $base-line-height * 4;
+    display: flex;
+    text-align: center;
 }
 
-.about {
-    @include linear-gradient(brand-colour(white), brand-colour(white));
-    padding: em(40) em(20) !important;
+.welcome-card:not(.welcome-card--middle) {
+    margin-top: $base-line-height * 3;
+    margin-bottom: $base-line-height * 3;
 }
 
-.journal {
-    @include linear-gradient(brand-colour(green), brand-colour(green, darker));
-    border: 1px solid brand-colour(white);
-}
-
-.case-studies {
-    @include linear-gradient(brand-colour(blue, light), brand-colour(blue, dark));
-    padding: em(40) em(20);
-}
-
-// Card Design
-
-.card {
-    width: 30%;
+.welcome-card {
+    border-radius: 7px;
+    flex: 1 1 0px;
     background-color: brand-colour(white);
-    display: block;
-    float: left;
-    border-radius: 4px;
     box-shadow: 10px 10px 20px brand-colour(orange, darker);
-    position: relative;
-
-    &-small {
-        margin-top: em(80);
-    }
 
     &:not(:last-child) {
-        margin-right: 5%;
+        margin-right: $base-line-height * 2;
     }
 }
 
-.card__main-image {
+.welcome-card__title {
+    @include type-setting(0);
+    padding: $base-line-height;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    color: brand-colour(white);
+}
+
+.welcome-card__list-item {
+    @include type-setting(0);
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: $base-line-height;
+    border-bottom: 1px solid #e6e6e6;
+    text-align: left;
+}
+
+.welcome-card__link {
+    @include type-setting(0);
+    margin: $base-line-height;
+    display: inline-block;
+    padding: 0.75rem $base-line-height;
+    border-radius: 20px;
+    color: brand-colour(white);
+}
+
+.welcome-card--middle {
+    flex-basis: $base-line-height * 2;
+}
+
+.welcome-card__image {
     display: block;
     height: 300px;
     background-size: cover;
     background-position: center center;
     position: relative;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
     
     &:after {
         content: "";
@@ -80,170 +91,219 @@
     }
 }
 
-.card__logo {
+.welcome-card__logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
 
-.card__text {
-    text-align: center;
-    @include sub-heading;
-    color: brand-colour(black);
-    margin-bottom: em(20);
-}
-
-.card__nav-list {
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-    text-align: center;
-    border-top: 1px solid #e6e6e6;
-
-    &-item {
-        @include sub-heading;
-        display: table-cell;
-        padding: em(15) 0;
-
-        &:not(:last-child) {
-            border-right: 1px solid #e6e6e6;
-        }
-
-        &:hover {
-            background-color: #e6e6e6;
-        }
+    &-text {
+        @include type-setting(0);
+        margin-bottom: $base-line-height;
+        color: brand-colour(black);
     }
 }
 
-.card__top {
-    display: block;
-    height: 80%;
+.welcome-card__social-list {
+    display: flex;
+    border-top: 1px solid #e6e6e6;
 }
 
-.card__title {
-    @include sub-heading;
-    color: brand-colour(white);
-    padding: em(20);
-    text-align: center;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-}
+.welcome-card__social-item {
+    flex: 1 1 auto;
+    align-items: flex-end;
+    padding: 1rem;
 
-.card__list-item {
-    @include sub-heading;
-    color: brand-colour(black);
-    padding: em(20);
-    border-bottom: 1px solid #e6e6e6;
-}
-
-.card__bottom {
-    display: block;
-    text-align: center;
-}
-
-.card__link {
-    display: inline-block;
-    text-align: center;
-    @include sub-heading;
-    @include font-size(1.0);
-    color: brand-colour(white);
-    padding: em(10) em(15);
-    border-radius: 20px;
-    margin: em(20) 0;
+    &:not(:last-child) {
+        border-right: 1px solid #e6e6e6;
+    }
 }
 
 @each $selector, $value in $post-colours {
-    [data-intro="#{$selector}"] .card__title {
+    [data-welcome="#{$selector}"] .welcome-card__title {
         background-color: post-colour($selector, light);
         border-bottom: 1px solid post-colour($selector);
     }
 
-    [data-intro="#{$selector}"] .card__link {
+    [data-welcome="#{$selector}"] .welcome-card__link {
         background-color: post-colour($selector, light);
 
         &:hover {
             background-color: post-colour($selector, hover);
+        } 
+    }
+}
+
+
+
+// About
+
+.about {
+    padding: $base-line-height * 2 0;
+}
+
+.about__column--one,
+.about__column--two {
+    display: block;
+    
+    @media only screen and (min-width: 768px) {
+        width: 47.5%;
+        float: left;
+    }
+}
+
+.about__column--one {
+    margin-right: 5%;
+}
+
+.about__column--three {
+    display: block;
+}
+
+.about__heading {
+    @include sub-heading;
+    @include type-setting(1);
+    color: brand-colour(orange);
+
+    &:after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 50px;
+        background-color: brand-colour(blue);
+        margin-bottom: 0.75rem;
+    }
+
+    span {
+        @include type-setting(-1);
+        color: brand-colour(blue);
+    }
+}
+
+.about__text {
+    @include type-setting(0);
+    margin-bottom: 0.75rem;
+    color: brand-colour(black); 
+}
+
+.about__job:not(:last-child) {
+    margin-bottom: $base-line-height * 2;
+}
+
+.about__list {
+    @include base;
+    @include type-setting(0);
+    color: brand-colour(black);
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+
+    &-item {
+        display: flex;
+        flex: 1 1 0px;
+        min-width: 16.666666667%;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0.5rem;
+
+        &:nth-child(-n+6) {
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        &:nth-child(n+2):nth-child(-n+6),
+        &:nth-child(n+8):nth-child(-n+12) {
+            border-left: 1px solid #e6e6e6;
         }
     }
 }
 
 
+// Posts
 
+.posts {
+  display: block;
+  @include linear-gradient(brand-colour(blue), brand-colour(green));
 
-// Bio
-
-.bio {
-    display: block;
-
-    &--centre {
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-    }
-
-    &--half {
-        width: 47.25%;
-        float: left;
-    }
+  @media only screen and (min-width: 667px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
-.bio__text {
-    @include base;
-    @include font-size(1.8);
-    line-height: em(24);
-    color: brand-colour(black);
-    text-align: center;
-    margin-bottom: em(20);
-
-    &:first-of-type {
-        margin-top: em(20);
-    }
-}
-
-
-
-
-// Journal 
-
-.journal-list__item {
-    position: relative;
-    width: 50%;
-    display: block;
-    float: left;
-
-    @media only screen and (min-width: 768px) {
-        width: 33.333333333%;
-    }
-
-    &:nth-child(odd) {
-        background-color: rgba(255, 255, 255, 0.15);
-    }
-}
-
-.journal-card {
+.post-card {
     @include sub-heading;
-    background-color: transparent;
-    border: 1px solid brand-colour(white);
-}
-
-.journal-card__title {
-    display: block;
-    padding: em(20) em(20) 0 em(20);
-    color: #08605F;
-}
-
-.journal-card__excerpt,
-.journal-card__date {
-    padding: em(20);
     color: brand-colour(white);
-    text-align: left;
+    border: 1px solid #e6e6e6;
+
+    @media only screen and (min-width: 667px) {
+        flex: 1 1 0px;
+        min-width: 50%;
+    }
+
+    @media only screen and (min-width: 992px) {
+        min-width: 25%;
+    }
 }
 
-.journal-card__read {
-    background-color: brand-colour(green, light);
+.post-card--intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 2 2 0px;
+    min-width: 50%;
+    padding: $base-line-height;
+}
+
+.post-card__header {
+    @include type-setting(2);
+    display: block;
+}
+
+.post-card__title {
+    @include type-setting(1);
+    padding: $base-line-height;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.post-card__excerpt,
+.post-card__date {
+    text-align: left;
+    padding: 0 $base-line-height $base-line-height $base-line-height;
+}
+
+.post-card__excerpt {
+    @include type-setting(0);
+}
+
+.post-card__date {
+    @include type-setting(-1);
+}
+
+.post-card__read {
+    @include type-setting(0);
+    background-color: brand-colour(white);
     display: inline-block;
     padding: em(10) em(20);
-    margin: 0 em(20) em(20) em(20);
     border-radius: 20px;
-    color: brand-colour(white);
+    color: brand-colour(black);
+    margin: 0 $base-line-height $base-line-height $base-line-height;
+    text-transform: capitalize;
+}
+
+@each $selector, $value in $post-colours {
+
+    .post-card[data-post="#{$selector}"] .post-card__title,
+    .post-card[data-post="#{$selector}"] .post-card__date {
+        //color: post-colour($selector, light);
+    }
+
+    .post-card[data-post="#{$selector}"] .post-card__read {
+        //background-color: post-colour($selector, light);
+
+        &:hover {
+          //  background-color: post-colour($selector, hover);
+        }
+    }
 }
