@@ -91,10 +91,9 @@ footer {
 
 .footer__text {
 	@include sub-heading;
-	@include font-size(0.8);
-	line-height: em(25);
-	color: brand-colour(orange);
-	margin-bottom: em(5);
+	@include type-setting(-2);
+	margin-bottom: 0.75rem;
+	color: brand-colour(black);
 }
 
 .footer__link {

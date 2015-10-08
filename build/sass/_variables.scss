@@ -2,8 +2,8 @@
 
 $grey: #f6f6f6;
 $orange: #EF4640;
-$blue: #6494AA;
-$green: #70C1B3;
+$blue: #4392F1;
+$green: #00A676;
 $purple: #67597A;
 $white: #ffffff;
 $black: #525252;
@@ -149,17 +149,27 @@ $syntax-colours: (
     @return map-get(map-get($syntax-colours, $syntax-colour), $tone);
 }
 
-
-
-
-
 // Modular Scale
 
 $type-scale: (
-  -1: 0.75rem,  
-  0: 1rem,      
-  1: 1.333rem,  
-  2: 1.777rem
+    11: 2.041rem,
+    10:1.913rem,
+    9: 1.793rem,
+    8: 1.68rem,
+    7: 1.575rem,
+    6: 1.476rem,
+    5: 1.383rem,
+    4: 1.296rem,
+    3: 1.215rem,
+    2: 1.138rem,
+    1: 1.067rem,
+    0: 1rem,
+    -1: 0.937rem,
+    -2: 0.878rem,
+    -3: 0.823rem,
+    -4: 0.772rem,
+    -5: 0.723rem,
+    -6: 0.678rem
 );
 
 @function type-scale($level) {
@@ -167,7 +177,7 @@ $type-scale: (
 }
 
 $base-font-size: 1rem;
-$base-line-height: $base-font-size * 1.25;
+$base-line-height: $base-font-size * 1.15;
 
 $line-heights: (
   -1: $base-line-height,

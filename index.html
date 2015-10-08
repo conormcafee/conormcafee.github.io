@@ -1,64 +1,110 @@
 ---
 layout: default
 title: Conor McAfee | Designer &amp; Front-End Developer
-description: A Designer &amp; Front-End Developer from Ballymena, Northern Ireland with 3 years industry experience. Make sure and check out my journals on front-end development and case studies on past projects
+description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ireland.
 ---
 
-<main>
+<main class="welcome">
 
-<div class="about">
+  <div class="welcome--wrapper">
 
-  <div class="about__left"></div>
+    <div class="welcome-card welcome-card--middle welcome--one">
+      <div class="welcome-card__image"></div>
+      <img src="assets/images/conor-mcafee-logo.svg" alt="Conor McAfee | Designer &amp; Front-End Developer" height="60" width="200" class="welcome-card__logo">
+      <p class="welcome-card__logo-text">Designer <span>&amp;</span> Front-End Developer</p>
+      <ul class="welcome-card__social-list">
+        <li class="welcome-card__social-item"><a href="http://www.twitter.com/conormcafee" title="Follow me on Twitter"><img src="/assets/images/social/twitter.svg" height="30" width="30" alt="Twitter Logo" /></a></li>
+        <li class="welcome-card__social-item"><a href="http://www.instagram.com/conormcafee" title="Follow me on Instagram"><img src="/assets/images/social/instagram.svg" height="30" width="30" alt="Instagram Logo" /></a></li>
+        <li class="welcome-card__social-item"><a href="http://www.dribbble.com/conormcafee" title="Follow me on Dribbble"><img src="/assets/images/social/dribbble.svg" height="30" width="30" alt="Dribbble Logo" /></a></li>
+        <li class="welcome-card__social-item"><a href="http://www.github.com/conormcafee" title="Follow me on Github"><img src="/assets/images/social/github.svg" height="30" width="30" alt="Github Logo" /></a></li>
+      </ul>
+    </div>
 
-  <div class="about__right">
+    <div class="welcome-card welcome--two" data-welcome="journal">
+      <p class="welcome-card__title">Latest Journals</p>
+      <ul class="welcome-card__list">
+      {% for post in site.categories.journal limit:3 %}
+        <li class="welcome-card__list-item"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+      {% endfor %}
+        <li class="welcome-card__list-item"><a href="#">Dummy Title</a></li>
+      </ul>
+      <a href="#" class="welcome-card__link" title="See all Journals">See all Journals</a>
+    </div>
 
-    <div class="about__right--content">
+    <div class="welcome-card welcome--three" data-welcome="case-study">
+      <p class="welcome-card__title">Latest Case Studies</p>
+      <ul class="welcome-card__list">
+      {% for post in site.categories.case-studies limit:3 %}
+        <li class="welcome-card__list-item"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+      {% endfor %}
+      </ul>
+      <a href="#" class="welcome-card__link" title="See all Case Studies">See all Case Studies</a>
+    </div>
 
-      <img src="assets/images/conor-mcafee-logo.svg" alt="Conor McAfee | Designer &amp; Front-End Developer" height="60" width="200" class="logo about__logo">
+  </div>
 
-      <p class="about__title">Designer <span>&amp;</span> Front-End Developer</p>
+</main>
 
-      <p class="about__text">I'm a designer &amp; front-end developer from Ballymena, Northern Ireland with 3 years industry experience.  Currently, I am working for dotRetailer in Belfast's Titanic Quarter.</p>
+<section class="about" id="about">
+  <div class="wrapper">
 
-      <p class="about__text">Be sure to check out my <a href="/work/" title="Check out my work: Case Studies &amp; Journals" class="about__link">work</a>, I have documented case studies to look through as well as journals on design &amp; front-end development.  If you wish to contact me, you can get me <a href="http://www.twitter.com/conormcafee" title="Tweet me" class="about__link" target="_blank">@conormcafee</a> on Twitter or via email <a href="mailto:hello@conormcafee.co.uk" title="Email me" class="about__link">hello@conormcafee.co.uk</a>.</p>
+    <div class="about__column about__column--one">
+      <h2 class="about__heading">About</h2>
 
-      <hr class="about__hr">
+      <p class="about__text">I'm a designer & front-end developer from Ballymena, Northern Ireland with 3 years industry experience. Currently, I am working for dotRetailer in Belfast's Titanic Quarter.</p>
 
-      <p class="about__text">I have experience in working with:</p>
+      <p class="about__text">I strive to build well executed websites, that not only look great on all devices - but also perform great. Living in Northern Ireland, we're not blessed with 4G connections or even good broadband connections - because of this I aim to optimise my websites as best I can, so that they load as quick as possible, even when the user does not have the best connection.</p>
+    </div>
+
+    <div class="about__column about__column--two">
+      <div class="about__job">
+        <h2 class="about__heading">dotRetailer <span>Front-End Developer</span></h2>
+
+        <p class="about__employed">March 2014 - Present</p>
+
+        <p class="about__text">I strive to build well executed websites, that not only look great on all devices - but also perform great. Living in Northern Ireland, we're not blessed with 4G connections in every town or even good broadband connections - because of this I aim to optimise my websites as best I can, so that they load as quick as possible when the user is not on a great Internet connection.</p>
+      </div>
+    </div>
+
+    <!-- Work -->
+
+    <div class="about__column about__column--one">
+      <h2 class="about__heading">Skills</h2>
 
       <ul class="about__list">
         {% for skill in site.data.skills %}
         <li class="about__list-item">{{ skill.name }}</li>
         {% endfor %}
       </ul>
-
-      <p class="about__text">My primary focus is on front-end development.  To me, this is the most important part of the web development process as this is what your users will interact with the most.</p>
-
-      <p class="about__text">I strive to build well executed websites, that not only look great on all devices - but also perform great.  Living in Northern Ireland, we're not blessed with 4G connections in every town or even good broadband connections - because of this I aim to optimise my websites as best I can, so that they load as quick as possible when the user is not on a great Internet connection.</p> 
-
-      <hr class="about__hr">
-
-      <p class="about__text">You may have seen some work that I have contributed to as part of a team, or solely around the web:</p>
-
-      <ul class="about__list">
-      {% for client in site.data.clients %}
-        <li class="about__list-item">{{ client.name }}</li>
-      {% endfor %}
-      </ul>
-
-      {% include footer.html %}
-
     </div>
 
+    <div class="about__column about__column--two">
+      <h2 class="about__heading">Sites I've Worked On</h2>
+
+      <ul class="about__list">
+        {% for client in site.data.clients %}
+        <li class="about__list-item">{{ client.name }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  
   </div>
+</section>
 
-</div>
+<section class="posts" id="posts" data-post="journal">
+  <div class="post-card post-card--intro">
+    <p class="post-card__header">Case Studies &amp; Journals</p>
+  </div>
+  {% for post in site.posts %}
+  <div class="post-card" data-post="{{ post.type }}">
+    <a href="{{ post.url | prepend: site.baseurl }}" class="post-card__title">{{ post.title }}</a>
+    <p class="post-card__excerpt">{{ post.excerpt | strip_html | truncate:150 }}</p>
+    <p class="post-card__date">{{ post.date | date: "%b %-d, %Y" }}</p>
+    <a href="{{ post.url | prepend: site.baseurl }}" class="post-card__read">Read {{ post.type }}</a>
+  </div>
+  {% endfor %}
+</section>
 
-</main>
 
-<div class="page-border page-border--top"></div>
-<div class="page-border page-border--left"></div>
-<div class="page-border page-border--bottom"></div>
-<div class="page-border page-border--right"></div>
 
 <script src="{{ site.baseurl }}/assets/js/main.min.js"></script>

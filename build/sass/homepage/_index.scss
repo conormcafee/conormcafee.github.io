@@ -7,43 +7,98 @@
     overflow: auto;
 }
 
-//@include linear-gradient(brand-colour(green), brand-colour(green, darker));
-//@include linear-gradient(brand-colour(blue, light), brand-colour(blue, dark));
-
 
 // Welcome
 
 .welcome {
     @include sub-heading;
-    @include linear-gradient(brand-colour(orange), brand-colour(orange, dark));
-    width: 100%;
-    padding: $base-line-height * 4;
-    display: flex;
+    display: block;
     text-align: center;
+    position: relative;
+
+    @media only screen and (min-width: 992px) {
+        @include linear-gradient(brand-colour(orange), brand-colour(orange, dark));
+        padding: $base-line-height * 6 0;
+        overflow: hidden;
+
+        &:after {
+            content: "";
+            display: block;
+            height: 30px;
+            width: 100%;
+            background-image: url('/assets/images/waves.svg');
+            background-repeat: repeat-x;
+            position: absolute;
+            bottom: -5px;
+        }
+    }
 }
 
-.welcome-card:not(.welcome-card--middle) {
-    margin-top: $base-line-height * 3;
-    margin-bottom: $base-line-height * 3;
+.welcome--wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media only screen and (min-width: 992px) {
+        padding: 0 $base-line-height * 2;
+    }
 }
 
 .welcome-card {
-    border-radius: 7px;
-    flex: 1 1 0px;
+    display: block;
     background-color: brand-colour(white);
-    box-shadow: 10px 10px 20px brand-colour(orange, darker);
+}
 
-    &:not(:last-child) {
-        margin-right: $base-line-height * 2;
+@media only screen and (min-width: 667px) {
+    .welcome-card {
+        width: 50%;
+        float: left;
+    }
+
+    .welcome-card--middle {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .welcome-card,
+    .welcome-card--middle {
+        width: 30%;
+        position: relative;
+        text-align: center;
+    }
+
+    .welcome-card {
+        box-shadow: 10px 10px 20px brand-colour(orange, darker);
+        border-radius: 7px;
+    }
+
+    .welcome-card:not(:last-child) {
+        margin-right: 5%;
+    }
+
+    .welcome--one {
+        left: 35%;
+    }
+
+    .welcome--two {
+        left: -35%;
+    }
+
+    .welcome--two,
+    .welcome--three {
+        margin-top: $base-line-height * 3;
     }
 }
 
 .welcome-card__title {
     @include type-setting(0);
     padding: $base-line-height;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
     color: brand-colour(white);
+
+    @media only screen and (min-width: 992px) {
+        border-top-right-radius: 7px;
+        border-top-left-radius: 7px;
+    }
 }
 
 .welcome-card__list-item {
@@ -66,18 +121,13 @@
     color: brand-colour(white);
 }
 
-.welcome-card--middle {
-    flex-basis: $base-line-height * 2;
-}
-
 .welcome-card__image {
     display: block;
-    height: 300px;
+    background-image: url('/assets/images/homepage/conor-mcafee.jpg');
+    height: 250px;
     background-size: cover;
     background-position: center center;
     position: relative;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
     
     &:after {
         content: "";
@@ -88,6 +138,11 @@
         background-repeat: repeat-x;
         position: absolute;
         bottom: -5px;
+    }
+
+    @media only screen and (min-width: 992px) {
+        border-top-right-radius: 7px;
+        border-top-left-radius: 7px;
     }
 }
 
@@ -103,29 +158,41 @@
     }
 }
 
-.welcome-card__social-list {
-    display: flex;
-    border-top: 1px solid #e6e6e6;
+.welcome-card__logo-text {
+    text-align: center;
 }
 
-.welcome-card__social-item {
-    flex: 1 1 auto;
-    align-items: flex-end;
-    padding: 1rem;
 
-    &:not(:last-child) {
-        border-right: 1px solid #e6e6e6;
+
+.welcome-card__social-list {
+    display: none;
+
+    @media only screen and (min-width: 992px) {
+        display: flex;
+        border-top: 1px solid #e6e6e6;
+
+        .welcome-card__social-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1 1 auto;
+            padding: 1rem;
+
+            &:not(:last-child) {
+                border-right: 1px solid #e6e6e6;
+           }
+        }
     }
 }
 
 @each $selector, $value in $post-colours {
     [data-welcome="#{$selector}"] .welcome-card__title {
-        background-color: post-colour($selector, light);
-        border-bottom: 1px solid post-colour($selector);
+        background-color: post-colour($selector);
+        border-bottom: 1px solid post-colour($selector, hover);
     }
 
     [data-welcome="#{$selector}"] .welcome-card__link {
-        background-color: post-colour($selector, light);
+        background-color: post-colour($selector);
 
         &:hover {
             background-color: post-colour($selector, hover);
@@ -134,11 +201,15 @@
 }
 
 
-
 // About
 
 .about {
     padding: $base-line-height * 2 0;
+    overflow: visible;
+}
+
+.about__column:not(:last-child) {
+    margin-bottom: $base-line-height * 2;
 }
 
 .about__column--one,
@@ -157,11 +228,12 @@
 
 .about__column--three {
     display: block;
+    clear: both;
 }
 
 .about__heading {
     @include sub-heading;
-    @include type-setting(1);
+    @include type-setting(6);
     color: brand-colour(orange);
 
     &:after {
@@ -170,19 +242,26 @@
         height: 2px;
         width: 50px;
         background-color: brand-colour(blue);
-        margin-bottom: 0.75rem;
+        margin: $base-line-height 0;
     }
 
     span {
-        @include type-setting(-1);
+        @include type-setting(-2);
         color: brand-colour(blue);
     }
 }
 
 .about__text {
-    @include type-setting(0);
+    @include type-setting(1);
     margin-bottom: 0.75rem;
-    color: brand-colour(black); 
+    color: brand-colour(black);
+}
+
+.about__employed {
+    @include sub-heading;
+    @include type-setting(-4);
+    margin-bottom: 0.75rem;
+    color: brand-colour(orange); 
 }
 
 .about__job:not(:last-child) {
@@ -195,23 +274,25 @@
     color: brand-colour(black);
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
 
     &-item {
         display: flex;
-        flex: 1 1 0px;
-        min-width: 16.666666667%;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem 0.5rem;
+        flex: 1 1 45%;
+        padding: 0.5rem 0;
 
-        &:nth-child(-n+6) {
-            border-bottom: 1px solid #e6e6e6;
+        &:nth-child(odd) {
+            margin-right: 2.5%;
         }
 
-        &:nth-child(n+2):nth-child(-n+6),
-        &:nth-child(n+8):nth-child(-n+12) {
-            border-left: 1px solid #e6e6e6;
+        &:nth-child(even) {
+            margin-left: 2.5%;
+        }
+
+        &:before {
+            content: "-";
+            display: inline-block;
+            color: brand-colour(blue);
+            margin-right: $base-line-height;
         }
     }
 }
@@ -221,6 +302,7 @@
 
 .posts {
   display: block;
+  clear: both;
   @include linear-gradient(brand-colour(blue), brand-colour(green));
 
   @media only screen and (min-width: 667px) {
@@ -235,12 +317,11 @@
     border: 1px solid #e6e6e6;
 
     @media only screen and (min-width: 667px) {
-        flex: 1 1 0px;
-        min-width: 50%;
+        flex: 1 1 50%;
     }
 
     @media only screen and (min-width: 992px) {
-        min-width: 25%;
+        flex: 1 1 25%;
     }
 }
 
@@ -248,13 +329,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 2 2 0px;
-    min-width: 50%;
+    flex: 2 2 50%;
     padding: $base-line-height;
 }
 
 .post-card__header {
-    @include type-setting(2);
+    @include type-setting(11);
     display: block;
 }
 
@@ -278,7 +358,7 @@
 }
 
 .post-card__date {
-    @include type-setting(-1);
+    @include type-setting(-4);
 }
 
 .post-card__read {
