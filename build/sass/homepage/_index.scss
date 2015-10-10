@@ -1,24 +1,14 @@
-// Global
-
-.intro,
-.about {
-    display: block;
-    position: relative;
-    overflow: auto;
-}
-
-
 // Welcome
 
 .welcome {
     @include sub-heading;
     display: block;
-    text-align: center;
     position: relative;
+    overflow: auto;
 
     @media only screen and (min-width: 992px) {
         @include linear-gradient(brand-colour(orange), brand-colour(orange, dark));
-        padding: $base-line-height * 6 0;
+        padding: $base-line-height * 5 0 $base-line-height * 6 0;
         overflow: hidden;
 
         &:after {
@@ -39,7 +29,7 @@
     margin: 0 auto;
 
     @media only screen and (min-width: 992px) {
-        padding: 0 $base-line-height * 2;
+        padding: 0 $base-line-height;
     }
 }
 
@@ -57,6 +47,11 @@
     .welcome-card--middle {
         width: 100%;
     }
+}
+
+.welcome--two,
+.welcome--three {
+    display: none;
 }
 
 @media only screen and (min-width: 992px) {
@@ -80,54 +75,51 @@
         left: 35%;
     }
 
+    .welcome--two,
+    .welcome--three {
+        display: block;
+        margin-top: $base-line-height * 3;
+    }
+
     .welcome--two {
         left: -35%;
     }
 
-    .welcome--two,
-    .welcome--three {
-        margin-top: $base-line-height * 3;
-    }
-}
-
-.welcome-card__title {
-    @include type-setting(0);
-    padding: $base-line-height;
-    color: brand-colour(white);
-
-    @media only screen and (min-width: 992px) {
+    .welcome-card__title {
+        @include type-setting(1);
+        padding: 0 $base-line-height;
         border-top-right-radius: 7px;
         border-top-left-radius: 7px;
+        padding: 0.75rem;
+        color: brand-colour(white);
     }
-}
 
-.welcome-card__list-item {
-    @include type-setting(0);
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding: $base-line-height;
-    border-bottom: 1px solid #e6e6e6;
-    text-align: left;
-}
+    .welcome-card__list-item {
+        @include type-setting(0);
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: $base-line-height;
+        border-bottom: 1px solid #e6e6e6;
+        text-align: left;
+    }
 
-.welcome-card__link {
-    @include type-setting(0);
-    margin: $base-line-height;
-    display: inline-block;
-    padding: 0.75rem $base-line-height;
-    border-radius: 20px;
-    color: brand-colour(white);
+    .welcome-card__link {
+        @include type-setting(0);
+        margin: $base-line-height;
+        display: inline-block;
+        padding: 0.75rem $base-line-height;
+        border-radius: 20px;
+        color: brand-colour(white);
+    }
 }
 
 .welcome-card__image {
     display: block;
-    background-image: url('/assets/images/homepage/conor-mcafee.jpg');
-    height: 250px;
-    background-size: cover;
-    background-position: center center;
+    height: 75px;
     position: relative;
+    @include linear-gradient(brand-colour(orange), brand-colour(orange, dark));
     
     &:after {
         content: "";
@@ -141,6 +133,10 @@
     }
 
     @media only screen and (min-width: 992px) {
+        height: 250px;
+        background-image: url('/assets/images/homepage/conor-mcafee.jpg');
+        background-size: cover;
+        background-position: center center;
         border-top-right-radius: 7px;
         border-top-left-radius: 7px;
     }
@@ -148,21 +144,26 @@
 
 .welcome-card__logo {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: $base-line-height;
+    
+    @media only screen and (min-width: 992px) {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+    }
 
     &-text {
         @include type-setting(0);
         margin-bottom: $base-line-height;
         color: brand-colour(black);
+        margin-left: $base-line-height;
+
+        @media only screen and (min-width: 992px) {
+            text-align: center;
+            margin-left: 0;
+        }
     }
 }
-
-.welcome-card__logo-text {
-    text-align: center;
-}
-
-
 
 .welcome-card__social-list {
     display: none;
@@ -201,11 +202,62 @@
 }
 
 
+
+
+
+// Navigation
+
+.nav--homepage {
+    @include sub-heading;
+    @include type-setting(-4);
+    display: block;
+    margin: $base-line-height;
+    display: flex;
+    text-align: center;
+    border: 1px solid #e6e6e6;
+    border-radius: 20px;
+
+    .nav__link {
+        display: flex;
+        flex: 1 1 0;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+
+        &:not(:last-child) {
+            border-right: 1px solid #e6e6e6;
+        }
+
+        &:hover {
+            background-color: brand-colour(blue);
+            color: brand-colour(white);
+
+            &:nth-child(1) {
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+            }
+
+            &:nth-child(3) {
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+            } 
+        }
+    }
+
+    @media only screen and (min-width: 992px) {
+        display: none;
+    }
+}
+
 // About
 
 .about {
-    padding: $base-line-height * 2 0;
+    padding: $base-line-height 0;
     overflow: visible;
+
+    @media only screen and (min-width: 992px) {
+        padding: $base-line-height * 2 0;
+    }
 }
 
 .about__column:not(:last-child) {
@@ -233,7 +285,7 @@
 
 .about__heading {
     @include sub-heading;
-    @include type-setting(6);
+    @include type-setting(4);
     color: brand-colour(orange);
 
     &:after {
@@ -246,8 +298,16 @@
     }
 
     span {
-        @include type-setting(-2);
+        @include type-setting(-4);
         color: brand-colour(blue);
+    }
+
+    @media only screen and (min-width: 768px) {
+        @include type-setting(6);
+
+        span {
+            @include type-setting(-2);
+        }
     }
 }
 
@@ -259,9 +319,13 @@
 
 .about__employed {
     @include sub-heading;
-    @include type-setting(-4);
+    @include type-setting(-6);
     margin-bottom: 0.75rem;
     color: brand-colour(orange); 
+
+    @media only screen and (min-width: 768px) {
+        @include type-setting(-4);
+    }
 }
 
 .about__job:not(:last-child) {
@@ -277,22 +341,26 @@
 
     &-item {
         display: flex;
-        flex: 1 1 45%;
+        flex: 1 1 100%;
         padding: 0.5rem 0;
 
-        &:nth-child(odd) {
-            margin-right: 2.5%;
-        }
-
-        &:nth-child(even) {
-            margin-left: 2.5%;
-        }
-
         &:before {
-            content: "-";
+            content: "·";
             display: inline-block;
             color: brand-colour(blue);
             margin-right: $base-line-height;
+        }
+
+        @media only screen and (min-width: 667px) {
+            flex: 1 1 45%;
+
+            &:nth-child(odd) {
+                margin-right: 2.5%;
+            }
+
+            &:nth-child(even) {
+                margin-left: 2.5%;
+            }
         }
     }
 }
@@ -304,6 +372,22 @@
   display: block;
   clear: both;
   @include linear-gradient(brand-colour(blue), brand-colour(green));
+  position: relative;
+  padding-top: 25px;
+
+    &:before {
+        content: "";
+        display: block;
+        height: 30px;
+        width: 100%;
+        background-image: url('/assets/images/waves.svg');
+        background-repeat: repeat-x;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -1px;
+        transform: rotate(180deg);
+    }
 
   @media only screen and (min-width: 667px) {
     display: flex;
@@ -314,7 +398,8 @@
 .post-card {
     @include sub-heading;
     color: brand-colour(white);
-    border: 1px solid #e6e6e6;
+    border: 1px solid brand-colour(white);
+    border-top: none;
 
     @media only screen and (min-width: 667px) {
         flex: 1 1 50%;

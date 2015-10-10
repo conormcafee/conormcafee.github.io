@@ -20,7 +20,17 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
       </ul>
     </div>
 
-    <div class="welcome-card welcome--two" data-welcome="journal">
+    <div class="welcome-card welcome--two" data-welcome="case-study">
+      <p class="welcome-card__title">Latest Case Studies</p>
+      <ul class="welcome-card__list">
+      {% for post in site.categories.case-studies limit:3 %}
+        <li class="welcome-card__list-item"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+      {% endfor %}
+      </ul>
+      <a href="#posts" class="welcome-card__link" title="See all Case Studies">See all Case Studies</a>
+    </div>
+
+    <div class="welcome-card welcome--three" data-welcome="journal">
       <p class="welcome-card__title">Latest Journals</p>
       <ul class="welcome-card__list">
       {% for post in site.categories.journal limit:3 %}
@@ -28,22 +38,18 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
       {% endfor %}
         <li class="welcome-card__list-item"><a href="#">Dummy Title</a></li>
       </ul>
-      <a href="#" class="welcome-card__link" title="See all Journals">See all Journals</a>
-    </div>
-
-    <div class="welcome-card welcome--three" data-welcome="case-study">
-      <p class="welcome-card__title">Latest Case Studies</p>
-      <ul class="welcome-card__list">
-      {% for post in site.categories.case-studies limit:3 %}
-        <li class="welcome-card__list-item"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
-      {% endfor %}
-      </ul>
-      <a href="#" class="welcome-card__link" title="See all Case Studies">See all Case Studies</a>
+      <a href="#posts" class="welcome-card__link" title="See all Journals">See all Journals</a>
     </div>
 
   </div>
 
 </main>
+
+<nav class="nav nav--homepage">
+  <a href="#about" class="nav__link" title="About Conor McAfee">About</a>
+  <a href="#posts" class="nav__link" title="See my Case Studies">Case Studies</a>
+  <a href="#posts" class="nav__link" title="See my Journals">Journal</a>
+</nav>
 
 <section class="about" id="about">
   <div class="wrapper">
@@ -54,6 +60,8 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
       <p class="about__text">I'm a designer & front-end developer from Ballymena, Northern Ireland with 3 years industry experience. Currently, I am working for dotRetailer in Belfast's Titanic Quarter.</p>
 
       <p class="about__text">I strive to build well executed websites, that not only look great on all devices - but also perform great. Living in Northern Ireland, we're not blessed with 4G connections or even good broadband connections - because of this I aim to optimise my websites as best I can, so that they load as quick as possible, even when the user does not have the best connection.</p>
+
+      <a href="#" class="btn btn--continue" title="Click to read more about Conor McAfee" alt="Click to read more about Conor McAfee">Continue Reading</a>
     </div>
 
     <div class="about__column about__column--two">
@@ -69,7 +77,7 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
     <!-- Work -->
 
     <div class="about__column about__column--one">
-      <h2 class="about__heading">Skills</h2>
+      <h2 class="about__heading">Skillset</h2>
 
       <ul class="about__list">
         {% for skill in site.data.skills %}
@@ -79,7 +87,7 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
     </div>
 
     <div class="about__column about__column--two">
-      <h2 class="about__heading">Sites I've Worked On</h2>
+      <h2 class="about__heading">Projects I've Worked On</h2>
 
       <ul class="about__list">
         {% for client in site.data.clients %}
