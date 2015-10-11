@@ -294,7 +294,7 @@ footer {
     overflow: hidden;
     text-overflow: ellipsis;
     padding: 1.15rem;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid #C1CAD6;
     text-align: left;
   }
 
@@ -380,7 +380,7 @@ footer {
 }
 @media only screen and (min-width: 992px) {
   .welcome-card__social-list {
-    border-top: 1px solid #e6e6e6;
+    border-top: 1px solid #C1CAD6;
     margin: 0;
   }
   .welcome-card__social-list .welcome-card__social-item {
@@ -396,7 +396,7 @@ footer {
     padding: 1rem;
   }
   .welcome-card__social-list .welcome-card__social-item:not(:last-child) {
-    border-right: 1px solid #e6e6e6;
+    border-right: 1px solid #C1CAD6;
     margin: 0;
   }
 }
@@ -433,7 +433,7 @@ footer {
   display: -ms-flexbox;
   display: flex;
   text-align: center;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #C1CAD6;
   border-radius: 20px;
 }
 .nav--homepage .nav__link {
@@ -452,7 +452,7 @@ footer {
   padding: 1rem;
 }
 .nav--homepage .nav__link:not(:last-child) {
-  border-right: 1px solid #e6e6e6;
+  border-right: 1px solid #C1CAD6;
 }
 .nav--homepage .nav__link:hover {
   background-color: #4392F1;
@@ -546,64 +546,6 @@ footer {
   color: #525252;
 }
 
-.about__employed {
-  font-family: 'quicksandregular', 'Arial', serif;
-  font-size: 0.678rem;
-  margin-bottom: 0.75rem;
-  color: #EF4640;
-}
-@media only screen and (min-width: 768px) {
-  .about__employed {
-    font-size: 0.772rem;
-  }
-}
-
-.about__job:not(:last-child) {
-  margin-bottom: 2.3rem;
-}
-
-.about__job--menu {
-  font-family: 'quicksandregular', 'Arial', serif;
-  font-size: 0.772rem;
-  margin: 1.15rem 0;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-  border: 1px solid #e6e6e6;
-  border-radius: 20px;
-}
-.about__job--menu .about__job--menu-link {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 0;
-      -ms-flex: 1 1 0;
-          flex: 1 1 0;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 1rem;
-}
-.about__job--menu .about__job--menu-link:not(:last-child) {
-  border-right: 1px solid #e6e6e6;
-}
-.about__job--menu .about__job--menu-link:hover {
-  background-color: #4392F1;
-  color: #ffffff;
-}
-.about__job--menu .about__job--menu-link:hover:nth-child(1) {
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
-.about__job--menu .about__job--menu-link:hover:nth-child(2) {
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
 .about__list {
   font-family: 'source_serif_proregular', 'Arial', serif;
   font-size: 1rem;
@@ -643,6 +585,65 @@ footer {
   .about__list-item:nth-child(even) {
     margin-left: 2.5%;
   }
+}
+
+.about__employment {
+  font-family: 'quicksandregular', 'Arial', serif;
+  border: 1px solid #C1CAD6;
+  border-radius: 7px;
+}
+
+.about__employment-nav {
+  font-family: 'quicksandregular', 'Arial', serif;
+  font-size: 0.772rem;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  border-bottom: 1px solid #C1CAD6;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.about__employment--js-active {
+  display: block;
+}
+
+.about__employment--js-inactive {
+  display: none;
+}
+
+.about__employment-link {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 0;
+      -ms-flex: 1 1 0;
+          flex: 1 1 0;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+.about__employment-link:hover {
+  background-color: #4392F1;
+  color: #ffffff;
+}
+.about__employment-link:not(:last-child) {
+  border-right: 1px solid #C1CAD6;
+}
+.about__employment-link:nth-child(1) {
+  border-top-left-radius: 4px;
+}
+.about__employment-link:nth-child(3) {
+  border-top-right-radius: 4px;
+}
+
+.about__employment-list {
+  padding: 1.15rem;
 }
 
 .about--hidden {
@@ -764,6 +765,7 @@ footer {
   color: #525252;
   margin: 0 1.15rem 1.15rem 1.15rem;
   padding: 0.75rem 1rem;
+  display: inline-block;
 }
 
 pre,

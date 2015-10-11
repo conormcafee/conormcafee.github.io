@@ -1,0 +1,27 @@
+- title: dotRetailer
+  role: Front-End Developer
+  time: March 2014 - Present
+  desc: Description goes here
+  state: active
+  number: 0
+
+- title: ActivWireless
+  role: Digital Media Officer
+  time: September 2013 - March 2014
+  desc: Description goes here
+  state: inactive
+  number: 1
+
+- title: Northern Ireland Open Challenge
+  role: Social Media Administrator
+  time: May 2013 - September 2014
+  desc: Description goes here
+  state: inactive
+  number: 2
+
+- title: University of Ulster
+  role: Multimedia Placement Student
+  time: June 2011 - June 2012
+  desc: Description goes here
+  state: inactive
+  number: 3

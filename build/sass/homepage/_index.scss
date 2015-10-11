@@ -101,7 +101,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
         padding: $base-line-height;
-        border-bottom: 1px solid #e6e6e6;
+        border-bottom: 1px solid brand-colour(grey);
         text-align: left;
     }
 
@@ -179,7 +179,7 @@
     }
 
     @media only screen and (min-width: 992px) {
-        border-top: 1px solid #e6e6e6;
+        border-top: 1px solid brand-colour(grey);
         margin: 0;
 
         .welcome-card__social-item {
@@ -190,7 +190,7 @@
         }
 
         .welcome-card__social-item:not(:last-child) {
-            border-right: 1px solid #e6e6e6;
+            border-right: 1px solid brand-colour(grey);
             margin: 0;
         }
     }
@@ -223,7 +223,7 @@
     margin: $base-line-height;
     display: flex;
     text-align: center;
-    border: 1px solid #e6e6e6;
+    border: 1px solid brand-colour(grey);
     border-radius: 20px;
 
     .nav__link {
@@ -234,7 +234,7 @@
         padding: 1rem;
 
         &:not(:last-child) {
-            border-right: 1px solid #e6e6e6;
+            border-right: 1px solid brand-colour(grey);
         }
 
         &:hover {
@@ -331,58 +331,6 @@
     color: brand-colour(black);
 }
 
-.about__employed {
-    @include sub-heading;
-    @include type-setting(-6);
-    margin-bottom: 0.75rem;
-    color: brand-colour(orange); 
-
-    @media only screen and (min-width: 768px) {
-        @include type-setting(-4);
-    }
-}
-
-.about__job:not(:last-child) {
-    margin-bottom: $base-line-height * 2;
-}
-
-.about__job--menu {
-    @include sub-heading;
-    @include type-setting(-4);
-    margin: $base-line-height 0;
-    display: flex;
-    text-align: center;
-    border: 1px solid #e6e6e6;
-    border-radius: 20px;
-
-    .about__job--menu-link {
-        display: flex;
-        flex: 1 1 0;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-
-        &:not(:last-child) {
-            border-right: 1px solid #e6e6e6;
-        }
-
-        &:hover {
-            background-color: brand-colour(blue);
-            color: brand-colour(white);
-
-            &:nth-child(1) {
-                border-top-left-radius: 20px;
-                border-bottom-left-radius: 20px;
-            }
-
-            &:nth-child(2) {
-                border-top-right-radius: 20px;
-                border-bottom-right-radius: 20px;
-            } 
-        }
-    }
-}
-
 .about__list {
     @include base;
     @include type-setting(0);
@@ -414,6 +362,59 @@
             }
         }
     }
+}
+
+.about__employment {
+    @include sub-heading;
+    border: 1px solid brand-colour(grey);
+    border-radius: 7px;
+}
+
+.about__employment-nav {
+    @include sub-heading;
+    @include type-setting(-4);
+    display: flex;
+    text-align: center;
+    border-bottom: 1px solid brand-colour(grey);
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.about__employment--js-active {
+    display: block;
+}
+
+.about__employment--js-inactive {
+    display: none;
+}
+
+.about__employment-link {
+    display: flex;
+    flex: 1 1 0;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    &:hover {
+        background-color: brand-colour(blue);
+        color: brand-colour(white); 
+    }
+
+    &:not(:last-child) {
+        border-right: 1px solid brand-colour(grey);
+    }
+
+    &:nth-child(1) {
+            border-top-left-radius: 4px;
+    }
+
+    &:nth-child(3) {
+        border-top-right-radius: 4px;
+    }
+}
+
+.about__employment-list {
+    padding: $base-line-height;
 }
 
 .about--hidden {
@@ -513,6 +514,7 @@
     color: brand-colour(black);
     margin: 0 $base-line-height $base-line-height $base-line-height;
     padding: 0.75rem 1rem;
+    display: inline-block;
 }
 
 @each $selector, $value in $post-colours {
