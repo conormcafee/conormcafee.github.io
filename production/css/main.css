@@ -522,7 +522,7 @@ footer {
   content: "";
   display: block;
   height: 2px;
-  width: 50px;
+  width: 30px;
   background-color: #4392F1;
   margin: 1.15rem 0;
 }
@@ -589,7 +589,6 @@ footer {
 
 .about__employment {
   font-family: 'quicksandregular', 'Arial', serif;
-  border: 1px solid #C1CAD6;
   border-radius: 7px;
 }
 
@@ -600,9 +599,8 @@ footer {
   display: -ms-flexbox;
   display: flex;
   text-align: center;
-  border-bottom: 1px solid #C1CAD6;
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
+  border: 1px solid #C1CAD6;
+  border-radius: 7px;
 }
 
 .about__employment--js-active {
@@ -611,6 +609,10 @@ footer {
 
 .about__employment--js-inactive {
   display: none;
+}
+
+.about__employment-list {
+  margin-top: 2.3rem;
 }
 
 .about__employment-link {
@@ -629,7 +631,7 @@ footer {
   padding: 1rem;
 }
 .about__employment-link:hover {
-  background-color: #4392F1;
+  background-color: #0e5fc0;
   color: #ffffff;
 }
 .about__employment-link:not(:last-child) {
@@ -637,13 +639,52 @@ footer {
 }
 .about__employment-link:nth-child(1) {
   border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
-.about__employment-link:nth-child(3) {
+.about__employment-link:nth-child(4) {
   border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
-.about__employment-list {
-  padding: 1.15rem;
+.about__employment-link--active {
+  background-color: #4392F1;
+  color: #ffffff;
+  position: relative;
+}
+.about__employment-link--active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -7px;
+  left: calc(50% - 7px);
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #4392F1;
+}
+.about__employment-link--active:hover:after {
+  border-top: 7px solid #0e5fc0;
+}
+
+.about__employment--title {
+  font-size: 1.215rem;
+  color: #EF4640;
+  margin-bottom: 0.5rem;
+}
+
+.about__employment--role {
+  font-size: 0.878rem;
+  color: #4392F1;
+  margin-bottom: 0.5rem;
+}
+
+.about__employment--desc {
+  font-family: 'source_serif_proregular', 'Arial', serif;
+  font-size: 1.067rem;
+  line-height: 2.3rem;
+  color: #525252;
 }
 
 .about--hidden {
@@ -662,6 +703,9 @@ footer {
 .btn--continue {
   background-color: #4392F1;
   color: #ffffff;
+}
+.btn--continue:hover {
+  background-color: #0e5fc0;
 }
 @media only screen and (min-width: 768px) {
   .btn--continue {

@@ -70,7 +70,7 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
       <div class="about__employment">
         
         <div class="about__employment-nav">
-          <a href="javascript: void(0)" class="about__employment-link" id="js-0-title" title="dotRetailer" alt="Other Jobs">dotRetailer</a>
+          <a href="javascript: void(0)" class="about__employment-link about__employment-link--active" id="js-0-title" title="dotRetailer" alt="Other Jobs">dotRetailer</a>
           <a href="javascript: void(0)" class="about__employment-link" id="js-1-title" title="ActivWireless" alt="Other Jobs">ActivWireless</a>
           <a href="javascript: void(0)" class="about__employment-link" id="js-2-title" title="Northern Ireland Open Challenge Tour" alt="Other Jobs">NI Open</a>
           <a href="javascript: void(0)" class="about__employment-link" id="js-3-title" title="University of Ulster" alt="Other Jobs">Uni of Ulster</a>
@@ -80,14 +80,11 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
         <ul id="js-{{ job.number }}" class="about__employment-list about__employment--js-{{ job.state }}">
           <li class="about__employment-item about__employment--title">{{ job.title }}</li>
           <li class="about__employment-item about__employment--role">{{ job.role }}</li>
-          <li class="about__employment-item about__employment--time">{{ job.time }}</li>
           <li class="about__employment-item about__employment--desc">{{ job.desc }}</li>
         </ul>
         {% endfor %}
       </div>
     </div>
-
-    <!-- Work -->
 
     <div class="about__column about__column--one about--js about--hidden">
       <h2 class="about__heading">Skillset</h2>
@@ -128,52 +125,5 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
 
 {% include footer.html %}
 
-<script src="{{ site.baseurl }}/assets/js/jquery-2.1.4.min.js"></script>
-<script>
-    $(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
-});
-</script>
-<script>
-$(".btn--continue").click(function(e) {
-    $(this).toggleClass("btn--continue-active btn--continue-inactive");
-    $(".about--js").toggleClass("about--hidden about--visible");
-});
-
-//
-
-$("#js-0-title").click(function(e) {
-    //$(this).toggleClass("btn--continue-active btn--continue-inactive");
-    $("#js-0").addClass("about__employment--js-active");
-    $("#js-1, #js-2, #js-3").addClass("about__employment--js-inactive");
-});
-
-$("#js-1-title").click(function(e) {
-    //$(this).toggleClass("btn--continue-active btn--continue-inactive");
-    $("#js-1").addClass("about__employment--js-active");
-    $("#js-0, #js-2, #js-3").addClass("about__employment--js-inactive");
-});
-
-$("#js-2-title").click(function(e) {
-    //$(this).toggleClass("btn--continue-active btn--continue-inactive");
-    $("#js-2").addClass("about__employment--js-active");
-    $("#js-0, #js-1, #js-3").addClass("about__employment--js-inactive");
-});
-
-$("#js-3-title").click(function(e) {
-    //$(this).toggleClass("btn--continue-active btn--continue-inactive");
-    $("#js-3").toggleClass("about__employment--js-active");
-    $("#js-0, #js-1, #js-2").addClass("about__employment--js-inactive");
-});
-</script>
+<script async src="{{ site.baseurl }}/assets/js/jquery-2.1.4.min.js"></script>
+<script async src="{{ site.baseurl }}/assets/js/homepage.min.js"></script>

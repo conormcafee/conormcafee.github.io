@@ -1,27 +1,23 @@
 - title: dotRetailer
-  role: Front-End Developer
-  time: March 2014 - Present
-  desc: Description goes here
+  role: Front-End Developer | Mar 14' - Present
+  desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id erat orci. Aenean tincidunt eu nisi vel luctus. Nam a congue velit, quis ultrices augue. Vivamus viverra, purus non malesuada ornare, lectus mauris ornare nibh, id euismod metus mi quis lorem.
   state: active
   number: 0
 
 - title: ActivWireless
-  role: Digital Media Officer
-  time: September 2013 - March 2014
-  desc: Description goes here
+  role: Digital Media Officer | Sep 13' - Mar 14'
+  desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id erat orci. Aenean tincidunt eu nisi vel luctus. Nam a congue velit, quis ultrices augue. Vivamus viverra, purus non malesuada ornare, lectus mauris ornare nibh, id euismod metus mi quis lorem. Vestibulum gravida varius quam eget elementum.
   state: inactive
   number: 1
 
 - title: Northern Ireland Open Challenge
-  role: Social Media Administrator
-  time: May 2013 - September 2014
-  desc: Description goes here
+  role: Social Media Administrator | May 13' - Sep 14'
+  desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id erat orci. Aenean tincidunt eu nisi vel luctus. Nam a congue velit, quis ultrices augue. 
   state: inactive
   number: 2
 
 - title: University of Ulster
-  role: Multimedia Placement Student
-  time: June 2011 - June 2012
-  desc: Description goes here
+  role: Multimedia Placement Student | June 11' - Jun 12'
+  desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id erat orci. Aenean tincidunt eu nisi vel luctus. Nam a congue velit, quis ultrices augue. 
   state: inactive
   number: 3
