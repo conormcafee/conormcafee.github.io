@@ -27,7 +27,7 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
         <li class="welcome-card__list-item"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
       {% endfor %}
       </ul>
-      <a href="#posts" class="welcome-card__link" title="See all Case Studies">See all Case Studies</a>
+      <a href="#posts" class="btn welcome-card__link" title="See all Case Studies">See all Case Studies</a>
     </div>
 
     <div class="welcome-card welcome--three" data-welcome="journal">
@@ -38,7 +38,7 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
       {% endfor %}
         <li class="welcome-card__list-item"><a href="#">Dummy Title</a></li>
       </ul>
-      <a href="#posts" class="welcome-card__link" title="See all Journals">See all Journals</a>
+      <a href="#posts" class="btn welcome-card__link" title="See all Journals">See all Journals</a>
     </div>
 
   </div>
@@ -61,10 +61,10 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
 
       <p class="about__text">I strive to build well executed websites, that not only look great on all devices - but also perform great. Living in Northern Ireland, we're not blessed with 4G connections or even good broadband connections - because of this I aim to optimise my websites as best I can, so that they load as quick as possible, even when the user does not have the best connection.</p>
 
-      <a href="#" class="btn btn--continue" title="Click to read more about Conor McAfee" alt="Click to read more about Conor McAfee">Continue Reading</a>
+      <a href="javascript: void(0)" class="btn btn--continue btn--continue-inactive" title="Click to read more about Conor McAfee" alt="Click to read more about Conor McAfee">Read more about Conor</a>
     </div>
 
-    <div class="about__column about__column--two">
+    <div class="about__column about__column--two about--js about--hidden">
       <div class="about__job">
         <h2 class="about__heading">dotRetailer <span>Front-End Developer</span></h2>
 
@@ -72,11 +72,18 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
 
         <p class="about__text">I strive to build well executed websites, that not only look great on all devices - but also perform great. Living in Northern Ireland, we're not blessed with 4G connections in every town or even good broadband connections - because of this I aim to optimise my websites as best I can, so that they load as quick as possible when the user is not on a great Internet connection.</p>
       </div>
+
+      <h3 class="about__heading">Previous Jobs</h3>
+
+      <div class="about__job--menu">
+        <a href="javascript: void(0)" class="about__job--menu-link" title="Other Jobs" alt="Other Jobs">ActivWireless</a>
+        <a href="javascript: void(0)" class="about__job--menu-link" title="Other Jobs" alt="Other Jobs">NI Open</a>
+      </div>
     </div>
 
     <!-- Work -->
 
-    <div class="about__column about__column--one">
+    <div class="about__column about__column--one about--js about--hidden">
       <h2 class="about__heading">Skillset</h2>
 
       <ul class="about__list">
@@ -86,7 +93,7 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
       </ul>
     </div>
 
-    <div class="about__column about__column--two">
+    <div class="about__column about__column--two about--js about--hidden">
       <h2 class="about__heading">Projects I've Worked On</h2>
 
       <ul class="about__list">
@@ -108,11 +115,33 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
     <a href="{{ post.url | prepend: site.baseurl }}" class="post-card__title">{{ post.title }}</a>
     <p class="post-card__excerpt">{{ post.excerpt | strip_html | truncate:150 }}</p>
     <p class="post-card__date">{{ post.date | date: "%b %-d, %Y" }}</p>
-    <a href="{{ post.url | prepend: site.baseurl }}" class="post-card__read">Read {{ post.type }}</a>
+    <a href="{{ post.url | prepend: site.baseurl }}" class="btn post-card__read">Read {{ post.type }}</a>
   </div>
   {% endfor %}
 </section>
 
+{% include footer.html %}
 
-
-<script src="{{ site.baseurl }}/assets/js/main.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/jquery-2.1.4.min.js"></script>
+<script>
+    $(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
+<script>
+$(".btn--continue").click(function(e) {
+    $(this).toggleClass("btn--continue-active btn--continue-inactive");
+    $(".about--js").toggleClass("about--hidden about--visible");
+});
+</script>

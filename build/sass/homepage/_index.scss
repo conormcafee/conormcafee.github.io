@@ -106,11 +106,7 @@
     }
 
     .welcome-card__link {
-        @include type-setting(0);
         margin: $base-line-height;
-        display: inline-block;
-        padding: 0.75rem $base-line-height;
-        border-radius: 20px;
         color: brand-colour(white);
     }
 }
@@ -184,6 +180,7 @@
 
     @media only screen and (min-width: 992px) {
         border-top: 1px solid #e6e6e6;
+        margin: 0;
 
         .welcome-card__social-item {
             justify-content: center;
@@ -194,6 +191,7 @@
 
         .welcome-card__social-item:not(:last-child) {
             border-right: 1px solid #e6e6e6;
+            margin: 0;
         }
     }
 }
@@ -348,6 +346,43 @@
     margin-bottom: $base-line-height * 2;
 }
 
+.about__job--menu {
+    @include sub-heading;
+    @include type-setting(-4);
+    margin: $base-line-height 0;
+    display: flex;
+    text-align: center;
+    border: 1px solid #e6e6e6;
+    border-radius: 20px;
+
+    .about__job--menu-link {
+        display: flex;
+        flex: 1 1 0;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+
+        &:not(:last-child) {
+            border-right: 1px solid #e6e6e6;
+        }
+
+        &:hover {
+            background-color: brand-colour(blue);
+            color: brand-colour(white);
+
+            &:nth-child(1) {
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+            }
+
+            &:nth-child(2) {
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+            } 
+        }
+    }
+}
+
 .about__list {
     @include base;
     @include type-setting(0);
@@ -381,6 +416,27 @@
     }
 }
 
+.about--hidden {
+    display: none;
+
+    @media only screen and (min-width: 768px) {
+        display: block;
+    }
+}
+
+.about--visible {
+    display: block;
+}
+
+.btn--continue {
+    background-color: brand-colour(blue);
+    color: brand-colour(white);
+
+    @media only screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
 
 // Posts
 
@@ -389,21 +445,7 @@
   clear: both;
   @include linear-gradient(brand-colour(blue), brand-colour(green));
   position: relative;
-  padding-top: 25px;
-
-    &:before {
-        content: "";
-        display: block;
-        height: 30px;
-        width: 100%;
-        background-image: url('/assets/images/waves.svg');
-        background-repeat: repeat-x;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: -1px;
-        transform: rotate(180deg);
-    }
+  border-top: 2px solid brand-colour(blue, darker);
 
   @media only screen and (min-width: 667px) {
     display: flex;
@@ -467,14 +509,10 @@
 }
 
 .post-card__read {
-    @include type-setting(0);
     background-color: brand-colour(white);
-    display: inline-block;
-    padding: em(10) em(20);
-    border-radius: 20px;
     color: brand-colour(black);
     margin: 0 $base-line-height $base-line-height $base-line-height;
-    text-transform: capitalize;
+    padding: 0.75rem 1rem;
 }
 
 @each $selector, $value in $post-colours {

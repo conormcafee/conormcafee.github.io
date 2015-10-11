@@ -31,11 +31,9 @@ a {
 .btn {
 	@include sub-heading;
 	@include type-setting(0);
-    background-color: brand-colour(blue);
     display: block;
-    padding: 1rem $base-line-height * 2;
+    padding: 0.75rem $base-line-height;
     border-radius: 20px;
-    color: brand-colour(white);
     margin: $base-line-height 0;
     text-transform: capitalize;
     text-align: center;
@@ -94,18 +92,6 @@ footer {
 
 .footer__link {
 	border-bottom: 1px dashed brand-colour(orange);
-}
-
-.m-top .footer__text {
-	color: brand-colour(white);
-}
-
-.m-top .footer__link {
-	border-bottom: 1px dashed brand-colour(white);
-}
-
-.follow-on-twitter {
-	margin-top: em(20);
 }
 
 .clearfix {
