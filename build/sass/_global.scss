@@ -28,17 +28,34 @@ a {
 	}
 }
 
+.btn {
+	@include sub-heading;
+	@include type-setting(0);
+    background-color: brand-colour(blue);
+    display: block;
+    padding: 1rem $base-line-height * 2;
+    border-radius: 20px;
+    color: brand-colour(white);
+    margin: $base-line-height 0;
+    text-transform: capitalize;
+    text-align: center;
+
+    @media only screen and (min-width: 768px) {
+    	display: inline-block;
+    }
+}
+
 .m-top {
 	padding: em(100) 0 em(20) 0;
 }
 
 ::-moz-selection { 
-    color: brand-colour(orange, darker);
+    color: brand-colour(blue, light);
     background: transparent;
 }
 
 ::selection {
-    color: brand-colour(orange, darker);
+    color: brand-colour(blue, light);
     background: transparent;
 }
 
@@ -57,27 +74,6 @@ a {
 
 	@media only screen and (min-width: 992px) {
 		display: block;
-	}
-}
-
-.navigation--link {
-	@include base;
-	@include font-size(1.0);
-	display: table-cell;
-	padding: em(25) em(5);
-	color: brand-colour(black);
-
-	&:hover {
-		color: brand-colour(orange);
-	}
-
-	@media only screen and (min-width: 992px) {
-		display: inline-block;
-		margin-right: em(20);
-
-		&:last-child {
-			margin-right: 0;
-		}
 	}
 }
 

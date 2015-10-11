@@ -124,17 +124,36 @@ a:focus {
   outline: none;
 }
 
+.btn {
+  font-family: 'quicksandregular', 'Arial', serif;
+  font-size: 1rem;
+  line-height: 1.15rem;
+  background-color: #4392F1;
+  display: block;
+  padding: 1rem 2.3rem;
+  border-radius: 20px;
+  color: #ffffff;
+  margin: 1.15rem 0;
+  text-transform: capitalize;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .btn {
+    display: inline-block;
+  }
+}
+
 .m-top {
   padding: 6.25em 0 1.25em 0;
 }
 
 ::-moz-selection {
-  color: #b91510;
+  color: #72aef5;
   background: transparent;
 }
 
 ::selection {
-  color: #b91510;
+  color: #72aef5;
   background: transparent;
 }
 
@@ -149,27 +168,6 @@ a:focus {
 @media only screen and (min-width: 992px) {
   .navigation {
     display: block;
-  }
-}
-
-.navigation--link {
-  font-family: 'source_serif_proregular', 'Arial', serif;
-  font-size: 10px;
-  font-size: 1rem;
-  display: table-cell;
-  padding: 1.5625em 0.3125em;
-  color: #525252;
-}
-.navigation--link:hover {
-  color: #EF4640;
-}
-@media only screen and (min-width: 992px) {
-  .navigation--link {
-    display: inline-block;
-    margin-right: 1.25em;
-  }
-  .navigation--link:last-child {
-    margin-right: 0;
   }
 }
 
@@ -356,7 +354,7 @@ footer {
   display: block;
   margin-left: 1.15rem;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .welcome-card__logo {
     margin-left: auto;
     margin-right: auto;
@@ -370,7 +368,7 @@ footer {
   color: #525252;
   margin-left: 1.15rem;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .welcome-card__logo-text {
     text-align: center;
     margin-left: 0;
@@ -378,19 +376,32 @@ footer {
 }
 
 .welcome-card__social-list {
-  display: none;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 1.15rem;
+}
+.welcome-card__social-list .welcome-card__social-item {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .welcome-card__social-list {
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .welcome-card__social-list .welcome-card__social-item:not(:last-child) {
+    margin-right: 1.15rem;
+  }
 }
 @media only screen and (min-width: 992px) {
   .welcome-card__social-list {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
     border-top: 1px solid #e6e6e6;
   }
   .welcome-card__social-list .welcome-card__social-item {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -434,7 +445,6 @@ footer {
 .nav--homepage {
   font-family: 'quicksandregular', 'Arial', serif;
   font-size: 0.772rem;
-  display: block;
   margin: 1.15rem;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -472,6 +482,12 @@ footer {
 .nav--homepage .nav__link:hover:nth-child(3) {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .nav--homepage {
+    width: 60%;
+    margin: 1.15rem auto;
+  }
 }
 @media only screen and (min-width: 992px) {
   .nav--homepage {
@@ -671,7 +687,12 @@ footer {
   -webkit-flex: 2 2 50%;
       -ms-flex: 2 2 50%;
           flex: 2 2 50%;
-  padding: 1.15rem;
+  padding: 4.6rem 1.15rem;
+}
+@media only screen and (min-width: 667px) {
+  .post-card--intro {
+    padding: 1.15rem;
+  }
 }
 
 .post-card__header {
