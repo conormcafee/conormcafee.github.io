@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-case-study
 title:  Nobel Cafe
 description: Nobel Cafe is an award winning contemporary cafe/restaurant in Ballymena, Co. Antrim.  Nobel approached me to redesign their existing website to bring it more in line with the interior changes to their premises. 
 date:   2015-09-07 20:00

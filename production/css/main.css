@@ -141,10 +141,6 @@ a:focus {
   }
 }
 
-.m-top {
-  padding: 6.25em 0 1.25em 0;
-}
-
 ::-moz-selection {
   color: #72aef5;
   background: transparent;
@@ -155,30 +151,33 @@ a:focus {
   background: transparent;
 }
 
-.navigation {
-  text-align: center;
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-  border-top: 5px solid #EF4640;
-  margin-bottom: 0.625em;
-}
-@media only screen and (min-width: 992px) {
-  .navigation {
-    display: block;
-  }
-}
-
 footer {
   clear: both;
   text-align: center;
-  margin: 2.5em 0;
+  padding: 1.15rem 0;
+}
+
+.footer__avatar {
+  display: block;
+  width: 110px;
+  height: 110px;
+  margin: 1.15rem auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/images/conor-mcafee-small.jpg");
+  border: 2px solid #EF4640;
+  border-radius: 60px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .footer__avatar {
+    background-image: url("../../assets/images/conor-mcafee-small@2x.jpg");
+  }
 }
 
 .footer__text {
   font-family: 'quicksandregular', 'Arial', serif;
   font-size: 0.878rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
   color: #525252;
 }
 
@@ -342,6 +341,7 @@ footer {
     padding: 0;
   }
 }
+
 .welcome-card__logo-text {
   font-size: 1rem;
   line-height: 1.15rem;
@@ -403,26 +403,26 @@ footer {
 
 [data-welcome="case-study"] .welcome-card__title {
   background-color: #4392F1;
-  border-bottom: 1px solid #0e5fc0;
+  border-bottom: 1px solid #1476ed;
 }
 
 [data-welcome="case-study"] .welcome-card__link {
   background-color: #4392F1;
 }
 [data-welcome="case-study"] .welcome-card__link:hover {
-  background-color: #0e5fc0;
+  background-color: #1476ed;
 }
 
 [data-welcome="journal"] .welcome-card__title {
   background-color: #00A676;
-  border-bottom: 1px solid #00402d;
+  border-bottom: 1px solid #007352;
 }
 
 [data-welcome="journal"] .welcome-card__link {
   background-color: #00A676;
 }
 [data-welcome="journal"] .welcome-card__link:hover {
-  background-color: #00402d;
+  background-color: #007352;
 }
 
 .nav--homepage {
@@ -436,6 +436,18 @@ footer {
   border: 1px solid #C1CAD6;
   border-radius: 20px;
 }
+@media only screen and (min-width: 768px) {
+  .nav--homepage {
+    width: 60%;
+    margin: 1.15rem auto;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .nav--homepage {
+    display: none;
+  }
+}
+
 .nav--homepage .nav__link {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -466,25 +478,14 @@ footer {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-@media only screen and (min-width: 768px) {
-  .nav--homepage {
-    width: 60%;
-    margin: 1.15rem auto;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .nav--homepage {
-    display: none;
-  }
-}
 
 .about {
-  padding: 1.15rem 0;
+  padding: 0.5rem 0 2.3rem 0;
   overflow: visible;
 }
 @media only screen and (min-width: 992px) {
   .about {
-    padding: 2.3rem 0;
+    padding: 2.3rem 0 3.45rem 0;
   }
 }
 
@@ -526,14 +527,17 @@ footer {
   background-color: #4392F1;
   margin: 1.15rem 0;
 }
+@media only screen and (min-width: 768px) {
+  .about__heading {
+    font-size: 1.476rem;
+  }
+}
+
 .about__heading span {
   font-size: 0.772rem;
   color: #4392F1;
 }
 @media only screen and (min-width: 768px) {
-  .about__heading {
-    font-size: 1.476rem;
-  }
   .about__heading span {
     font-size: 0.878rem;
   }
@@ -558,6 +562,7 @@ footer {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
 }
+
 .about__list-item {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -687,6 +692,34 @@ footer {
   color: #525252;
 }
 
+.about__column--full {
+  clear: both;
+  text-align: center;
+  margin: 0 auto;
+  border: 2px solid #EF4640;
+  border-radius: 7px;
+  padding: 1.15rem;
+}
+@media only screen and (min-width: 768px) {
+  .about__column--full {
+    display: block;
+    width: 50%;
+  }
+}
+
+.about__column--full .about__heading:after {
+  margin: 1.15rem auto;
+}
+
+.about__column--full .btn {
+  background-color: #EF4640;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+.about__column--full .btn:hover {
+  background-color: #b91510;
+}
+
 .about--hidden {
   display: none;
 }
@@ -714,12 +747,13 @@ footer {
 }
 
 .posts {
-  display: block;
-  clear: both;
   background: #4392F1;
   background: linear-gradient(180deg, #4392F1, #00A676);
+  display: block;
+  clear: both;
   position: relative;
   border-top: 2px solid #0e5fc0;
+  border-bottom: 2px solid #007352;
 }
 @media only screen and (min-width: 667px) {
   .posts {
@@ -735,8 +769,8 @@ footer {
 .post-card {
   font-family: 'quicksandregular', 'Arial', serif;
   color: #ffffff;
-  border: 1px solid #ffffff;
-  border-top: none;
+  border-color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 @media only screen and (min-width: 667px) {
   .post-card {
@@ -805,11 +839,78 @@ footer {
 }
 
 .post-card__read {
-  background-color: #ffffff;
-  color: #525252;
+  border: 2px solid #ffffff;
+  color: #ffffff;
   margin: 0 1.15rem 1.15rem 1.15rem;
-  padding: 0.75rem 1rem;
   display: inline-block;
+}
+.post-card__read:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.post {
+  position: relative;
+  padding: 4.6rem 0 6.9rem 0;
+}
+.post:after {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 100%;
+  background-image: url("/assets/images/waves.svg");
+  background-repeat: repeat-x;
+  position: absolute;
+  bottom: -5px;
+}
+
+.post__header,
+.post__date {
+  font-family: 'quicksandregular', 'Arial', serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+.post__header {
+  font-size: 2.041rem;
+}
+
+.post__date {
+  font-size: 1.138rem;
+  line-height: 2.3rem;
+  margin-top: 1.15rem;
+}
+
+article {
+  display: block;
+  width: 70%;
+  float: left;
+}
+
+article p,
+article li {
+  font-size: 1.067rem;
+  line-height: 2.3rem;
+  margin-bottom: 0.75rem;
+  color: #525252;
+}
+
+article h2 {
+  font-family: 'quicksandregular', 'Arial', serif;
+  font-size: 1.68rem;
+  margin-bottom: 0.75rem;
+  color: #00A676;
+}
+
+.post--case-study {
+  border-top: 2px solid #1476ed;
+  background: #4392F1;
+  background: linear-gradient(180deg, #4392F1, #1476ed);
+}
+
+.post--journal {
+  border-top: 2px solid #007352;
+  background: #00A676;
+  background: linear-gradient(180deg, #00A676, #007352);
 }
 
 pre,

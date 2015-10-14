@@ -43,10 +43,6 @@ a {
     }
 }
 
-.m-top {
-	padding: em(100) 0 em(20) 0;
-}
-
 ::-moz-selection { 
     color: brand-colour(blue, light);
     background: transparent;
@@ -57,36 +53,34 @@ a {
     background: transparent;
 }
 
-
-
-
-// Navigation
-
-.navigation {
-	text-align: center;
-	display: table;
-	table-layout: fixed;
-	width: 100%;
-	border-top: 5px solid brand-colour(orange);
-	margin-bottom: em(10);
-
-	@media only screen and (min-width: 992px) {
-		display: block;
-	}
-}
-
 // Footer
 
 footer {
 	clear: both;
 	text-align: center;
-	margin: em(40) 0;
+	padding: $base-line-height 0;
+}
+
+.footer__avatar {
+	display: block;
+	width: 110px;
+	height: 110px;
+	margin: $base-line-height auto;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: url('../../assets/images/conor-mcafee-small.jpg');
+	border: 2px solid brand-colour(orange);
+	border-radius: 60px;
+
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    	background-image: url('../../assets/images/conor-mcafee-small@2x.jpg');
+	}
 }
 
 .footer__text {
 	@include sub-heading;
 	@include type-setting(-2);
-	margin-bottom: 0.75rem;
+	margin-bottom: 1rem;
 	color: brand-colour(black);
 }
 

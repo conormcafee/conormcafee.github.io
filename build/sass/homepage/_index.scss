@@ -147,17 +147,17 @@
         margin-right: auto;
         padding: 0;
     }
+}
 
-    &-text {
-        @include type-setting(0);
-        margin-bottom: $base-line-height;
-        color: brand-colour(black);
-        margin-left: $base-line-height;
+.welcome-card__logo-text {
+    @include type-setting(0);
+    margin-bottom: $base-line-height;
+    color: brand-colour(black);
+    margin-left: $base-line-height;
 
-        @media only screen and (min-width: 768px) {
-            text-align: center;
-            margin-left: 0;
-        }
+    @media only screen and (min-width: 768px) {
+        text-align: center;
+        margin-left: 0;
     }
 }
 
@@ -226,33 +226,6 @@
     border: 1px solid brand-colour(grey);
     border-radius: 20px;
 
-    .nav__link {
-        display: flex;
-        flex: 1 1 0;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-
-        &:not(:last-child) {
-            border-right: 1px solid brand-colour(grey);
-        }
-
-        &:hover {
-            background-color: brand-colour(blue);
-            color: brand-colour(white);
-
-            &:nth-child(1) {
-                border-top-left-radius: 20px;
-                border-bottom-left-radius: 20px;
-            }
-
-            &:nth-child(3) {
-                border-top-right-radius: 20px;
-                border-bottom-right-radius: 20px;
-            } 
-        }
-    }
-
     @media only screen and (min-width: 768px) {
         width: 60%;
         margin: $base-line-height auto;
@@ -263,6 +236,32 @@
     }
 }
 
+.nav--homepage .nav__link {
+    display: flex;
+    flex: 1 1 0;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    &:not(:last-child) {
+        border-right: 1px solid brand-colour(grey);
+    }
+
+    &:hover {
+        background-color: brand-colour(blue);
+        color: brand-colour(white);
+
+        &:nth-child(1) {
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+        &:nth-child(3) {
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        } 
+    }
+}
 
 
 
@@ -270,11 +269,11 @@
 // About
 
 .about {
-    padding: $base-line-height 0;
+    padding: 0.5rem 0 $base-line-height * 2 0;
     overflow: visible;
 
     @media only screen and (min-width: 992px) {
-        padding: $base-line-height * 2 0;
+        padding: $base-line-height * 2 0 $base-line-height * 3 0;
     }
 }
 
@@ -315,17 +314,17 @@
         margin: $base-line-height 0;
     }
 
-    span {
-        @include type-setting(-4);
-        color: brand-colour(blue);
-    }
-
     @media only screen and (min-width: 768px) {
         @include type-setting(6);
+    }
+}
 
-        span {
-            @include type-setting(-2);
-        }
+.about__heading span {
+    @include type-setting(-4);
+    color: brand-colour(blue);
+
+    @media only screen and (min-width: 768px) {
+        @include type-setting(-2);
     }
 }
 
@@ -341,34 +340,32 @@
     color: brand-colour(black);
     display: flex;
     flex-wrap: wrap;
+}
 
-    &-item {
-        display: flex;
-        flex: 1 1 100%;
-        padding: 0.5rem 0;
+.about__list-item {
+    display: flex;
+    flex: 1 1 100%;
+    padding: 0.5rem 0;
 
-        &:before {
-            content: "·";
-            display: inline-block;
-            color: brand-colour(blue);
-            margin-right: $base-line-height;
+    &:before {
+        content: "·";
+        display: inline-block;
+        color: brand-colour(blue);
+        margin-right: $base-line-height;
+    }
+
+    @media only screen and (min-width: 667px) {
+        flex: 1 1 45%;
+
+        &:nth-child(odd) {
+            margin-right: 2.5%;
         }
 
-        @media only screen and (min-width: 667px) {
-            flex: 1 1 45%;
-
-            &:nth-child(odd) {
-                margin-right: 2.5%;
-            }
-
-            &:nth-child(even) {
-                margin-left: 2.5%;
-            }
+        &:nth-child(even) {
+            margin-left: 2.5%;
         }
     }
 }
-
-// Employment Section
 
 .about__employment {
     @include sub-heading;
@@ -462,8 +459,35 @@
 .about__employment--desc {
     @include base;
     @include type-setting(1);
-    //line-height: 1.75rem;
     color: brand-colour(black);
+}
+
+.about__column--full {
+    clear: both;
+    text-align: center;
+    margin: 0 auto;
+    border: 2px solid brand-colour(orange);
+    border-radius: 7px;
+    padding: $base-line-height;
+
+    @media only screen and (min-width: 768px) {
+        display: block;
+        width: 50%;
+    }
+}
+
+.about__column--full .about__heading:after {
+    margin: $base-line-height auto;
+}
+
+.about__column--full .btn {
+    background-color: brand-colour(orange);
+    color: brand-colour(white);
+    margin-bottom: 0;
+
+    &:hover {
+        background-color: brand-colour(orange, darker);
+    }
 }
 
 .about--hidden {
@@ -495,23 +519,24 @@
 // Posts
 
 .posts {
-  display: block;
-  clear: both;
-  @include linear-gradient(brand-colour(blue), brand-colour(green));
-  position: relative;
-  border-top: 2px solid brand-colour(blue, darker);
+    @include linear-gradient(brand-colour(blue), brand-colour(green));
+    display: block;
+    clear: both;
+    position: relative;
+    border-top: 2px solid brand-colour(blue, darker);
+    border-bottom: 2px solid brand-colour(green, dark);
 
-  @media only screen and (min-width: 667px) {
-    display: flex;
-    flex-wrap: wrap;
-  }
+    @media only screen and (min-width: 667px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .post-card {
     @include sub-heading;
     color: brand-colour(white);
-    border: 1px solid brand-colour(white);
-    border-top: none;
+    border-color: brand-colour(white);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 
     @media only screen and (min-width: 667px) {
         flex: 1 1 50%;
@@ -563,25 +588,12 @@
 }
 
 .post-card__read {
-    background-color: brand-colour(white);
-    color: brand-colour(black);
+    border: 2px solid brand-colour(white);
+    color: brand-colour(white);
     margin: 0 $base-line-height $base-line-height $base-line-height;
-    padding: 0.75rem 1rem;
     display: inline-block;
-}
 
-@each $selector, $value in $post-colours {
-
-    .post-card[data-post="#{$selector}"] .post-card__title,
-    .post-card[data-post="#{$selector}"] .post-card__date {
-        //color: post-colour($selector, light);
-    }
-
-    .post-card[data-post="#{$selector}"] .post-card__read {
-        //background-color: post-colour($selector, light);
-
-        &:hover {
-          //  background-color: post-colour($selector, hover);
-        }
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
     }
 }

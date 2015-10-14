@@ -4,29 +4,39 @@ layout: default
 
 {% include header.html %}
 
-<div class="post post--{{ page.type }}">
+<main class="post" data-post-type="{{ page.type }}">
 
 	<div class="wrapper">
-	
-		<h1 class="post__header">{{ page.title }}</h1>
 
-		<p class="post__date">{{ page.date | date: "%b %-d, %Y" }}</p>
+		<div class="post__header">
+
+			<h1 class="post__heading">{{ page.title }}</h1>
+
+			<p class="post__date">{{ page.date | date: "%b %-d, %Y" }}</p>
+
+		</div>
+
+		<div class="post__wrap">
+
+			<div class="post__image">
+
+				<img src="{{ site.baseurl }}/assets/images/{{ page.header }}" class="post--image" title="{{ post.title }}" />
+
+			</div>
+
+			<div class="post__content">
+						
+				{{ content }}
+
+			</div>
+
+		</div>
+	
+	{% include footer.html %}
 
 	</div>
 
-</div>
-
-<div class="wrapper">
-
-	<article class="post__content">
-
-		{{ content }}
-
-	</article>
-
-</div>
-
-{% include footer.html %}
+</main>
 
 <script src="{{ site.baseurl }}/assets/js/main.min.js"></script>
 <script type="application/ld+json">

@@ -100,7 +100,7 @@ $post-colours: (
         base:   $blue,
         lighter: lighten($blue, 20%),
         light: lighten($blue, 10%),
-        hover: darken($blue, 20%),
+        hover: darken($blue, 10%),
         svg:  case-study
     ),
 
@@ -108,7 +108,7 @@ $post-colours: (
         base: $green,
         lighter: lighten($green, 20%),
         light: lighten($green, 10%),
-        hover: darken($green, 20%),
+        hover: darken($green, 10%),
         svg: journal
     )
 );
