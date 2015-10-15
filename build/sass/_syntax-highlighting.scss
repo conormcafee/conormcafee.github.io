@@ -2,31 +2,32 @@
 pre,
 code {
     font-family: "Courier New", Courier, monospace;
-    @include font-size(1.2);
-    line-height: em(24);
-    background-color: syntax-colour(navy);
+    @include type-setting(0);
+    //background-color: syntax-colour(navy);
 }
 
 code {
-    padding: 1px 5px;
+    //padding: 1px 5px;
     color: brand-colour(white);
 }
 
 pre {
-    padding: em(15) em(30);
+    padding: $base-line-height;
+
 
     > code {
         border: 0;
         padding-right: 0;
         padding-left: 0;
+
     }
 }
 
 .highlight {
     background-color: syntax-colour(navy);
-    border-top: 2px solid syntax-colour(navy, dark);
-    border-bottom: 2px solid syntax-colour(navy, dark);
-    margin-bottom: em(30);
+    border: 2px solid syntax-colour(navy);
+    border-radius: 7px;
+    margin-bottom: $base-line-height;
     color: brand-colour(white);
     overflow-x: scroll;
 

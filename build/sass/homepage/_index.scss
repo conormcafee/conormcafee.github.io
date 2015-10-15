@@ -150,6 +150,7 @@
 }
 
 .welcome-card__logo-text {
+    @include sub-heading;
     @include type-setting(0);
     margin-bottom: $base-line-height;
     color: brand-colour(black);
@@ -462,7 +463,7 @@
     color: brand-colour(black);
 }
 
-.about__column--full {
+.contact {
     clear: both;
     text-align: center;
     margin: 0 auto;
@@ -476,11 +477,13 @@
     }
 }
 
-.about__column--full .about__heading:after {
-    margin: $base-line-height auto;
+.contact__text {
+    @include type-setting(1);
+    margin-bottom: 0.75rem;
+    color: brand-colour(black);
 }
 
-.about__column--full .btn {
+.contact .btn {
     background-color: brand-colour(orange);
     color: brand-colour(white);
     margin-bottom: 0;

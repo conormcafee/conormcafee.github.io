@@ -177,6 +177,7 @@ footer {
 .footer__text {
   font-family: 'quicksandregular', 'Arial', serif;
   font-size: 0.878rem;
+  line-height: 1.15rem;
   margin-bottom: 1rem;
   color: #525252;
 }
@@ -187,6 +188,60 @@ footer {
 
 .clearfix {
   clear: both;
+}
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #a2b0c2;
+  overflow: hidden;
+  padding: 1.15rem 0;
+}
+
+.header__left,
+.header__right {
+  display: block;
+  float: left;
+}
+
+.header__left {
+  width: 1000%;
+}
+@media only screen and (min-width: 668px) {
+  .header__left {
+    width: 25%;
+  }
+}
+
+.header__right {
+  width: 100%;
+}
+@media only screen and (min-width: 668px) {
+  .header__right {
+    width: 75%;
+  }
+}
+
+.header__menu {
+  font-family: 'quicksandregular', 'Arial', serif;
+  padding: 0.75em 0;
+  text-align: left;
+}
+@media only screen and (min-width: 668px) {
+  .header__menu {
+    text-align: right;
+  }
+}
+
+.header__menu-item {
+  display: inline;
+  color: #525252;
+}
+.header__menu-item:hover {
+  color: #EF4640;
+}
+
+.header__menu-item:not(:first-child) {
+  padding-left: 0.9375em;
 }
 
 .welcome {
@@ -277,7 +332,7 @@ footer {
 
   .welcome-card__title {
     font-size: 1.067rem;
-    line-height: 2.3rem;
+    line-height: 2rem;
     padding: 0 1.15rem;
     border-top-right-radius: 7px;
     border-top-left-radius: 7px;
@@ -343,6 +398,7 @@ footer {
 }
 
 .welcome-card__logo-text {
+  font-family: 'quicksandregular', 'Arial', serif;
   font-size: 1rem;
   line-height: 1.15rem;
   margin-bottom: 1.15rem;
@@ -428,6 +484,7 @@ footer {
 .nav--homepage {
   font-family: 'quicksandregular', 'Arial', serif;
   font-size: 0.772rem;
+  line-height: 1.15rem;
   margin: 1.15rem;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -517,6 +574,7 @@ footer {
 .about__heading {
   font-family: 'quicksandregular', 'Arial', serif;
   font-size: 1.296rem;
+  line-height: 2rem;
   color: #EF4640;
 }
 .about__heading:after {
@@ -530,22 +588,25 @@ footer {
 @media only screen and (min-width: 768px) {
   .about__heading {
     font-size: 1.476rem;
+    line-height: 2rem;
   }
 }
 
 .about__heading span {
   font-size: 0.772rem;
+  line-height: 1.15rem;
   color: #4392F1;
 }
 @media only screen and (min-width: 768px) {
   .about__heading span {
     font-size: 0.878rem;
+    line-height: 1.15rem;
   }
 }
 
 .about__text {
   font-size: 1.067rem;
-  line-height: 2.3rem;
+  line-height: 2rem;
   margin-bottom: 0.75rem;
   color: #525252;
 }
@@ -600,6 +661,7 @@ footer {
 .about__employment-nav {
   font-family: 'quicksandregular', 'Arial', serif;
   font-size: 0.772rem;
+  line-height: 1.15rem;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -675,12 +737,14 @@ footer {
 
 .about__employment--title {
   font-size: 1.215rem;
+  line-height: 2rem;
   color: #EF4640;
   margin-bottom: 0.5rem;
 }
 
 .about__employment--role {
   font-size: 0.878rem;
+  line-height: 1.15rem;
   color: #4392F1;
   margin-bottom: 0.5rem;
 }
@@ -688,11 +752,11 @@ footer {
 .about__employment--desc {
   font-family: 'source_serif_proregular', 'Arial', serif;
   font-size: 1.067rem;
-  line-height: 2.3rem;
+  line-height: 2rem;
   color: #525252;
 }
 
-.about__column--full {
+.contact {
   clear: both;
   text-align: center;
   margin: 0 auto;
@@ -701,22 +765,25 @@ footer {
   padding: 1.15rem;
 }
 @media only screen and (min-width: 768px) {
-  .about__column--full {
+  .contact {
     display: block;
     width: 50%;
   }
 }
 
-.about__column--full .about__heading:after {
-  margin: 1.15rem auto;
+.contact__text {
+  font-size: 1.067rem;
+  line-height: 2rem;
+  margin-bottom: 0.75rem;
+  color: #525252;
 }
 
-.about__column--full .btn {
+.contact .btn {
   background-color: #EF4640;
   color: #ffffff;
   margin-bottom: 0;
 }
-.about__column--full .btn:hover {
+.contact .btn:hover {
   background-color: #b91510;
 }
 
@@ -810,12 +877,13 @@ footer {
 
 .post-card__header {
   font-size: 2.041rem;
+  line-height: 2rem;
   display: block;
 }
 
 .post-card__title {
   font-size: 1.067rem;
-  line-height: 2.3rem;
+  line-height: 2rem;
   padding: 1.15rem;
   display: block;
   overflow: hidden;
@@ -836,6 +904,7 @@ footer {
 
 .post-card__date {
   font-size: 0.772rem;
+  line-height: 1.15rem;
 }
 
 .post-card__read {
@@ -850,7 +919,7 @@ footer {
 
 .post {
   position: relative;
-  padding: 4.6rem 0 6.9rem 0;
+  padding: 4.6rem 0 5.75rem 0;
 }
 .post:after {
   content: "";
@@ -872,63 +941,161 @@ footer {
 
 .post__header {
   font-size: 2.041rem;
+  line-height: 2rem;
 }
 
 .post__date {
   font-size: 1.138rem;
-  line-height: 2.3rem;
+  line-height: 2rem;
   margin-top: 1.15rem;
 }
 
 article {
   display: block;
-  width: 70%;
-  float: left;
+  margin-top: 1.15rem;
+}
+@media only screen and (min-width: 768px) {
+  article {
+    width: 55%;
+    margin-right: 5%;
+    float: left;
+  }
+}
+@media only screen and (min-width: 992px) {
+  article {
+    width: 65%;
+    margin-right: 5%;
+  }
 }
 
 article p,
 article li {
   font-size: 1.067rem;
-  line-height: 2.3rem;
+  line-height: 2rem;
   margin-bottom: 0.75rem;
   color: #525252;
+}
+
+article ul {
+  list-style: disc;
+  list-style-position: inside;
+  margin-left: 1.15rem;
 }
 
 article h2 {
   font-family: 'quicksandregular', 'Arial', serif;
   font-size: 1.68rem;
+  line-height: 2rem;
+  line-height: 4.6rem;
   margin-bottom: 0.75rem;
-  color: #00A676;
 }
 
-.post--case-study {
+article img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+aside {
+  display: block;
+  margin-top: 1.15rem;
+}
+@media only screen and (min-width: 768px) {
+  aside {
+    width: 40%;
+    float: left;
+    padding-left: 1.15rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  aside {
+    width: 30%;
+  }
+}
+aside .contact {
+  width: 100%;
+}
+
+.related .welcome-card {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .related .welcome-card {
+    display: block;
+    left: 0;
+    margin-right: 0;
+    width: 100%;
+    box-shadow: none;
+    margin-bottom: 2.3rem;
+    border-radius: 7px;
+    padding-top: 1.15rem;
+  }
+}
+.related .welcome-card .welcome-card__image {
+  display: block;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("/assets/images/conor-mcafee-small.jpg");
+}
+.related .welcome-card .welcome-card__image:after {
+  display: none;
+}
+.related .welcome-card .welcome-card__social-list,
+.related .welcome-card .welcome-card__social-item {
+  border: none;
+}
+
+.related__box {
+  clear: both;
+  border-radius: 7px;
+  padding: 1.15rem;
+  background: #EF4640;
+  background: linear-gradient(180deg, #EF4640, #b91510);
+}
+
+.post.post--case-study {
   border-top: 2px solid #1476ed;
   background: #4392F1;
   background: linear-gradient(180deg, #4392F1, #1476ed);
 }
 
-.post--journal {
+article.post--case-study h2 {
+  color: #4392F1;
+}
+
+.related--case-study .welcome-card {
+  border: 2px solid #4392F1;
+}
+
+.post.post--journal {
   border-top: 2px solid #007352;
   background: #00A676;
   background: linear-gradient(180deg, #00A676, #007352);
 }
 
+article.post--journal h2 {
+  color: #00A676;
+}
+
+.related--journal .welcome-card {
+  border: 2px solid #00A676;
+}
+
 pre,
 code {
   font-family: "Courier New", Courier, monospace;
-  font-size: 12px;
-  font-size: 1.2rem;
-  line-height: 1.5em;
-  background-color: #2D3047;
+  font-size: 1rem;
+  line-height: 1.15rem;
 }
 
 code {
-  padding: 1px 5px;
   color: #ffffff;
 }
 
 pre {
-  padding: 0.9375em 1.875em;
+  padding: 1.15rem;
 }
 pre > code {
   border: 0;
@@ -938,9 +1105,9 @@ pre > code {
 
 .highlight {
   background-color: #2D3047;
-  border-top: 2px solid #191b28;
-  border-bottom: 2px solid #191b28;
-  margin-bottom: 1.875em;
+  border: 2px solid #2D3047;
+  border-radius: 7px;
+  margin-bottom: 1.15rem;
   color: #ffffff;
   overflow-x: scroll;
 }

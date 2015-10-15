@@ -180,10 +180,24 @@ $base-font-size: 1rem;
 $base-line-height: $base-font-size * 1.15;
 
 $line-heights: (
-  -1: $base-line-height,
-  0: $base-line-height,
-  1: $base-line-height * 2,
-  2: $base-line-height * 2
+    -6: $base-line-height,
+    -5: $base-line-height,
+    -4: $base-line-height,
+    -3: $base-line-height,
+    -2: $base-line-height,
+    -1: $base-line-height,
+    0: $base-line-height,
+    1: 2rem,
+    2: 2rem,
+    3: 2rem,
+    4: 2rem,
+    5: 2rem,
+    6: 2rem,
+    7: 2rem,
+    8: 2rem,
+    9: 2rem,
+    10: 2rem,
+    11: 2rem
 );
 
 @function line-height($level) {

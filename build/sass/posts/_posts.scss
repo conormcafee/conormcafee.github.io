@@ -1,6 +1,6 @@
 .post {
     position: relative;
-    padding: $base-line-height * 4 0 $base-line-height * 6 0;
+    padding: $base-line-height * 4 0 $base-line-height * 5 0;
 
     &:after {
         content: "";
@@ -32,8 +32,18 @@
 
 article {
     display: block;
-    width: 70%;
-    float: left;
+    margin-top: $base-line-height;
+
+    @media only screen and (min-width: 768px) {
+        width: 55%;
+        margin-right: 5%;
+        float: left;
+    }
+
+    @media only screen and (min-width: 992px) {
+        width: 65%;
+        margin-right: 5%; 
+    }
 }
 
 article p,
@@ -43,16 +53,102 @@ article li {
     color: brand-colour(black);
 }
 
+article ul {
+    list-style: disc;
+    list-style-position: inside;
+    margin-left: $base-line-height;
+}
+
 article h2 {
     @include sub-heading;
     @include type-setting(8);
+    line-height: $base-line-height * 4;
     margin-bottom: 0.75rem;
-    color: brand-colour(green);
+}
+
+article img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+aside {
+    display: block;
+    margin-top: $base-line-height;
+
+    @media only screen and (min-width: 768px) {
+        width: 40%;
+        float: left;
+        padding-left: $base-line-height;
+    }
+
+    @media only screen and (min-width: 992px) {
+        width: 30%;
+    }
+
+    .contact {
+        width: 100%;
+    }
+}
+
+
+
+
+
+// Related
+
+.related .welcome-card {
+    display: none;
+
+    @media only screen and (min-width: 768px) {
+        display: block;
+        left: 0;
+        margin-right: 0;
+        width: 100%;
+        box-shadow: none;
+        margin-bottom: $base-line-height * 2;
+        border-radius: 7px;
+        padding-top: $base-line-height;
+    }
+
+    .welcome-card__image {
+        display: block;
+        height: 100px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url('/assets/images/conor-mcafee-small.jpg');
+
+        &:after {
+            display: none;
+        }
+    }
+
+    .welcome-card__social-list,
+    .welcome-card__social-item {
+        border: none;
+    }
+}
+
+
+.related__box {
+    clear: both;
+    border-radius: 7px;
+    padding: $base-line-height;
+    @include linear-gradient(brand-colour(orange), brand-colour(orange, darker));
 }
 
 @each $selector, $value in $post-colours {
-    .post--#{$selector} {
+    .post.post--#{$selector} {
         border-top: 2px solid post-colour($selector, hover);
         @include linear-gradient(post-colour($selector), post-colour($selector, hover));
+    }
+
+    article.post--#{$selector} h2 {
+        color: post-colour($selector);
+    }
+
+    .related--#{$selector} .welcome-card {
+        border: 2px solid post-colour($selector);
     }
 }

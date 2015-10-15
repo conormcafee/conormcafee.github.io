@@ -1,5 +1,5 @@
 ---
-layout: post-case-study
+layout: post
 title:  "2015 Redesign"
 date:   2015-09-14 20:00:00
 categories: case-studies

@@ -1,13 +1,9 @@
 header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
 	background-color: brand-colour(white);
 	border-bottom: 1px solid brand-colour(grey, dark);
 	overflow: hidden;
-	z-index: 1;
-	padding: em(10) 0;
+	//padding: em(10) 0;
+	padding: $base-line-height 0;
 }
 
 .header__left,
@@ -17,7 +13,7 @@ header {
 }
 
 .header__left {
-	width: 50%;
+	width: 1000%;
 
 	@media only screen and (min-width: 668px) {
 		width: 25%;
@@ -25,7 +21,7 @@ header {
 }
 
 .header__right {
-	width: 50%;
+	width: 100%;
 
 	@media only screen and (min-width: 668px) {
 		width: 75%;
@@ -34,8 +30,12 @@ header {
 
 .header__menu {
 	@include sub-heading;
-	text-align: right;
 	padding: em(12) 0;
+	text-align: left;
+
+	@media only screen and (min-width: 668px) {
+		text-align: right;
+	}
 }
 
 .header__menu-item {
