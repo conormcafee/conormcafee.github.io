@@ -4,39 +4,47 @@ layout: default
 
 {% include header.html %}
 
-<main class="m-top post">
+<div class="post post--{{ page.type }}">
 
 	<div class="wrapper">
+		
+		<h1 class="post__header">{{ page.title }}</h1>
 
-		<div class="post__header">
-
-			<h1 class="post__heading">{{ page.title }}</h1>
-
-			<p class="post__date">{{ page.date | date: "%b %-d, %Y" }}</p>
-
-		</div>
-
-		<div class="post__wrap">
-
-			<div class="post__image">
-
-				<img src="{{ site.baseurl }}/assets/images/{{ page.header }}" class="post--image" title="{{ post.title }}" />
-
-			</div>
-
-			<div class="post__content">
-						
-				{{ content }}
-
-			</div>
-
-		</div>
-	
-	{% include footer.html %}
-
+		<p class="post__date">{{ page.date | date: "%b %-d, %Y" }}</p>
+		
 	</div>
 
-</main>
+</div>
+
+<div class="wrapper wrapper--edit wrapper--{{ page.type }}">
+
+	<article class="post__content post--{{ page.type }}">
+
+		{{ content }}
+
+	</article>
+
+	<aside class="related related--{{ page.type }}">
+
+		<div class="welcome-card welcome-card--middle welcome--one">
+      		<div class="welcome-card__image"></div>
+      		<img src="../assets/images/conor-mcafee-logo.svg" alt="Conor McAfee | Designer &amp; Front-End Developer" height="60" width="200" class="welcome-card__logo">
+      		<p class="welcome-card__logo-text">Designer <span>&amp;</span> Front-End Developer</p>
+		    <ul class="welcome-card__social-list">
+		    	<li class="welcome-card__social-item"><a href="http://www.twitter.com/conormcafee" title="Follow me on Twitter"><img src="/assets/images/social/twitter.svg" height="30" width="30" alt="Twitter Logo" /></a></li>
+		        <li class="welcome-card__social-item"><a href="http://www.instagram.com/conormcafee" title="Follow me on Instagram"><img src="/assets/images/social/instagram.svg" height="30" width="30" alt="Instagram Logo" /></a></li>
+		        <li class="welcome-card__social-item"><a href="http://www.dribbble.com/conormcafee" title="Follow me on Dribbble"><img src="/assets/images/social/dribbble.svg" height="30" width="30" alt="Dribbble Logo" /></a></li>
+		        <li class="welcome-card__social-item"><a href="http://www.github.com/conormcafee" title="Follow me on Github"><img src="/assets/images/social/github.svg" height="30" width="30" alt="Github Logo" /></a></li>
+		    </ul>
+    	</div>
+
+		{% include contact.html %}
+
+	</aside>
+
+</div>
+
+{% include footer.html %}
 
 <script src="{{ site.baseurl }}/assets/js/main.min.js"></script>
 <script type="application/ld+json">

@@ -10,8 +10,6 @@ header: case-studies/blue-horizon-developments/bhd-header.jpg
 author: Conor McAfee
 ---
 
-## The Brief
-
 I was approached by Caroline Rowley of Blue Horizon Developments to create a website for them in which they could showcase their latest housing developments in prestigious areas of Northern Ireland.
 
 Caroline, who would be maintaining and managing the website needed a simple solution to add details of new housing developments on both the homepage and on another (Developments) page.  With the nature of their business, Blue Horizon Developments felt it was important to have areas on the homepage that would make use of big imagery.  

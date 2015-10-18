@@ -9,8 +9,6 @@ header: /journal/business-card.jpg
 author: Conor McAfee
 ---
 
-It’s been a long time in coming, but at long last I can finally say I have a new presence online.  I hope you like it. 
-
 It’s been a busy 2 years since I graduated university and have come a long way in my career since then.  I’m now at the stage where I want to give more back to the web design community - and feel that I am better equipped to do that now.
 
 The thinking behind this website is that I am going to:

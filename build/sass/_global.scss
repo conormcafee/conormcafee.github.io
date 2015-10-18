@@ -1,25 +1,20 @@
 html {
 	-webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
-	font-size: 14px;
-
-	@media only screen and (min-width: 768px) {
-		font-size: 16px;
-	}
+	@include type-setting(0);
 }
 
 body {
-	position: relative;
 	@include base;
-	@include linear-gradient(brand-colour(orange), brand-colour(orange, dark));
+	position: relative;
 }
 
 .wrapper {
-	max-width: 1100px;
+	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 em(15);
+	padding: 0 $base-line-height;
 
-	@media only screen and (min-width: 1150px) {
+	@media only screen and (min-width: 1200px) {
 		padding: 0;
 	}
 }
@@ -33,57 +28,29 @@ a {
 	}
 }
 
-.m-top {
-	padding: em(100) 0 em(20) 0;
+.btn {
+	@include sub-heading;
+	@include type-setting(0);
+    display: block;
+    padding: 0.75rem $base-line-height;
+    border-radius: 20px;
+    margin: $base-line-height 0;
+    text-transform: capitalize;
+    text-align: center;
+
+    @media only screen and (min-width: 768px) {
+    	display: inline-block;
+    }
 }
 
 ::-moz-selection { 
-    color: brand-colour(orange, darker);
+    color: brand-colour(blue, light);
     background: transparent;
 }
 
 ::selection {
-    color: brand-colour(orange, darker);
+    color: brand-colour(blue, light);
     background: transparent;
-}
-
-
-
-
-// Navigation
-
-.navigation {
-	text-align: center;
-	display: table;
-	table-layout: fixed;
-	width: 100%;
-	border-top: 5px solid brand-colour(orange);
-	margin-bottom: em(10);
-
-	@media only screen and (min-width: 992px) {
-		display: block;
-	}
-}
-
-.navigation--link {
-	@include base;
-	@include font-size(1.0);
-	display: table-cell;
-	padding: em(25) em(5);
-	color: brand-colour(black);
-
-	&:hover {
-		color: brand-colour(orange);
-	}
-
-	@media only screen and (min-width: 992px) {
-		display: inline-block;
-		margin-right: em(20);
-
-		&:last-child {
-			margin-right: 0;
-		}
-	}
 }
 
 // Footer
@@ -91,29 +58,36 @@ a {
 footer {
 	clear: both;
 	text-align: center;
-	margin: em(40) 0;
+	padding: $base-line-height 0;
+}
+
+.footer__avatar {
+	display: block;
+	width: 110px;
+	height: 110px;
+	margin: $base-line-height auto;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: url('../../assets/images/conor-mcafee-small.jpg');
+	border: 2px solid brand-colour(orange);
+	border-radius: 60px;
+
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    	background-image: url('../../assets/images/conor-mcafee-small@2x.jpg');
+	}
 }
 
 .footer__text {
 	@include sub-heading;
-	@include font-size(0.8);
-	line-height: em(25);
-	color: brand-colour(orange);
-	margin-bottom: em(5);
+	@include type-setting(-2);
+	margin-bottom: 1rem;
+	color: brand-colour(black);
 }
 
 .footer__link {
 	border-bottom: 1px dashed brand-colour(orange);
 }
 
-.m-top .footer__text {
-	color: brand-colour(white);
-}
-
-.m-top .footer__link {
-	border-bottom: 1px dashed brand-colour(white);
-}
-
-.follow-on-twitter {
-	margin-top: em(20);
+.clearfix {
+	clear: both;
 }
