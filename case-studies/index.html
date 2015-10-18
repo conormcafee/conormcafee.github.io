@@ -9,10 +9,6 @@ description: Have a look at my latest Case Studies and see how I came up with th
 <ul class="archive__list">
 {% for post in site.categories.case-studies %}
 	<li class="archive__list-item {{ post.type }} is-visible" data-post="{{ post.type }}">
-		<figure class="archive__image-wrap">
-			<img src="{{ site.baseurl }}/assets/images/{{ post.thumbnail-desktop }}" class="archive__image" title="{{ post.title }}" />
-		</figure>
-
 		<a href="{{ post.url | prepend: site.baseurl }}" class="archive__title">{{ post.title }}</a>
 		
 		<span class="archive__date">{{ post.date | date: "%b %-d, %Y" }}</span>

@@ -518,7 +518,7 @@ header {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem;
+  padding: 0.75rem;
 }
 .nav--homepage .nav__link:not(:last-child) {
   border-right: 1px solid #C1CAD6;
@@ -936,7 +936,7 @@ header {
 .post__date {
   font-family: 'quicksandregular', 'Arial', serif;
   color: #ffffff;
-  text-align: center;
+  text-align: left;
 }
 
 .post__header {
