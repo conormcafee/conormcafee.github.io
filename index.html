@@ -52,27 +52,35 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
 
 <section class="about" id="about">
   <div class="wrapper">
-
     <div class="about__column about__column--one">
+      
       <h2 class="about__heading">About</h2>
 
-      <p class="about__text">I'm a designer & front-end developer from Ballymena, Northern Ireland with 3 years industry experience. Currently, I am working for dotRetailer in Belfast's Titanic Quarter.</p>
+      <p class="about__text">I'm a designer &amp; front-end developer from Ballymena, Northern Ireland with 3 years industry experience. Currently, I am working for dotRetailer in Belfast's Titanic Quarter.</p>
 
-      <p class="about__text">My aim is to build well executed websites, that look &amp; perform great on all devices.  We're now at a stage where a large chunk of are users browse from a mobile device, be it a mobile phone or tablet.  Those users browsing over a 3G connection do not need to be downloading unnecessary content, I aim to prioritise whats necssary - giving users the best possible experience accessing the web.</p>
+      <p class="about__text">My aim is to build well executed websites, that look &amp; perform great on all devices.  We're now at a stage where a large chunk of are users browse from a mobile device, albeit a mobile phone or tablet.  Those users browsing over a 3G connection do not need to be downloading unnecessary content.  My aim is to prioritise what content is necssary - giving users the best possible experience when accessing the web.</p>
 
-      <a href="javascript: void(0)" class="btn btn--continue btn--continue-inactive" title="Click to read more about Conor McAfee" alt="Click to read more about Conor McAfee">Read more about Conor</a>
+      <h2 class="about__heading">Networking</h2>
+
+      <p class="about__text">You can find me at local web events around Belfast such as <a href="http://www.hustleconf.co.uk/" target="_blank" class="about__link" title="Hustle Confernce">Hustle</a> &amp; <a href="http://refreshbelfast.com/" target="_blank" class="about__link" title="Refresh Belfast">Refresh</a>.  These are always great for catching up with local designers &amp; developers as well as meeting others.  I have also attended <a href="http://2013.buildconf.com/" target="_blank" class="about__link" title="Build Confernce">Build</a> on two occasions.</p>
+
+      <p class="about__text">I really enjoy collaborating on projects with other designers and/or software developers, so if you need a front-end developer to help out on a subject feel free to give me a shout.</p>
+
+      <a href="#1" class="btn btn--continue btn--continue-inactive" title="Click to read more about Conor McAfee" alt="Click to read more about Conor McAfee">Read more about Conor</a>
+
     </div>
 
     <div class="about__column about__column--two about--js about--hidden">
+      
       <h2 class="about__heading">Employment</h2>
         
       <div class="about__employment">
         
         <div class="about__employment-nav">
-          <a href="javascript: void(0)" class="about__employment-link about__employment-link--active" id="js-0-title" title="dotRetailer" alt="Other Jobs">dotRetailer</a>
-          <a href="javascript: void(0)" class="about__employment-link" id="js-1-title" title="ActivWireless" alt="Other Jobs">ActivWireless</a>
-          <a href="javascript: void(0)" class="about__employment-link" id="js-2-title" title="Northern Ireland Open Challenge Tour" alt="Other Jobs">NI Open</a>
-          <a href="javascript: void(0)" class="about__employment-link" id="js-3-title" title="University of Ulster" alt="Other Jobs">Uni of Ulster</a>
+          <a href="#" class="about__employment-link about__employment-link--active" id="js-0-title" title="dotRetailer" alt="Other Jobs">dotRetailer</a>
+          <a href="#" class="about__employment-link" id="js-1-title" title="ActivWireless" alt="Other Jobs">ActivWireless</a>
+          <a href="#" class="about__employment-link" id="js-2-title" title="Northern Ireland Open Challenge Tour" alt="Other Jobs">NI Open</a>
+          <a href="#" class="about__employment-link" id="js-3-title" title="University of Ulster" alt="Other Jobs">Uni of Ulster</a>
         </div>
 
         {% for job in site.data.jobs %}
@@ -82,27 +90,15 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
           <li class="about__employment-item about__employment--desc">{{ job.desc }}</li>
         </ul>
         {% endfor %}
+
+        <h2 class="about__heading">Some Projects I've Worked On</h2>
+
+        <ul class="about__list">
+          {% for client in site.data.clients %}
+          <li class="about__list-item">{{ client.name }}</li>
+          {% endfor %}
+        </ul>
       </div>
-    </div>
-
-    <div class="about__column about__column--one about--js about--hidden">
-      <h2 class="about__heading">Skillset</h2>
-
-      <ul class="about__list">
-        {% for skill in site.data.skills %}
-        <li class="about__list-item">{{ skill.name }}</li>
-        {% endfor %}
-      </ul>
-    </div>
-
-    <div class="about__column about__column--two about--js about--hidden">
-      <h2 class="about__heading">Some Projects I've Worked On</h2>
-
-      <ul class="about__list">
-        {% for client in site.data.clients %}
-        <li class="about__list-item">{{ client.name }}</li>
-        {% endfor %}
-      </ul>
     </div>
 
     {% include contact.html %}
@@ -110,18 +106,22 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
   </div>
 </section>
 
-<section class="posts" id="posts" data-post="journal">
-  <div class="post-card post-card--intro">
-    <p class="post-card__header">Case Studies &amp; Journals</p>
+<section class="posts" id="posts">
+  <div class="wrapper">
+    <div class="posts--wrapper">
+      <div class="post-card post-card--intro">
+        <p class="post-card__header">Case Studies &amp; Journals</p>
+      </div>
+      {% for post in site.posts %}
+      <div class="post-card" data-post="{{ post.type }}">
+        <a href="{{ post.url | prepend: site.baseurl }}" class="post-card__title">{{ post.title }}</a>
+        <p class="post-card__excerpt">{{ post.excerpt | strip_html | truncate:150 }}</p>
+        <p class="post-card__date">{{ post.date | date: "%b %-d, %Y" }}</p>
+        <a href="{{ post.url | prepend: site.baseurl }}" class="btn post-card__read">Read {{ post.type }}</a>
+      </div>
+      {% endfor %}
+    </div>
   </div>
-  {% for post in site.posts %}
-  <div class="post-card" data-post="{{ post.type }}">
-    <a href="{{ post.url | prepend: site.baseurl }}" class="post-card__title">{{ post.title }}</a>
-    <p class="post-card__excerpt">{{ post.excerpt | strip_html | truncate:150 }}</p>
-    <p class="post-card__date">{{ post.date | date: "%b %-d, %Y" }}</p>
-    <a href="{{ post.url | prepend: site.baseurl }}" class="btn post-card__read">Read {{ post.type }}</a>
-  </div>
-  {% endfor %}
 </section>
 
 {% include footer.html %}

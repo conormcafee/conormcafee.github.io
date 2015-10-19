@@ -14,6 +14,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
+    minifyHTML = require('gulp-minify-html'),
     del = require('del');
  
 // SASS
@@ -37,6 +38,21 @@ gulp.task('scripts', function() {
     .pipe(uglify())
     .pipe(gulp.dest('production/js'))
     .pipe(notify({ message: 'Scripts task complete' }));
+});
+
+// Minify HTML
+gulp.task('minify-html', function() {
+  var opts = {
+    conditionals: true,
+    spare:true
+  };
+ 
+  return gulp.src('./_site/*.html')
+    .pipe(minifyHTML(opts))
+    .pipe(gulp.dest('./_site'))
+    gulp.src("./_site/*/*.html")
+    .pipe(minifyHTML(opts))
+    .pipe(gulp.dest("./_site/./"));
 });
  
 // Clean

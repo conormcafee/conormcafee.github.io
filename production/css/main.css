@@ -153,25 +153,7 @@ a:focus {
 
 footer {
   clear: both;
-  text-align: center;
-  padding: 1.15rem 0;
-}
-
-.footer__avatar {
-  display: block;
-  width: 110px;
-  height: 110px;
-  margin: 1.15rem auto;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-image: url("../../assets/images/conor-mcafee-small.jpg");
-  border: 2px solid #EF4640;
-  border-radius: 60px;
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .footer__avatar {
-    background-image: url("../../assets/images/conor-mcafee-small@2x.jpg");
-  }
+  padding: 2.3rem 0;
 }
 
 .footer__text {
@@ -183,7 +165,10 @@ footer {
 }
 
 .footer__link {
-  border-bottom: 1px dashed #EF4640;
+  color: #EF4640;
+}
+.footer__link:hover {
+  color: #4392F1;
 }
 
 .clearfix {
@@ -192,7 +177,6 @@ footer {
 
 header {
   background-color: #ffffff;
-  border-bottom: 1px solid #a2b0c2;
   overflow: hidden;
   padding: 1.15rem 0;
 }
@@ -266,6 +250,8 @@ header {
     background-repeat: repeat-x;
     position: absolute;
     bottom: -5px;
+    left: 0;
+    right: 0;
   }
 }
 
@@ -373,6 +359,8 @@ header {
   background-repeat: repeat-x;
   position: absolute;
   bottom: -5px;
+  left: 0;
+  right: 0;
 }
 @media only screen and (min-width: 992px) {
   .welcome-card__image {
@@ -611,6 +599,13 @@ header {
   color: #525252;
 }
 
+.about__link {
+  color: #EF4640;
+}
+.about__link:hover {
+  color: #4392F1;
+}
+
 .about__list {
   font-family: 'source_serif_proregular', 'Arial', serif;
   font-size: 1rem;
@@ -679,7 +674,7 @@ header {
 }
 
 .about__employment-list {
-  margin-top: 2.3rem;
+  margin: 2.3rem 0;
 }
 
 .about__employment-link {
@@ -821,9 +816,11 @@ header {
   position: relative;
   border-top: 2px solid #0e5fc0;
   border-bottom: 2px solid #007352;
+  padding: 1.15rem 0;
 }
+
 @media only screen and (min-width: 667px) {
-  .posts {
+  .posts--wrapper {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -832,28 +829,32 @@ header {
             flex-wrap: wrap;
   }
 }
-
 .post-card {
   font-family: 'quicksandregular', 'Arial', serif;
   color: #ffffff;
   border-color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1.15rem 0;
+}
+
+@media only screen and (max-width: 666px) {
+  .post-card:not(:first-child) {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
 }
 @media only screen and (min-width: 667px) {
   .post-card {
     -webkit-flex: 1 1 50%;
         -ms-flex: 1 1 50%;
             flex: 1 1 50%;
+    padding: 1.15rem;
+  }
+  .post-card:nth-child(odd) {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .post-card:nth-child(n+3) {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
-@media only screen and (min-width: 992px) {
-  .post-card {
-    -webkit-flex: 1 1 25%;
-        -ms-flex: 1 1 25%;
-            flex: 1 1 25%;
-  }
-}
-
 .post-card--intro {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -861,17 +862,15 @@ header {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-flex: 2 2 50%;
       -ms-flex: 2 2 50%;
           flex: 2 2 50%;
-  padding: 4.6rem 1.15rem;
 }
 @media only screen and (min-width: 667px) {
   .post-card--intro {
-    padding: 1.15rem;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -879,22 +878,17 @@ header {
   font-size: 2.041rem;
   line-height: 2rem;
   display: block;
+  padding: 2.3rem 0;
 }
 
 .post-card__title {
-  font-size: 1.067rem;
+  font-size: 1.296rem;
   line-height: 2rem;
-  padding: 1.15rem;
+  margin-bottom: 1.15rem;
   display: block;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-
-.post-card__excerpt,
-.post-card__date {
-  text-align: left;
-  padding: 0 1.15rem 1.15rem 1.15rem;
 }
 
 .post-card__excerpt {
@@ -905,12 +899,13 @@ header {
 .post-card__date {
   font-size: 0.772rem;
   line-height: 1.15rem;
+  margin-top: 1.15rem;
 }
 
 .post-card__read {
   border: 2px solid #ffffff;
   color: #ffffff;
-  margin: 0 1.15rem 1.15rem 1.15rem;
+  margin-bottom: 0.5rem;
   display: inline-block;
 }
 .post-card__read:hover {
