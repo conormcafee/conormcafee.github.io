@@ -246,8 +246,9 @@ header {
     display: block;
     height: 30px;
     width: 100%;
+    background-size: contain;
     background-image: url("/assets/images/waves.svg");
-    background-repeat: repeat-x;
+    background-repeat: repeat;
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -355,8 +356,9 @@ header {
   display: block;
   height: 30px;
   width: 100%;
+  background-size: contain;
   background-image: url("/assets/images/waves.svg");
-  background-repeat: repeat-x;
+  background-repeat: repeat;
   position: absolute;
   bottom: -5px;
   left: 0;
