@@ -20,6 +20,8 @@
             background-repeat: repeat-x;
             position: absolute;
             bottom: -5px;
+            left: 0;
+            right: 0;
         }
     }
 }
@@ -126,6 +128,8 @@
         background-repeat: repeat-x;
         position: absolute;
         bottom: -5px;
+        left: 0;
+        right: 0;
     }
 
     @media only screen and (min-width: 992px) {
@@ -335,6 +339,14 @@
     color: brand-colour(black);
 }
 
+.about__link {
+    color: brand-colour(orange);
+
+    &:hover {
+        color: brand-colour(blue);
+    }
+}
+
 .about__list {
     @include base;
     @include type-setting(0);
@@ -391,7 +403,7 @@
 }
 
 .about__employment-list {
-    margin-top: $base-line-height * 2;
+    margin: $base-line-height * 2 0;
 }
 
 .about__employment-link {
@@ -528,8 +540,11 @@
     position: relative;
     border-top: 2px solid brand-colour(blue, darker);
     border-bottom: 2px solid brand-colour(green, dark);
+    padding: $base-line-height 0;
+}
 
-    @media only screen and (min-width: 667px) {
+@media only screen and (min-width: 667px) {
+    .posts--wrapper {
         display: flex;
         flex-wrap: wrap;
     }
@@ -539,47 +554,53 @@
     @include sub-heading;
     color: brand-colour(white);
     border-color: brand-colour(white);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: $base-line-height 0;
+}
 
-    @media only screen and (min-width: 667px) {
-        flex: 1 1 50%;
+@media only screen and (max-width: 666px) {
+    .post-card:not(:first-child) {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
     }
+}
 
-    @media only screen and (min-width: 992px) {
-        flex: 1 1 25%;
+@media only screen and (min-width: 667px) {
+    .post-card {
+        flex: 1 1 50%;
+        padding: $base-line-height;
+
+        &:nth-child(odd) {
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        &:nth-child(n+3) {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
     }
 }
 
 .post-card--intro {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex: 2 2 50%;
-    padding: $base-line-height * 4 $base-line-height;
 
     @media only screen and (min-width: 667px) {
-        padding: $base-line-height;
+        justify-content: center;
     }
 }
 
 .post-card__header {
     @include type-setting(11);
     display: block;
+    padding: $base-line-height * 2 0;
 }
 
 .post-card__title {
-    @include type-setting(1);
-    padding: $base-line-height;
+    @include type-setting(4);
+    margin-bottom: $base-line-height;
     display: block;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-}
-
-.post-card__excerpt,
-.post-card__date {
-    text-align: left;
-    padding: 0 $base-line-height $base-line-height $base-line-height;
 }
 
 .post-card__excerpt {
@@ -588,12 +609,13 @@
 
 .post-card__date {
     @include type-setting(-4);
+    margin-top: $base-line-height;
 }
 
 .post-card__read {
     border: 2px solid brand-colour(white);
     color: brand-colour(white);
-    margin: 0 $base-line-height $base-line-height $base-line-height;
+    margin-bottom: 0.5rem;
     display: inline-block;
 
     &:hover {
