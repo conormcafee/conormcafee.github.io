@@ -16,7 +16,6 @@
             display: block;
             height: 30px;
             width: 100%;
-            background-size: contain;
             background-image: url('/assets/images/waves.svg');
             background-repeat: repeat;
             position: absolute;
@@ -125,7 +124,6 @@
         display: block;
         height: 30px;
         width: 100%;
-        background-size: contain;
         background-image: url('/assets/images/waves.svg');
         background-repeat: repeat;
         position: absolute;
@@ -203,6 +201,35 @@
     }
 }
 
+
+
+
+// Sprite
+
+.sprite {
+    display: block;
+    background-image: url('/assets/images/social-sprite.svg');
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+}
+
+.twitter {
+  background-position: 0 0;
+}
+
+.instagram {
+  background-position: -30px 0;
+}
+
+.dribbble {
+  background-position: -60px 0;
+}
+
+.github {
+  background-position: -90px 0;
+}
+
 @each $selector, $value in $post-colours {
     [data-welcome="#{$selector}"] .welcome-card__title {
         background-color: post-colour($selector);
@@ -263,7 +290,7 @@
             border-bottom-left-radius: 20px;
         }
 
-        &:nth-child(3) {
+        &:nth-child(2) {
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
         } 
@@ -292,7 +319,7 @@
 .about__column--two {
     display: block;
     
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 992px) {
         width: 47.5%;
         float: left;
     }
@@ -339,6 +366,7 @@
     @include type-setting(1);
     margin-bottom: 0.75rem;
     color: brand-colour(black);
+    max-width: 700px;
 }
 
 .about__link {
@@ -370,15 +398,15 @@
     }
 
     @media only screen and (min-width: 667px) {
-        flex: 1 1 45%;
+        flex: 1 1 50%;
+    }
 
-        &:nth-child(odd) {
-            margin-right: 2.5%;
-        }
+    @media only screen and (min-width: 768px) {
+        flex: 1 1 33%;
+    }
 
-        &:nth-child(even) {
-            margin-left: 2.5%;
-        }
+    @media only screen and (min-width: 992px) {
+        flex: 1 1 50%;
     }
 }
 
@@ -389,11 +417,15 @@
 
 .about__employment-nav {
     @include sub-heading;
-    @include type-setting(-4);
+    @include type-setting(-6);
     display: flex;
     text-align: center;
     border: 1px solid brand-colour(grey);
     border-radius: 7px;
+
+    @media only screen and (min-width: 1100px) {
+        @include type-setting(-4);
+    }
 }
 
 .about__employment--js-active {
@@ -414,6 +446,7 @@
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    width: 25%;
 
     &:hover {
         background-color: brand-colour(blue, darker);
@@ -568,6 +601,7 @@
 @media only screen and (min-width: 667px) {
     .post-card {
         flex: 1 1 50%;
+        max-width: 50%;
         padding: $base-line-height;
 
         &:nth-child(odd) {
