@@ -75,19 +75,5 @@ gulp.task('watch', function() {
   gulp.watch('build/js/*.js', ['scripts']);
 
   gulp.watch('build/js/*.js', ['scripts']);
-
-  gulp.task('minify-html', function() {
-  var opts = {
-    conditionals: true,
-    spare:true
-  };
- 
-  return gulp.src('./_site/*.html')
-    .pipe(minifyHTML(opts))
-    .pipe(gulp.dest('./_site'))
-    gulp.src("./_site/*/*.html")
-    .pipe(minifyHTML(opts))
-    .pipe(gulp.dest("./_site/./"));
-});
  
 });
