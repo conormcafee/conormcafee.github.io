@@ -178,7 +178,7 @@ footer {
 header {
   background-color: #ffffff;
   overflow: hidden;
-  padding: 1.15rem 0;
+  padding: 0.5rem 0;
 }
 
 .header__left,
@@ -953,6 +953,33 @@ header {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+.post-archive__list {
+  list-style: none;
+  margin: 0;
+}
+
+.post-archive__item:not(:last-child) {
+  margin-bottom: 1.15rem;
+}
+
+.post-archive__link {
+  font-family: 'quicksandregular', 'Arial', serif;
+  font-size: 1.68rem;
+  line-height: 2rem;
+}
+
+.post-archive__date {
+  display: block;
+  font-size: 0.772rem;
+  line-height: 1.15rem;
+  color: #525252;
+  margin-top: 0.5rem;
+}
+
+.post-archive__list .btn {
+  color: #ffffff;
+}
+
 .post {
   position: relative;
   padding: 4.6rem 0 5.75rem 0;
@@ -1105,6 +1132,21 @@ article.post--case-study h2 {
   border: 2px solid #4392F1;
 }
 
+[data-archive="case-study"] .post-archive__item {
+  border-bottom: 1px dashed #4392F1;
+}
+
+[data-archive="case-study"] .post-archive__link {
+  color: #4392F1;
+}
+
+[data-archive="case-study"].post-archive__list .btn {
+  background-color: #4392F1;
+}
+[data-archive="case-study"].post-archive__list .btn:hover {
+  background-color: #1476ed;
+}
+
 .post.post--journal {
   border-top: 2px solid #007352;
   background: #00A676;
@@ -1117,6 +1159,21 @@ article.post--journal h2 {
 
 .related--journal .welcome-card {
   border: 2px solid #00A676;
+}
+
+[data-archive="journal"] .post-archive__item {
+  border-bottom: 1px dashed #00A676;
+}
+
+[data-archive="journal"] .post-archive__link {
+  color: #00A676;
+}
+
+[data-archive="journal"].post-archive__list .btn {
+  background-color: #00A676;
+}
+[data-archive="journal"].post-archive__list .btn:hover {
+  background-color: #007352;
 }
 
 pre,

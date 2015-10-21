@@ -4,8 +4,6 @@ title: New Site, New Direction
 date:   2015-09-21 20:00:00
 categories: journal
 type: journal
-thumbnail: journal/journal.jpg
-header: /journal/business-card.jpg
 author: Conor McAfee
 ---
 

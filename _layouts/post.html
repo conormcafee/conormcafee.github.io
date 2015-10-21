@@ -30,12 +30,13 @@ layout: default
       		<div class="welcome-card__image"></div>
       		<img src="../assets/images/conor-mcafee-logo.svg" alt="Conor McAfee | Designer &amp; Front-End Developer" height="60" width="200" class="welcome-card__logo">
       		<p class="welcome-card__logo-text">Designer <span>&amp;</span> Front-End Developer</p>
+		    
 		    <ul class="welcome-card__social-list">
-		    	<li class="welcome-card__social-item"><a href="http://www.twitter.com/conormcafee" title="Follow me on Twitter"><img src="/assets/images/social/twitter.svg" height="30" width="30" alt="Twitter Logo" /></a></li>
-		        <li class="welcome-card__social-item"><a href="http://www.instagram.com/conormcafee" title="Follow me on Instagram"><img src="/assets/images/social/instagram.svg" height="30" width="30" alt="Instagram Logo" /></a></li>
-		        <li class="welcome-card__social-item"><a href="http://www.dribbble.com/conormcafee" title="Follow me on Dribbble"><img src="/assets/images/social/dribbble.svg" height="30" width="30" alt="Dribbble Logo" /></a></li>
-		        <li class="welcome-card__social-item"><a href="http://www.github.com/conormcafee" title="Follow me on Github"><img src="/assets/images/social/github.svg" height="30" width="30" alt="Github Logo" /></a></li>
-		    </ul>
+		        <li class="welcome-card__social-item"><a href="http://www.twitter.com/conormcafee" target="_blank" title="Follow me on Twitter" class="sprite twitter"></a></li>
+		        <li class="welcome-card__social-item"><a href="http://www.instagram.com/conormcafee" target="_blank" title="Follow me on Instagram" class="sprite instagram"></a></li>
+		        <li class="welcome-card__social-item"><a href="http://www.dribbble.com/conormcafee" target="_blank" title="Follow me on Dribbble" class="sprite dribbble"></a></li>
+		        <li class="welcome-card__social-item"><a href="http://www.github.com/conormcafee" target="_blank" title="Follow me on Github" class="sprite github"></a></li>
+      		</ul>
     	</div>
 
 		{% include contact.html %}
@@ -46,7 +47,6 @@ layout: default
 
 {% include footer.html %}
 
-<script src="{{ site.baseurl }}/assets/js/main.min.js"></script>
 <script type="application/ld+json">
 {
   "@context": "http://schema.org",

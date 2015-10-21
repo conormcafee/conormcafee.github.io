@@ -1,3 +1,28 @@
+.post-archive__list {
+    list-style: none;
+    margin: 0;
+}
+
+.post-archive__item:not(:last-child) {
+    margin-bottom: $base-line-height;
+}
+
+.post-archive__link {
+    @include sub-heading;
+    @include type-setting(8);
+}
+
+.post-archive__date {
+    display: block;
+    @include type-setting(-4);
+    color: brand-colour(black);
+    margin-top: 0.5rem;
+}
+
+.post-archive__list .btn {
+    color: brand-colour(white);
+}
+
 .post {
     position: relative;
     padding: $base-line-height * 4 0 $base-line-height * 5 0;
@@ -150,5 +175,21 @@ aside {
 
     .related--#{$selector} .welcome-card {
         border: 2px solid post-colour($selector);
+    }
+
+    [data-archive="#{$selector}"] .post-archive__item {
+        border-bottom: 1px dashed post-colour($selector);
+    }
+
+    [data-archive="#{$selector}"] .post-archive__link {
+        color: post-colour($selector);
+    }
+
+    [data-archive="#{$selector}"].post-archive__list .btn {
+        background-color: post-colour($selector);
+
+        &:hover {
+            background-color: post-colour($selector, hover);
+        }
     }
 }
