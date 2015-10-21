@@ -4,8 +4,6 @@ title: Theme Management with Sass Maps
 date:   2015-09-20 20:00:00
 categories: journal
 type: journal
-thumbnail: journal/sass.jpg
-header: /case-studies/nobel-cafe/nobel-header.jpg
 author: Conor McAfee
 published: false
 ---

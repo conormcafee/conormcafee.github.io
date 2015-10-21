@@ -4,8 +4,6 @@ title:  "2015 Redesign"
 date:   2015-09-14 20:00:00
 categories: case-studies
 type: "case-study"
-thumbnail: case-studies/conormcafee/conor-mcafee-logo.jpg
-header: /case-studies/conormcafee/conormcafee-header.jpg
 author: Conor McAfee
 published: false
 ---
