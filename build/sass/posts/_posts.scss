@@ -3,6 +3,15 @@
     margin: 0;
 }
 
+.post-archive__item {
+    border-bottom: 1px solid brand-colour(grey);
+    padding: $base-line-height 0;
+
+    &:nth-child(odd) {
+        margin-right: 5%;
+    }
+}
+
 .post-archive__item:not(:last-child) {
     margin-bottom: $base-line-height;
 }
@@ -25,7 +34,7 @@
 
 .post {
     position: relative;
-    padding: $base-line-height * 4 0 $base-line-height * 5 0;
+    padding: $base-line-height * 3 0 $base-line-height * 4 0;
 
     &:after {
         content: "";
@@ -175,10 +184,6 @@ aside {
 
     .related--#{$selector} .welcome-card {
         border: 2px solid post-colour($selector);
-    }
-
-    [data-archive="#{$selector}"] .post-archive__item {
-        border-bottom: 1px dashed post-colour($selector);
     }
 
     [data-archive="#{$selector}"] .post-archive__link {

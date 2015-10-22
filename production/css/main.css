@@ -958,6 +958,14 @@ header {
   margin: 0;
 }
 
+.post-archive__item {
+  border-bottom: 1px solid #C1CAD6;
+  padding: 1.15rem 0;
+}
+.post-archive__item:nth-child(odd) {
+  margin-right: 5%;
+}
+
 .post-archive__item:not(:last-child) {
   margin-bottom: 1.15rem;
 }
@@ -982,7 +990,7 @@ header {
 
 .post {
   position: relative;
-  padding: 4.6rem 0 5.75rem 0;
+  padding: 3.45rem 0 4.6rem 0;
 }
 .post:after {
   content: "";
@@ -1132,10 +1140,6 @@ article.post--case-study h2 {
   border: 2px solid #4392F1;
 }
 
-[data-archive="case-study"] .post-archive__item {
-  border-bottom: 1px dashed #4392F1;
-}
-
 [data-archive="case-study"] .post-archive__link {
   color: #4392F1;
 }
@@ -1159,10 +1163,6 @@ article.post--journal h2 {
 
 .related--journal .welcome-card {
   border: 2px solid #00A676;
-}
-
-[data-archive="journal"] .post-archive__item {
-  border-bottom: 1px dashed #00A676;
 }
 
 [data-archive="journal"] .post-archive__link {
