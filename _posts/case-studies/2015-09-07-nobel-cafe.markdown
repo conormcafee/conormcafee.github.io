@@ -5,6 +5,8 @@ description: Nobel Cafe is an award winning contemporary cafe/restaurant in Ball
 date:   2015-09-07 20:00
 categories: case-studies
 type: case-study
+logo: nobel-cafe/nobel-logo.jpg
+role: Design & Develoment
 author: Conor McAfee
 ---
 

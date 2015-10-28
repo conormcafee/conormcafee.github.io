@@ -27,7 +27,7 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
         <li class="welcome-card__list-item"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
       {% endfor %}
       </ul>
-      <a href="#posts" class="btn welcome-card__link" title="See all Case Studies">See all Case Studies</a>
+      <a href="#case-studies" class="btn welcome-card__link" title="See all Case Studies">See all Case Studies</a>
     </div>
 
     <div class="welcome-card welcome--three" data-welcome="journal">
@@ -37,7 +37,7 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
         <li class="welcome-card__list-item"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
       {% endfor %}
       </ul>
-      <a href="#posts" class="btn welcome-card__link" title="See all Journals">See all Journals</a>
+      <a href="#journals" class="btn welcome-card__link" title="See all Journals">See all Journals</a>
     </div>
 
   </div>
@@ -111,13 +111,56 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
   </div>
 </section>
 
-<section class="posts" id="posts">
+<!-- Case Studies -->
+
+<section class="posts case-studies" id="case-studies">
   <div class="wrapper">
     <div class="posts--wrapper">
-      <div class="post-card post-card--intro">
-        <p class="post-card__header">Case Studies &amp; Journals</p>
-      </div>
-      {% for post in site.posts %}
+      <p class="post-card__header">Case Studies</p>
+      <ul>
+      {% for post in site.categories.case-studies %}
+        <li class="case-studies__card">
+          <p class="case-studies__role">{{ post.role }}</p>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="case-studies__logo-link">
+            <img src="/assets/images/case-studies/{{ post.logo }}" class="case-studies__logo" title="{{ post.title }}" alt="Logo for {{ post.title }}" />
+          </a>
+          <div class="case-studies__btn-wrapper">
+            <a href="{{ post.url | prepend: site.baseurl }}" class="btn case-studies__btn">Read {{ post.type }}</a>
+          </div>
+        </li>
+
+        <li class="case-studies__card">
+          <p class="case-studies__role">{{ post.role }}</p>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="case-studies__logo-link">
+            <img src="/assets/images/case-studies/{{ post.logo }}" class="case-studies__logo" title="{{ post.title }}" alt="Logo for {{ post.title }}" />
+          </a>
+          <div class="case-studies__btn-wrapper">
+            <a href="{{ post.url | prepend: site.baseurl }}" class="btn case-studies__btn">Read {{ post.type }}</a>
+          </div>
+        </li>
+
+        <li class="case-studies__card">
+          <p class="case-studies__role">{{ post.role }}</p>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="case-studies__logo-link">
+            <img src="/assets/images/case-studies/{{ post.logo }}" class="case-studies__logo" title="{{ post.title }}" alt="Logo for {{ post.title }}" />
+          </a>
+          <div class="case-studies__btn-wrapper">
+            <a href="{{ post.url | prepend: site.baseurl }}" class="btn case-studies__btn">Read {{ post.type }}</a>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Journals -->
+
+<section class="posts journals" id="journals">
+  <div class="wrapper">
+    <div class="posts--wrapper">
+      <p class="post-card__header">Journals</p>
+      {% for post in site.categories.journal %}
       <div class="post-card" data-post="{{ post.type }}">
         <a href="{{ post.url | prepend: site.baseurl }}" class="post-card__title">{{ post.title }}</a>
         <p class="post-card__excerpt">{{ post.excerpt | strip_html | truncate:150 }}</p>

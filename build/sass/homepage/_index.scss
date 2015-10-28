@@ -212,6 +212,10 @@
     background-repeat: no-repeat;
     height: 30px;
     width: 30px;
+
+    &:hover {
+        transform: scale(1.2);
+    }
 }
 
 .twitter {
@@ -514,20 +518,24 @@
     clear: both;
     text-align: center;
     margin: 0 auto;
-    border: 2px solid brand-colour(orange);
+    border: 1px solid brand-colour(grey, light);
+    background-color: #f6f6f6;
     border-radius: 7px;
     padding: $base-line-height;
+}
 
-    @media only screen and (min-width: 768px) {
-        display: block;
-        width: 50%;
-    }
+.contact__title {
+    @include sub-heading;
+    @include type-setting(6);
+    color: brand-colour(orange);
+    margin-bottom: 1rem;
 }
 
 .contact__text {
     @include type-setting(1);
-    margin-bottom: 0.75rem;
     color: brand-colour(black);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .contact .btn {
@@ -569,20 +577,23 @@
 // Posts
 
 .posts {
-    @include linear-gradient(brand-colour(blue), brand-colour(green));
     display: block;
+    overflow: hidden;
     clear: both;
     position: relative;
-    border-top: 2px solid brand-colour(blue, darker);
-    border-bottom: 2px solid brand-colour(green, dark);
     padding: $base-line-height 0;
 }
 
-@media only screen and (min-width: 667px) {
-    .posts--wrapper {
-        display: flex;
-        flex-wrap: wrap;
-    }
+.case-studies {
+    @include linear-gradient(brand-colour(blue, light), brand-colour(blue));
+    border-top: 2px solid brand-colour(blue, darker);
+    border-bottom: 2px solid brand-colour(blue, darker);
+}
+
+.journals {
+    @include linear-gradient(brand-colour(green, light), brand-colour(green));
+    border-top: 2px solid brand-colour(green, dark);
+    border-bottom: 2px solid brand-colour(green, dark);
 }
 
 .post-card {
@@ -592,42 +603,89 @@
     padding: $base-line-height 0;
 }
 
-@media only screen and (max-width: 666px) {
-    .post-card:not(:first-child) {
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-    }
-}
-
-@media only screen and (min-width: 667px) {
-    .post-card {
-        flex: 1 1 50%;
-        max-width: 50%;
-        padding: $base-line-height;
-
-        &:nth-child(odd) {
-            border-right: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        &:nth-child(n+3) {
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-        }
-    }
-}
-
-.post-card--intro {
-    display: flex;
-    align-items: center;
-    flex: 2 2 50%;
-
-    @media only screen and (min-width: 667px) {
-        justify-content: center;
-    }
-}
-
 .post-card__header {
+    @include sub-heading;
     @include type-setting(11);
+    color: brand-colour(white);
     display: block;
-    padding: $base-line-height * 2 0;
+    padding: $base-line-height * 2 0 $base-line-height * 3 0;
+    text-align: center;
+}
+
+// Case Studies
+
+.case-studies__card {
+    display: block;
+    float: left;
+    margin-bottom: $base-line-height * 3;
+    background-color: brand-colour(white);
+    text-align: center;
+    border-radius: 7px;
+    border: 1px solid brand-colour(blue, dark);
+    box-shadow: 10px 10px 20px brand-colour(blue, darker);
+
+    @media only screen and (min-width: 667px) and (max-width: 767px) {
+        width: 47.5%;
+        float: left;
+        margin-right: 5%;
+        margin-bottom: 5%;
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+
+        &:nth-child(2n+1) {
+            clear: left;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        width: 30%;
+        margin-right: 5%;
+        
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+
+        &:nth-child(3n+1) {
+            clear: left;
+        }
+    }
+}
+
+.case-studies__role {
+    @include sub-heading;
+    @include type-setting(1);
+    padding: 0 $base-line-height;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 0.75rem;
+    background-color: brand-colour(blue);
+    border-bottom: 1px solid brand-colour(blue, dark);
+    color: brand-colour(white);
+}
+
+.case-studies__logo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    padding: $base-line-height;
+}
+
+.case-studies__btn-wrapper {
+    border-top: 1px solid brand-colour(grey);
+    padding: $base-line-height;
+}
+
+.case-studies__btn {
+    background-color: brand-colour(blue);
+    color: brand-colour(white);
+    margin: 0   ;
+    display: inline-block;
+
+    &:hover {
+        background-color: brand-colour(blue, darker);
+    }
 }
 
 .post-card__title {

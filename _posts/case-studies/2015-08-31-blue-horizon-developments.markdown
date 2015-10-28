@@ -5,6 +5,8 @@ description: Blue Horizon Developments are a housing development company buildin
 date:   2015-08-31 20:00
 categories: case-studies
 type: case-study
+logo: blue-horizon-developments/bhd-logo.jpg
+role: Design &amp; Development
 author: Conor McAfee
 ---
 
