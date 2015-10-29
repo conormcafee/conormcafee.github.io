@@ -1,0 +1,68 @@
+.contact {
+    clear: both;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid brand-colour(grey, light);
+    background-color: #f6f6f6;
+    border-radius: 7px;
+    padding: $base-line-height;
+}
+
+.contact__title {
+    @include sub-heading;
+    @include type-setting(6);
+    color: brand-colour(orange);
+    margin-bottom: 1rem;
+}
+
+.contact__text {
+    @include type-setting(1);
+    color: brand-colour(black);
+}
+
+.contact .btn {
+    background-color: brand-colour(orange);
+    color: brand-colour(white);
+    margin-bottom: 0;
+
+    &:hover {
+        background-color: brand-colour(orange, darker);
+    }
+}
+
+// Case Studies Homepage Contact
+
+.case-studies .contact {
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    max-width: 500px;
+}
+
+.case-studies .contact__title {
+    color: brand-colour(white);
+
+    &:after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 30px;
+        background-color: brand-colour(blue, darker);
+        margin: $base-line-height 0;
+    }
+}
+
+.case-studies .contact__text {
+    color: brand-colour(white);
+}
+
+.case-studies .contact .btn {
+    background-color: brand-colour(orange);
+
+    &:hover {
+        background-color: brand-colour(orange, darker);
+    }
+}

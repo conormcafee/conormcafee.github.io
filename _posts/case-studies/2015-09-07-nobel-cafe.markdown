@@ -6,7 +6,7 @@ date:   2015-09-07 20:00
 categories: case-studies
 type: case-study
 logo: nobel-cafe/nobel-logo.jpg
-role: Design & Develoment
+role: Design & Development
 author: Conor McAfee
 ---
 
