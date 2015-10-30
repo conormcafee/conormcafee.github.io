@@ -130,7 +130,6 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
       </li>
       {% endfor %}
     </ul>
-    {% include contact.html %}
   </div>
 </section>
 
@@ -138,14 +137,16 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
 
 <section class="journals" id="journals">
   <div class="wrapper">
-      <p class="journals__header">Journals</p>
-      <p class="journals__intro">Check out my selected Case Studies below.  I've decided to showcase a select few projects, mainly ones that I have had full control of regards design and/or development.</p>
       <ul class="journals__list">
+        <li class="journal journal--homepage">
+          <p class="journal__title">Journals</p>
+        </li>
         {% for post in site.categories.journal %}
         <li class="journal">
-          <a href="{{ post.url | prepend: site.baseurl }}" class="post-card__title">{{ post.title }}</a>
-          <p class="post-card__excerpt">{{ post.excerpt | strip_html | truncate:150 }}</p>
-          <a href="{{ post.url | prepend: site.baseurl }}" class="btn post-card__read">Read {{ post.type }}</a>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="journal__title">{{ post.title }}</a>
+          <p class="journal__date">{{ post.date | date: '%b %d, %Y' }}
+          <p class="journal__excerpt">{{ post.excerpt | strip_html | truncate:300 }}</p>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="btn journal__btn">Read {{ post.type }}</a>
         </li>
         {% endfor %}
       </ul>
