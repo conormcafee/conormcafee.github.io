@@ -27,7 +27,7 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
         <li class="welcome-card__list-item"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
       {% endfor %}
       </ul>
-      <a href="#posts" class="btn welcome-card__link" title="See all Case Studies">See all Case Studies</a>
+      <a href="#case-studies" class="btn welcome-card__link" title="See all Case Studies">See all Case Studies</a>
     </div>
 
     <div class="welcome-card welcome--three" data-welcome="journal">
@@ -37,7 +37,7 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
         <li class="welcome-card__list-item"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
       {% endfor %}
       </ul>
-      <a href="#posts" class="btn welcome-card__link" title="See all Journals">See all Journals</a>
+      <a href="#journals" class="btn welcome-card__link" title="See all Journals">See all Journals</a>
     </div>
 
   </div>
@@ -111,21 +111,45 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
   </div>
 </section>
 
-<section class="posts" id="posts">
+<!-- Case Studies -->
+<section class="case-studies" id="case-studies">
   <div class="wrapper">
-    <div class="posts--wrapper">
-      <div class="post-card post-card--intro">
-        <p class="post-card__header">Case Studies &amp; Journals</p>
-      </div>
-      {% for post in site.posts %}
-      <div class="post-card" data-post="{{ post.type }}">
-        <a href="{{ post.url | prepend: site.baseurl }}" class="post-card__title">{{ post.title }}</a>
-        <p class="post-card__excerpt">{{ post.excerpt | strip_html | truncate:150 }}</p>
-        <p class="post-card__date">{{ post.date | date: "%b %-d, %Y" }}</p>
-        <a href="{{ post.url | prepend: site.baseurl }}" class="btn post-card__read">Read {{ post.type }}</a>
-      </div>
+    <p class="case-studies__header">Case Studies</p>
+    <p class="case-studies__intro">Check out my selected Case Studies below.  I've decided to showcase a select few projects, mainly ones that I have had full control of regards design and/or development.</p>
+    <ul class="case-studies__list">
+      {% for post in site.categories.case-studies %}
+      <li class="case-study">
+        <div class="case-study__chrome">
+          <div class="case-study__buttons"></div>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="case-study__link" title="Read Case Study on {{ post.title }}">Read Case Study</a>
+        </div>
+        <div class="case-study__content">
+          <img src="/assets/images/case-studies/{{ post.logo }}" class="case-study__logo" title="{{ post.title }}" alt="Logo for {{ post.title }}" />
+          <p class="case-study__excerpt">{{ post.role }}</p>
+        </div>
+      </li>
       {% endfor %}
-    </div>
+    </ul>
+  </div>
+</section>
+
+<!-- Journals -->
+
+<section class="journals" id="journals">
+  <div class="wrapper">
+      <ul class="journals__list">
+        <li class="journal journal--homepage">
+          <p class="journal__title">Journals</p>
+        </li>
+        {% for post in site.categories.journal %}
+        <li class="journal">
+          <a href="{{ post.url | prepend: site.baseurl }}" class="journal__title">{{ post.title }}</a>
+          <p class="journal__date">{{ post.date | date: '%b %d, %Y' }}
+          <p class="journal__excerpt">{{ post.excerpt | strip_html | truncate:300 }}</p>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="btn journal__btn">Read {{ post.type }}</a>
+        </li>
+        {% endfor %}
+      </ul>
   </div>
 </section>
 

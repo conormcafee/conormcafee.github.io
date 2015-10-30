@@ -1,7 +1,11 @@
 html {
 	-webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-	@include type-setting(0);
+    -ms-text-size-adjust: 100%;
+	@include type-setting(-2);
+
+	@media only screen and (min-width: 668px) {
+		@include type-setting(0);
+	}
 }
 
 body {
