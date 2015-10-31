@@ -61,12 +61,19 @@ a {
 
 footer {
 	clear: both;
+	text-align: center;
 	padding: $base-line-height * 2 0;
+}
+
+.wrapper--case-study + footer,
+.wrapper--journal + footer {
+	border-top: 1px solid brand-colour(grey, light);
+	margin-top: $base-line-height * 2;
 }
 
 .footer__text {
 	@include sub-heading;
-	@include type-setting(-2);
+	@include type-setting(-4);
 	margin-bottom: 1rem;
 	color: brand-colour(black);
 }

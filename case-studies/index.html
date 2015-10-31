@@ -4,48 +4,23 @@ title: Conor McAfee | Designer &amp; Front-End Developer
 description: Have a look at my latest Case Studies and see how I came up with the design interfaces and development decisions in the project 
 ---
 
-<div class="post post--case-study">
-
-	<div class="wrapper">
-		
-		<h1 class="post__header">Case Studies</h1>
-		
-	</div>
-
-</div>
-
-<div class="wrapper">
-
-	<article>
-
-		<ul class="post-archive__list" data-archive="case-study">
-		{% for post in site.categories.case-studies %}
-			<li class="post-archive__item">
-				<a href="{{ post.url | prepend: site.baseurl }}" class="post-archive__link">{{ post.title }}<span class="post-archive__date">{{ post.date | date: "%b %-d, %Y" }}</span></a>
-				<a href="{{ post.url | prepend: site.baseurl }}" class="btn">Read Journal</a>
-			</li>
-		{% endfor %}
-		</ul>
-		
-	</article>
-
-	<aside class="related related--case-study">
-
-		<div class="welcome-card welcome-card--middle welcome--one">
-      		<div class="welcome-card__image"></div>
-      		<img src="../assets/images/conor-mcafee-logo.svg" alt="Conor McAfee | Designer &amp; Front-End Developer" height="60" width="200" class="welcome-card__logo">
-      		<p class="welcome-card__logo-text">Designer <span>&amp;</span> Front-End Developer</p>
-		    
-		    <ul class="welcome-card__social-list">
-		        <li class="welcome-card__social-item"><a href="http://www.twitter.com/conormcafee" target="_blank" title="Follow me on Twitter" class="sprite twitter"></a></li>
-		        <li class="welcome-card__social-item"><a href="http://www.instagram.com/conormcafee" target="_blank" title="Follow me on Instagram" class="sprite instagram"></a></li>
-		        <li class="welcome-card__social-item"><a href="http://www.dribbble.com/conormcafee" target="_blank" title="Follow me on Dribbble" class="sprite dribbble"></a></li>
-		        <li class="welcome-card__social-item"><a href="http://www.github.com/conormcafee" target="_blank" title="Follow me on Github" class="sprite github"></a></li>
-      		</ul>
-    	</div>
-
-		{% include contact.html %}
-
-	</aside>
-
-</div>
+<section class="case-studies case-studies--archive" id="case-studies">
+  <div class="wrapper">
+    <p class="case-studies__header">Case Studies</p>
+    <p class="case-studies__intro">Check out my selected Case Studies below.  I've decided to showcase a select few projects, mainly ones that I have had full control of regards design and/or development.</p>
+    <ul class="case-studies__list">
+      {% for post in site.categories.case-studies %}
+      <li class="case-study">
+        <div class="case-study__chrome">
+          <div class="case-study__buttons"></div>
+            <a href="{{ post.url | prepend: site.baseurl }}" class="case-study__link" title="Read Case Study on {{ post.title }}">Read Case Study</a>
+        </div>
+        <div class="case-study__content">
+          <img src="/assets/images/case-studies/{{ post.logo }}" class="case-study__logo" title="{{ post.title }}" alt="Logo for {{ post.title }}" />
+          <p class="case-study__excerpt">{{ post.role }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
