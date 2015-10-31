@@ -24,7 +24,7 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
       <p class="welcome-card__title">Latest Case Studies</p>
       <ul class="welcome-card__list">
       {% for post in site.categories.case-studies limit:3 %}
-        <li class="welcome-card__list-item"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+        <li class="welcome-card__list-item"><a href="{{ post.url | prepend: site.baseurl }}" class="welcome-card__post-link">{{ post.title }}</a></li>
       {% endfor %}
       </ul>
       <a href="#case-studies" class="btn welcome-card__link" title="See all Case Studies">See all Case Studies</a>
@@ -34,7 +34,7 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
       <p class="welcome-card__title">Latest Journals</p>
       <ul class="welcome-card__list">
       {% for post in site.categories.journal limit:3 %}
-        <li class="welcome-card__list-item"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+        <li class="welcome-card__list-item"><a href="{{ post.url | prepend: site.baseurl }}" class="welcome-card__post-link">{{ post.title }}</a></li>
       {% endfor %}
       </ul>
       <a href="#journals" class="btn welcome-card__link" title="See all Journals">See all Journals</a>
@@ -46,7 +46,8 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
 
 <nav class="nav nav--homepage">
   <a href="#about" class="nav__link" title="About Conor McAfee">About</a>
-  <a href="#posts" class="nav__link" title="See my Case Studies">Work</a>
+  <a href="#case-studies" class="nav__link" title="See my Case Studies">Case Studies</a>
+  <a href="#journals" class="nav__link" title="See my Journals">Journal</a>
 </nav>
 
 <section class="about" id="about">
@@ -134,7 +135,6 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
 </section>
 
 <!-- Journals -->
-
 <section class="journals" id="journals">
   <div class="wrapper">
       <ul class="journals__list">

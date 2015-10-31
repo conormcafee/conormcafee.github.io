@@ -159,12 +159,19 @@ a:focus {
 
 footer {
   clear: both;
+  text-align: center;
   padding: 2.3rem 0;
+}
+
+.wrapper--case-study + footer,
+.wrapper--journal + footer {
+  border-top: 1px solid #e0e4ea;
+  margin-top: 2.3rem;
 }
 
 .footer__text {
   font-family: 'quicksandregular', 'Arial', serif;
-  font-size: 0.878rem;
+  font-size: 0.772rem;
   line-height: 1.15rem;
   margin-bottom: 1rem;
   color: #525252;
@@ -184,42 +191,23 @@ footer {
 header {
   background-color: #ffffff;
   overflow: hidden;
-  padding: 0.5rem 0;
 }
 
 .header__left,
 .header__right {
+  width: 100%;
   display: block;
   float: left;
 }
 
-.header__left {
-  width: 1000%;
-}
-@media only screen and (min-width: 668px) {
-  .header__left {
-    width: 25%;
-  }
-}
-
-.header__right {
-  width: 100%;
-}
-@media only screen and (min-width: 668px) {
-  .header__right {
-    width: 75%;
-  }
+.header__logo {
+  margin-top: 0.5rem;
 }
 
 .header__menu {
   font-family: 'quicksandregular', 'Arial', serif;
-  padding: 0.75em 0;
+  padding: 1.15rem 0;
   text-align: left;
-}
-@media only screen and (min-width: 668px) {
-  .header__menu {
-    text-align: right;
-  }
 }
 
 .header__menu-item {
@@ -231,9 +219,22 @@ header {
 }
 
 .header__menu-item:not(:first-child) {
-  padding-left: 0.9375em;
+  padding-left: 1.15rem;
 }
 
+@media only screen and (min-width: 668px) {
+  .header__left {
+    width: 25%;
+  }
+
+  .header__right {
+    width: 75%;
+  }
+
+  .header__menu {
+    text-align: right;
+  }
+}
 .welcome {
   font-family: 'quicksandregular', 'Arial', serif;
   display: block;
@@ -491,6 +492,10 @@ header {
   background-color: #1476ed;
 }
 
+[data-welcome="case-study"] .welcome-card__post-link:hover {
+  color: #4392F1;
+}
+
 [data-welcome="journal"] .welcome-card__title {
   background-color: #00A676;
   border-bottom: 1px solid #007352;
@@ -501,6 +506,10 @@ header {
 }
 [data-welcome="journal"] .welcome-card__link:hover {
   background-color: #007352;
+}
+
+[data-welcome="journal"] .welcome-card__post-link:hover {
+  color: #00A676;
 }
 
 .nav--homepage {
@@ -553,7 +562,7 @@ header {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
-.nav--homepage .nav__link:hover:nth-child(2) {
+.nav--homepage .nav__link:hover:nth-child(3) {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -608,19 +617,8 @@ header {
   margin: 1.15rem 0;
 }
 
-.about__heading span {
-  font-size: 0.772rem;
-  line-height: 1.15rem;
-  color: #4392F1;
-}
-@media only screen and (min-width: 768px) {
-  .about__heading span {
-    font-size: 0.878rem;
-    line-height: 1.15rem;
-  }
-}
-
 .about__text {
+  font-family: 'source_serif_proregular', 'Arial', serif;
   font-size: 1.067rem;
   line-height: 2rem;
   margin-bottom: 0.75rem;
@@ -631,6 +629,7 @@ header {
 .about__link {
   color: #EF4640;
 }
+
 .about__link:hover {
   color: #4392F1;
 }
@@ -648,6 +647,13 @@ header {
           flex-wrap: wrap;
 }
 
+.about__list-item:before {
+  content: "·";
+  display: inline-block;
+  color: #4392F1;
+  margin-right: 1.15rem;
+}
+
 .about__list-item {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -656,12 +662,6 @@ header {
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
   padding: 0.5rem 0;
-}
-.about__list-item:before {
-  content: "·";
-  display: inline-block;
-  color: #4392F1;
-  margin-right: 1.15rem;
 }
 @media only screen and (min-width: 667px) {
   .about__list-item {
@@ -963,6 +963,7 @@ header {
   max-width: 100%;
   height: auto;
   padding: 0 1.15rem;
+  margin: 0 auto;
 }
 
 .case-study__excerpt {
@@ -1056,6 +1057,7 @@ header {
 }
 
 .journal__date {
+  font-family: 'quicksandregular', 'Arial', serif;
   font-size: 0.878rem;
   line-height: 1.15rem;
   margin-bottom: 0.75rem;
@@ -1080,41 +1082,18 @@ header {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.post-archive__list {
-  list-style: none;
-  margin: 0;
+@media only screen and (min-width: 667px) {
+  .case-studies--archive .case-study {
+    width: 47.5%;
+    margin-right: 5%;
+  }
+  .case-studies--archive .case-study:nth-child(2n) {
+    margin-right: 0;
+  }
+  .case-studies--archive .case-study:nth-child(2n+1) {
+    clear: left;
+  }
 }
-
-.post-archive__item {
-  border-bottom: 1px solid #C1CAD6;
-  padding: 1.15rem 0;
-}
-.post-archive__item:nth-child(odd) {
-  margin-right: 5%;
-}
-
-.post-archive__item:not(:last-child) {
-  margin-bottom: 1.15rem;
-}
-
-.post-archive__link {
-  font-family: 'quicksandregular', 'Arial', serif;
-  font-size: 1.68rem;
-  line-height: 2rem;
-}
-
-.post-archive__date {
-  display: block;
-  font-size: 0.772rem;
-  line-height: 1.15rem;
-  color: #525252;
-  margin-top: 0.5rem;
-}
-
-.post-archive__list .btn {
-  color: #ffffff;
-}
-
 .post {
   position: relative;
   padding: 3.45rem 0 4.6rem 0;
@@ -1134,7 +1113,7 @@ header {
 .post__date {
   font-family: 'quicksandregular', 'Arial', serif;
   color: #ffffff;
-  text-align: left;
+  text-align: center;
 }
 
 .post__header {
@@ -1154,15 +1133,8 @@ article {
 }
 @media only screen and (min-width: 768px) {
   article {
-    width: 55%;
-    margin-right: 5%;
-    float: left;
-  }
-}
-@media only screen and (min-width: 992px) {
-  article {
-    width: 65%;
-    margin-right: 5%;
+    max-width: 700px;
+    margin: 2.3rem auto;
   }
 }
 
@@ -1194,65 +1166,6 @@ article img {
   height: auto;
 }
 
-aside {
-  display: block;
-  margin-top: 1.15rem;
-}
-@media only screen and (min-width: 768px) {
-  aside {
-    width: 40%;
-    float: left;
-    padding-left: 1.15rem;
-  }
-}
-@media only screen and (min-width: 992px) {
-  aside {
-    width: 30%;
-  }
-}
-aside .contact {
-  width: 100%;
-}
-
-.related .welcome-card {
-  display: none;
-}
-@media only screen and (min-width: 768px) {
-  .related .welcome-card {
-    display: block;
-    left: 0;
-    margin-right: 0;
-    width: 100%;
-    box-shadow: none;
-    margin-bottom: 2.3rem;
-    border-radius: 7px;
-    padding-top: 1.15rem;
-  }
-}
-.related .welcome-card .welcome-card__image {
-  display: block;
-  height: 100px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url("/assets/images/conor-mcafee-small.jpg");
-}
-.related .welcome-card .welcome-card__image:after {
-  display: none;
-}
-.related .welcome-card .welcome-card__social-list,
-.related .welcome-card .welcome-card__social-item {
-  border: none;
-}
-
-.related__box {
-  clear: both;
-  border-radius: 7px;
-  padding: 1.15rem;
-  background: #EF4640;
-  background: linear-gradient(180deg, #EF4640, #b91510);
-}
-
 .post.post--case-study {
   border-top: 2px solid #1476ed;
   background: #4392F1;
@@ -1261,10 +1174,6 @@ aside .contact {
 
 article.post--case-study h2 {
   color: #4392F1;
-}
-
-.related--case-study .welcome-card {
-  border: 2px solid #4392F1;
 }
 
 [data-archive="case-study"] .post-archive__link {
@@ -1286,10 +1195,6 @@ article.post--case-study h2 {
 
 article.post--journal h2 {
   color: #00A676;
-}
-
-.related--journal .welcome-card {
-  border: 2px solid #00A676;
 }
 
 [data-archive="journal"] .post-archive__link {
@@ -1335,230 +1240,4 @@ article.post--journal h2 {
 }
 .contact .btn:hover {
   background-color: #b91510;
-}
-
-pre,
-code {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 1rem;
-  line-height: 1.15rem;
-}
-
-code {
-  color: #ffffff;
-}
-
-pre {
-  padding: 1.15rem;
-}
-pre > code {
-  border: 0;
-  padding-right: 0;
-  padding-left: 0;
-}
-
-.highlight {
-  background-color: #2D3047;
-  border: 2px solid #2D3047;
-  border-radius: 7px;
-  margin-bottom: 1.15rem;
-  color: #ffffff;
-  overflow-x: scroll;
-}
-.highlight::-webkit-scrollbar {
-  background: transparent;
-}
-.highlight::-webkit-scrollbar-thumb {
-  background: #2D3047 !important;
-}
-.highlight .c {
-  color: #998;
-  font-style: italic;
-}
-.highlight .err {
-  color: #d14;
-}
-.highlight .k {
-  color: #ffffff;
-}
-.highlight .o {
-  color: #ffffff;
-}
-.highlight .p {
-  color: #ffffff;
-}
-.highlight .cm {
-  color: #998;
-  font-style: italic;
-}
-.highlight .cp {
-  color: #999;
-}
-.highlight .c1 {
-  color: #998;
-  font-style: italic;
-}
-.highlight .cs {
-  color: #999;
-  font-style: italic;
-}
-.highlight .gd {
-  color: #000;
-  background-color: #fdd;
-}
-.highlight .gd .x {
-  color: #000;
-  background-color: #faa;
-}
-.highlight .ge {
-  font-style: italic;
-}
-.highlight .gr {
-  color: #a00;
-}
-.highlight .gh {
-  color: #999;
-}
-.highlight .gi {
-  color: #000;
-  background-color: #dfd;
-}
-.highlight .gi .x {
-  color: #000;
-  background-color: #afa;
-}
-.highlight .go {
-  color: #888;
-}
-.highlight .gp {
-  color: #555;
-}
-.highlight .gs {
-  color: #ffffff;
-}
-.highlight .gu {
-  color: #aaa;
-}
-.highlight .gt {
-  color: #a00;
-}
-.highlight .kc {
-  color: #ffffff;
-}
-.highlight .kd {
-  color: #ffffff;
-}
-.highlight .kp {
-  color: #ffffff;
-}
-.highlight .kr {
-  color: #ffffff;
-}
-.highlight .kt {
-  color: #ffffff;
-}
-.highlight .m {
-  color: #099;
-}
-.highlight .s {
-  color: #d14;
-}
-.highlight .na {
-  color: #1B998B;
-}
-.highlight .nb {
-  color: #FFFD82;
-}
-.highlight .nc {
-  color: #ffffff;
-}
-.highlight .nd {
-  color: #ffffff;
-}
-.highlight .no {
-  color: #1B998B;
-}
-.highlight .ni {
-  color: #FFFD82;
-}
-.highlight .ne {
-  color: #f7a19e;
-}
-.highlight .nf {
-  color: #f7a19e;
-}
-.highlight .nn {
-  color: #555;
-}
-.highlight .nt {
-  color: #3891A6;
-}
-.highlight .nv {
-  color: #1B998B;
-}
-.highlight .ow {
-  color: #ffffff;
-}
-.highlight .w {
-  color: #bbb;
-}
-.highlight .mf {
-  color: #099;
-}
-.highlight .mh {
-  color: #099;
-}
-.highlight .mi {
-  color: #099;
-}
-.highlight .mo {
-  color: #099;
-}
-.highlight .sb {
-  color: #d14;
-}
-.highlight .sc {
-  color: #d14;
-}
-.highlight .sd {
-  color: #d14;
-}
-.highlight .s2 {
-  color: #d14;
-}
-.highlight .se {
-  color: #d14;
-}
-.highlight .sh {
-  color: #d14;
-}
-.highlight .si {
-  color: #d14;
-}
-.highlight .sx {
-  color: #d14;
-}
-.highlight .sr {
-  color: #009926;
-}
-.highlight .s1 {
-  color: #d14;
-}
-.highlight .ss {
-  color: #990073;
-}
-.highlight .bp {
-  color: #999;
-}
-.highlight .vc {
-  color: #1B998B;
-}
-.highlight .vg {
-  color: #1B998B;
-}
-.highlight .vi {
-  color: #1B998B;
-}
-.highlight .il {
-  color: #099;
 }
