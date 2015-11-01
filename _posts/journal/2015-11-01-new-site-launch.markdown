@@ -1,7 +1,8 @@
 ---
 layout: post
 title: New Site, New Direction
-date:   2015-09-21 20:00:00
+description: It’s been a busy 2 years since I graduated university and have come a long way in my career since then.  I’m now at the stage where I want to give more back to the web design community - and feel that I am better equipped to do that now.
+date:   2015-11-01 19:00:00
 categories: journal
 type: journal
 author: Conor McAfee
@@ -25,10 +26,6 @@ Like the majority of people in the same line of work as me, you learn mainly fro
 - [Github]
 
 I’m not proclaiming to be an expert at any of these, not by a long shot - but I do want to document more about how i’ve learned to get to grips with these tools and incorporate them into my workflow.  Hopefully it can help someone else.
-
-## Labs (Coming Soon)
-
-To help drive my career forward, I need to keep on top of the latest trends and technologies that become available.  To do that, I need to work on side projects and experiments.  To help me document this learning, I have decided to include a labs sections in this website.  To have my experiments documented online it will show what I can do, and it will also hopefully help other people who are looking to learn more as well - so really this is just an extension to the blog section.
 
 ## Case Studies
 
