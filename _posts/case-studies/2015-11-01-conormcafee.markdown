@@ -2,7 +2,7 @@
 layout: post
 title:  Conor McAfee
 description: Personal Website (http://conormcafee.co.uk) redesign.  This case study will detail my design & development decisions, along with future plans for conormcafee.co.uk.
-date:   2015-10-22 20:00
+date:   2015-11-01 19:00
 categories: case-studies
 type: case-study
 logo: conormcafee/conor-mcafee-logo.jpg
@@ -14,11 +14,12 @@ At long last, my personal website has gone live with a fresh lick of paint.  In 
 
 ## Criteria
 
-I’m about to point out the obvious here, but the reason for this redesign was to show off what I can do as a designer &amp; front-end developer.  My previous websites have been rather basic to say the least, and were merely put together because I was applying for a job.  I want this one to be different.  To me, these were the most important aspects I had to cover to make this redesign stand out from previous versions:
+I’m about to point out the obvious here, but the reason for this redesign was to show off what I can do as a designer &amp; front-end developer.  My previous websites have been rather basic to say the least, and were merely put together because I was applying for a job.  I want this one to be different.
+
+To me, these were the most important aspects I had to cover to make this redesign stand out from previous versions:
 
 - Mobile first design/build
 - Unique landing page
-- Detailed information about my career to date
 - Blogs &amp; Case Studies
 - Fast website performance
 
@@ -42,41 +43,33 @@ After some more tinkering on Photoshop, and trying out full screen backgrounds o
 
 Since the website is sort of like an online cv, I thought a portrait of me will get the design juices flowing.  I met with Ronan in Conway Mill in Belfast where he had access to the loft, it was a pretty unique location to get photos taken, and even though I felt totally awkward getting these done, I was buzzing to see what I could do with them.
 
-Image 1 Half/Half
+![Conor McAfee - Half and Half](/assets/images/case-studies/conormcafee/half-and-half.jpg)
 
-Above you can see an initial design concept that actually made it to code and my server, I did like this idea however it wasn’t overly unique and I was never totally satisfied with it.  By this stage I had came up with the layout below.
+Above you can see an initial design concept that actually made it to code and live site, I did like this idea however it wasn’t overly unique and I was never totally satisfied with it.  By this stage I had came up with this UI below.
 
-Image 2 Dribble
+![Conor McAfee - Posts UI](/assets/images/case-studies/conormcafee/posts-ui.jpg)
 
-I really likes this idea, and it went down quite well on Dribbble which is always a nice wee pat on the back.  Once I seen the reaction that it got, the cogs in my head immediately started thinking that something like this should be on the homepage instead.  By this stage I had abandoned photoshop and was purely designing in the browser, which has its good &amp; bad points but they are for another day.
+I really liked this idea, and it went down quite well on Dribbble which is always a nice wee pat on the back.  Once I seen the reaction that it got, the cogs in my head immediately started thinking that something like this should be on the homepage instead.  By this stage I had abandoned photoshop and was purely designing in the browser, which has its good &amp; bad points but they are for another day.
 
 After some tinkering and playing about with Flexbox at the same time, you can see now what is currently the homepage on this website.
 
-Image 3 Homepage
+![Conor McAfee - Homepage UI](/assets/images/case-studies/conormcafee/homepage.jpg)
 
-To me, this was taking the best elements from that Dribbble post along with additional tweaks to highlight certain call to actions and I have a finally at homepage that I am really happy with.  If you’ve any on thoughts on it, please do give me a shout.
-
-## Detailed Information
-
-As mentioned a few times, the aim of this website is to give my self more of an online presence, and also show people exactly where I am at in my career.  I found it quite hard writing about myself on this section, it’s hard trying to make yourself sound good (or better, depends what way you look at it) without sounding cocky or boastful.  It’s also hard to know what is too much information and what is not enough - I feel I am on the border of having too much content.  I will be revisiting this in the near future to see what a fresh head can achieve. 
+To me, this was taking the best elements from that Dribbble post along with additional tweaks to highlight certain call to actions and I finally have a homepage that I am really happy with.  If you’ve any on thoughts on it, please do give me a shout. 
 
 ## Blogs & Case Studies
 
-This is new to conormcafee.co.uk - but I feel it is a necessary addition to help me stand out from the crowd a bit.  These are multiply purposeful in terms of the development of my career.  I hope that they can:
+This is new to conormcafee.co.uk - but I feel it is a necessary addition to help me stand out from the crowd a bit.  I hope that they can:
 
 - Improve my writing skills
 - Show what I have to offer
-- Help others through learning
+- Help others learn
 
-I had intended on building a *Labs* section into the website as well as Blogs & Case Studies - this may still happen but I recently have came up with the idea to take part in a 52 Week UI challenge.  I have plans to start it in January in timing with the new year.  
-
-To make it stand out from other UI challenges, I have came up with the idea of theming the entire 52 weeks.  I was in the Manchester Art Museum in August, and shortly after I began this redesign, there was an exhibition called *Black on Black*.  I loved the idea of this as I am fascinated with black on black, take a look at my car for example.
-
-From then on it was in my head to design my website with black on black in mind, but I just wasn’t comfortable with it - I see it to be used as more of an experiment or fun project rather than something practical which was the intentions of this site.  I was feel black on black is terribly hard to portray well on the web.
-
-Keep an eye on that in the next month or two if you’re interested to see where it goes, I can’t wait to get stuck into it.
+I had intended on building a *Labs* section into the website as well as Blogs & Case Studies - this may still happen but I recently have came up with the idea to take part in a 52 Week UI challenge.  I have plans to start it in January in timing with the new year.  More on that soon.
 
 ## Performance
 
 Last but not least, my favourite part of web development at the moment.  Performance.
+
+Of recent I have been following the work of [Scott Jehl](https://www.twitter.com/scottjehl) and [Patrick Hamann](https://twitter.com/patrickhamann) in regards to web page speed.  If you are not following these guys I suggest you start.  It was mainly Patrick’s work with the new Guardian website that opened my eyes about how you can improve the speed of your web pages without cutting back on content.  I’m still finding my feet with everything you can do to improve page speed and this will be a work in progress for a while after launch - but I am pretty happy with the current scores on [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) at present.
 

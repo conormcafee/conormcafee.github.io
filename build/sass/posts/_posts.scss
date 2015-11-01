@@ -76,6 +76,14 @@ article img {
         color: post-colour($selector);
     }
 
+    article.post--#{$selector} a {
+        color: post-colour($selector);
+
+        &:hover {
+            color: post-colour($selector, hover);
+        }
+    }
+
     [data-archive="#{$selector}"] .post-archive__link {
         color: post-colour($selector);
     }
