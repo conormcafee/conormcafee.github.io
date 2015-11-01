@@ -1176,6 +1176,13 @@ article.post--case-study h2 {
   color: #4392F1;
 }
 
+article.post--case-study a {
+  color: #4392F1;
+}
+article.post--case-study a:hover {
+  color: #1476ed;
+}
+
 [data-archive="case-study"] .post-archive__link {
   color: #4392F1;
 }
@@ -1195,6 +1202,13 @@ article.post--case-study h2 {
 
 article.post--journal h2 {
   color: #00A676;
+}
+
+article.post--journal a {
+  color: #00A676;
+}
+article.post--journal a:hover {
+  color: #007352;
 }
 
 [data-archive="journal"] .post-archive__link {
