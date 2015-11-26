@@ -976,6 +976,24 @@ header {
   padding: 1.15rem;
 }
 
+.case-studies__tag {
+  font-family: 'quicksandregular', 'Arial', serif;
+  display: inline-block;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 5px 15px;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+.case-studies__tag:before {
+  content: "";
+  background: url("../../assets/images/tag.svg");
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
 .journals {
   background: #00d99a;
   background: linear-gradient(180deg, #00d99a, #00A676);
@@ -1254,4 +1272,61 @@ article.post--journal a:hover {
 }
 .contact .btn:hover {
   background-color: #b91510;
+}
+
+.interview {
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+.interview--left {
+  background: #72aef5;
+  background: linear-gradient(180deg, #72aef5, #4392F1);
+  border-top: 2px solid #1476ed;
+}
+.interview--right {
+  background: #00d99a;
+  background: linear-gradient(180deg, #00d99a, #00A676);
+  border-top: 2px solid #007352;
+}
+.interview--right:last-of-type {
+  border-bottom: 2px solid #a2b0c2;
+}
+
+.interview__half {
+  display: block;
+  float: left;
+  width: 50%;
+}
+.interview__half img {
+  width: 100%;
+  height: auto;
+}
+
+.interview--text {
+  margin-top: 175px;
+  padding: 0 60px;
+}
+
+.case-study--interview {
+  width: 100%;
+  margin-top: 100px;
+}
+
+.interview--right .case-study--interview {
+  box-shadow: 10px 10px 20px #007352;
+}
+
+.interview--right .case-studies__header:after {
+  background-color: #007352;
+}
+
+.interview--left .case-studies__tag {
+  border-color: #0e5fc0;
+  background-color: #0e5fc0;
+}
+
+.interview--right .case-studies__tag {
+  border-color: #007352;
+  background-color: #007352;
 }
