@@ -1,0 +1,127 @@
+@font-face {
+  font-family: 'quicksandregular';
+  src: url("../../assets/webfonts/quicksand/quicksand-regular-webfont.eot");
+  src: url("../../assets/webfonts/quicksand/quicksand-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/webfonts/quicksand/quicksand-regular-webfont.woff2") format("woff2"), url("../../assets/webfonts/quicksand/quicksand-regular-webfont.woff") format("woff"), url("../../assets/webfonts/quicksand/quicksand-regular-webfont.ttf") format("truetype"), url("../../assets/webfonts/quicksand/quicksand-regular-webfont.svg#quicksandregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'source_serif_proregular';
+  src: url("../../assets/webfonts/source-serif-pro/sourceserifpro-regular-webfont.eot");
+  src: url("../../assets/webfonts/source-serif-pro/sourceserifpro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/webfonts/source-serif-pro/sourceserifpro-regular-webfont.woff2") format("woff2"), url("../../assets/webfonts/source-serif-pro/sourceserifpro-regular-webfont.woff") format("woff"), url("../../assets/webfonts/source-serif-pro/sourceserifpro-regular-webfont.ttf") format("truetype"), url("../../assets/webfonts/source-serif-pro/sourceserifpro-regular-webfont.svg#source_serif_proregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+nav {
+  position: fixed;
+  width: 350px;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: #282828;
+  color: #ffffff;
+}
+nav li {
+  font-family: 'quicksandregular', 'Arial', serif;
+  display: block;
+  float: left;
+  width: 16.666666667%;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+}
+nav li:hover {
+  background-color: #000000;
+}
+
+.content li {
+  height: 100vh;
+  margin-left: 350px;
+}
+.content li:nth-child(odd) {
+  background-color: #282828;
+}
+.content li:nth-child(even) {
+  background-color: #000000;
+}

@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+@import
+	"global/mixins",
+	"global/variables",
+    "global/base"
+;
+
+// Colour Palette
+
+$black-one: #282828;
+$black-two: #000000;
+$white: #ffffff;
+ 
+// Brand Colour Palette
+$ui-colours: (
+    black-one: (
+        base:   $black-one
+    ),
+
+    black-two: (
+        base:   $black-two
+    ),
+
+    white: (
+        base: $white
+    )
+);
+ 
+@function ui-colour($ui-colour, $tone: 'base') {
+    @return map-get(map-get($ui-colours, $ui-colour), $tone);
+}
+@function get-ui-colour($ui-colour, $tone: 'base') {
+    @return map-get(map-get($ui-colours, $ui-colour), $tone);
+}
+
+nav {
+    position: fixed;
+    width: 350px;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: ui-colour(black-one);
+    color: ui-colour(white);
+
+    li {
+        @include sub-heading;
+        display: block;
+        float: left;
+        width: 16.666666667%;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+
+        &:hover {
+            background-color: ui-colour(black-two);
+        }
+    }
+}
+
+.content li {
+    height: 100vh;
+    margin-left: 350px;
+
+    &:nth-child(odd) {
+        background-color: ui-colour(black-one);
+    }
+
+    &:nth-child(even) {
+        background-color: ui-colour(black-two);
+    }
+}
