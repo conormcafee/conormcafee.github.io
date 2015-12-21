@@ -106,3 +106,5 @@ a {
 {% endhighlight %}
 
 And that’s it.  The power behind this now is that if you need to change your any of your original colours, this can be done once and the change will be site wide after your compile your Sass.
+
+Original concept by [Erskine Design](http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/)
