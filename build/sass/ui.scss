@@ -3,23 +3,28 @@
 @import
 	"global/mixins",
 	"global/variables",
-    "global/base"
+  "global/base"
 ;
 
 // Colour Palette
 
 $black-one: #282828;
-$black-two: #000000;
+$black-two: darken(#515151, 5%);
 $white: #ffffff;
+$dribbble: #ea4c89;
  
 // Brand Colour Palette
 $ui-colours: (
-    black-one: (
+    one: (
         base:   $black-one
     ),
 
-    black-two: (
+    two: (
         base:   $black-two
+    ),
+
+    pink: (
+      base: $dribbble
     ),
 
     white: (
@@ -27,47 +32,149 @@ $ui-colours: (
     )
 );
  
-@function ui-colour($ui-colour, $tone: 'base') {
-    @return map-get(map-get($ui-colours, $ui-colour), $tone);
-}
-@function get-ui-colour($ui-colour, $tone: 'base') {
-    @return map-get(map-get($ui-colours, $ui-colour), $tone);
+@function colour($colour, $tone: 'base') {
+    @return map-get(map-get($ui-colours, $colour), $tone);
 }
 
-nav {
-    position: fixed;
-    width: 350px;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background-color: ui-colour(black-one);
-    color: ui-colour(white);
-
-    li {
-        @include sub-heading;
-        display: block;
-        float: left;
-        width: 16.666666667%;
-        text-align: center;
-        height: 40px;
-        line-height: 40px;
-
-        &:hover {
-            background-color: ui-colour(black-two);
-        }
-    }
+::-webkit-scrollbar { 
+    display: none; 
 }
 
-.content li {
-    height: 100vh;
-    margin-left: 350px;
+body {
+  position: relative;
+  background-color: colour(one);
+  @include sub-heading;
+}
 
-    &:nth-child(odd) {
-        background-color: ui-colour(black-one);
-    }
+.nav {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  background: colour(one);
+  color: colour(two);
+  width: 100%;
+}
 
-    &:nth-child(even) {
-        background-color: ui-colour(black-two);
-    }
+.nav--header {
+  top: 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+}
+.nav--header img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav--footer {
+  bottom: 0;
+  border-top: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav--footer .nav__list {
+  white-space: nowrap;
+  overflow: scroll;
+}
+
+.nav--footer .nav__item {
+  display: inline-block;
+  width: 60px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  
+  &.nav__title {
+    width: 200px;
+  }
+}
+
+.nav--footer .nav__link {
+  color: colour(two);
+  text-decoration: none;
+
+  &:hover {
+    color: colour(white);
+  }
+}
+
+.shots {
+  height: calc(100vh - 104px);
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  margin-top: 62px;
+}
+
+.shot {
+  flex: 0 0 100%;
+}
+
+.shot__content {
+  display: flex;
+  flex-direction: column;
+  color: colour(two);
+}
+
+.shot__grid {
+  flex: 0 0 100%;
+  width: 100%;
+  padding: em(20);
+}
+
+.shot__image {
+  max-width: 100%;
+  height: auto;
+}
+
+.shot__title {
+  @include font-size(1.2);
+}
+
+.shot__desc {
+  @include base;
+  @include font-size(1.0);
+  line-height: 25px;
+  margin: em(20) 0;
+  max-width: 500px;
+}
+
+.shot__likes:before {
+  content: url('/52-week-ui-challenge/heart.svg');
+  display: inline-block;
+  margin-right: em(10);
+  margin-top: em(5);
+}
+
+.shot__link {
+  @include font-size(1.0);
+  display: inline-block;
+  color: colour(two);
+  text-decoration: none;
+  margin: em(20) 0;
+
+  &:hover {
+    color: colour(pink);
+  }
+}
+
+.shot__link:after {
+  content: url('/52-week-ui-challenge/external.svg');
+  display: inline-block;
+  margin-left: em(10);
+}
+
+@media only screen and (min-width: 600px) {
+  .shot__content {
+    flex-direction: row;
+  }
+  
+  .shot__grid {
+    flex: 0 0 50%;
+    width: 50%;
+  }
+
+  .shot__grid--right {
+    padding-left: 0;
+  }
 }

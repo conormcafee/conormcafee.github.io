@@ -82,6 +82,8 @@ gulp.task('watch', function() {
  
   // Watch .scss files
   gulp.watch('build/sass/**/*.scss', ['sass']);
+
+  gulp.watch('build/sass/**/*.scss', ['sass-ui']);
  
   // Watch .js files
   gulp.watch('build/js/*.js', ['scripts']);
