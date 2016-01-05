@@ -27,7 +27,7 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
         <li class="welcome-card__list-item"><a href="{{ post.url | prepend: site.baseurl }}" class="welcome-card__post-link">{{ post.title }}</a></li>
       {% endfor %}
       </ul>
-      <a href="#case-studies" class="btn welcome-card__link" title="See all Case Studies">See all Case Studies</a>
+      <a href="{{ site.baseurl }}/case-studies/" class="btn welcome-card__link" title="See all Case Studies">See all Case Studies</a>
     </div>
 
     <div class="welcome-card welcome--three" data-welcome="journal">
@@ -37,7 +37,7 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
         <li class="welcome-card__list-item"><a href="{{ post.url | prepend: site.baseurl }}" class="welcome-card__post-link">{{ post.title }}</a></li>
       {% endfor %}
       </ul>
-      <a href="#journals" class="btn welcome-card__link" title="See all Journals">See all Journals</a>
+      <a href="{{ site.baseurl }}/journal/" class="btn welcome-card__link" title="See all Journals">See all Journals</a>
     </div>
 
   </div>
