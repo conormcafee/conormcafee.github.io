@@ -33,7 +33,7 @@
 <meta name="twitter:creator" content="@conormcafee">
 <meta name="twitter:title" content="{{ page.title }}">
 <meta name="twitter:description" content="{{ page.description}}">
-<meta name="twitter:image" content="{{ site.baseurl }}/assets/images/{{ page.header }}">
+<meta name="twitter:image" content="{{ site.url }}/assets/images/{% if page.header %}{{ page.header }}{% else %}conormcafee-twitter.jpg{% endif %}">
 
 <meta property="og:title" content="{{ page.title }}" />
 <meta property="og:site_name" content="Conor McAfee | Designer &amp; Front-End Developer"/>
