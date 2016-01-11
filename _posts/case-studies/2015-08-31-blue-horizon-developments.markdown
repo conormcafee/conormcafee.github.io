@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: case-study
 title:  Blue Horizon Developments
 description: Blue Horizon Developments are a housing development company building houses in prestigious areas of Northern Ireland.  Have a read of this case study to see what my role was for the company 
 date:   2015-08-31 20:00

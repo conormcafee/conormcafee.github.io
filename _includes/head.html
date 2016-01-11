@@ -33,7 +33,7 @@
 <meta name="twitter:creator" content="@conormcafee">
 <meta name="twitter:title" content="{{ page.title }}">
 <meta name="twitter:description" content="{{ page.description}}">
-<meta name="twitter:image" content="{{ site.url }}/assets/images/{% if page.header %}{{ page.header }}{% else %}conormcafee-twitter.jpg{% endif %}">
+<meta name="twitter:image" content="{{ site.url }}/assets/images/{% if twitter.header %}{{ twitter.header }}{% else %}conormcafee-twitter.jpg{% endif %}">
 
 <meta property="og:title" content="{{ page.title }}" />
 <meta property="og:site_name" content="Conor McAfee | Designer &amp; Front-End Developer"/>
@@ -41,4 +41,5 @@
 <meta property="og:description" content="{{ page.description}}" />
 <meta property="og:type" content="article" />
 <meta property="article:author" content="https://www.facebook.com/conor.mcafee" />
+<meta property="og:image" content="{{ site.url }}/assets/images/{% if facebook.header %}{{ facebook.header }}{% else %}conormcafee-facebook.jpg{% endif %}"/>
 </head>
