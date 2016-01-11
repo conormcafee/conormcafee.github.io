@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: case-study
 title:  Conor McAfee
 description: Personal Website (http://conormcafee.co.uk) redesign.  This case study will detail my design & development decisions, along with future plans for conormcafee.co.uk.
 date:   2015-11-01 19:00
