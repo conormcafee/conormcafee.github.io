@@ -5,8 +5,6 @@ description: Github Branches confused me when working locally to begin with, hop
 date:   2016-01-20 19:30:00
 categories: journal
 type: journal
-twitter-header: http://conormcafee.co.uk/assets/images/journal/github-branches-demo.gif
-facebook-header: http://conormcafee.co.uk/assets/images/journal/github-branches-demo.gif
 author: Conor McAfee
 ---
 Github Branches confused me when working locally to begin with, hopefully this blog post will make it easier for you to understand too.
