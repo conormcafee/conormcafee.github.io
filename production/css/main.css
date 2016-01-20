@@ -1156,11 +1156,10 @@ article {
   }
 }
 
-article p,
-article li {
+article p {
   font-size: 1.067rem;
   line-height: 2rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
   color: #525252;
 }
 
@@ -1168,13 +1167,20 @@ article ul {
   list-style: disc;
   list-style-position: inside;
   margin-left: 1.15rem;
+  margin-bottom: 0.75rem;
+}
+
+article li {
+  font-size: 1.067rem;
+  line-height: 2rem;
+  margin-bottom: 0.75rem;
+  color: #525252;
 }
 
 article h2 {
   font-family: 'quicksandregular', 'Arial', serif;
   font-size: 1.68rem;
   line-height: 2rem;
-  line-height: 4.6rem;
   margin-bottom: 0.75rem;
 }
 
@@ -1182,6 +1188,18 @@ article img {
   display: block;
   width: 100%;
   height: auto;
+}
+
+article blockquote {
+  padding: 1.25em;
+  border: 2px solid #e6e6e6;
+  background-color: #f6f6f6;
+  border-radius: 7px;
+  margin: 1.25em auto;
+  max-width: 600px;
+}
+article blockquote p {
+  margin: 0;
 }
 
 .post.post--case-study {
