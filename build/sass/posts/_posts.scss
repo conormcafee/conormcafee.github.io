@@ -40,10 +40,9 @@ article {
     }
 }
 
-article p,
-article li {
+article p {
     @include type-setting(1);
-    margin-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
     color: brand-colour(black);
 }
 
@@ -51,12 +50,18 @@ article ul {
     list-style: disc;
     list-style-position: inside;
     margin-left: $base-line-height;
+    margin-bottom: 0.75rem;
+}
+
+article li {
+    @include type-setting(1);
+    margin-bottom: 0.75rem;
+    color: brand-colour(black);
 }
 
 article h2 {
     @include sub-heading;
     @include type-setting(8);
-    line-height: $base-line-height * 4;
     margin-bottom: 0.75rem;
 }
 
@@ -64,6 +69,19 @@ article img {
     display: block;
     width: 100%;
     height: auto;
+}
+
+article blockquote {
+    padding: em(20);
+    border: 2px solid #e6e6e6;
+    background-color: #f6f6f6;
+    border-radius: 7px;
+    margin: em(20) auto;
+    max-width: 600px;
+
+    p {
+        margin: 0;
+    }
 }
 
 @each $selector, $value in $post-colours {
