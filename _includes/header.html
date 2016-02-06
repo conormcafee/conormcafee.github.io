@@ -1,17 +1,24 @@
+<div class="header-waves header--{{ page.type }}"></div>
 <header>
+  <div class="wrapper">
+      
+    <img src="{{ site.baseurl }}/assets/images/conor-mcafee-logo.svg" alt="Conor McAfee | Designer &amp; Front-End Developer" height="60" width="200" class="header__logo">
+      
+    <p class="header-text">Designer <span>&amp;</span> Front-End Developer</p>
+      
+    <ul class="header-social">
+    	<li class="header-social__item"><a href="http://www.twitter.com/conormcafee" target="_blank" title="Follow me on Twitter" class="sprite twitter"></a></li>
+        <li class="header-social__item"><a href="http://www.instagram.com/conormcafee" target="_blank" title="Follow me on Instagram" class="sprite instagram"></a></li>
+        <li class="header-social__item"><a href="http://www.dribbble.com/conormcafee" target="_blank" title="Follow me on Dribbble" class="sprite dribbble"></a></li>
+        <li class="header-social__item"><a href="http://www.github.com/conormcafee" target="_blank" title="Follow me on Github" class="sprite github"></a></li>
+      </ul>
+ 
 
-	<div class="wrapper">
-		<div class="header__left">
-			<a href="/"><img src="../assets/images/conor-mcafee-logo.svg" alt="Conor McAfee | Designer &amp; Front-End Developer" height="40" width="150" class="logo header__logo"></a>
-		</div>
-
-		<div class="header__right">
-			<ul class="header__menu">
-				<li class="header__menu-item"><a href="{{ site.baseurl }}/">About</a></li>
-				<li class="header__menu-item"><a href="{{ site.baseurl }}/case-studies/">Case Studies</a></li>
-				<li class="header__menu-item"><a href="{{ site.baseurl }}/journal/">Journals</a></li>
-			</ul>
-		</div>
-	</div>
+	<nav class="nav nav--header">
+	  <a href="/about" class="nav__link" title="About Conor McAfee">About</a>
+	  <a href="/case-studies" class="nav__link" title="See my Case Studies">Case Studies</a>
+	  <a href="/journal" class="nav__link" title="See my Journals">Journal</a>
+	</nav>
+ </div>
 
 </header>

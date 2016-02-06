@@ -10,6 +10,8 @@ html {
 
 body {
 	@include base;
+	font-size: 62.5%;
+	color: brand-colour(black);
 	position: relative;
 }
 

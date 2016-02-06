@@ -45,75 +45,22 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
 </main>
 
 <nav class="nav nav--homepage">
-  <a href="#about" class="nav__link" title="About Conor McAfee">About</a>
-  <a href="#case-studies" class="nav__link" title="See my Case Studies">Case Studies</a>
-  <a href="#journals" class="nav__link" title="See my Journals">Journal</a>
+  <a href="/about" class="nav__link" title="About Conor McAfee">About</a>
+  <a href="/case-studies" class="nav__link" title="See my Case Studies">Case Studies</a>
+  <a href="/journal" class="nav__link" title="See my Journals">Journal</a>
 </nav>
 
-<section class="about" id="about">
+<section class="about">
   <div class="wrapper">
-    <div class="about__column about__column--one">
-      
-      <h2 class="about__heading">About</h2>
+    <p>I am a designer &amp; front-end developer from Ballymena, Northern Ireland with 3 years industry experience. Currently, I am working for Sugar Rush Creative in Belfast.</p>
 
-      <p class="about__text">I am a designer &amp; front-end developer from Ballymena, Northern Ireland with 3 years industry experience. Currently, I am working for dotRetailer in Belfast's Titanic Quarter.</p>
+    <p>I am an advocate of Responsive Web Design and in particular, improving the speed and performance of  websites.</p>
 
-      <p class="about__text">My aim is to build well executed websites, that look &amp; perform great on all devices.  We're now at a stage where a large chunk of our users browse from a mobile device, albeit a mobile phone or tablet.  Those users browsing over a 3G connection do not need to be downloading unnecessary content.  My aim is to prioritise what content is necessary - giving users the best possible experience when accessing the web.</p>
-
-      <br />
-
-      <h2 class="about__heading">University</h2>
-
-      <p class="about__text">I am a graduate of <a href="http://scm.ulster.ac.uk/imd/" target="_blank" class="about__link" title="Interactive Multimedia Design">Interactive Multimedia Design</a> from the University of Ulster, studying both in the main campus at Jordanstown, and the Art College in Belfast.  I completed the course, gaining a Second Class Honours in the Upper Division (2:1) in July 2013.</p>
-
-      <br />
-
-      <h2 class="about__heading">Networking</h2>
-
-      <p class="about__text">You can find me at local web events around Belfast such as <a href="http://www.hustleconf.co.uk/" target="_blank" class="about__link" title="Hustle Confernce">Hustle</a> &amp; <a href="http://refreshbelfast.com/" target="_blank" class="about__link" title="Refresh Belfast">Refresh</a>.  These are always great for catching up with local designers &amp; developers as well as meeting others.  I have also attended <a href="http://2013.buildconf.com/" target="_blank" class="about__link" title="Build Confernce">Build</a> on two occasions.</p>
-
-      <a href="javascript:void(0)" class="btn btn--continue btn--continue-inactive" title="Click to read more about Conor McAfee" alt="Click to read more about Conor McAfee">Read more about Conor</a>
-
-    </div>
-
-    <div class="about__column about__column--two about--js about--hidden">
-      
-      <h2 class="about__heading">Employment</h2>
-        
-      <div class="about__employment">
-        
-        <div class="about__employment-nav">
-          <a href="javascript:void(0)" class="about__employment-link about__employment-link--active" id="js-0-title" title="dotRetailer" alt="Other Jobs">dotRetailer</a>
-          <a href="javascript:void(0)" class="about__employment-link" id="js-1-title" title="ActivWireless" alt="Other Jobs">Activ Wireless</a>
-          <a href="javascript:void(0)" class="about__employment-link" id="js-2-title" title="Northern Ireland Open Challenge Tour" alt="Other Jobs">NI Open</a>
-          <a href="javascript:void(0)" class="about__employment-link" id="js-3-title" title="University of Ulster" alt="Other Jobs">Uni of Ulster</a>
-        </div>
-
-        {% for job in site.data.jobs %}
-        <ul id="js-{{ job.number }}" class="about__employment-list about__employment--js-{{ job.state }}">
-          <li class="about__employment-item about__employment--title">{{ job.title }}</li>
-          <li class="about__employment-item about__employment--role">{{ job.role }}</li>
-          <li class="about__employment-item about__employment--desc">{{ job.desc }}</li>
-        </ul>
-        {% endfor %}
-
-        <h2 class="about__heading">Some Projects I've Worked On</h2>
-
-        <ul class="about__list">
-          {% for client in site.data.clients %}
-          <li class="about__list-item">{{ client.name }}</li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-
-    {% include contact.html %}
-  
+    <p>I have had the pleasure of working on projects for the Kyoto Pearl, Northern Ireland Open Nobel Cafe, &amp; Fearon Bros to name a few.  <a href="#" title="See all Projects">See all projects</a>.</p>
   </div>
 </section>
 
-<!-- Case Studies -->
-<section class="case-studies" id="case-studies">
+<section class="case-studies">
   <div class="wrapper">
     <p class="case-studies__header">Case Studies</p>
     <p class="case-studies__intro">Check out my selected Case Studies below.  I've decided to showcase a select few projects, mainly ones that I have had full control of regards design and/or development.</p>
@@ -134,8 +81,7 @@ description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ire
   </div>
 </section>
 
-<!-- Journals -->
-<section class="journals" id="journals">
+<section class="journals">
   <div class="wrapper">
       <ul class="journals__list">
         <li class="journal journal--homepage">

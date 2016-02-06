@@ -1,0 +1,34 @@
+.heading {
+	@include sub-heading;
+}
+
+h1 {
+	@include type-setting(11);
+}
+
+h2 {
+	@include type-setting(6);
+	color: brand-colour(orange);
+
+	&:after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 30px;
+        background-color: brand-colour(blue);
+        margin: $base-line-height 0;
+    }
+}
+
+h3 {
+	@include type-setting(3);
+	color: brand-colour(orange);
+}
+
+p {
+	@include type-setting(1);
+}
+
+ul {
+	@include type-setting(1);
+}

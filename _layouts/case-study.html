@@ -6,21 +6,13 @@ layout: default
 
 {% include header.html %}
 
-<div class="post post--{{ page.type }}">
-
-	<div class="wrapper">
-		
-		<h1 class="post__header">{{ page.title }}</h1>
-
-		<p class="post__date">{{ page.date | date: "%b %-d, %Y" }}</p>
-		
-	</div>
-
-</div>
-
 <div class="wrapper wrapper--edit wrapper--{{ page.type }}">
 
 	<article class="post__content post--{{ page.type }}">
+
+    <h1 class="heading">{{ page.title }}</h1>
+
+    <p>{{ page.date | date: "%b %-d, %Y" }}</p>
 
 		{{ content }}
 

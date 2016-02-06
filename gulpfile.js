@@ -28,17 +28,6 @@ gulp.task('sass', function() {
     .pipe(notify({ message: 'Styles task complete' }));
 });
 
-// SASS (UI)
-gulp.task('sass-ui', function() {
-    return sass('build/sass/ui.scss', { style: 'expanded' })
-    .pipe(prefix({ browsers: ['last 2 versions'] }))
-    .pipe(gulp.dest('production/css'))
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(minifycss())
-    .pipe(gulp.dest('production/css'))
-    .pipe(notify({ message: 'Styles task complete' }));
-});
-
 // Scripts
 gulp.task('scripts', function() {
   return gulp.src('build/js/*.js')
@@ -82,8 +71,6 @@ gulp.task('watch', function() {
  
   // Watch .scss files
   gulp.watch('build/sass/**/*.scss', ['sass']);
-
-  gulp.watch('build/sass/**/*.scss', ['sass-ui']);
  
   // Watch .js files
   gulp.watch('build/js/*.js', ['scripts']);
