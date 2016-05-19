@@ -4,50 +4,35 @@ title: Conor McAfee | Designer &amp; Front-End Developer
 description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ireland.
 ---
 
-{% include header.html %}
+<section>
+  <h1>About</h1>
 
-<section class="about" id="about">
-  <div class="wrapper">
-    <div class="about-column about--one">      
-      <p>I am a designer &amp; front-end developer from Ballymena, Northern Ireland with 3 years industry experience. Currently, I am working for Sugar Rush Creative in Belfast.</p>
+  <p>I am a designer &amp; front-end developer from Ballymena, Northern Ireland with 3 years industry experience. Currently, I am working for Sugar Rush Creative in Belfast.</p>
 
-      <p>I am an advocate of Responsive Web Design and in particular, improving the speed and performance of  websites.</p>
+  <p>I am an advocate of Responsive Web Design and in particular, improving the speed and performance of  websites.</p>
 
-      <h2 class="heading">University</h2>
+  <h2>University</h2>
 
-      <p>I am a graduate of <a href="http://scm.ulster.ac.uk/imd/" target="_blank" title="Interactive Multimedia Design">Interactive Multimedia Design</a> from the University of Ulster, studying both in the main campus at Jordanstown, and the Art College in Belfast.  I completed the course, gaining a Second Class Honours in the Upper Division (2:1) in July 2013.</p>
+  <p>I am a graduate of <a href="http://scm.ulster.ac.uk/imd/" target="_blank" title="Interactive Multimedia Design">Interactive Multimedia Design</a> from the University of Ulster, studying both in the main campus at Jordanstown, and the Art College in Belfast.  I completed the course, gaining a Second Class Honours in the Upper Division (2:1) in July 2013.</p>
 
-      <br />
+  <h2>Networking</h2>
 
-      <h2 class="heading">Networking</h2>
+  <p>You can find me at local web events around Belfast such as <a href="http://www.hustleconf.co.uk/" target="_blank" title="Hustle Confernce">Hustle</a> &amp; <a href="http://refreshbelfast.com/" target="_blank" title="Refresh Belfast">Refresh</a>.  These are always great for catching up with local designers &amp; developers as well as meeting others.  I have also attended <a href="http://2013.buildconf.com/" target="_blank" title="Build Confernce">Build</a> on two occasions.</p>
 
-      <p>You can find me at local web events around Belfast such as <a href="http://www.hustleconf.co.uk/" target="_blank" title="Hustle Confernce">Hustle</a> &amp; <a href="http://refreshbelfast.com/" target="_blank" title="Refresh Belfast">Refresh</a>.  These are always great for catching up with local designers &amp; developers as well as meeting others.  I have also attended <a href="http://2013.buildconf.com/" target="_blank" title="Build Confernce">Build</a> on two occasions.</p>
+  <h2>Some Projects I've Worked On</h2>
 
-      <h2 class="heading">Some Projects I've Worked On</h2>
+  <ul class="about__list">
+  {% for client in site.data.clients %}
+    <li class="about__list-item">{{ client.name }}</li>
+  {% endfor %}
+  </ul>
 
-      <ul class="about__list">
-        {% for client in site.data.clients %}
-        <li class="about__list-item">{{ client.name }}</li>
-        {% endfor %}
-      </ul>
 
-    </div>
-
-    <div class="about-column about--two">
-      {% for job in site.data.jobs %}
-      <div class="about-employment">
-        <h3>{{ job.title }}</h3>
-        <span>{{ job.role }}</span>
-        <p>{{ job.desc }}</p>
-      </div>
-      {% endfor %}
-    </div>
+  {% for job in site.data.jobs %}
+  <div class="about-employment">
+    <h3>{{ job.title }}</h3>
+    <span>{{ job.role }}</span>
+    <p>{{ job.desc }}</p>
   </div>
-  {% include contact.html %}
+  {% endfor %}
 </section>
-
-{% include footer.html %}
-
-<script src="{{ site.baseurl }}/assets/js/jquery-2.1.4.min.js"></script>
-<script src="{{ site.baseurl }}/assets/js/homepage.js"></script>
-<script src="{{ site.baseurl }}/assets/js/main.min.js"></script>

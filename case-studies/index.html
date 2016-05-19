@@ -1,26 +1,16 @@
 ---
 layout: archive
 title: Conor McAfee | Designer &amp; Front-End Developer
-description: Have a look at my latest Case Studies and see how I came up with the design interfaces and development decisions in the project 
+description: Have a look at my latest Case Studies and see how I came up with the design interfaces and development decisions in the project
 ---
 
-<section class="case-studies case-studies--archive" id="case-studies">
-  <div class="wrapper">
-    <p class="case-studies__header">Case Studies</p>
-    <p class="case-studies__intro">Check out my selected Case Studies below.  I've decided to showcase a select few projects, mainly ones that I have had full control of regards design and/or development.</p>
-    <ul class="case-studies__list">
-      {% for post in site.categories.case-studies %}
-      <li class="case-study">
-        <div class="case-study__chrome">
-          <div class="case-study__buttons"></div>
-            <a href="{{ post.url | prepend: site.baseurl }}" class="case-study__link" title="Read Case Study on {{ post.title }}">Read Case Study</a>
-        </div>
-        <div class="case-study__content">
-          <img src="/assets/images/case-studies/{{ post.logo }}" class="case-study__logo" title="{{ post.title }}" alt="Logo for {{ post.title }}" />
-          <p class="case-study__excerpt">{{ post.role }}</p>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+<section>
+  <h1>Case Studies</h1>
+  <p>Check out my selected Case Studies below.  I've decided to showcase a select few projects, mainly ones that I have had full control of regards design and/or development.</p>
+
+  <ul>
+  {% for post in site.categories.case-studies %}
+    <li><a href="{{ post.url | prepend: site.baseurl }}" title="Read Case Study on {{ post.title }}">{{ post.title }}</a></li>
+  {% endfor %}
+  </ul>
 </section>

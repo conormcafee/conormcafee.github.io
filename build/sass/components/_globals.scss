@@ -1,0 +1,67 @@
+$accent: #E63946;
+
+html {
+  font-size: 52.5%;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 62.5%;
+  }
+}
+
+body {
+  background-color: #f6f6f6;
+  padding: em(20);
+  position: relative;
+  @include font-size(1.4);
+  line-height: 2.1rem;
+  color: #211A1D;
+}
+
+section {
+  max-width: 600px;
+  margin-bottom: em(100);
+}
+
+a {
+  color: #211A1D;
+  text-decoration: none;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+.link {
+  color: $accent;
+
+  &:hover {
+    color: #ffffff;
+    background: $accent;
+  }
+}
+
+a:focus {
+  outline: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  margin-bottom: em(20);
+}
+
+li:before {
+  content: "-";
+  display: inline-block;
+  margin: 0 em(10);
+  color: $accent;
+}
+
+.post__date {
+  margin-bottom: em(20);
+  color: $accent;
+}

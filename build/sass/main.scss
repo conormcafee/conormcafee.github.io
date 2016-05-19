@@ -1,19 +1,12 @@
-@charset "utf-8";
+@import "base/00-reset";
+//@import "base/01-variables";
+@import "base/02-functions";
+@import "base/04-mixins";
 
-@import
-	"global/mixins",
-	"global/variables",
-    "global/base",
-    "global/typography",
-    "global/global",
-    "global/header",
-    "homepage/landing",
-    "homepage/about",
-    "homepage/case-studies",
-    "homepage/journals",
-    "archive/a-case-studies",
-    "archive/a-journals",
-    "posts/posts",
-    "contact/contact",
-    "interview/interview"
-;
+@import "grid/bourbon/bourbon";
+@import "grid/grid-settings";
+@import "grid/neat/neat";
+
+@import "components/globals";
+@import "components/typography";
+@import "components/nav";
