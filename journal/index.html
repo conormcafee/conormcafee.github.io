@@ -4,20 +4,12 @@ title: Conor McAfee | Designer &amp; Front-End Developer
 description: Be sure to check out my latest journals on design & front-end development
 ---
 
-<section class="journals journals--archive" id="journals">
-  <div class="wrapper">
-      <ul class="journals__list">
-        <li class="journal journal--homepage">
-          <p class="journal__title">Journals</p>
-        </li>
-        {% for post in site.categories.journal %}
-        <li class="journal">
-          <a href="{{ post.url | prepend: site.baseurl }}" class="journal__title">{{ post.title }}</a>
-          <p class="journal__date">{{ post.date | date: '%b %d, %Y' }}
-          <p class="journal__excerpt">{{ post.excerpt | strip_html | truncate:300 }}</p>
-          <a href="{{ post.url | prepend: site.baseurl }}" class="btn journal__btn">Read {{ post.type }}</a>
-        </li>
-        {% endfor %}
-      </ul>
-  </div>
+<section>
+  <h1>Journals</h1>
+  <p>Posts about design, front-end development and the latest happenings with my career in the web industry.</p>
+  <ul>
+  {% for post in site.categories.journal %}
+    <li><a href="{{ post.url | prepend: site.baseurl }}" class="journal__title">{{ post.title }}</a></li>
+  {% endfor %}
+  </ul>
 </section>

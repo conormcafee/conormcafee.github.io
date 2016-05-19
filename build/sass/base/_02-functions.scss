@@ -1,0 +1,27 @@
+// Gutter Function
+@function gutter($key) {
+  @if map-has-key($gutterwidths, $key) {
+    @return map-get($gutterwidths, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $gutterwidths.";
+  @return null;
+}
+
+
+
+
+// Colour Palette Function
+@function brand($brand, $tone: 'base') {
+    @return map-get(map-get($palette, $brand), $tone);
+}
+
+
+
+
+// Value in scale in $modular-scale?
+@function in-modular-scale($scale, $key) {
+  $map: map-get($modular-scale, $scale);
+  $output: map-has-key($map, $key);
+  @return $output;
+}

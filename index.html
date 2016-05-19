@@ -4,156 +4,24 @@ title: Conor McAfee | Designer &amp; Front-End Developer
 description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ireland.
 ---
 
-<main class="welcome">
+<section>
+  <h1>Conor McAfee</h1>
+  <h2>Designer &amp; Front-End Developer</h2>
+  <p>Based in Ballymena, Northern Ireland I have been working full time in the web industry since 2013.  I've contributed to 30+ projects since then, gaining invaluable experience in many aspects of design &amp; development.</p>
+  <p>Currently, I am working for <a href="http://www.sugarrushcreative.com" title="Sugar Rush Creative" class="link" target="_blank">Sugar Rush Creative</a> in Belfast, previously at <a href="http://www.dotretailer.com" title="dotRetailer" class="link" target="_blank">dotRetailer</a>, <a href="http://www.activwireless.com" title="ActivWireless" class="link" target="_blank">ActiveWireless</a>, <a href="http://www.niopen.golf/" title="Northern Ireland Open" class="link" target="_blank">Northern Ireland Open Challenge Tour</a> &amp; <a href="http://www.ulster.ac.uk" title="University of Ulster" class="link" target="_blank">University of Ulster</a>.</p>
 
-  <div class="welcome--wrapper">
+  <h3>Selected Journals</h3>
+  <ul class="journal-list">
+  {% for post in site.categories.journal %}
+    <li><a href="{{ post.url | prepend: site.baseurl }}" class="welcome-card__post-link">{{ post.title }}</a></li>
+  {% endfor %}
+  </ul>
 
-    <div class="welcome-card welcome-card--middle welcome--one">
-      <div class="welcome-card__image"></div>
-      <img src="assets/images/conor-mcafee-logo.svg" alt="Conor McAfee | Designer &amp; Front-End Developer" height="60" width="200" class="welcome-card__logo">
-      <p class="welcome-card__logo-text">Designer <span>&amp;</span> Front-End Developer</p>
-      <ul class="welcome-card__social-list">
-        <li class="welcome-card__social-item"><a href="http://www.twitter.com/conormcafee" target="_blank" title="Follow me on Twitter" class="sprite twitter"></a></li>
-        <li class="welcome-card__social-item"><a href="http://www.instagram.com/conormcafee" target="_blank" title="Follow me on Instagram" class="sprite instagram"></a></li>
-        <li class="welcome-card__social-item"><a href="http://www.dribbble.com/conormcafee" target="_blank" title="Follow me on Dribbble" class="sprite dribbble"></a></li>
-        <li class="welcome-card__social-item"><a href="http://www.github.com/conormcafee" target="_blank" title="Follow me on Github" class="sprite github"></a></li>
-      </ul>
-    </div>
+  <h3>Selected Case Studies</h3>
+  <ul class="case-study-list">
+  {% for post in site.categories.case-studies %}
+    <li><a href="{{ post.url | prepend: site.baseurl }}" class="welcome-card__post-link">{{ post.title }}</a></li>
+  {% endfor %}
+  </ul>
 
-    <div class="welcome-card welcome--two" data-welcome="case-study">
-      <p class="welcome-card__title">Latest Case Studies</p>
-      <ul class="welcome-card__list">
-      {% for post in site.categories.case-studies limit:3 %}
-        <li class="welcome-card__list-item"><a href="{{ post.url | prepend: site.baseurl }}" class="welcome-card__post-link">{{ post.title }}</a></li>
-      {% endfor %}
-      </ul>
-      <a href="{{ site.baseurl }}/case-studies/" class="btn welcome-card__link" title="See all Case Studies">See all Case Studies</a>
-    </div>
-
-    <div class="welcome-card welcome--three" data-welcome="journal">
-      <p class="welcome-card__title">Latest Journals</p>
-      <ul class="welcome-card__list">
-      {% for post in site.categories.journal limit:3 %}
-        <li class="welcome-card__list-item"><a href="{{ post.url | prepend: site.baseurl }}" class="welcome-card__post-link">{{ post.title }}</a></li>
-      {% endfor %}
-      </ul>
-      <a href="{{ site.baseurl }}/journal/" class="btn welcome-card__link" title="See all Journals">See all Journals</a>
-    </div>
-
-  </div>
-
-</main>
-
-<nav class="nav nav--homepage">
-  <a href="#about" class="nav__link" title="About Conor McAfee">About</a>
-  <a href="#case-studies" class="nav__link" title="See my Case Studies">Case Studies</a>
-  <a href="#journals" class="nav__link" title="See my Journals">Journal</a>
-</nav>
-
-<section class="about" id="about">
-  <div class="wrapper">
-    <div class="about__column about__column--one">
-      
-      <h2 class="about__heading">About</h2>
-
-      <p class="about__text">I am a designer &amp; front-end developer from Ballymena, Northern Ireland with 3 years industry experience. Currently, I am working for dotRetailer in Belfast's Titanic Quarter.</p>
-
-      <p class="about__text">My aim is to build well executed websites, that look &amp; perform great on all devices.  We're now at a stage where a large chunk of our users browse from a mobile device, albeit a mobile phone or tablet.  Those users browsing over a 3G connection do not need to be downloading unnecessary content.  My aim is to prioritise what content is necessary - giving users the best possible experience when accessing the web.</p>
-
-      <br />
-
-      <h2 class="about__heading">University</h2>
-
-      <p class="about__text">I am a graduate of <a href="http://scm.ulster.ac.uk/imd/" target="_blank" class="about__link" title="Interactive Multimedia Design">Interactive Multimedia Design</a> from the University of Ulster, studying both in the main campus at Jordanstown, and the Art College in Belfast.  I completed the course, gaining a Second Class Honours in the Upper Division (2:1) in July 2013.</p>
-
-      <br />
-
-      <h2 class="about__heading">Networking</h2>
-
-      <p class="about__text">You can find me at local web events around Belfast such as <a href="http://www.hustleconf.co.uk/" target="_blank" class="about__link" title="Hustle Confernce">Hustle</a> &amp; <a href="http://refreshbelfast.com/" target="_blank" class="about__link" title="Refresh Belfast">Refresh</a>.  These are always great for catching up with local designers &amp; developers as well as meeting others.  I have also attended <a href="http://2013.buildconf.com/" target="_blank" class="about__link" title="Build Confernce">Build</a> on two occasions.</p>
-
-      <a href="javascript:void(0)" class="btn btn--continue btn--continue-inactive" title="Click to read more about Conor McAfee" alt="Click to read more about Conor McAfee">Read more about Conor</a>
-
-    </div>
-
-    <div class="about__column about__column--two about--js about--hidden">
-      
-      <h2 class="about__heading">Employment</h2>
-        
-      <div class="about__employment">
-        
-        <div class="about__employment-nav">
-          <a href="javascript:void(0)" class="about__employment-link about__employment-link--active" id="js-0-title" title="dotRetailer" alt="Other Jobs">dotRetailer</a>
-          <a href="javascript:void(0)" class="about__employment-link" id="js-1-title" title="ActivWireless" alt="Other Jobs">Activ Wireless</a>
-          <a href="javascript:void(0)" class="about__employment-link" id="js-2-title" title="Northern Ireland Open Challenge Tour" alt="Other Jobs">NI Open</a>
-          <a href="javascript:void(0)" class="about__employment-link" id="js-3-title" title="University of Ulster" alt="Other Jobs">Uni of Ulster</a>
-        </div>
-
-        {% for job in site.data.jobs %}
-        <ul id="js-{{ job.number }}" class="about__employment-list about__employment--js-{{ job.state }}">
-          <li class="about__employment-item about__employment--title">{{ job.title }}</li>
-          <li class="about__employment-item about__employment--role">{{ job.role }}</li>
-          <li class="about__employment-item about__employment--desc">{{ job.desc }}</li>
-        </ul>
-        {% endfor %}
-
-        <h2 class="about__heading">Some Projects I've Worked On</h2>
-
-        <ul class="about__list">
-          {% for client in site.data.clients %}
-          <li class="about__list-item">{{ client.name }}</li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-
-    {% include contact.html %}
-  
-  </div>
 </section>
-
-<!-- Case Studies -->
-<section class="case-studies" id="case-studies">
-  <div class="wrapper">
-    <p class="case-studies__header">Case Studies</p>
-    <p class="case-studies__intro">Check out my selected Case Studies below.  I've decided to showcase a select few projects, mainly ones that I have had full control of regards design and/or development.</p>
-    <ul class="case-studies__list">
-      {% for post in site.categories.case-studies %}
-      <li class="case-study">
-        <div class="case-study__chrome">
-          <div class="case-study__buttons"></div>
-          <a href="{{ post.url | prepend: site.baseurl }}" class="case-study__link" title="Read Case Study on {{ post.title }}">Read Case Study</a>
-        </div>
-        <div class="case-study__content">
-          <img src="/assets/images/case-studies/{{ post.logo }}" class="case-study__logo" title="{{ post.title }}" alt="Logo for {{ post.title }}" />
-          <p class="case-study__excerpt">{{ post.role }}</p>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-
-<!-- Journals -->
-<section class="journals" id="journals">
-  <div class="wrapper">
-      <ul class="journals__list">
-        <li class="journal journal--homepage">
-          <p class="journal__title">Journals</p>
-        </li>
-        {% for post in site.categories.journal %}
-        <li class="journal">
-          <a href="{{ post.url | prepend: site.baseurl }}" class="journal__title">{{ post.title }}</a>
-          <p class="journal__date">{{ post.date | date: '%b %d, %Y' }}
-          <p class="journal__excerpt">{{ post.excerpt | strip_html | truncate:300 }}</p>
-          <a href="{{ post.url | prepend: site.baseurl }}" class="btn journal__btn">Read {{ post.type }}</a>
-        </li>
-        {% endfor %}
-      </ul>
-  </div>
-</section>
-
-{% include footer.html %}
-
-<script src="{{ site.baseurl }}/assets/js/jquery-2.1.4.min.js"></script>
-<script src="{{ site.baseurl }}/assets/js/homepage.js"></script>

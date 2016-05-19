@@ -1,15 +1,13 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
-  <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
-  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{{ page.description}}">
   <meta name="google-site-verification" content="A-qCaXf51mdCWJ9vLEUaA_vERV89c0AT4vqnTIAay-M" />
 
-  <link rel="stylesheet" href="{{ "/production/css/main.min.css" | prepend: site.baseurl }}">
+
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
@@ -44,4 +42,8 @@
 <meta property="og:type" content="article" />
 <meta property="article:author" content="https://www.facebook.com/conor.mcafee" />
 <meta property="og:image" content="{% if page.facebook-header %}{{ page.facebook-header }}{% else %}{{ site.url }}/assets/images/social/conormcafee-twitter.jpg{% endif %}"/>
+
+<style>
+article,aside,details,figcaption,figure,footer,header,hgroup,img,menu,nav,section{display:block}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}.post__date,h2,ul{margin-bottom:1.25em}.nav,body{padding:1.25em}body,html{height:100%}a img{border:none}blockquote{quotes:none}blockquote:after,blockquote:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}caption,td,th{text-align:left;font-weight:400;vertical-align:middle}ol,ul{list-style:none}html{box-sizing:border-box;font-size:52.5%}*,:after,:before{box-sizing:inherit}@media only screen and (min-width:768px){html{font-size:62.5%}}body{background-color:#f6f6f6;position:relative;font-size:14px;font-size:1.4rem;line-height:2.1rem;color:#211A1D;font-family:system,-apple-system,".SFNSText-Regular","San Francisco",Roboto,"Segoe UI","Helvetica Neue","Lucida Grande",sans-serif}section{max-width:600px;margin-bottom:6.25em}a{color:#211A1D;text-decoration:none}.link,a:hover{color:#E63946}.link:hover{color:#fff;background:#E63946}a:focus{outline:0}img{max-width:100%;height:auto}li:before{content:"-";display:inline-block;margin:0 .625em;color:#E63946}.post__date{color:#E63946}h3,p{margin-bottom:.625em}h1{font-size:22px;font-size:2.2rem;line-height:3.3rem}h2{font-size:18px;font-size:1.8rem;line-height:2.7rem}h3{font-size:16px;font-size:1.6rem;line-height:2.4rem}.nav{position:fixed;bottom:0;left:0;right:0;width:100%;background:#fff;border-top:1px solid #e6e6e6}.nav__link{color:#666}.nav__link:after{content:"/";color:#E63946;display:inline-block;margin:0 .625em}
+</style>
 </head>

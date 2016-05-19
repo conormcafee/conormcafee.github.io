@@ -4,31 +4,19 @@ layout: default
 
 {% include syntax-highlighting.html %}
 
-{% include header.html %}
+<section>
 
-<div class="post post--{{ page.type }}">
+    <h1>{{ page.title }}</h1>
 
-	<div class="wrapper">
-		
-		<h1 class="post__header">{{ page.title }}</h1>
+    <p class="post__date">{{ page.date | date: "%b %-d, %Y" }}</p>
 
-		<p class="post__date">{{ page.date | date: "%b %-d, %Y" }}</p>
-		
-	</div>
-
-</div>
-
-<div class="wrapper wrapper--edit wrapper--{{ page.type }}">
-
-	<article class="post__content post--{{ page.type }}">
+	<article>
 
 		{{ content }}
 
 	</article>
 
-</div>
-
-{% include footer.html %}
+</section>
 
 <script type="application/ld+json">
 {
@@ -45,4 +33,3 @@ layout: default
   "articleBody": "{{ content | strip_html }}"
 }
 </script>
-
