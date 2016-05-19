@@ -2,7 +2,7 @@
 layout: post
 title: Sprints
 description: A plan is in place to design, develop & promote my new upcoming website.
-date:   2016-05-20 00:15:00
+date:   2016-05-19 23:00:00
 categories: journal
 type: journal
 author: Conor McAfee
