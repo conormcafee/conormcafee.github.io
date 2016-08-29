@@ -1,0 +1,51 @@
+// Form Element
+// input, label, select, button, textarea
+.form-element {
+	margin:0;
+	border:0;
+	border-radius: 0;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	padding:0;
+	display:inline-block;
+	vertical-align:middle;
+	white-space:normal;
+	background:none;
+	line-height:1;
+	-webkit-appearance: none;
+	@include font-size(1.6);
+
+	&:focus {
+		outline: 0;
+	}
+}
+
+.input {
+	background: brand(white);
+	appearance: none;
+	-webkit-appearance:textfield;
+
+	&::-webkit-search-decoration {
+		display:none;
+	}
+}
+
+.checkbox,
+.radio {
+	width:13px;
+	height:13px;
+}
+
+.submit {
+	// Fix IE7 display bug
+	overflow:visible;
+	cursor: pointer;
+	appearance: none;
+}
+
+.input-textarea {
+	//Move the label to the top */
+	vertical-align:top;
+	// Turn off scroll bars in IE unless needed */
+	overflow:auto;
+}

@@ -1,0 +1,201 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.form-element {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  background: none;
+  line-height: 1;
+  -webkit-appearance: none;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+.form-element:focus {
+  outline: 0;
+}
+
+.input {
+  background: #ffffff;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: textfield;
+}
+.input::-webkit-search-decoration {
+  display: none;
+}
+
+.checkbox,
+.radio {
+  width: 13px;
+  height: 13px;
+}
+
+.submit {
+  overflow: visible;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.input-textarea {
+  vertical-align: top;
+  overflow: auto;
+}
+
+html {
+  font-size: 62.5%;
+  background: linear-gradient(270deg, #1B676B, #519548, #88C425);
+  background-size: 600% 600%;
+  -webkit-animation: AnimationName 30s ease infinite;
+          animation: AnimationName 30s ease infinite;
+  height: 100%;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+  position: relative;
+  font-family: system,-apple-system,".SFNSText-Regular","San Francisco",Roboto,"Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  line-height: 24px;
+  line-height: 2.4rem;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  background: #ffffff;
+  margin: 0.625em;
+  padding: 1.25em;
+  height: calc(100vh - 20px);
+  color: #0A1128;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.none {
+  display: none;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.t-left {
+  text-align: left;
+}
+
+.t-right {
+  text-align: right;
+}
+
+.wrapper--breakout {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.g-half {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.g-two-col {
+  width: 50%;
+  float: left;
+}
+
+.box-one {
+  margin-bottom: 2.5em;
+  border-bottom: 2px solid #ccc;
+  padding: 2.5em 0;
+}

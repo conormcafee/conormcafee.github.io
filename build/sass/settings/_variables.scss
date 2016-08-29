@@ -1,0 +1,49 @@
+$green-1: #1B676B;
+$green-2: #519548;
+$green-3: #88C425;
+$green-4: #BEF202;
+
+// Brand Color Palette
+$brand-colors: (
+    green: (
+      base: $green-2,
+      light: $green-3,
+      dark: $green-1,
+      accent: $green-4
+    ),
+
+    white: (
+      base: #ffffff
+    )
+);
+
+@function brand($brand-color, $tone: 'base') {
+    @return map-get(map-get($brand-colors, $brand-color), $tone);
+}
+@function get-brand($brand-color, $tone: 'base') {
+    @return map-get(map-get($brand-colors, $brand-color), $tone);
+}
+
+
+
+
+
+// Breakpoints
+$bp: 0.0625em; // 1px
+$bp1: 23.375em; // 374px
+$bp2: 25.6875em; // 411px
+$bp3: 48em; // 768px
+$bp4: 56.25em; // 900px
+
+
+
+
+// Grid
+
+$spacing: percentage(24/1200);
+$one-col: percentage(78/1200);
+$two-col: percentage(180/1200);
+$three-col: percentage(282/1200);
+$four-col: percentage(384/1200);
+$six-col: percentage(588/1200);
+$eight-col: percentage(792/1200);

@@ -1,0 +1,67 @@
+html {
+  font-size: 62.5%;
+  background: linear-gradient(270deg, brand(green, dark), brand(green), brand(green, light));
+  background-size: 600% 600%;
+  animation: AnimationName 30s ease infinite;
+  height: 100%;
+}
+
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+body {
+  @include font-size(1.6);
+  position: relative;
+  font-family:system,-apple-system,".SFNSText-Regular","San Francisco",Roboto,"Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  line-height:24px;
+  line-height: 2.4rem;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  background: #ffffff;
+  margin: em(10);
+  padding: em(20);
+  height: calc(100vh - 20px);
+  color: #0A1128;
+}
+
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
+// Displays
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.none {
+  display: none;
+}
+
+
+
+
+
+// Alignment
+.t-center {
+  text-align: center;
+}
+.t-left {
+  text-align: left;
+}
+.t-right {
+  text-align: right;
+}
