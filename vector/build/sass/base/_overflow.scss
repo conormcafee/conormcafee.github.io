@@ -1,0 +1,10 @@
+$overflow: (
+  hidden: hidden,
+  visible: visible
+);
+
+@each $selector, $value in $overflow {
+  .o-#{$selector} {
+    overflow: $value;
+  }
+}

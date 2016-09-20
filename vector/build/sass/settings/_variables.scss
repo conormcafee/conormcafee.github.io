@@ -1,0 +1,31 @@
+// Brand Color Palette
+$brand-colors: (
+    grey: (
+      base: #f6f6f6,
+      dark: #e6e6e6
+    ),
+
+    black: (
+      base: #282828
+    ),
+
+    white: (
+      base: #ffffff
+    )
+);
+
+@function brand($brand-color, $tone: 'base') {
+    @return map-get(map-get($brand-colors, $brand-color), $tone);
+}
+@function get-brand($brand-color, $tone: 'base') {
+    @return map-get(map-get($brand-colors, $brand-color), $tone);
+}
+
+
+
+// Breakpoints
+$bp: 0.0625em; // 1px
+$bp1: 23.375em; // 374px
+$bp2: 25.6875em; // 411px
+$bp3: 48em; // 768px
+$bp4: 56.25em; // 900px

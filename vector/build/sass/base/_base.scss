@@ -1,0 +1,31 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @include font-size(1.6);
+  //font-family: $base-text;
+  line-height: 1.5;
+  position: relative;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 em(20);
+  box-sizing: border-box;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.bs {
+  box-sizing: border-box;
+}

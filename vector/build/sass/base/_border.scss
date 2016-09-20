@@ -1,0 +1,65 @@
+$border: (
+  ( ba, border-style,         solid,  em(1) ),
+  ( bt, border-top-style,     solid,  em(1) ),
+  ( br, border-right-style,   solid,  em(1) ),
+  ( bb, border-bottom-style,  solid,  em(1) ),
+  ( bl, border-left-style,    solid,  em(1) ),
+  ( bn, border-style,         none,   0 )
+);
+
+@each $value in $border {
+  .#{nth($value, 1)} {
+    #{nth($value, 2)}: nth($value, 3); border-width: nth($value, 4);
+  }
+}
+
+@media only screen and (min-width: $bp3) {
+  @each $value in $border {
+    .#{nth($value, 1)}-3 {
+      #{nth($value, 2)}: nth($value, 3); border-width: nth($value, 4);
+    }
+  }
+}
+
+
+
+// Border Width
+$border-width: (
+  2: em(2),
+  3: em(3),
+  4: em(4),
+  5: em(5)
+);
+
+@each $selector, $value in $border-width {
+  .bw-#{$selector} {
+    border-width: $value;
+  }
+}
+
+
+
+
+// Border Style
+$border-style: (
+  solid: solid,
+  dashed: dashed,
+  dotted: dotted,
+  none: none
+);
+
+@each $selector, $value in $border-style {
+  .bs-#{$selector} {
+    border-style: $value;
+  }
+}
+
+
+
+
+// Border Resets
+
+.bt-0 { border-top-width: 0; }
+.br-0 { border-right-width: 0; }
+.bb-0 { border-bottom-width: 0; }
+.bl-0 { border-left-width: 0; }

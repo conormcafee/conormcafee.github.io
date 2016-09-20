@@ -1,0 +1,10 @@
+.btn {
+  text-decoration: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background .3s ease-in-out;
+
+  &:focus {
+    outline: none;
+  }
+}

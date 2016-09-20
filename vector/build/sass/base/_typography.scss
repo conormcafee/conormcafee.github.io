@@ -1,0 +1,78 @@
+// Mapped Typography
+
+$font-sizes: (
+  12: 1.2,
+  14: 1.4,
+  16: 1.6,
+  18: 1.8,
+  20: 2.0,
+  25: 2.5,
+  35: 3.5,
+  45: 4.5
+);
+
+$alignment: (
+  center: center,
+  right: right,
+  left: left
+);
+
+// Font Sizes
+@each $selector, $value in $font-sizes {
+  .t-#{$selector} {
+    @include font-size($value);
+  }
+}
+
+// Alignment
+@each $selector, $value in $alignment {
+  .t-#{$selector} {
+    text-align: $value;
+  }
+}
+
+// 768px BP
+@media only screen and (min-width: $bp3) {
+  // Alignment
+  @each $selector, $value in $alignment {
+    .t-#{$selector}-3 {
+      text-align: $value;
+    }
+  }
+
+  @each $selector, $value in $font-sizes {
+    .t-#{$selector}-3 {
+      @include font-size($value);
+    }
+  }
+}
+
+// 900px BP
+@media only screen and (min-width: $bp4) {
+  // Font Sizes
+  @each $selector, $value in $font-sizes {
+    .t-#{$selector}-4 {
+      @include font-size($value);
+    }
+  }
+
+  @each $selector, $value in $font-sizes {
+    .t-#{$selector}-4 {
+      @include font-size($value);
+    }
+  }
+}
+
+
+
+
+
+.bold {
+  font-style: normal;
+  font-weight: 700;
+}
+
+// Line Heights
+.lh-30 {
+  line-height: 30px;
+}

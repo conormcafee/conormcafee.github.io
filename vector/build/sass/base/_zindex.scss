@@ -1,0 +1,11 @@
+$zindex: (
+  1: 1,
+  2: 2,
+  3: 3
+);
+
+@each $selector, $value in $zindex {
+  .z#{$selector} {
+    z-index: $value;
+  }
+}

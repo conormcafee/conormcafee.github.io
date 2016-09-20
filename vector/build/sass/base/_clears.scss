@@ -1,0 +1,35 @@
+$clears: (
+  l: left,
+  r: right,
+  b: both
+);
+
+@each $selector, $value in $clears {
+  .c#{$selector} {
+    clear: $value;
+  }
+}
+
+@media only screen and (min-width: $bp2) {
+  @each $selector, $value in $clears {
+    .c#{$selector}--2 {
+      clear: $value;
+    }
+  }
+}
+
+@media only screen and (min-width: $bp3) {
+  @each $selector, $value in $clears {
+    .c#{$selector}--3 {
+      clear: $value;
+    }
+  }
+}
+
+@media only screen and (min-width: $bp4) {
+  @each $selector, $value in $clears {
+    .c#{$selector}--4 {
+      clear: $value;
+    }
+  }
+}

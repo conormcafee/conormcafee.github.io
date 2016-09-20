@@ -1,0 +1,18 @@
+$position: (
+  relative: relative,
+  absolute: absolute
+);
+
+@each $selector, $value in $position {
+  .#{$selector} {
+    position: $value;
+  }
+}
+
+@media only screen and (min-width: $bp3) {
+  @each $selector, $value in $position {
+    .#{$selector}-3 {
+      position: $value;
+    }
+  }
+}

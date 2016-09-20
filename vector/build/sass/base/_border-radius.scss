@@ -1,0 +1,40 @@
+$border-radius: (
+  0: 0,
+  1: em(5),
+  2: em(10),
+  3: em(20),
+  4: em(30),
+  5: em(40)
+);
+
+@each $selector, $value in $border-radius {
+  .radius-#{$selector} {
+    border-radius: $value;
+  }
+
+  .radius-tr-#{$selector} {
+    border-top-right-radius: $value;
+  }
+
+  .radius-tl-#{$selector} {
+    border-top-left-radius: $value;
+  }
+
+  .radius-br-#{$selector} {
+    border-bottom-right-radius: $value;
+  }
+
+  .radius-bl-#{$selector} {
+    border-bottom-left-radius: $value;
+  }
+
+  .radius-l-#{$selector} {
+    border-top-left-radius: $value;
+    border-bottom-left-radius: $value;
+  }
+
+  .radius-r-#{$selector} {
+    border-top-right-radius: $value;
+    border-bottom-right-radius: $value;
+  }
+}
