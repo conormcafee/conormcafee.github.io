@@ -1,29 +1,91 @@
----
-layout: default
-title: Conor McAfee | Designer &amp; Front-End Developer
-description: I'm a Designer &amp; Front-End Developer from Ballymena Northen Ireland.
----
+<html>
+  <head>
+    <title>Conor McAfee :: Senior UX Engineer</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
 
-<section>
-  <h1>Conor McAfee</h1>
-  <h2>Designer &amp; Front-End Developer</h2>
-  <p>Based in Ballymena, Northern Ireland I have been working full time in the web industry since 2013.  I've contributed to 30+ projects since then, gaining invaluable experience in many aspects of design &amp; development.</p>
-  <p>Currently, I am working for <a href="http://www.sugarrushcreative.com" title="Sugar Rush Creative" class="link" target="_blank">Sugar Rush Creative</a> in Belfast, previously at <a href="http://www.dotretailer.com" title="dotRetailer" class="link" target="_blank">dotRetailer</a>, <a href="http://www.activwireless.com" title="ActivWireless" class="link" target="_blank">ActiveWireless</a>, <a href="http://www.niopen.golf/" title="Northern Ireland Open" class="link" target="_blank">Northern Ireland Open Challenge Tour</a> &amp; <a href="http://www.ulster.ac.uk" title="University of Ulster" class="link" target="_blank">University of Ulster</a>.</p>
+  <body>
+    <header class="container">
+      <h1>Conor McAfee <span>UXE</span></h1>
+    </header>
 
-  <h3>Selected Journals</h3>
-  <ul class="journal-list">
-  {% for post in site.categories.journal %}
-    <li><a href="{{ post.url | prepend: site.baseurl }}" class="welcome-card__post-link">{{ post.title }}</a></li>
-  {% endfor %}
-  </ul>
+    <section class="container [ grid ]">
+      <article>
+        <p>
+          I'm a <b>Senior UX Engineer</b> from Ireland, currently working on
+          interesting and challenging solutions for
+          <a href="https://white.space/" target="_blank" title="Whitespace"
+            ><span>Whitespace</span></a
+          >, based in their Belfast office.
+        </p>
 
-  <h3>Selected Case Studies</h3>
-  <ul class="case-study-list">
-  {% for post in site.categories.case-studies %}
-    <li><a href="{{ post.url | prepend: site.baseurl }}" class="welcome-card__post-link">{{ post.title }}</a></li>
-  {% endfor %}
-  </ul>
+        <p>
+          Working primarly with
+          <a href="https://reactjs.org/" target="_blank"><span>React</span></a>
+          &
+          <a href="https://www.gatsbyjs.org/" target="_blank"
+            ><span>Gatsby JS</span></a
+          >.
+        </p>
+        <p>
+          In my current role at Whitespace, I am fortunate to also get involved
+          in more complex data and middleware layers of projects, which gives me
+          huge variety on a daily basis.
+        </p>
 
-  <p>If you would like to talk about working together on a project, give me a shout <a class="link" href="mailto:hello@conormcafee.co.uk?Subject=Let's work together">hello[@]conormcafee.co.uk</a>.</p>
+        <h2 class="heading">Recent work involves:</h2>
 
-</section>
+        <p>
+          Building a component library to support a fully dynamic front-end,
+          which is driven by data on the back-end.
+        </p>
+
+        <p>
+          Building a web platform for a London fintech company to help traders
+          better understand their portfolio risk.
+        </p>
+
+        <p>
+          Building a component library for an internal product which helps
+          companies make better financial decisions, aided by some smarts from
+          machine learning.
+        </p>
+      </article>
+
+      <aside>
+        <blockquote>
+          <h1 class="heading">What is a UX Engineer?</h1>
+
+          <p>
+            A UX Engineer (UXE) is a Front-End Engineer who sits on a
+            cross-functional design team and helps facilitate collaboration
+            between design and engineering.
+          </p>
+
+          <p>
+            UXEs possess the skill-set of a Front-end Engineer but with working
+            knowledge of UX design principles. Their primary domain focuses on
+            the design/UI component layer of an application and steers away from
+            the middleware layer between front-end and back-end development.
+          </p>
+          <cite
+            ><a
+              href="https://dev.to/emmabostian/ux-engineering-3hem"
+              target="_blank"
+              ><span>Emma Bostian on the DEV blog</span></a
+            ></cite
+          >
+        </blockquote>
+      </aside>
+
+      <div>
+        <p>
+          Contact
+          <a class="link" href="mailto:hello@conormcafee.co.uk"
+            ><span>hello@conormcafee.co.uk</span></a
+          >
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
