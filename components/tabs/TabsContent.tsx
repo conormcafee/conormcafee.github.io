@@ -1,6 +1,6 @@
-import * as ReactTabs from '@radix-ui/react-tabs';
-import { Fragment } from "react"
-import { BIO_LINKS, BIO_PERSONAL, BIO_WORK } from './constants';
+import * as ReactTabs from '@radix-ui/react-tabs'
+import { Fragment } from 'react'
+import { BIO_LINKS, BIO_PERSONAL, BIO_WORK } from './constants'
 
 const className = 'p-4'
 

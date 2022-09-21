@@ -1,4 +1,4 @@
-import { BioTabs } from "./types"
+import { BioTabs } from './types'
 
 export const BIO_WORK: BioTabs = {
   title: 'work.tsx',
